@@ -11,6 +11,9 @@
     <AssemblyName>gv.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <StartAction>Program</StartAction>
+    <StartProgram>$ (SolutionDir)packages\NUnit.Runners.2.6.3\tools\nunit.exe</StartProgram>
+    <StartArguments>gv.dll</StartArguments>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
