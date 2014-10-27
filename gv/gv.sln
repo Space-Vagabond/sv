@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Galactic_Vagabond", "Galactic_Vagabond\Galactic_Vagabond.csproj", "{301D23AE-2637-4C7D-8957-B0C333B5C0A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gv", "gv\gv.csproj", "{6B827C39-53AB-4A6F-9471-A70932DF0777}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gv.Tests", "gv.Tests\gv.Tests.csproj", "{6C1262F3-F0AC-4981-ACAE-DB43BEA5F448}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{301D23AE-2637-4C7D-8957-B0C333B5C0A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{301D23AE-2637-4C7D-8957-B0C333B5C0A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{301D23AE-2637-4C7D-8957-B0C333B5C0A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B827C39-53AB-4A6F-9471-A70932DF0777}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B827C39-53AB-4A6F-9471-A70932DF0777}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B827C39-53AB-4A6F-9471-A70932DF0777}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B827C39-53AB-4A6F-9471-A70932DF0777}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C1262F3-F0AC-4981-ACAE-DB43BEA5F448}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C1262F3-F0AC-4981-ACAE-DB43BEA5F448}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C1262F3-F0AC-4981-ACAE-DB43BEA5F448}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C1262F3-F0AC-4981-ACAE-DB43BEA5F448}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
