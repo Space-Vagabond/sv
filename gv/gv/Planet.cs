@@ -6,9 +6,12 @@ namespace gv
 {
     public class Planet
     {
-        public string _name;
-        public static int planetNumber = 0;
-        public string _type;
+        internal string _name;
+        internal static int planetNumber = 0;
+        internal string _type;
+        internal string _climate;
+        internal string _surface;
+        internal string _ressource;
         Random rand = new Random();
 
         internal Planet( List<string> planetTypes )
@@ -21,6 +24,41 @@ namespace gv
 
             int t = rand.Next( 0, 10 );
             _type = planetTypes[t];
+
+            GeneratePlanetAttributes( t );
+            
+        }
+        void GeneratePlanetAttributes( int t )
+        {
+            switch (t)
+             {
+                 case 0:
+                     
+                     break;
+                 case 1:
+                     
+                     break;
+                 case 2:
+                     
+                     break;
+                 case 3:
+                     
+                     break;
+                 case 4:
+                     break;
+                 case 5:
+                     break;
+                 case 6:
+                     break;
+                 case 7:
+                     break;
+                 case 8:
+                     break;
+                 case 9:
+                     break;
+                 default:
+                     break;
+             };
         }
     }
 }
