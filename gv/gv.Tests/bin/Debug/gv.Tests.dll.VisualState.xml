@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VisualState xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ShowCheckBoxes="false">
-  <TopNode>[0-1002]C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv.Tests\bin\Debug\gv.Tests.dll</TopNode>
-  <SelectedNode>[0-1001]gv.Tests.Tests.creates_planet_name_between6_and_8_char</SelectedNode>
+  <TopNode>[0-1004]C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv.Tests\bin\Debug\gv.Tests.dll</TopNode>
+  <SelectedNode>[0-1000]gv.Tests.Tests</SelectedNode>
   <ExcludeCategories>false</ExcludeCategories>
   <Nodes>
-    <Node UniqueName="[0-1002]C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv.Tests\bin\Debug\gv.Tests.dll" Expanded="true" />
-    <Node UniqueName="[0-1003]gv" Expanded="true" />
-    <Node UniqueName="[0-1004]gv.Tests" Expanded="true" />
+    <Node UniqueName="[0-1004]C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv.Tests\bin\Debug\gv.Tests.dll" Expanded="true" />
+    <Node UniqueName="[0-1005]gv" Expanded="true" />
+    <Node UniqueName="[0-1006]gv.Tests" Expanded="true" />
     <Node UniqueName="[0-1000]gv.Tests.Tests" Expanded="true" />
   </Nodes>
 </VisualState>
