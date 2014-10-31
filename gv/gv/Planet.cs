@@ -12,9 +12,8 @@ namespace gv
          int _climate;
          string _surface;
          string _ressource; 
-         bool _inhabited; //todo
-         string _inhabitantsName; //todo
-         string _prodRatio;
+         bool _inhabited; 
+         string _inhabitantsName; 
 
         Random rand = new Random();
 

@@ -58,5 +58,78 @@ namespace gv.Tests
                 Console.WriteLine( count[i] );
             }
         }
+        [Test]
+        public void With_type_comes_ressources()
+        {
+            Universe u = new Universe();
+            int i;
+
+            for( i = 0; i < 100; i++ )
+            {
+                Planet P = u.AddPlanet();
+                if( P.Type == PlanetAttributes.PlanetTypes[0] )
+                {
+                    Assert.That( P.Ressource == PlanetAttributes.PlanetRessources[0] );
+                    Assert.That(P.Surface == PlanetAttributes.PlanetSurfaces[5] ||
+                                P.Surface == PlanetAttributes.PlanetSurfaces[6] ||
+                                P.Surface == PlanetAttributes.PlanetSurfaces[7] || 
+                                P.Surface == PlanetAttributes.PlanetSurfaces[8]);
+                }
+                else if( P.Type == PlanetAttributes.PlanetTypes[1] )
+                {
+                    Assert.That( P.Ressource == PlanetAttributes.PlanetRessources[1] );
+                    Assert.That( P.Surface == PlanetAttributes.PlanetSurfaces[5] ||
+                                P.Surface == PlanetAttributes.PlanetSurfaces[6] ||
+                                P.Surface == PlanetAttributes.PlanetSurfaces[7] ||
+                                P.Surface == PlanetAttributes.PlanetSurfaces[8] );
+                }
+                else if( P.Type == PlanetAttributes.PlanetTypes[2] )
+                {
+                    Assert.That( P.Ressource == PlanetAttributes.PlanetRessources[3] );
+                    Assert.That( P.Surface == PlanetAttributes.PlanetSurfaces[5] ||
+                                P.Surface == PlanetAttributes.PlanetSurfaces[6] ||
+                                P.Surface == PlanetAttributes.PlanetSurfaces[7] ||
+                                P.Surface == PlanetAttributes.PlanetSurfaces[8] );
+                }
+                else if( P.Type == PlanetAttributes.PlanetTypes[3] )
+                {
+                    Assert.That( P.Ressource == PlanetAttributes.PlanetRessources[6] );
+                    Assert.That( P.Surface == PlanetAttributes.PlanetSurfaces[0]);
+                }
+                else if( P.Type == PlanetAttributes.PlanetTypes[4] )
+                {
+                    Assert.That( P.Ressource == PlanetAttributes.PlanetRessources[6] );
+                    Assert.That( P.Surface == PlanetAttributes.PlanetSurfaces[4]);
+                }
+                else if( P.Type == PlanetAttributes.PlanetTypes[5] )
+                {
+                    Assert.That( P.Ressource == PlanetAttributes.PlanetRessources[6] );
+                    Assert.That( P.Surface == PlanetAttributes.PlanetSurfaces[5] ||
+                                P.Surface == PlanetAttributes.PlanetSurfaces[6] ||
+                                P.Surface == PlanetAttributes.PlanetSurfaces[7] ||
+                                P.Surface == PlanetAttributes.PlanetSurfaces[8] );
+                }
+                else if( P.Type == PlanetAttributes.PlanetTypes[6] )
+                {
+                    Assert.That( P.Ressource == PlanetAttributes.PlanetRessources[0] );
+                    Assert.That( P.Surface == PlanetAttributes.PlanetSurfaces[1] );
+                }
+                else if( P.Type == PlanetAttributes.PlanetTypes[7] )
+                {
+                    Assert.That( P.Ressource == PlanetAttributes.PlanetRessources[4] );
+                    Assert.That( P.Surface == PlanetAttributes.PlanetSurfaces[4]);
+                }
+                else if( P.Type == PlanetAttributes.PlanetTypes[8] )
+                {
+                    Assert.That( P.Ressource == PlanetAttributes.PlanetRessources[5] );
+                    Assert.That( P.Surface == PlanetAttributes.PlanetSurfaces[6] );
+                }
+                else if( P.Type == PlanetAttributes.PlanetTypes[9] )
+                {
+                    Assert.That( P.Ressource == PlanetAttributes.PlanetRessources[2] || P.Ressource == PlanetAttributes.PlanetRessources[1] );
+                    Assert.That( P.Surface == PlanetAttributes.PlanetSurfaces[2] );
+                } 
+            }
+        }
     }
 }
