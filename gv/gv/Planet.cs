@@ -11,7 +11,7 @@ namespace gv
          string _type;
          int _climate;
          string _surface;
-         string _ressource; // todo
+         string _ressource; 
          bool _inhabited; //todo
          string _inhabitantsName; //todo
          string _prodRatio;
@@ -20,10 +20,12 @@ namespace gv
 
         internal Planet()
         {
+            planetNumber++;
             TextGenerator NameGen = new TextGenerator(WordTypes.Name);
             int n =  rand.Next( 6, 9 ); 
             
             _name = NameGen.GenerateWord( n );
+            _inhabitantsName = _name + "ians";
             _name = _name + "us";
 
             int t = rand.Next( 0, 10 );
@@ -35,6 +37,7 @@ namespace gv
         void GeneratePlanetAttributes( int t )
         {
             GenerateSurfaceAndClimate( t );
+            GenerateRessourcesAndHabitants( t );
         }
 
         void GenerateSurfaceAndClimate( int t )
@@ -71,6 +74,44 @@ namespace gv
                 _climate = rand.Next( -1, 2 );
             }
         }
+        void GenerateRessourcesAndHabitants( int t )
+        {
+            if( t == 0 || t == 6 )
+            {
+                _ressource = PlanetAttributes.PlanetRessource( 0 );
+                _inhabited = (rand.Next(0,2) >0)?true:false ;
+            }
+            else if( t == 1 )
+            {
+                _ressource = PlanetAttributes.PlanetRessource( 1 );
+                _inhabited = (rand.Next( 0, 2 ) > 0) ? true : false;
+            }
+            else if( t == 2 )
+            {
+                _ressource = PlanetAttributes.PlanetRessource( 3 );
+                _inhabited = (rand.Next( 0, 2 ) > 0) ? true : false;
+            }
+            else if( t == 7 )
+            {
+                _ressource = PlanetAttributes.PlanetRessource( 4 );
+                _inhabited = (rand.Next( 0, 2 ) > 0) ? true : false;
+            }
+            else if( t == 8 )
+            {
+                _ressource = PlanetAttributes.PlanetRessource( 5 );
+                _inhabited = (rand.Next( 0, 2 ) > 0) ? true : false;
+            }
+            else if( t == 9 )
+            {
+                _ressource = PlanetAttributes.PlanetRessource( rand.Next(1,3));
+                _inhabited = false;
+            }
+            else
+            {
+                _ressource = PlanetAttributes.PlanetRessource( 6 );
+                _inhabited = true;
+            }
+        }
         public string Name
         {
             get { return _name; }
@@ -86,6 +127,10 @@ namespace gv
         public string Surface
         {
             get { return _surface; }
+        }
+        public string Ressource
+        {
+            get { return _ressource; }
         }
     }
 }

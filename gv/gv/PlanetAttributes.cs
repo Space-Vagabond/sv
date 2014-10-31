@@ -34,27 +34,36 @@ namespace gv
         {
             "Silicium",
             "Gems",
+            "Plutonium",
             "Metal",
             "Hydrogene",
             "Helium",
-            "Plutonium",
             "none"
         };
         internal static string PlanetType(int i)
         {
             return _planetTypes[i] ;
         }
-       internal static string PlanetSurface(int i)
-        {
-            return _planetSurfaces[i] ; 
-        }
         public static List<string> PlanetTypes
         {
             get { return _planetTypes; }
         }
+       internal static string PlanetSurface(int i)
+        {
+            return _planetSurfaces[i] ; 
+        }
+        
         public static List<string> PlanetSurfaces
         {
             get { return _planetSurfaces; }
+        }
+        internal static string PlanetRessource( int i )
+        {
+            return _planetRessources[i];
+        }
+        public static List<string> PlanetRessources
+        {
+            get { return _planetRessources; }
         }
     }
     
