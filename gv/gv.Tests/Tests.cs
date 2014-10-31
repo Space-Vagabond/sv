@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using NUnit.Framework;
+using gv;
 
 
 namespace gv.Tests
@@ -16,25 +17,10 @@ namespace gv.Tests
             for( i = 0; i < 100; i++ )
             {
                 Planet P = u.AddPlanet();
-                Console.WriteLine( P._name );
-                Assert.That( P._name.Length <= 10 && P._name.Length >= 8);
+                Console.WriteLine( P.Name );
+                Assert.That( P.Name.Length <= 10 && P.Name.Length >= 8);
             }
 
-        }
-        [Test]
-        public void planet_type_list_works_as_should()
-        {
-            Universe u = new Universe();
-            Assert.AreEqual(u._planetTypes[0], ( "Telluric Silicat" ));
-            Assert.AreEqual(u._planetTypes[1], ( "Telluric Carbon" ));
-            Assert.AreEqual(u._planetTypes[2], ( "Telluric Metal" ));
-            Assert.AreEqual(u._planetTypes[3], ( "Telluric Lava" ));
-            Assert.AreEqual(u._planetTypes[4], ( "Telluric Ice" ));
-            Assert.AreEqual(u._planetTypes[5], ( "Telluric Desert" ));
-            Assert.AreEqual(u._planetTypes[6], ( "Coreless" ));
-            Assert.AreEqual(u._planetTypes[7], ( "Gazeous Hydrogen" ));
-            Assert.AreEqual(u._planetTypes[8], ( "Gazeous Helium" ));
-            Assert.AreEqual(u._planetTypes[9], ( "Chthonian" ));
         }
         [Test]
         public void planet_type_assignement_works()
@@ -45,8 +31,31 @@ namespace gv.Tests
             for( i = 0; i < 100; i++ )
             {
                 Planet P = u.AddPlanet();
-                Assert.That( u._planetTypes.Contains( P._type ) );
-                Console.WriteLine( P._type );
+                Assert.That( PlanetAttributes.PlanetTypes.Contains( P.Type ) );
+                Console.WriteLine( P.Type );
+            }
+        }
+        [Test]
+        public void random_type_check()
+        {
+            Universe u = new Universe();
+            int i;
+            int[] count = new int[10];
+
+            for( i = 0; i < 10; i++ )
+            {
+                count[i] = 0;
+            }
+
+            for( i = 0; i < 100; i++ )
+            {
+                Planet P = u.AddPlanet();
+                count[PlanetAttributes.PlanetTypes.IndexOf(P.Type)] += 1 ;
+                
+            }
+            for( i = 0; i < 10; i++ )
+            {
+                Console.WriteLine( count[i] );
             }
         }
     }

@@ -1,1 +1,8 @@
 C:\myGit\sv\gv\Galactic_Vagabond\bin\Debug\Galactic_Vagabond.exe.config
+C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\Galactic_Vagabond\bin\Debug\Galactic_Vagabond.exe.config
+C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\Galactic_Vagabond\bin\Debug\Galactic_Vagabond.exe
+C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\Galactic_Vagabond\bin\Debug\Galactic_Vagabond.pdb
+C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\Galactic_Vagabond\obj\Debug\Galactic_Vagabond.Properties.Resources.resources
+C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\Galactic_Vagabond\obj\Debug\Galactic_Vagabond.csproj.GenerateResource.Cache
+C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\Galactic_Vagabond\obj\Debug\Galactic_Vagabond.exe
+C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\Galactic_Vagabond\obj\Debug\Galactic_Vagabond.pdb

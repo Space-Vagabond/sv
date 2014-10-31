@@ -6,18 +6,18 @@ namespace gv
 {
     public class Planet
     {
-        internal string _name;
-        internal static int planetNumber = 0;
-        internal string _type;
-        internal int _climate;
-        internal string _surface;
-        internal string _ressource;
-        internal bool _inhabited;
-        internal string _inhabitantsName;
+         string _name;
+         static int planetNumber = 0;
+         string _type;
+         int _climate;
+         string _surface;
+         string _ressource;
+         bool _inhabited;
+         string _inhabitantsName;
 
         Random rand = new Random();
 
-        internal Planet( List<string> planetTypes )
+        internal Planet()
         {
             TextGenerator NameGen = new TextGenerator(WordTypes.Name);
             int n =  rand.Next( 6, 9 ); 
@@ -26,7 +26,7 @@ namespace gv
             _name = _name + "us";
 
             int t = rand.Next( 0, 10 );
-            _type = planetTypes[t];
+            _type = PlanetAttributes.PlanetType(t);
 
             GeneratePlanetAttributes( t );
             
@@ -54,6 +54,14 @@ namespace gv
         void GenerateSurface( int t )
         {
 
+        }
+        public string Name
+        {
+            get { return _name; }
+        }
+        public string Type
+        {
+            get { return _type; }
         }
     }
 }
