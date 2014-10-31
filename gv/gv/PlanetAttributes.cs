@@ -30,17 +30,31 @@ namespace gv
             "Oceanic",
             "Glass"
         };
+        internal static readonly List<string> _planetRessources = new List<string>()
+        {
+            "Silicium",
+            "Gems",
+            "Metal",
+            "Hydrogene",
+            "Helium",
+            "Plutonium",
+            "none"
+        };
         internal static string PlanetType(int i)
         {
             return _planetTypes[i] ;
         }
-       internal static string PlanetSurfaces(int i)
+       internal static string PlanetSurface(int i)
         {
             return _planetSurfaces[i] ; 
         }
         public static List<string> PlanetTypes
         {
             get { return _planetTypes; }
+        }
+        public static List<string> PlanetSurfaces
+        {
+            get { return _planetSurfaces; }
         }
     }
     

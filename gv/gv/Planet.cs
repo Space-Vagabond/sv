@@ -11,9 +11,10 @@ namespace gv
          string _type;
          int _climate;
          string _surface;
-         string _ressource;
-         bool _inhabited;
-         string _inhabitantsName;
+         string _ressource; // todo
+         bool _inhabited; //todo
+         string _inhabitantsName; //todo
+         string _prodRatio;
 
         Random rand = new Random();
 
@@ -33,27 +34,42 @@ namespace gv
         }
         void GeneratePlanetAttributes( int t )
         {
-            GenerateClimate( t );
+            GenerateSurfaceAndClimate( t );
         }
 
-        void GenerateClimate( int t )
+        void GenerateSurfaceAndClimate( int t )
         {
-            if( t == 3 || t == 6 || t == 9 )
+            if( t == 3 )
             {
+                _surface = PlanetAttributes.PlanetSurface( 0 );
                 _climate = 1;
             }
-            else if( t == 4 || t == 7 || t == 8 )
+            else if( t == 6 )
             {
+                _surface = PlanetAttributes.PlanetSurface( 1 );
+                _climate = 1;
+            }
+            else if( t == 9 )
+            {
+                _surface = PlanetAttributes.PlanetSurface( 2 );
+                _climate = 1;
+            }
+            else if( t == 8 || t == 7 )
+            {
+                _surface = PlanetAttributes.PlanetSurface( 3 );
+                _climate = -1;
+            }
+            else if( t == 4 )
+            {
+                _surface = PlanetAttributes.PlanetSurface( 4 );
                 _climate = -1;
             }
             else
             {
+                int r =  rand.Next( 5, 9 );
+                _surface = PlanetAttributes.PlanetSurface( r );
                 _climate = rand.Next( -1, 2 );
             }
-        }
-        void GenerateSurface( int t )
-        {
-
         }
         public string Name
         {
@@ -62,6 +78,14 @@ namespace gv
         public string Type
         {
             get { return _type; }
+        }
+        public int Climate
+        {
+            get { return _climate; }
+        }
+        public string Surface
+        {
+            get { return _surface; }
         }
     }
 }
