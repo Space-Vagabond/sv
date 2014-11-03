@@ -9,9 +9,7 @@ namespace gv
         
         public Universe()
         {
-        }
-        
-
+        }       
         public Planet AddPlanet()
         {
             return new Planet();

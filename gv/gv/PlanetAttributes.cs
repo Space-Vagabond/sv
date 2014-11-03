@@ -12,8 +12,8 @@ namespace gv
                 "Telluric Metal" ,
                 "Telluric Lava" ,
                 "Telluric Ice" ,
-                "Telluric Desert" ,
                 "Coreless" ,
+                "Telluric Desert" ,                
                 "Gazeous Hydrogen" ,
                 "Gazeous Helium" ,
                 "Chthonian"

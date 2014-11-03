@@ -13,7 +13,9 @@ namespace gv
          string _surface;
          string _ressource; 
          bool _inhabited; 
-         string _inhabitantsName; 
+         string _inhabitantsName;
+         int x;
+         int y;
 
         Random rand = new Random();
 
@@ -58,18 +60,17 @@ namespace gv
             }
             else if( t == 8 || t == 7 )
             {
-                _surface = PlanetAttributes.PlanetSurface( 3 );
+                _surface = PlanetAttributes.PlanetSurface( 4 );
                 _climate = -1;
             }
             else if( t == 4 )
             {
-                _surface = PlanetAttributes.PlanetSurface( 4 );
+                _surface = PlanetAttributes.PlanetSurface( 3 );
                 _climate = -1;
             }
             else
             {
-                int r =  rand.Next( 5, 9 );
-                _surface = PlanetAttributes.PlanetSurface( r );
+                _surface = PlanetAttributes.PlanetSurface( rand.Next( 5, 9 ) );
                 _climate = rand.Next( -1, 2 );
             }
         }
@@ -130,6 +131,24 @@ namespace gv
         public string Ressource
         {
             get { return _ressource; }
+        }
+        public bool Inhabited
+        {
+            get { return _inhabited; }
+        }
+        public string InhabitantsName
+        {
+            get
+            {
+                if( this.Inhabited )
+                {
+                    return _inhabitantsName;
+                }
+                else
+                {
+                    return "Inhabited planet";
+                }
+            }
         }
     }
 }
