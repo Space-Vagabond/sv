@@ -1,0 +1,10 @@
+C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv\Fakes\FakeTextGenerator.fakes : warning : Cannot generate stub for ET.FakeText.Corpus: type has no family visible contructors.
+C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv\Fakes\FakeTextGenerator.fakes : warning : Cannot generate stub for ET.FakeText.LetterStats: type is a value type.
+C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv\Fakes\FakeTextGenerator.fakes : warning : Cannot generate stub for ET.FakeText.WordTypes: type is a value type.
+C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv\Fakes\FakeTextGenerator.fakes : warning : Cannot generate stub for <PrivateImplementationDetails>{883D5BED-B522-4A2E-8CEA-9B36E2588DA7}: type is not supported because of internal limitations.
+C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv\Fakes\FakeTextGenerator.fakes : warning : Cannot generate shim for ET.FakeText.Corpus+<>c__DisplayClass2: type is not supported because of internal limitations.
+C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv\Fakes\FakeTextGenerator.fakes : warning : Cannot generate shim for ET.FakeText.TextGenerator+<>c__DisplayClass11: type is not supported because of internal limitations.
+C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv\Fakes\FakeTextGenerator.fakes : warning : Cannot generate shim for ET.FakeText.TextGenerator+<>c__DisplayClass14: type is not supported because of internal limitations.
+C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv\Fakes\FakeTextGenerator.fakes : warning : Cannot generate shim for ET.FakeText.TextGenerator+Range: type is not visible to exported or assembly(FakeTextGenerator.1.0.1.0.Fakes).
+C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv\Fakes\FakeTextGenerator.fakes : warning : Cannot generate shim for ET.FakeText.WordTypes: type is an enum.
+C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv\Fakes\FakeTextGenerator.fakes : warning : Cannot generate shim for <PrivateImplementationDetails>{883D5BED-B522-4A2E-8CEA-9B36E2588DA7}: type is not supported because of internal limitations.

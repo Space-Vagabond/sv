@@ -1,0 +1,8 @@
+C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv\bin\Debug\gv.dll
+C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv\bin\Debug\gv.pdb
+C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv\bin\Debug\FakeTextGenerator.dll
+C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv\bin\Debug\FakeTextGenerator.pdb
+C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv\obj\Debug\gv.dll
+C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv\obj\Debug\gv.pdb
+C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv\obj\Debug\gv.csprojResolveAssemblyReference.cache
