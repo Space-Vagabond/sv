@@ -14,8 +14,8 @@ namespace gv
          string _ressource; 
          bool _inhabited; 
          string _inhabitantsName;
-         int x;
-         int y;
+         int _x;
+         int _y;
 
         Random rand = new Random();
 
@@ -34,6 +34,31 @@ namespace gv
 
             GeneratePlanetAttributes( t );
             
+        }
+        internal Planet(bool type)
+        {
+            if( type == false )
+            {
+                _name = "Earth";
+                _type = "Destroyed";
+                _climate = 0;
+                _surface = "Ravaged";
+                _ressource = PlanetAttributes.PlanetRessource( 6 );
+                _inhabited = false;
+                _inhabitantsName = "Terrians";
+                _x = 0;
+                _y = 0;
+            }
+            else
+            {
+                _name = "Eldorado";
+                _type = "Promised Land";
+                _climate = 0;
+                _surface = "Golden";
+                _ressource = PlanetAttributes.PlanetRessource( 6 );
+                _inhabited = false;
+                _inhabitantsName = "Dorados";
+            }
         }
         void GeneratePlanetAttributes( int t )
         {
