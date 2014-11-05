@@ -7,14 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using gv;
 
 namespace Galactic_Vagabond
 {
-    public partial class Form1 : Form
+    public partial class Form_GV_01 : Form
     {
-        public Form1()
+        public Form_GV_01()
         {
             InitializeComponent();
+            
         }
     }
 }
