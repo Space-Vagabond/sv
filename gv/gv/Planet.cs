@@ -14,8 +14,7 @@ namespace gv
          string _ressource; 
          bool _inhabited; 
          string _inhabitantsName;
-         int _x;
-         int _y;
+         Point _position;
 
         Random rand = new Random();
 
@@ -46,8 +45,7 @@ namespace gv
                 _ressource = PlanetAttributes.PlanetRessource( 6 );
                 _inhabited = false;
                 _inhabitantsName = "Terrians";
-                _x = 0;
-                _y = 0;
+                _position = new Point(0, 0);
             }
             else
             {
