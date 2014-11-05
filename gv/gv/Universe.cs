@@ -6,7 +6,7 @@ namespace gv
 {
     public class Universe
     {
-        
+        public static Random rand = new Random();
         public Universe()
         {
             CreateEarth();

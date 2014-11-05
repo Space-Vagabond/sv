@@ -30,7 +30,7 @@ namespace gv
             _movedX = Math.Max( _position.X, destination.X ) - Math.Min( _position.X, destination.X );
             _movedY = Math.Max( _position.Y, destination.Y ) - Math.Min( _position.Y, destination.Y );
             _movedOf = _movedX + _movedY;
-            if( _movedOf <= _remainingSteps )
+            if( _movedOf <= _remainingSteps && _canMove == true )
             {
                 _position = _position.Move( destination );
                 _remainingSteps -= _movedOf;
