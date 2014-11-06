@@ -12,6 +12,10 @@ namespace gv
         {
             _position = Pos;
         }
+        public void AddPlanet()
+        {
+            Universe.AddPlanet( _position );
+        }
         public bool ContainsPlanet
         {
             get { return _containsPlanet; }

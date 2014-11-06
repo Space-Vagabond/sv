@@ -11,9 +11,14 @@ namespace gv
         {
             CreateEarth();
         }       
-        public Planet AddPlanet()
+        public static Planet AddPlanet()
+
         {
             return new Planet();
+        }
+        public static Planet AddPlanet(Point position)
+        {
+            return new Planet(position);
         }
         public Planet CreateEarth()
         {

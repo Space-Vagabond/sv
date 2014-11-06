@@ -33,6 +33,12 @@ namespace gv
             GeneratePlanetAttributes( t );
             
         }
+        internal Planet( Point Pos )
+            :this()
+        {
+            _position = Pos;
+            
+        }
         internal Planet(bool type)
         {
             if( type == false )
@@ -171,6 +177,10 @@ namespace gv
                     return "Inhabited planet";
                 }
             }
+        }
+        public Point Position
+        {
+            get { return _position; }
         }
     }
 }
