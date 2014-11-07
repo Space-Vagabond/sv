@@ -7,3 +7,15 @@ C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\Galactic_Vagabond\obj\Debug\Galac
 C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\Galactic_Vagabond\obj\Debug\Galactic_Vagabond.exe
 C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\Galactic_Vagabond\obj\Debug\Galactic_Vagabond.pdb
 C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\Galactic_Vagabond\obj\Debug\Galactic_Vagabond.csprojResolveAssemblyReference.cache
+C:\myGit\sv\gv\Galactic_Vagabond\obj\Debug\Galactic_Vagabond.exe
+C:\myGit\sv\gv\Galactic_Vagabond\obj\Debug\Galactic_Vagabond.pdb
+C:\myGit\sv\gv\Galactic_Vagabond\bin\Debug\Galactic_Vagabond.exe
+C:\myGit\sv\gv\Galactic_Vagabond\bin\Debug\Galactic_Vagabond.pdb
+C:\myGit\sv\gv\Galactic_Vagabond\obj\Debug\Galactic_Vagabond.csprojResolveAssemblyReference.cache
+C:\myGit\sv\gv\Galactic_Vagabond\obj\Debug\Galactic_Vagabond.Properties.Resources.resources
+C:\myGit\sv\gv\Galactic_Vagabond\obj\Debug\Galactic_Vagabond.csproj.GenerateResource.Cache
+C:\myGit\sv\gv\Galactic_Vagabond\obj\Debug\Galactic_Vagabond.Form_GV_01.resources
+C:\myGit\sv\gv\Galactic_Vagabond\bin\Debug\gv.dll
+C:\myGit\sv\gv\Galactic_Vagabond\bin\Debug\FakeTextGenerator.dll
+C:\myGit\sv\gv\Galactic_Vagabond\bin\Debug\gv.pdb
+C:\myGit\sv\gv\Galactic_Vagabond\bin\Debug\FakeTextGenerator.pdb

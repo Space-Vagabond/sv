@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using ET.FakeText;
 
+
 namespace gv
 {
     public class Planet
@@ -48,6 +49,7 @@ namespace gv
                 _inhabitantsName = "Terrians";
                 _x = 0;
                 _y = 0;
+                
             }
             else
             {
@@ -104,7 +106,7 @@ namespace gv
             if( t == 0 || t == 6 )
             {
                 _ressource = PlanetAttributes.PlanetRessource( 0 );
-                _inhabited = (rand.Next(0,2) >0)?true:false ;
+                _inhabited = (rand.Next( 0, 2 ) >0)?true:false ;
             }
             else if( t == 1 )
             {
@@ -137,30 +139,37 @@ namespace gv
                 _inhabited = true;
             }
         }
+
         public string Name
         {
             get { return _name; }
         }
+
         public string Type
         {
             get { return _type; }
         }
+
         public int Climate
         {
             get { return _climate; }
         }
+
         public string Surface
         {
             get { return _surface; }
         }
+
         public string Ressource
         {
             get { return _ressource; }
         }
+
         public bool Inhabited
         {
             get { return _inhabited; }
         }
+
         public string InhabitantsName
         {
             get
@@ -174,6 +183,18 @@ namespace gv
                     return "Inhabited planet";
                 }
             }
+        }
+
+        public int X
+        {
+            get { return _x; }
+            set { _x = value; }
+        }
+
+        public int Y
+        {
+            get { return _y; }
+            set { _y = value;  }
         }
     }
 }

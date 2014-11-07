@@ -6,22 +6,34 @@ namespace gv
 {
     public class Universe
     {
-        
+        public static readonly List<Planet> _planets = new List<Planet>();
+
         public Universe()
         {
-            CreateEarth();
+            Planet earth = CreateEarth();    
         }       
         public Planet AddPlanet()
         {
-            return new Planet();
+            Planet p = new Planet();
+            _planets.Add( p );
+            return p;
         }
         public Planet CreateEarth()
         {
-            return new Planet( false );
+            Planet earth  =  new Planet( false );
+            _planets.Add( earth );
+            return earth;
         }
         public Planet CreateEldorado()
         {
-            return new Planet( true );
+           Planet eldorado =  new Planet( true );
+           _planets.Add( eldorado );
+           return eldorado;
+        }
+
+        public static List<Planet> Planets
+        {
+            get { return _planets; }
         }
     }
 }
