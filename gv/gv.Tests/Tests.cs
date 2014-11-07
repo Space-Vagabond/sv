@@ -16,7 +16,7 @@ namespace gv.Tests
             Universe u = new Universe();
             for( i = 0; i < 100; i++ )
             {
-                Planet P = u.AddPlanet();
+                Planet P = Universe.AddPlanet();
                 Console.WriteLine( P.Name );
                 Assert.That( P.Name.Length <= 10 && P.Name.Length >= 8);
             }
@@ -30,7 +30,7 @@ namespace gv.Tests
 
             for( i = 0; i < 100; i++ )
             {
-                Planet P = u.AddPlanet();
+                Planet P = Universe.AddPlanet();
                 Assert.That( PlanetAttributes.PlanetTypes.Contains( P.Type ) );
                 Console.WriteLine( P.Type );
             }
@@ -49,7 +49,7 @@ namespace gv.Tests
 
             for( i = 0; i < 100; i++ )
             {
-                Planet P = u.AddPlanet();
+                Planet P = Universe.AddPlanet();
                 count[PlanetAttributes.PlanetTypes.IndexOf(P.Type)] += 1 ;
                 
             }
@@ -66,7 +66,7 @@ namespace gv.Tests
 
             for( i = 0; i < 100; i++ )
             {
-                Planet P = u.AddPlanet();
+                Planet P = Universe.AddPlanet();
                 Console.WriteLine( i );
                 Console.WriteLine("type: "+P.Type+ "Surface: "+ P.Surface+" Ressource: "+P.Ressource);
                 if( P.Type == PlanetAttributes.PlanetTypes[0] )
