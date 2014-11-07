@@ -10,8 +10,7 @@ namespace gv
 
         public Universe()
         {
-            Planet earth = CreateEarth();
-            
+            Planet earth = CreateEarth();    
         }       
         public Planet AddPlanet()
         {

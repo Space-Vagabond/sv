@@ -6,7 +6,7 @@ namespace gv
     public class PlanetAttributes
     {
        internal static readonly List<string> _planetTypes = new List<string>()
-            {
+       {
                 "Telluric Silicat" ,
                 "Telluric Carbon" ,
                 "Telluric Metal" ,
@@ -17,7 +17,7 @@ namespace gv
                 "Gazeous Hydrogen" ,
                 "Gazeous Helium" ,
                 "Chthonian"
-                };
+        };
         internal static readonly List<string> _planetSurfaces = new List<string>()
         {
             "Lava",

@@ -106,7 +106,7 @@ namespace gv
             if( t == 0 || t == 6 )
             {
                 _ressource = PlanetAttributes.PlanetRessource( 0 );
-                _inhabited = (rand.Next(0,2) >0)?true:false ;
+                _inhabited = (rand.Next( 0, 2 ) >0)?true:false ;
             }
             else if( t == 1 )
             {
@@ -188,11 +188,13 @@ namespace gv
         public int X
         {
             get { return _x; }
+            set { _x = value; }
         }
 
         public int Y
         {
             get { return _y; }
+            set { _y = value;  }
         }
     }
 }

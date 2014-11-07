@@ -35,12 +35,19 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(126, 682);
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Chocolate;
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Orator Std", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Chartreuse;
+            this.button1.Location = new System.Drawing.Point(24, 664);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 27);
+            this.button1.Size = new System.Drawing.Size(130, 45);
             this.button1.TabIndex = 0;
             this.button1.Text = "Show Map";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // map
@@ -51,7 +58,7 @@
             this.map.Cursor = System.Windows.Forms.Cursors.Cross;
             this.map.Location = new System.Drawing.Point(24, 33);
             this.map.Name = "map";
-            this.map.Size = new System.Drawing.Size(404, 403);
+            this.map.Size = new System.Drawing.Size(609, 606);
             this.map.TabIndex = 1;
             // 
             // Form_GV_01
