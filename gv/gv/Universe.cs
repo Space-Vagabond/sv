@@ -6,14 +6,19 @@ namespace gv
 {
     public class Universe
     {
-        
+        public static Random rand = new Random();
         public Universe()
         {
             CreateEarth();
         }       
-        public Planet AddPlanet()
+        public static Planet AddPlanet()
+
         {
             return new Planet();
+        }
+        public static Planet AddPlanet(Point position)
+        {
+            return new Planet(position);
         }
         public Planet CreateEarth()
         {

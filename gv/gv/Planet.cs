@@ -16,22 +16,27 @@ namespace gv
          string _inhabitantsName;
          Point _position;
 
-        Random rand = new Random();
 
         internal Planet()
         {
             planetNumber++;
             TextGenerator NameGen = new TextGenerator(WordTypes.Name);
-            int n =  rand.Next( 6, 9 ); 
+            int n =  Universe.rand.Next( 6, 9 ); 
             
             _name = NameGen.GenerateWord( n );
             _inhabitantsName = _name + "ians";
             _name = _name + "us";
 
-            int t = rand.Next( 0, 10 );
+            int t = Universe.rand.Next( 0, 10 );
             _type = PlanetAttributes.PlanetType(t);
 
             GeneratePlanetAttributes( t );
+            
+        }
+        internal Planet( Point Pos )
+            :this()
+        {
+            _position = Pos;
             
         }
         internal Planet(bool type)
@@ -93,8 +98,8 @@ namespace gv
             }
             else
             {
-                _surface = PlanetAttributes.PlanetSurface( rand.Next( 5, 9 ) );
-                _climate = rand.Next( -1, 2 );
+                _surface = PlanetAttributes.PlanetSurface( Universe.rand.Next( 5, 9 ) );
+                _climate = Universe.rand.Next( -1, 2 );
             }
         }
         void GenerateRessourcesAndHabitants( int t )
@@ -102,31 +107,31 @@ namespace gv
             if( t == 0 || t == 6 )
             {
                 _ressource = PlanetAttributes.PlanetRessource( 0 );
-                _inhabited = (rand.Next(0,2) >0)?true:false ;
+                _inhabited = (Universe.rand.Next(0,2) >0)?true:false ;
             }
             else if( t == 1 )
             {
                 _ressource = PlanetAttributes.PlanetRessource( 1 );
-                _inhabited = (rand.Next( 0, 2 ) > 0) ? true : false;
+                _inhabited = (Universe.rand.Next( 0, 2 ) > 0) ? true : false;
             }
             else if( t == 2 )
             {
                 _ressource = PlanetAttributes.PlanetRessource( 3 );
-                _inhabited = (rand.Next( 0, 2 ) > 0) ? true : false;
+                _inhabited = (Universe.rand.Next( 0, 2 ) > 0) ? true : false;
             }
             else if( t == 7 )
             {
                 _ressource = PlanetAttributes.PlanetRessource( 4 );
-                _inhabited = (rand.Next( 0, 2 ) > 0) ? true : false;
+                _inhabited = (Universe.rand.Next( 0, 2 ) > 0) ? true : false;
             }
             else if( t == 8 )
             {
                 _ressource = PlanetAttributes.PlanetRessource( 5 );
-                _inhabited = (rand.Next( 0, 2 ) > 0) ? true : false;
+                _inhabited = (Universe.rand.Next( 0, 2 ) > 0) ? true : false;
             }
             else if( t == 9 )
             {
-                _ressource = PlanetAttributes.PlanetRessource( rand.Next(1,3));
+                _ressource = PlanetAttributes.PlanetRessource( Universe.rand.Next(1,3));
                 _inhabited = false;
             }
             else
@@ -172,6 +177,10 @@ namespace gv
                     return "Inhabited planet";
                 }
             }
+        }
+        public Point Position
+        {
+            get { return _position; }
         }
     }
 }
