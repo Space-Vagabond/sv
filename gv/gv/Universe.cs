@@ -9,10 +9,10 @@ namespace gv
         static readonly List<Planet> _planets = new List<Planet>();
         public static readonly List<Chunk> _chunks = new List<Chunk>();
         public static Random rand = new Random();
-        
+        public static Player _p = new Player();
+
         public Universe()
         {
-            Player p = new Player();
             CreateEarth();
             for( int i = -1; i < 1; i++ )
             {

@@ -71,13 +71,15 @@
             this.up.FlatAppearance.BorderSize = 2;
             this.up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.up.Font = new System.Drawing.Font("Orator Std", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.up.ForeColor = System.Drawing.Color.Orange;
-            this.up.Location = new System.Drawing.Point(259, 645);
+            this.up.ForeColor = System.Drawing.Color.Linen;
+            this.up.Location = new System.Drawing.Point(257, 643);
+            this.up.Margin = new System.Windows.Forms.Padding(1);
             this.up.Name = "up";
-            this.up.Size = new System.Drawing.Size(75, 27);
+            this.up.Size = new System.Drawing.Size(75, 39);
             this.up.TabIndex = 2;
             this.up.Text = "Up";
             this.up.UseVisualStyleBackColor = false;
+            this.up.Click += new System.EventHandler(this.up_Click);
             // 
             // down
             // 
@@ -85,13 +87,15 @@
             this.down.FlatAppearance.BorderSize = 2;
             this.down.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.down.Font = new System.Drawing.Font("Orator Std", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.down.ForeColor = System.Drawing.Color.Orange;
-            this.down.Location = new System.Drawing.Point(259, 682);
+            this.down.ForeColor = System.Drawing.Color.Linen;
+            this.down.Location = new System.Drawing.Point(257, 684);
+            this.down.Margin = new System.Windows.Forms.Padding(1);
             this.down.Name = "down";
-            this.down.Size = new System.Drawing.Size(75, 27);
+            this.down.Size = new System.Drawing.Size(75, 37);
             this.down.TabIndex = 3;
             this.down.Text = "Down";
             this.down.UseVisualStyleBackColor = false;
+            this.down.Click += new System.EventHandler(this.down_Click);
             // 
             // left
             // 
@@ -99,13 +103,15 @@
             this.left.FlatAppearance.BorderSize = 2;
             this.left.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.left.Font = new System.Drawing.Font("Orator Std", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.left.ForeColor = System.Drawing.Color.Orange;
-            this.left.Location = new System.Drawing.Point(178, 664);
+            this.left.ForeColor = System.Drawing.Color.Linen;
+            this.left.Location = new System.Drawing.Point(180, 664);
+            this.left.Margin = new System.Windows.Forms.Padding(1);
             this.left.Name = "left";
-            this.left.Size = new System.Drawing.Size(75, 27);
+            this.left.Size = new System.Drawing.Size(75, 35);
             this.left.TabIndex = 4;
             this.left.Text = "left";
             this.left.UseVisualStyleBackColor = false;
+            this.left.Click += new System.EventHandler(this.left_Click);
             // 
             // right
             // 
@@ -113,13 +119,15 @@
             this.right.FlatAppearance.BorderSize = 2;
             this.right.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.right.Font = new System.Drawing.Font("Orator Std", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.right.ForeColor = System.Drawing.Color.Orange;
-            this.right.Location = new System.Drawing.Point(340, 664);
+            this.right.ForeColor = System.Drawing.Color.Linen;
+            this.right.Location = new System.Drawing.Point(334, 664);
+            this.right.Margin = new System.Windows.Forms.Padding(1);
             this.right.Name = "right";
-            this.right.Size = new System.Drawing.Size(75, 27);
+            this.right.Size = new System.Drawing.Size(83, 35);
             this.right.TabIndex = 5;
             this.right.Text = "right";
             this.right.UseVisualStyleBackColor = false;
+            this.right.Click += new System.EventHandler(this.right_Click);
             // 
             // Form_GV_01
             // 

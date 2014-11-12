@@ -9,8 +9,8 @@ namespace gv
     /// </summary>
     public struct Position
     {
-        public readonly int X;
-        public readonly int Y;
+        public int X;
+        public int Y;
 
         public Position( int x, int y )
         {
@@ -22,5 +22,7 @@ namespace gv
         {
             return new Position( destination.X , destination.Y );
         }
+
+
     }
 }
