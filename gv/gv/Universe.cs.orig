@@ -6,8 +6,12 @@ namespace gv
 {
     public class Universe
     {
-        static readonly List<Planet> _planets = new List<Planet>();
+<<<<<<< HEAD
+        public static readonly List<Planet> _planets = new List<Planet>();
         public static readonly List<Chunk> _chunks = new List<Chunk>();
+=======
+        static readonly List<Planet> _planets = new List<Planet>();
+>>>>>>> bd1d44070fe0278f4afd9d48ccfc0a81c716f2d3
         public static Random rand = new Random();
         
         public Universe()
@@ -18,7 +22,7 @@ namespace gv
             {
                 for( int j = -1; j < 1; j++ )
                 {
-                    Chunk c = new Chunk( new Position( i * 10, j * 10 ) );
+                    Chunk c = new Chunk( new Point( i * 10, j * 10 ) );
                     _chunks.Add( c );
                 }
             }   
