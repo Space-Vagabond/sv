@@ -10,17 +10,16 @@ namespace gv
 
         public Chunk( Point Begining )
         {
-            Cell c;
-
             _position = Begining;
-            for( int i = 0; i < 5; i++ )
+            for( int i = 0; i < 10; i++ )
             {
-                for (int j = 0; j < 5; j++)
+                for (int j = 0; j < 10; j++)
 			    {
-                    c = new Cell(new Point(Begining.X+i, Begining.Y+j));
+                    Cell c = new Cell( new Point( Begining.X + i, Begining.Y + j ) );
                     _cells.Add( c );
                 }
-			}           
+			}
+            InitializeCells();
         }
         void InitializeCells()
         {
@@ -31,6 +30,10 @@ namespace gv
                 if( planetCounter <= 8 )
                 {
                     c.ContainsPlanet = ((Universe.rand.Next( 0, 2 ) > 0) ? true : false);
+                    if( c.ContainsPlanet )
+                    {
+                        c.AddPlanet();
+                    }
                 }
                 else
                 {

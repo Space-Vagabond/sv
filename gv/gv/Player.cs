@@ -14,7 +14,7 @@ namespace gv
         int _remainingSteps;
 
 
-        Player()
+       public Player()
         {
             _position = new Point( 0, 0 );
             _speed = 4;
