@@ -21,5 +21,10 @@ namespace gv
             get { return _containsPlanet; }
             set { _containsPlanet = value; }
         }
+        public Point Position
+        {
+            get { return _position; }
+            set { _position = value; }
+        }
     }
 }
