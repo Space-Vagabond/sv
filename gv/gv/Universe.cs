@@ -6,7 +6,7 @@ namespace gv
 {
     public class Universe
     {
-        public static readonly List<Planet> _planets = new List<Planet>();
+        static readonly List<Planet> _planets = new List<Planet>();
         public static Random rand = new Random();
         public Universe()
         {
@@ -17,17 +17,21 @@ namespace gv
         {
             return new Planet();
         }
-        public static Planet AddPlanet(Point position)
+        public static Planet AddPlanet(Position position)
         {
             return new Planet(position);
         }
         public Planet CreateEarth()
         {
-            return new Planet( false );
+            Planet earth = new Planet( false );
+            _planets.Add( earth );
+            return earth;
         }
         public Planet CreateEldorado()
         {
-            return new Planet( true );
+            Planet eldorado =  new Planet( true );
+            _planets.Add( eldorado );
+            return eldorado;
         }
         public static List<Planet> Planets
         {
