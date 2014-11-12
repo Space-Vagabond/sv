@@ -5,10 +5,10 @@ namespace gv
 {
     class Cell
     {
-        Point _position;
+        Position _position;
         bool _containsPlanet;
 
-        public Cell( Point Pos )
+        public Cell( Position Pos )
         {
             _position = Pos;
         }

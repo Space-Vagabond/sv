@@ -8,7 +8,7 @@ namespace gv
 {
     public class Player
     {
-        Point _position;
+        Position _position;
         bool _canMove;
         int _speed;
         int _remainingSteps;
@@ -16,12 +16,12 @@ namespace gv
 
        public Player()
         {
-            _position = new Point( 0, 0 );
+            _position = new Position( 0, 0 );
             _speed = 4;
             _canMove = true;
             _remainingSteps = _speed;
         }
-        public void MovePlayer( Point destination )
+        public void MovePlayer( Position destination )
         {
             int _movedX;
             int _movedY;
@@ -46,7 +46,7 @@ namespace gv
             get { return _speed; }
             set { _speed = value; }
         }
-        public Point Position
+        public Position Position
         {
             get { return _position; }
             set { _position = value; }
