@@ -10,6 +10,6 @@ C:\myGit\sv\gv\gv\bin\Debug\gv.dll
 C:\myGit\sv\gv\gv\bin\Debug\gv.pdb
 C:\myGit\sv\gv\gv\bin\Debug\FakeTextGenerator.dll
 C:\myGit\sv\gv\gv\bin\Debug\FakeTextGenerator.pdb
-C:\myGit\sv\gv\gv\obj\Debug\gv.csprojResolveAssemblyReference.cache
 C:\myGit\sv\gv\gv\obj\Debug\gv.dll
 C:\myGit\sv\gv\gv\obj\Debug\gv.pdb
+C:\myGit\sv\gv\gv\obj\Debug\gv.csprojResolveAssemblyReference.cache

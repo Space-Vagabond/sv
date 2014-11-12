@@ -5,10 +5,10 @@ namespace gv
 {
     public class Chunk
     {
-        Point _position;
+        Position _position;
         List<Cell>  _cells = new List<Cell>();
 
-        public Chunk( Point Begining )
+        public Chunk( Position Begining )
         {
             Cell c;
 
@@ -17,7 +17,7 @@ namespace gv
             {
                 for (int j = 0; j < 5; j++)
 			    {
-                    c = new Cell(new Point(Begining.X+i, Begining.Y+j));
+                    c = new Cell(new Position(Begining.X+i, Begining.Y+j));
                     _cells.Add( c );
                 }
 			}           

@@ -7,20 +7,20 @@ namespace gv
     /// Two dimensional immutable point.
     /// Coordinates are in cells.
     /// </summary>
-    public struct Point
+    public struct Position
     {
         public readonly int X;
         public readonly int Y;
 
-        public Point( int x, int y )
+        public Position( int x, int y )
         {
             X = x;
             Y = y;
         }
 
-        public Point Move( Point destination )
+        public Position Move( Position destination )
         {
-            return new Point( destination.X , destination.Y );
+            return new Position( destination.X , destination.Y );
         }
     }
 }

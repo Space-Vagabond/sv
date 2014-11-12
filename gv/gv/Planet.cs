@@ -14,7 +14,7 @@ namespace gv
          string _ressource; 
          bool _inhabited; 
          string _inhabitantsName;
-         Point _position;
+         Position _position;
 
 
         internal Planet()
@@ -33,7 +33,7 @@ namespace gv
             GeneratePlanetAttributes( t );
             
         }
-        internal Planet( Point Pos )
+        internal Planet( Position Pos )
             :this()
         {
             _position = Pos;
@@ -50,7 +50,7 @@ namespace gv
                 _ressource = PlanetAttributes.PlanetRessource( 6 );
                 _inhabited = false;
                 _inhabitantsName = "Terrians";
-                _position = new Point(0, 0);
+                _position = new Position(0, 0);
             }
             else
             {
@@ -178,7 +178,7 @@ namespace gv
                 }
             }
         }
-        public Point Position
+        public Position Position
         {
             get { return _position; }
         }
