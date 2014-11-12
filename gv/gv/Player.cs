@@ -30,6 +30,7 @@ namespace gv
             _movedX = Math.Max( _position.X, destination.X ) - Math.Min( _position.X, destination.X );
             _movedY = Math.Max( _position.Y, destination.Y ) - Math.Min( _position.Y, destination.Y );
             _movedOf = _movedX + _movedY;
+
             if( _movedOf <= _remainingSteps && _canMove == true )
             {
                 _position = _position.Move( destination );
@@ -41,6 +42,9 @@ namespace gv
             }
 
         }
+
+        
+
         public int Speed
         {
             get { return _speed; }
@@ -56,6 +60,16 @@ namespace gv
             get { return _remainingSteps; }
             set { _remainingSteps = value; }
         }
- 
+        public int X
+        {
+            get { return _position.X; }
+            set { _position.X = value; }
+        }
+
+        public int Y
+        {
+            get { return _position.Y; }
+            set { _position.Y = value; }
+        }
     }
 }
