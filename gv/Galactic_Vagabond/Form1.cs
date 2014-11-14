@@ -41,6 +41,7 @@ namespace Galactic_Vagabond
             Font drawFont = new Font( "Verdana", 12 );
             SolidBrush drawBrush = new SolidBrush( Color.Cyan );
             SolidBrush drawPlayer = new SolidBrush( Color.Red );
+            ShowCurrentPlanet(this, EventArgs.Empty);
             map.Refresh();
 
             foreach( Planet pl in Universe.Planets )
@@ -162,6 +163,38 @@ namespace Galactic_Vagabond
             button1_Click( this, EventArgs.Empty );
         }
 
+        private void ShowCurrentPlanet( object sender, EventArgs e )
+        {
+            List<object> caracs = new List<object>();
+            foreach( Planet pl in Universe.Planets )
+            {
+                if( Universe._p.X == pl.Position.X && Universe._p.Y == pl.Position.Y )
+                {
+                  
+                  CurrentPlanet.Refresh();
+                  
+                  caracs.Add("Name: "+ pl.Name);
+                  caracs.Add("Type: "+ pl.Type );
+                  caracs.Add("Climate: " + pl.Climate );
+                  caracs.Add("Surface: "+ pl.Surface );
+                  caracs.Add("Resources: "+ pl.Ressource );
+                  caracs.Add("Inhabitants: "+ pl.InhabitantsName );
+                  
+                  CurrentPlanet.DataSource = caracs;
+                }
+                else
+                {
+                  caracs.Add("You are not on a planet");
+                  CurrentPlanet.DataSource = caracs;
+                }
+            }
+        }
+
+       
+
+        
+        
+
 
 
 
@@ -174,6 +207,5 @@ namespace Galactic_Vagabond
            
 
             
-        
-    }
+   }
 }

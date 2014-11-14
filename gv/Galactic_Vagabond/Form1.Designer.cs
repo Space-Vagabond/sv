@@ -35,6 +35,7 @@
             this.down = new System.Windows.Forms.Button();
             this.left = new System.Windows.Forms.Button();
             this.right = new System.Windows.Forms.Button();
+            this.CurrentPlanet = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // button1
@@ -129,6 +130,19 @@
             this.right.UseVisualStyleBackColor = false;
             this.right.Click += new System.EventHandler(this.right_Click);
             // 
+            // CurrentPlanet
+            // 
+            this.CurrentPlanet.BackColor = System.Drawing.Color.Black;
+            this.CurrentPlanet.Font = new System.Drawing.Font("Orator Std", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentPlanet.ForeColor = System.Drawing.Color.Azure;
+            this.CurrentPlanet.FormattingEnabled = true;
+            this.CurrentPlanet.ItemHeight = 17;
+            this.CurrentPlanet.Location = new System.Drawing.Point(671, 33);
+            this.CurrentPlanet.Name = "CurrentPlanet";
+            this.CurrentPlanet.Size = new System.Drawing.Size(516, 208);
+            this.CurrentPlanet.TabIndex = 7;
+            this.CurrentPlanet.Click += new System.EventHandler(this.ShowCurrentPlanet);
+            // 
             // Form_GV_01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -136,6 +150,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1264, 721);
+            this.Controls.Add(this.CurrentPlanet);
             this.Controls.Add(this.right);
             this.Controls.Add(this.left);
             this.Controls.Add(this.down);
@@ -158,6 +173,7 @@
         private System.Windows.Forms.Button down;
         private System.Windows.Forms.Button left;
         private System.Windows.Forms.Button right;
+        private System.Windows.Forms.ListBox CurrentPlanet;
 
 
 
