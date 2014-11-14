@@ -40,6 +40,12 @@ namespace gv
             "Helium",
             "none"
         };
+        internal static readonly List<string> _planetClimates = new List<string>()
+        {
+            "Cold",
+            "Temperate",
+            "Hot"
+        };
         internal static string PlanetType(int i)
         {
             return _planetTypes[i] ;
@@ -64,6 +70,14 @@ namespace gv
         public static List<string> PlanetRessources
         {
             get { return _planetRessources; }
+        }
+        internal static string PlanetClimate( int i )
+        {
+            return _planetClimates[i];
+        }
+        public static List<string> PlanetClimates
+        {
+            get { return _planetClimates; }
         }
     }
     
