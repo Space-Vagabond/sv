@@ -45,7 +45,7 @@ namespace gv
             {
                 _name = "Earth";
                 _type = "Destroyed";
-                PlanetAttributes.PlanetClimate(1);
+                _climate = PlanetAttributes.PlanetClimate(1);
                 _surface = "Ravaged";
                 _ressource = PlanetAttributes.PlanetRessource( 6 );
                 _inhabited = false;
@@ -56,7 +56,7 @@ namespace gv
             {
                 _name = "Eldorado";
                 _type = "Promised Land";
-                PlanetAttributes.PlanetClimate(1);
+                _climate = PlanetAttributes.PlanetClimate(1);
                 _surface = "Golden";
                 _ressource = PlanetAttributes.PlanetRessource( 6 );
                 _inhabited = false;
@@ -74,27 +74,27 @@ namespace gv
             if( t == 3 )
             {
                 _surface = PlanetAttributes.PlanetSurface( 0 );
-                PlanetAttributes.PlanetClimate(2);
+                _climate = PlanetAttributes.PlanetClimate(2);
             }
             else if( t == 6 )
             {
                 _surface = PlanetAttributes.PlanetSurface( 1 );
-                PlanetAttributes.PlanetClimate(2);
+                _climate = PlanetAttributes.PlanetClimate( 2 );
             }
             else if( t == 9 )
             {
                 _surface = PlanetAttributes.PlanetSurface( 2 );
-                PlanetAttributes.PlanetClimate(2);
+                _climate = PlanetAttributes.PlanetClimate( 2 );
             }
             else if( t == 8 || t == 7 )
             {
                 _surface = PlanetAttributes.PlanetSurface( 4 );
-                PlanetAttributes.PlanetClimate(0);
+                _climate = PlanetAttributes.PlanetClimate( 0 );
             }
             else if( t == 4 )
             {
                 _surface = PlanetAttributes.PlanetSurface( 3 );
-                PlanetAttributes.PlanetClimate(0);
+                _climate = PlanetAttributes.PlanetClimate( 0 );
             }
             else
             {
