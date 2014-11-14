@@ -133,13 +133,16 @@
             // CurrentPlanet
             // 
             this.CurrentPlanet.BackColor = System.Drawing.Color.Black;
+            this.CurrentPlanet.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CurrentPlanet.Cursor = System.Windows.Forms.Cursors.Cross;
             this.CurrentPlanet.Font = new System.Drawing.Font("Orator Std", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentPlanet.ForeColor = System.Drawing.Color.Azure;
+            this.CurrentPlanet.ForeColor = System.Drawing.Color.LightGreen;
             this.CurrentPlanet.FormattingEnabled = true;
             this.CurrentPlanet.ItemHeight = 17;
             this.CurrentPlanet.Location = new System.Drawing.Point(671, 33);
             this.CurrentPlanet.Name = "CurrentPlanet";
-            this.CurrentPlanet.Size = new System.Drawing.Size(516, 208);
+            this.CurrentPlanet.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.CurrentPlanet.Size = new System.Drawing.Size(516, 204);
             this.CurrentPlanet.TabIndex = 7;
             this.CurrentPlanet.Click += new System.EventHandler(this.ShowCurrentPlanet);
             // 

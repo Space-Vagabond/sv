@@ -166,6 +166,7 @@ namespace Galactic_Vagabond
         private void ShowCurrentPlanet( object sender, EventArgs e )
         {
             List<object> caracs = new List<object>();
+            
             foreach( Planet pl in Universe.Planets )
             {
                 if( Universe._p.X == pl.Position.X && Universe._p.Y == pl.Position.Y )
@@ -184,7 +185,7 @@ namespace Galactic_Vagabond
                 }
                 else
                 {
-                  caracs.Add("You are not on a planet");
+                  caracs.Add("No planet to interact with");
                   CurrentPlanet.DataSource = caracs;
                 }
             }
