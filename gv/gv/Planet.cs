@@ -9,7 +9,7 @@ namespace gv
          string _name;
          static int planetNumber = 0;
          string _type;
-         int _climate;
+         string _climate;
          string _surface;
          string _ressource; 
          bool _inhabited; 
@@ -45,7 +45,7 @@ namespace gv
             {
                 _name = "Earth";
                 _type = "Destroyed";
-                _climate = 0;
+                PlanetAttributes.PlanetClimate(1);
                 _surface = "Ravaged";
                 _ressource = PlanetAttributes.PlanetRessource( 6 );
                 _inhabited = false;
@@ -56,7 +56,7 @@ namespace gv
             {
                 _name = "Eldorado";
                 _type = "Promised Land";
-                _climate = 0;
+                PlanetAttributes.PlanetClimate(1);
                 _surface = "Golden";
                 _ressource = PlanetAttributes.PlanetRessource( 6 );
                 _inhabited = false;
@@ -74,32 +74,32 @@ namespace gv
             if( t == 3 )
             {
                 _surface = PlanetAttributes.PlanetSurface( 0 );
-                _climate = 1;
+                PlanetAttributes.PlanetClimate(2);
             }
             else if( t == 6 )
             {
                 _surface = PlanetAttributes.PlanetSurface( 1 );
-                _climate = 1;
+                PlanetAttributes.PlanetClimate(2);
             }
             else if( t == 9 )
             {
                 _surface = PlanetAttributes.PlanetSurface( 2 );
-                _climate = 1;
+                PlanetAttributes.PlanetClimate(2);
             }
             else if( t == 8 || t == 7 )
             {
                 _surface = PlanetAttributes.PlanetSurface( 4 );
-                _climate = -1;
+                PlanetAttributes.PlanetClimate(0);
             }
             else if( t == 4 )
             {
                 _surface = PlanetAttributes.PlanetSurface( 3 );
-                _climate = -1;
+                PlanetAttributes.PlanetClimate(0);
             }
             else
             {
                 _surface = PlanetAttributes.PlanetSurface( Universe.rand.Next( 5, 9 ) );
-                _climate = Universe.rand.Next( -1, 2 );
+                _climate = PlanetAttributes.PlanetClimate(Universe.rand.Next( 0, 3 ));
             }
         }
         void GenerateRessourcesAndHabitants( int t )
@@ -148,7 +148,7 @@ namespace gv
         {
             get { return _type; }
         }
-        public int Climate
+        public string Climate
         {
             get { return _climate; }
         }
