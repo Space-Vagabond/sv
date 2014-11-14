@@ -136,7 +136,7 @@
             this.CurrentPlanet.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.CurrentPlanet.Cursor = System.Windows.Forms.Cursors.Cross;
             this.CurrentPlanet.Font = new System.Drawing.Font("Orator Std", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentPlanet.ForeColor = System.Drawing.Color.LightGreen;
+            this.CurrentPlanet.ForeColor = System.Drawing.Color.Yellow;
             this.CurrentPlanet.FormattingEnabled = true;
             this.CurrentPlanet.ItemHeight = 17;
             this.CurrentPlanet.Location = new System.Drawing.Point(671, 33);
