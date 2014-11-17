@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FakeTextGenerator.1.0.1.0.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:ET.FakeText.Fakes.ShimCorpus">
+            <summary>Shim type of ET.FakeText.Corpus</summary>
+        </member>
+        <member name="M:ET.FakeText.Fakes.ShimCorpus.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:ET.FakeText.Fakes.ShimCorpus.#ctor(ET.FakeText.Corpus)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:ET.FakeText.Fakes.ShimCorpus.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ET.FakeText.Fakes.ShimCorpus.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimCorpus.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimCorpus.CharCountGet">
+            <summary>Sets the shim of Corpus.get_CharCount()</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimCorpus.CharCountSetInt32">
+            <summary>Sets the shim of Corpus.set_CharCount(Int32 value)</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimCorpus.Constructor">
+            <summary>Sets the shim of Corpus.Corpus()</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimCorpus.CreateFromTextString">
+            <summary>Sets the shim of Corpus.CreateFromText(String text)</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimCorpus.DeserializeFromEmbeddedResourceString">
+            <summary>Sets the shim of Corpus.DeserializeFromEmbeddedResource(String name)</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimCorpus.DeserializeFromFileString">
+            <summary>Sets the shim of Corpus.DeserializeFromFile(String fileName)</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimCorpus.LettersGet">
+            <summary>Sets the shim of Corpus.get_Letters()</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimCorpus.SerializeToFileString">
+            <summary>Sets the shim of Corpus.SerializeToFile(String fileName)</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimCorpus.WordCountGet">
+            <summary>Sets the shim of Corpus.get_WordCount()</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimCorpus.WordCountSetInt32">
+            <summary>Sets the shim of Corpus.set_WordCount(Int32 value)</summary>
+        </member>
+        <member name="T:ET.FakeText.Fakes.ShimCorpus.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimCorpus.AllInstances.CharCountGet">
+            <summary>Sets the shim of Corpus.get_CharCount()</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimCorpus.AllInstances.CharCountSetInt32">
+            <summary>Sets the shim of Corpus.set_CharCount(Int32 value)</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimCorpus.AllInstances.LettersGet">
+            <summary>Sets the shim of Corpus.get_Letters()</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimCorpus.AllInstances.SerializeToFileString">
+            <summary>Sets the shim of Corpus.SerializeToFile(String fileName)</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimCorpus.AllInstances.WordCountGet">
+            <summary>Sets the shim of Corpus.get_WordCount()</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimCorpus.AllInstances.WordCountSetInt32">
+            <summary>Sets the shim of Corpus.set_WordCount(Int32 value)</summary>
+        </member>
+        <member name="T:ET.FakeText.Fakes.ShimLetterStats">
+            <summary>Shim type of ET.FakeText.LetterStats</summary>
+        </member>
+        <member name="M:ET.FakeText.Fakes.ShimLetterStats.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:ET.FakeText.Fakes.ShimLetterStats.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ET.FakeText.Fakes.ShimLetterStats.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimLetterStats.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:ET.FakeText.Fakes.ShimLetterStats.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:ET.FakeText.Fakes.ShimTextGenerator">
+            <summary>Shim type of ET.FakeText.TextGenerator</summary>
+        </member>
+        <member name="M:ET.FakeText.Fakes.ShimTextGenerator.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:ET.FakeText.Fakes.ShimTextGenerator.#ctor(ET.FakeText.TextGenerator)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:ET.FakeText.Fakes.ShimTextGenerator.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ET.FakeText.Fakes.ShimTextGenerator.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimTextGenerator.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimTextGenerator.ConstructorCorpus">
+            <summary>Sets the shim of TextGenerator.TextGenerator(Corpus corpus)</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimTextGenerator.ConstructorWordTypes">
+            <summary>Sets the shim of TextGenerator.TextGenerator(WordTypes wordType)</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimTextGenerator.GenerateTextInt32">
+            <summary>Sets the shim of TextGenerator.GenerateText(Int32 wordCount)</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimTextGenerator.GenerateWordInt32">
+            <summary>Sets the shim of TextGenerator.GenerateWord(Int32 length)</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimTextGenerator.GetRandomCachedWord">
+            <summary>Sets the shim of TextGenerator.GetRandomCachedWord()</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimTextGenerator.MaxSentenceLengthGet">
+            <summary>Sets the shim of TextGenerator.get_MaxSentenceLength()</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimTextGenerator.MaxSentenceLengthSetInt32">
+            <summary>Sets the shim of TextGenerator.set_MaxSentenceLength(Int32 value)</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimTextGenerator.PickNextLetterCharArrayInt32">
+            <summary>Sets the shim of TextGenerator.PickNextLetter(Char[] prev2Letters, Int32 position)</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimTextGenerator.StaticConstructor">
+            <summary>Sets the shim of TextGenerator.TextGenerator()</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimTextGenerator._PickNextLetterb__1LetterStats">
+            <summary>Sets the shim of TextGenerator.&lt;PickNextLetter&gt;b__1(LetterStats x)</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimTextGenerator._PickNextLetterb__3LetterStats">
+            <summary>Sets the shim of TextGenerator.&lt;PickNextLetter&gt;b__3(LetterStats x)</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimTextGenerator._PickNextLetterb__4IGroupingOfCharLetterStatsInt32">
+            <summary>Sets the shim of TextGenerator.&lt;PickNextLetter&gt;b__4(IGrouping`2&lt;Char,LetterStats&gt; x, Int32 y)</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimTextGenerator._PickNextLetterb__5LetterStats">
+            <summary>Sets the shim of TextGenerator.&lt;PickNextLetter&gt;b__5(LetterStats o)</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimTextGenerator._PickNextLetterb__8LetterStats">
+            <summary>Sets the shim of TextGenerator.&lt;PickNextLetter&gt;b__8(LetterStats x)</summary>
+        </member>
+        <member name="T:ET.FakeText.Fakes.ShimTextGenerator.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimTextGenerator.AllInstances.GenerateTextInt32">
+            <summary>Sets the shim of TextGenerator.GenerateText(Int32 wordCount)</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimTextGenerator.AllInstances.GenerateWordInt32">
+            <summary>Sets the shim of TextGenerator.GenerateWord(Int32 length)</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimTextGenerator.AllInstances.GetRandomCachedWord">
+            <summary>Sets the shim of TextGenerator.GetRandomCachedWord()</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimTextGenerator.AllInstances.MaxSentenceLengthGet">
+            <summary>Sets the shim of TextGenerator.get_MaxSentenceLength()</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimTextGenerator.AllInstances.MaxSentenceLengthSetInt32">
+            <summary>Sets the shim of TextGenerator.set_MaxSentenceLength(Int32 value)</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.ShimTextGenerator.AllInstances.PickNextLetterCharArrayInt32">
+            <summary>Sets the shim of TextGenerator.PickNextLetter(Char[] prev2Letters, Int32 position)</summary>
+        </member>
+        <member name="T:ET.FakeText.Fakes.StubTextGenerator">
+            <summary>Stub type of ET.FakeText.TextGenerator</summary>
+        </member>
+        <member name="M:ET.FakeText.Fakes.StubTextGenerator.#ctor(ET.FakeText.WordTypes)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:ET.FakeText.Fakes.StubTextGenerator.#ctor(ET.FakeText.Corpus)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:ET.FakeText.Fakes.StubTextGenerator.InitializeStub">
+            <summary>Initializes a new instance of type StubTextGenerator</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.StubTextGenerator.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.StubTextGenerator.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:ET.FakeText.Fakes.StubTextGenerator.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+    </members>
+</doc>
