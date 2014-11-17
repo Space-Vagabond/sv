@@ -3,10 +3,11 @@ using System.Collections.Generic;
 
 namespace gv
 {
-    class Cell
+    public class Cell
     {
         Position _position;
         bool _containsPlanet;
+        Planet _planet;
 
         public Cell( Position Pos )
         {
@@ -14,8 +15,9 @@ namespace gv
         }
         public void AddPlanet()
         {
-            Universe.AddPlanet( _position );
+            _planet = Universe.AddPlanet();
         }
+
         public bool ContainsPlanet
         {
             get { return _containsPlanet; }
@@ -25,6 +27,11 @@ namespace gv
         {
             get { return _position; }
             set { _position = value; }
+        }
+        public Planet ContainedPlanet
+        {
+            get { return _planet; }
+            set { _planet = value; }
         }
     }
 }

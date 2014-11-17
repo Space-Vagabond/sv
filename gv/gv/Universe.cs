@@ -30,12 +30,6 @@ namespace gv
             _planets.Add(p);
             return p;
         }
-        public static Planet AddPlanet(Position position)
-        {
-            Planet p = new Planet(position);
-            _planets.Add( p );
-            return p;
-        }
         public static Planet CreateEarth()
         {
             Planet earth = new Planet( false );
@@ -56,5 +50,6 @@ namespace gv
         {
             get { return _chunks;}
         }
+        
     }
 }

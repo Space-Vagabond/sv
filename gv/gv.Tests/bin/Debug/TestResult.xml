@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv.Tests\bin\Debug\gv.Tests.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-11-17" time="09:30:38">
-  <environment nunit-version="2.6.3.13283" clr-version="4.0.30319.34014" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv.Tests\bin\Debug" machine-name="BENOITGIDON" user="BENOIT" user-domain="BENOITGIDON" />
+<test-results name="C:\myGit\sv\gv\gv.Tests\bin\Debug\gv.Tests.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-11-17" time="10:57:23">
+  <environment nunit-version="2.6.3.13283" clr-version="4.0.30319.34014" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\myGit\sv\gv\gv.Tests\bin\Debug" machine-name="ESCANDE" user="Damien" user-domain="Escande" />
   <culture-info current-culture="fr-FR" current-uiculture="fr-FR" />
-  <test-suite type="Assembly" name="C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv.Tests\bin\Debug\gv.Tests.dll" executed="True" result="Success" success="True" time="4.288" asserts="0">
+  <test-suite type="Assembly" name="C:\myGit\sv\gv\gv.Tests\bin\Debug\gv.Tests.dll" executed="True" result="Success" success="True" time="0.647" asserts="0">
     <results>
-      <test-suite type="Namespace" name="gv" executed="True" result="Success" success="True" time="4.246" asserts="0">
+      <test-suite type="Namespace" name="gv" executed="True" result="Success" success="True" time="0.619" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="4.245" asserts="0">
+          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="0.612" asserts="0">
             <results>
-              <test-suite type="TestFixture" name="Tests" executed="True" result="Success" success="True" time="4.238" asserts="0">
+              <test-suite type="TestFixture" name="Tests" executed="True" result="Success" success="True" time="0.608" asserts="0">
                 <results>
-                  <test-case name="gv.Tests.Tests.Planets_Pos_test" executed="True" result="Success" success="True" time="4.195" asserts="0" />
+                  <test-case name="gv.Tests.Tests.Earth_Position_Should_be_Equal_To_Player_Position" executed="True" result="Success" success="True" time="0.581" asserts="2" />
                 </results>
               </test-suite>
             </results>

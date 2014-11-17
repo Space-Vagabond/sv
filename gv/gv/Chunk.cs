@@ -6,7 +6,7 @@ namespace gv
     public class Chunk
     {
         Position _position;
-        List<Cell>  _cells = new List<Cell>();
+        public  static readonly List<Cell>  _cells = new List<Cell>();
 
         public Chunk( Position Begining )
         {
@@ -30,23 +30,27 @@ namespace gv
                 if( c.Position.X == 0 && c.Position.Y == 0 )
                 {
                     c.ContainsPlanet = true;
-                    Universe.CreateEarth();
+                    c.ContainedPlanet = Universe.CreateEarth();
+
                 }
-                else if( planetCounter <= 8 )
+                else if( planetCounter < 8 )
                 {
 
                     c.ContainsPlanet = ((Universe.rand.Next( 0, 2 ) > 0) ? true : false);
                     if( c.ContainsPlanet )
                     {
-                        planetCounter++;
                         c.AddPlanet();
+                        planetCounter++;
+                        
                     }
                 }
                 else
                 {
                     c.ContainsPlanet = false;
                 }
+
             }
         }
+        
     }
 }
