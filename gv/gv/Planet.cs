@@ -14,7 +14,6 @@ namespace gv
          string _ressource; 
          bool _inhabited; 
          string _inhabitantsName;
-         Position _position;
 
 
         internal Planet()
@@ -31,12 +30,7 @@ namespace gv
             _type = PlanetAttributes.PlanetType(t);
 
             GeneratePlanetAttributes( t );
-            
-        }
-        internal Planet( Position Pos )
-            :this()
-        {
-            _position = Pos;
+            return;
             
         }
         internal Planet(bool type)
@@ -51,7 +45,6 @@ namespace gv
                 _ressource = PlanetAttributes.PlanetRessource( 6 );
                 _inhabited = false;
                 _inhabitantsName = "Terrians";
-                _position = new Position(0, 0);
             }
             else
             {
@@ -179,9 +172,6 @@ namespace gv
                 }
             }
         }
-        public Position Position
-        {
-            get { return _position; }
-        }
+        
     }
 }

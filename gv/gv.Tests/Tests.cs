@@ -145,8 +145,25 @@ namespace gv.Tests
             Universe u = new Universe();
             foreach( Planet p in Universe.Planets )
             {
-                Console.WriteLine( "PositionX " + p.Position.X + "  Position Y  " + p.Position.Y );
+                //Console.WriteLine( "PositionX " + p.Position.X + "  Position Y  " + p.Position.Y );
             }
         }
+       /* [Test]
+        public void Earth_Position_Should_be_Equal_To_Player_Position()
+        {
+            Universe u = new Universe();
+            Assert.That( Universe._p.X == 0 && Universe._p.Y == 0 );
+            foreach( Planet p in Universe.Planets)
+            {
+                Console.WriteLine( p.Name +" X"+ p.Position.X +" Y"+ p.Position.Y );
+                if( p.Name == "Earth" )
+                {
+                    Assert.That( p.Position.X == 0 && p.Position.Y == 0 );
+                    Console.WriteLine( p.Type );
+                }
+
+            }
+            Console.WriteLine(" List len"+ Universe.Planets.Count);
+        }*/
     }
 }

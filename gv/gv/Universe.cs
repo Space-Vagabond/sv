@@ -8,6 +8,7 @@ namespace gv
     {
         static readonly List<Planet> _planets = new List<Planet>();
         public static readonly List<Chunk> _chunks = new List<Chunk>();
+        public static readonly List<Cell> _cells = new List<Cell>();
         public static Random rand = new Random();
         public static Player _p = new Player();
 
@@ -30,12 +31,6 @@ namespace gv
             _planets.Add(p);
             return p;
         }
-        public static Planet AddPlanet(Position position)
-        {
-            Planet p = new Planet(position);
-            _planets.Add( p );
-            return p;
-        }
         public static Planet CreateEarth()
         {
             Planet earth = new Planet( false );
@@ -56,5 +51,10 @@ namespace gv
         {
             get { return _chunks;}
         }
+        public static List<Cell> Cells
+        {
+            get { return _cells; }
+        }
+        
     }
 }
