@@ -8,6 +8,7 @@ namespace gv
     {
         static readonly List<Planet> _planets = new List<Planet>();
         public static readonly List<Chunk> _chunks = new List<Chunk>();
+        public static readonly List<Cell> _cells = new List<Cell>();
         public static Random rand = new Random();
         public static Player _p = new Player();
 
@@ -49,6 +50,10 @@ namespace gv
         public static List<Chunk> Chunks
         {
             get { return _chunks;}
+        }
+        public static List<Cell> Cells
+        {
+            get { return _cells; }
         }
         
     }

@@ -17,6 +17,7 @@ namespace gv
 			    {
                     Cell c = new Cell( new Position( Begining.X + i, Begining.Y + j ) );
                     _cells.Add( c );
+                    Universe.Cells.Add( c );
                 }
 			}
             InitializeCells();

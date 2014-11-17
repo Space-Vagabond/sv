@@ -179,34 +179,31 @@ namespace Galactic_Vagabond
         {
             List<object> caracs = new List<object>();
 
-             foreach( Chunk ch in Universe.Chunks )
+            IEnumerable<Cell> Req = from c in Universe.Cells
+                                    where c.Position.X == Universe._p.Position.X && c.Position.Y == Universe._p.Position.Y
+                                    select c;
+            foreach( Cell c in Req )
             {
-                foreach( Cell cl in ch._cells )
+                Cell pos = c;
+                if( pos.ContainsPlanet )
                 {
-                    if( cl.ContainsPlanet )
-                    {
-                        if( Universe._p.X == cl.Position.X  && Universe._p.Y == cl.Position.Y )
-                        {
-                            CurrentPlanet.Refresh();
+                    CurrentPlanet.Refresh();
 
-                            caracs.Add( "Name: " + cl.ContainedPlanet.Name );
-                            caracs.Add( "Type: " + cl.ContainedPlanet.Type );
-                            caracs.Add( "Climate: " + cl.ContainedPlanet.Climate );
-                            caracs.Add( "Surface: " + cl.ContainedPlanet.Surface );
-                            caracs.Add( "Resources: " + cl.ContainedPlanet.Ressource );
-                            caracs.Add( "Inhabitants: " + cl.ContainedPlanet.InhabitantsName );
-                        }
-                        CurrentPlanet.DataSource = caracs;  
-                    }
-                    else
-                    {
-                        caracs.Add( "No planet to interact with" );
-                        CurrentPlanet.DataSource = caracs;
-                    }
-                    
+                    caracs.Add( "Name: " + pos.ContainedPlanet.Name );
+                    caracs.Add( "Type: " + pos.ContainedPlanet.Type );
+                    caracs.Add( "Climate: " + pos.ContainedPlanet.Climate );
+                    caracs.Add( "Surface: " + pos.ContainedPlanet.Surface );
+                    caracs.Add( "Resources: " + pos.ContainedPlanet.Ressource );
+                    caracs.Add( "Inhabitants: " + pos.ContainedPlanet.InhabitantsName );
                 }
+                else
+                {
+                    caracs.Add( "No planet to interact with" );
+                }
+                CurrentPlanet.DataSource = caracs;
             }
 
+            
 
             
         }

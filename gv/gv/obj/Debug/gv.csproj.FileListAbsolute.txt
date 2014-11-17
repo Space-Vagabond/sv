@@ -12,3 +12,4 @@ C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv\bin\Debug\Microsoft.QualityToo
 C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv\bin\Debug\FakeTextGenerator.pdb
 C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv\obj\Debug\gv.dll
 C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv\obj\Debug\gv.pdb
+C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv\obj\Debug\gv.csprojResolveAssemblyReference.cache
