@@ -182,30 +182,24 @@ namespace Galactic_Vagabond
             IEnumerable<Cell> Req = from c in Universe.Cells
                                     where c.Position.X == Universe._p.Position.X && c.Position.Y == Universe._p.Position.Y
                                     select c;
-            foreach( Cell c in Req )
+
+            Cell pos = Req.First();
+            if( pos.ContainsPlanet )
             {
-                Cell pos = c;
-                if( pos.ContainsPlanet )
-                {
-                    CurrentPlanet.Refresh();
+                CurrentPlanet.Refresh();
 
-                    caracs.Add( "Name: " + pos.ContainedPlanet.Name );
-                    caracs.Add( "Type: " + pos.ContainedPlanet.Type );
-                    caracs.Add( "Climate: " + pos.ContainedPlanet.Climate );
-                    caracs.Add( "Surface: " + pos.ContainedPlanet.Surface );
-                    caracs.Add( "Resources: " + pos.ContainedPlanet.Ressource );
-                    caracs.Add( "Inhabitants: " + pos.ContainedPlanet.InhabitantsName );
-                }
-                else
-                {
-                    caracs.Add( "No planet to interact with" );
-                }
-                CurrentPlanet.DataSource = caracs;
+                caracs.Add( "Name: " + pos.ContainedPlanet.Name );
+                caracs.Add( "Type: " + pos.ContainedPlanet.Type );
+                caracs.Add( "Climate: " + pos.ContainedPlanet.Climate );
+                caracs.Add( "Surface: " + pos.ContainedPlanet.Surface );
+                caracs.Add( "Resources: " + pos.ContainedPlanet.Ressource );
+                caracs.Add( "Inhabitants: " + pos.ContainedPlanet.InhabitantsName );
             }
-
-            
-
-            
+            else
+            {
+                caracs.Add( "No planet to interact with" );
+            }
+            CurrentPlanet.DataSource = caracs;
         }
     }
 }

@@ -37,7 +37,7 @@ namespace gv
                 else if( planetCounter < 8 )
                 {
 
-                    c.ContainsPlanet = ((Universe.rand.Next( 0, 2 ) > 0) ? true : false);
+                    c.ContainsPlanet = ((Universe.rand.Next( 0, 9 ) == 0) ? true : false);
                     if( c.ContainsPlanet )
                     {
                         c.AddPlanet();
