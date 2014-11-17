@@ -47,6 +47,7 @@ namespace gv
                 _type = "Destroyed";
                 PlanetAttributes.PlanetClimate(1);
                 _surface = "Ravaged";
+                _climate = PlanetAttributes.PlanetClimate( 1 );
                 _ressource = PlanetAttributes.PlanetRessource( 6 );
                 _inhabited = false;
                 _inhabitantsName = "Terrians";

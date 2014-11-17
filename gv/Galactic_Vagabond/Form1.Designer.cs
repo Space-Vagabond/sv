@@ -47,9 +47,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Orator Std", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Chartreuse;
-            this.button1.Location = new System.Drawing.Point(24, 664);
+            this.button1.Location = new System.Drawing.Point(24, 654);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 45);
+            this.button1.Size = new System.Drawing.Size(84, 28);
             this.button1.TabIndex = 0;
             this.button1.Text = "Show Map";
             this.button1.UseVisualStyleBackColor = false;
@@ -59,7 +59,6 @@
             // 
             this.map.AutoSize = true;
             this.map.BackColor = System.Drawing.Color.Black;
-            this.map.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.map.Cursor = System.Windows.Forms.Cursors.Cross;
             this.map.Location = new System.Drawing.Point(24, 33);
             this.map.Name = "map";
@@ -160,6 +159,7 @@
             this.Controls.Add(this.up);
             this.Controls.Add(this.map);
             this.Controls.Add(this.button1);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_GV_01";
             this.Text = "Galactic_Vagabond 0.1";
