@@ -6,7 +6,7 @@ namespace gv
     public class Chunk
     {
         Position _position;
-        public  static readonly List<Cell>  _cells = new List<Cell>();
+        public readonly List<Cell>  _cells = new List<Cell>();
 
         public Chunk( Position Begining )
         {

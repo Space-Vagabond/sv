@@ -52,7 +52,7 @@ namespace Galactic_Vagabond
 
                 foreach( Chunk ch in Universe.Chunks )
                 {
-                    foreach( Cell cl in Chunk._cells )
+                    foreach( Cell cl in ch._cells )
                     {
                         if( cl.ContainsPlanet )
                         {
@@ -179,9 +179,9 @@ namespace Galactic_Vagabond
         {
             List<object> caracs = new List<object>();
 
-            foreach( Chunk ch in Universe.Chunks )
+             foreach( Chunk ch in Universe.Chunks )
             {
-                foreach( Cell cl in Chunk._cells )
+                foreach( Cell cl in ch._cells )
                 {
                     if( cl.ContainsPlanet )
                     {
@@ -196,9 +196,7 @@ namespace Galactic_Vagabond
                             caracs.Add( "Resources: " + cl.ContainedPlanet.Ressource );
                             caracs.Add( "Inhabitants: " + cl.ContainedPlanet.InhabitantsName );
                         }
-                        CurrentPlanet.DataSource = caracs;
-                        
-                        
+                        CurrentPlanet.DataSource = caracs;  
                     }
                     else
                     {
