@@ -13,7 +13,6 @@ namespace gv
 
         public Universe()
         {
-            CreateEarth();
             for( int i = -1; i < 1; i++ )
             {
                 for( int j = -1; j < 1; j++ )
@@ -27,13 +26,17 @@ namespace gv
         public static Planet AddPlanet()
 
         {
-            return new Planet();
+            Planet p = new Planet();
+            _planets.Add(p);
+            return p;
         }
         public static Planet AddPlanet(Position position)
         {
-            return new Planet(position);
+            Planet p = new Planet(position);
+            _planets.Add( p );
+            return p;
         }
-        public Planet CreateEarth()
+        public static Planet CreateEarth()
         {
             Planet earth = new Planet( false );
             _planets.Add( earth );

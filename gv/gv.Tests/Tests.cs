@@ -139,5 +139,14 @@ namespace gv.Tests
                 } 
             }
         }
+        [Test]
+        public void Planets_Pos_test()
+        {
+            Universe u = new Universe();
+            foreach( Planet p in Universe.Planets )
+            {
+                Console.WriteLine( "PositionX " + p.Position.X + "  Position Y  " + p.Position.Y );
+            }
+        }
     }
 }

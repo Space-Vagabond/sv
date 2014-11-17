@@ -27,11 +27,18 @@ namespace gv
 
             foreach( Cell c in _cells )
             {
-                if( planetCounter <= 8 )
+                if( c.Position.X == 0 && c.Position.Y == 0 )
                 {
+                    c.ContainsPlanet = true;
+                    Universe.CreateEarth();
+                }
+                else if( planetCounter <= 8 )
+                {
+
                     c.ContainsPlanet = ((Universe.rand.Next( 0, 2 ) > 0) ? true : false);
                     if( c.ContainsPlanet )
                     {
+                        planetCounter++;
                         c.AddPlanet();
                     }
                 }

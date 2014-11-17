@@ -1,29 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv.Tests\bin\Debug\gv.Tests.dll" total="1" errors="1" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-11-03" time="11:25:11">
-  <environment nunit-version="2.6.3.13283" clr-version="4.0.30319.34014" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv.Tests\bin\Debug" machine-name="BENOITGIDON" user="BENOIT" user-domain="BenoitGidon" />
+<test-results name="C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv.Tests\bin\Debug\gv.Tests.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-11-17" time="09:30:38">
+  <environment nunit-version="2.6.3.13283" clr-version="4.0.30319.34014" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv.Tests\bin\Debug" machine-name="BENOITGIDON" user="BENOIT" user-domain="BENOITGIDON" />
   <culture-info current-culture="fr-FR" current-uiculture="fr-FR" />
-  <test-suite type="Assembly" name="C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv.Tests\bin\Debug\gv.Tests.dll" executed="False" result="Cancelled">
+  <test-suite type="Assembly" name="C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv.Tests\bin\Debug\gv.Tests.dll" executed="True" result="Success" success="True" time="4.288" asserts="0">
     <results>
-      <test-suite type="Namespace" name="gv" executed="False" result="Cancelled">
+      <test-suite type="Namespace" name="gv" executed="True" result="Success" success="True" time="4.246" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Tests" executed="False" result="Cancelled">
+          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="4.245" asserts="0">
             <results>
-              <test-suite type="TestFixture" name="Tests" executed="False" result="Cancelled">
+              <test-suite type="TestFixture" name="Tests" executed="True" result="Success" success="True" time="4.238" asserts="0">
                 <results>
-                  <test-case name="gv.Tests.Tests.planet_type_assignement_works" executed="False" result="Cancelled">
-                    <failure>
-                      <message><![CDATA[Test cancelled by user]]></message>
-                      <stack-trace><![CDATA[à System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
-à System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
-à System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-à System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-à NUnit.Core.Reflect.InvokeMethod(MethodInfo method, Object fixture, Object[] args)
-à NUnit.Core.TestMethod.RunTestMethod()
-à NUnit.Core.TestMethod.RunTestCase(TestResult testResult)
-]]></stack-trace>
-                    </failure>
-                  </test-case>
+                  <test-case name="gv.Tests.Tests.Planets_Pos_test" executed="True" result="Success" success="True" time="4.195" asserts="0" />
                 </results>
               </test-suite>
             </results>
