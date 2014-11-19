@@ -6,54 +6,59 @@ namespace gv
 {
     public class Universe
     {
-        static readonly List<Planet> _planets = new List<Planet>();
-        public static readonly List<Chunk> _chunks = new List<Chunk>();
-        public static readonly List<Cell> _cells = new List<Cell>();
+        readonly List<Planet> _planets = new List<Planet>();
+        readonly List<Chunk> _chunks = new List<Chunk>();
+        readonly List<Cell> _cells = new List<Cell>();
         public static Random rand = new Random();
-        public static Player _p = new Player();
+        Player _player;
 
         public Universe()
         {
+            _player = new Player( this );
+
             for( int i = -1; i < 1; i++ )
             {
                 for( int j = -1; j < 1; j++ )
                 {
-                    Chunk c = new Chunk( new Position( i * 10, j * 10 ) );
+                    Chunk c = new Chunk( new Position( i * 10, j * 10 ), this );
                     _chunks.Add( c );
                 }
             }   
             
         }       
-        public static Planet AddPlanet()
-
+        public Planet AddPlanet()
         {
             Planet p = new Planet();
-            _planets.Add(p);
+            this._planets.Add(p);
             return p;
         }
-        public static Planet CreateEarth()
+        public Planet CreateEarth(Universe u)
         {
             Planet earth = new Planet( false );
-            _planets.Add( earth );
+            u._planets.Add( earth );
             return earth;
         }
-        public Planet CreateEldorado()
+        public Planet CreateEldorado(Universe u)
         {
             Planet eldorado =  new Planet( true );
-            _planets.Add( eldorado );
+            u._planets.Add( eldorado );
             return eldorado;
         }
-        public static List<Planet> Planets
+        public List<Planet> Planets
         {
             get { return _planets; }
         }
-        public static List<Chunk> Chunks
+        public List<Chunk> Chunks
         {
-            get { return _chunks;}
+           get { return _chunks;}
         }
-        public static List<Cell> Cells
+        public List<Cell> Cells
         {
             get { return _cells; }
+        }
+        public Player User
+        {
+            get { return _player; }
         }
         
     }
