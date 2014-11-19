@@ -14,10 +14,11 @@ namespace Galactic_Vagabond
 {
     public partial class Form_GV_01 : Form
     {
+        static Universe _universe;
         public Form_GV_01()
         {
             InitializeComponent();
-            Universe universe = new Universe();
+            _universe = new Universe();
 
         }
 
@@ -50,7 +51,7 @@ namespace Galactic_Vagabond
                 ShowCurrentPlanet( this, EventArgs.Empty );
                 map.Refresh();
 
-                foreach( Chunk ch in Universe.Chunks )
+                foreach( Chunk ch in _universe.Chunks )
                 {
                     foreach( Cell cl in ch._cells )
                     {
@@ -112,9 +113,9 @@ namespace Galactic_Vagabond
                                 g.DrawString( "Ch", drawFont, drawBrush, drawPoint );
                             }
 
-                            if( Universe._p != null )
+                            if( _universe.User != null )
                             {
-                                Point drawPoint = new Point( (Universe._p.X + 10) * 30 + 5, (Universe._p.Y + 10) * 30 - 25 );
+                                Point drawPoint = new Point( (_universe.User.X + 10) * 30 + 5, (_universe.User.Y + 10) * 30 - 25 );
                                 g.DrawString( "P", drawFont, drawPlayer, drawPoint );
                             }
                         }
@@ -153,25 +154,25 @@ namespace Galactic_Vagabond
         // Contrary directions Y because of GUI 0,0 left upper corner
         private void up_Click( object sender, EventArgs e )
         {
-            Universe._p.Y = Universe._p.Y - 1;
+            _universe.User.Y = _universe.User.Y - 1;
             button1_Click( this, EventArgs.Empty );
         }
 
         private void down_Click( object sender, EventArgs e )
         {
-            Universe._p.Y = Universe._p.Y + 1;
+            _universe.User.Y = _universe.User.Y + 1;
             button1_Click( this, EventArgs.Empty );
         }
 
         private void left_Click( object sender, EventArgs e )
         {
-            Universe._p.X = Universe._p.X - 1;
+            _universe.User.X = _universe.User.X - 1;
             button1_Click( this, EventArgs.Empty );
         }
 
         private void right_Click( object sender, EventArgs e )
         {
-            Universe._p.X = Universe._p.X + 1;
+            _universe.User.X = _universe.User.X + 1;
             button1_Click( this, EventArgs.Empty );
         }
         ///
@@ -179,11 +180,7 @@ namespace Galactic_Vagabond
         {
             List<object> caracs = new List<object>();
 
-            IEnumerable<Cell> Req = from c in Universe.Cells
-                                    where c.Position.X == Universe._p.Position.X && c.Position.Y == Universe._p.Position.Y
-                                    select c;
-
-            Cell pos = Req.First();
+            var pos = _universe.Cells.Where( c => c.Position.X == _universe.User.Position.X && c.Position.Y == _universe.User.Position.Y ).Single();
             if( pos.ContainsPlanet )
             {
                 CurrentPlanet.Refresh();

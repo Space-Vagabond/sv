@@ -7,7 +7,6 @@ namespace gv
     public class Planet
     {
          string _name;
-         static int planetNumber = 0;
          string _type;
          string _climate;
          string _surface;
@@ -15,10 +14,8 @@ namespace gv
          bool _inhabited; 
          string _inhabitantsName;
 
-
         internal Planet()
         {
-            planetNumber++;
             TextGenerator NameGen = new TextGenerator(WordTypes.Name);
             int n =  Universe.rand.Next( 6, 9 ); 
             

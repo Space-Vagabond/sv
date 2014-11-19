@@ -16,7 +16,7 @@ namespace gv.Tests
             Universe u = new Universe();
             for( i = 0; i < 100; i++ )
             {
-                Planet P = Universe.AddPlanet();
+                Planet P =  u.AddPlanet();
                 Console.WriteLine( P.Name );
                 Assert.That( P.Name.Length <= 10 && P.Name.Length >= 8);
             }
@@ -30,8 +30,8 @@ namespace gv.Tests
 
             for( i = 0; i < 100; i++ )
             {
-                Planet P = Universe.AddPlanet();
-                Assert.That( PlanetAttributes.PlanetTypes.Contains( P.Type ) );
+                Planet P = u.AddPlanet();
+                //Assert.That( PlanetAttributes.PlanetTypes.Contains( P.Type ) );
                 Console.WriteLine( P.Type );
             }
         }
@@ -49,8 +49,8 @@ namespace gv.Tests
 
             for( i = 0; i < 100; i++ )
             {
-                Planet P = Universe.AddPlanet();
-                count[PlanetAttributes.PlanetTypes.IndexOf(P.Type)] += 1 ;
+                Planet P = u.AddPlanet();
+               // count[PlanetAttributes.PlanetTypes.IndexOf(P.Type)] += 1 ;
                 
             }
             for( i = 0; i < 10; i++ )
@@ -66,7 +66,7 @@ namespace gv.Tests
 
             for( i = 0; i < 100; i++ )
             {
-                Planet P = Universe.AddPlanet();
+                Planet P = u.AddPlanet();
                 Console.WriteLine( i );
                 Console.WriteLine("type: "+P.Type+ "Surface: "+ P.Surface+" Ressource: "+P.Ressource);
                 if( P.Type == PlanetAttributes.PlanetTypes[0] )
@@ -143,7 +143,7 @@ namespace gv.Tests
         public void Planets_Pos_test()
         {
             Universe u = new Universe();
-            foreach( Planet p in Universe.Planets )
+            foreach( Planet p in u.Planets )
             {
                 //Console.WriteLine( "PositionX " + p.Position.X + "  Position Y  " + p.Position.Y );
             }

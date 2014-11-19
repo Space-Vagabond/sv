@@ -12,10 +12,12 @@ namespace gv
         bool _canMove;
         int _speed;
         int _remainingSteps;
+        Universe _universe;
 
 
-       public Player()
+       public Player(Universe u)
         {
+            _universe = u;
             _position = new Position( 0, 0 );
             _speed = 4;
             _canMove = true;
@@ -71,5 +73,9 @@ namespace gv
             get { return _position.Y; }
             set { _position.Y = value; }
         }
+        public Universe Univ
+        {
+            get { return _universe; }
+         }
     }
 }
