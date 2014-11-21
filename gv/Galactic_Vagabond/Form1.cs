@@ -51,79 +51,73 @@ namespace Galactic_Vagabond
                 ShowCurrentPlanet( this, EventArgs.Empty );
                 map.Refresh();
 
-                foreach( Chunk ch in _universe.Chunks )
+                foreach( Cell cl in _universe.Cells )
                 {
-                    foreach( Cell cl in ch._cells )
+                    if( cl.ContainsPlanet )
                     {
-                        if( cl.ContainsPlanet )
+                        if( cl.ContainedPlanet.Type == "Destroyed" )
                         {
-                            if( cl.ContainedPlanet.Type == "Destroyed" )
-                            {
-                                Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) );
-                                g.DrawString( "E", drawFont, drawBrush, drawPoint );
-                            }
-                            else if( cl.ContainedPlanet.Type == "Telluric Silicat" )
-                            {
-                                Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) );
-                                g.DrawString( "S", drawFont, drawBrush, drawPoint );
-                            }
-                            else if( cl.ContainedPlanet.Type == "Coreless" )
-                            {
-                                Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) );
-                                g.DrawString( "C", drawFont, drawBrush, drawPoint );
-                            }
-                            else if( cl.ContainedPlanet.Type == "Telluric Carbon" )
-                            {
-                                Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) );
-                                g.DrawString( "Ca", drawFont, drawBrush, drawPoint );
-                            }
-                            else if( cl.ContainedPlanet.Type == "Telluric Metal" )
-                            {
-                                Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) ); ;
-                                g.DrawString( "M", drawFont, drawBrush, drawPoint );
-                            }
-                            else if( cl.ContainedPlanet.Type == "Telluric Lava" )
-                            {
-                                Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) ); ;
-                                g.DrawString( "L", drawFont, drawBrush, drawPoint );
-                            }
-                            else if( cl.ContainedPlanet.Type == "Telluric Ice" )
-                            {
-                                Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) ); ;
-                                g.DrawString( "I", drawFont, drawBrush, drawPoint );
-                            }
-                            else if( cl.ContainedPlanet.Type == "Telluric Desert" )
-                            {
-                                Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) ); ;
-                                g.DrawString( "D", drawFont, drawBrush, drawPoint );
-                            }
-                            else if( cl.ContainedPlanet.Type == "Gazeous Hydrogen" )
-                            {
-                                Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) ); ;
-                                g.DrawString( "Hy", drawFont, drawBrush, drawPoint );
-                            }
-                            else if( cl.ContainedPlanet.Type == "Gazeous Helium" )
-                            {
-                                Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) ); ;
-                                g.DrawString( "He", drawFont, drawBrush, drawPoint );
-                            }
-                            else if( cl.ContainedPlanet.Type == "Chthonian" )
-                            {
-                                Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) ); ;
-                                g.DrawString( "Ch", drawFont, drawBrush, drawPoint );
-                            }
+                            Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) );
+                            g.DrawString( "E", drawFont, drawBrush, drawPoint );
+                        }
+                        else if( cl.ContainedPlanet.Type == "Telluric Silicat" )
+                        {
+                            Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) );
+                            g.DrawString( "S", drawFont, drawBrush, drawPoint );
+                        }
+                        else if( cl.ContainedPlanet.Type == "Coreless" )
+                        {
+                            Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) );
+                            g.DrawString( "C", drawFont, drawBrush, drawPoint );
+                        }
+                        else if( cl.ContainedPlanet.Type == "Telluric Carbon" )
+                        {
+                            Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) );
+                            g.DrawString( "Ca", drawFont, drawBrush, drawPoint );
+                        }
+                        else if( cl.ContainedPlanet.Type == "Telluric Metal" )
+                        {
+                            Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) ); ;
+                            g.DrawString( "M", drawFont, drawBrush, drawPoint );
+                        }
+                        else if( cl.ContainedPlanet.Type == "Telluric Lava" )
+                        {
+                            Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) ); ;
+                            g.DrawString( "L", drawFont, drawBrush, drawPoint );
+                        }
+                        else if( cl.ContainedPlanet.Type == "Telluric Ice" )
+                        {
+                            Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) ); ;
+                            g.DrawString( "I", drawFont, drawBrush, drawPoint );
+                        }
+                        else if( cl.ContainedPlanet.Type == "Telluric Desert" )
+                        {
+                            Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) ); ;
+                            g.DrawString( "D", drawFont, drawBrush, drawPoint );
+                        }
+                        else if( cl.ContainedPlanet.Type == "Gazeous Hydrogen" )
+                        {
+                            Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) ); ;
+                            g.DrawString( "Hy", drawFont, drawBrush, drawPoint );
+                        }
+                        else if( cl.ContainedPlanet.Type == "Gazeous Helium" )
+                        {
+                            Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) ); ;
+                            g.DrawString( "He", drawFont, drawBrush, drawPoint );
+                        }
+                        else if( cl.ContainedPlanet.Type == "Chthonian" )
+                        {
+                            Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) ); ;
+                            g.DrawString( "Ch", drawFont, drawBrush, drawPoint );
+                        }
 
-                            if( _universe.User != null )
-                            {
-                                Point drawPoint = new Point( (_universe.User.X + 10) * 30 + 5, (_universe.User.Y + 10) * 30 - 25 );
-                                g.DrawString( "P", drawFont, drawPlayer, drawPoint );
-                            }
+                        if( _universe.User != null )
+                        {
+                            Point drawPoint = new Point( (_universe.User.X + 10) * 30 + 5, (_universe.User.Y + 10) * 30 - 25 );
+                            g.DrawString( "P", drawFont, drawPlayer, drawPoint );
                         }
                     }
-
-
-
-                }
+                   }
 
                 Pen p = new Pen( Color.LimeGreen );
                 Pen p1 = new Pen( Color.White );

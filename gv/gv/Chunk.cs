@@ -34,12 +34,12 @@ namespace gv
                 if( c.Position.X == 0 && c.Position.Y == 0 )
                 {
                     c.ContainsPlanet = true;
-                    c.ContainedPlanet = _container.CreateEarth(_container);
+                    c.ContainedPlanet = _container.CreateEarth();
 
                 }
-                if( planetCounter < 8 )
+                else if( planetCounter < 8 )
                 {
-                    c.ContainsPlanet = ((Universe.rand.Next( 0, 9 ) == 0) ? true : false);
+                    c.ContainsPlanet = ((_container.Rand.Next( 0, 9 ) == 0) ? true : false);
                     if( c.ContainsPlanet )
                     {
                         c.AddPlanet();
