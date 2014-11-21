@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VisualState xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ShowCheckBoxes="false">
-  <TopNode>[0-1007]C:\myGit\sv\gv\gv.Tests\bin\Debug\gv.Tests.dll</TopNode>
-  <SelectedNode>[0-1006]gv.Tests.Tests.Earth_Position_Should_be_Equal_To_Player_Position</SelectedNode>
+  <TopNode>[0-1007]C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv.Tests\bin\Debug\gv.Tests.dll</TopNode>
+  <SelectedNode>[0-1006]gv.Tests.Tests.Checking_earth_spawn</SelectedNode>
   <ExcludeCategories>false</ExcludeCategories>
   <Nodes>
-    <Node UniqueName="[0-1007]C:\myGit\sv\gv\gv.Tests\bin\Debug\gv.Tests.dll" Expanded="true" />
+    <Node UniqueName="[0-1007]C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv.Tests\bin\Debug\gv.Tests.dll" Expanded="true" />
     <Node UniqueName="[0-1008]gv" Expanded="true" />
     <Node UniqueName="[0-1009]gv.Tests" Expanded="true" />
     <Node UniqueName="[0-1000]gv.Tests.Tests" Expanded="true" />

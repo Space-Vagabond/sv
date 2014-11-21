@@ -9,7 +9,7 @@ namespace gv
         readonly List<Planet> _planets = new List<Planet>();
         readonly List<Chunk> _chunks = new List<Chunk>();
         readonly List<Cell> _cells = new List<Cell>();
-        public static Random rand = new Random();
+        Random rand = new Random();
         Player _player;
 
         public Universe()
@@ -28,20 +28,20 @@ namespace gv
         }       
         public Planet AddPlanet()
         {
-            Planet p = new Planet();
-            this._planets.Add(p);
+            Planet p = new Planet(this);
+            _planets.Add(p);
             return p;
         }
-        public Planet CreateEarth(Universe u)
+        public Planet CreateEarth()
         {
             Planet earth = new Planet( false );
-            u._planets.Add( earth );
+            _planets.Add( earth );
             return earth;
         }
-        public Planet CreateEldorado(Universe u)
+        public Planet CreateEldorado()
         {
             Planet eldorado =  new Planet( true );
-            u._planets.Add( eldorado );
+            _planets.Add( eldorado );
             return eldorado;
         }
         public List<Planet> Planets
@@ -59,6 +59,10 @@ namespace gv
         public Player User
         {
             get { return _player; }
+        }
+        public Random Rand
+        {
+            get { return rand ; }
         }
         
     }

@@ -14,19 +14,19 @@ namespace gv
          bool _inhabited; 
          string _inhabitantsName;
 
-        internal Planet()
+        internal Planet(Universe u)
         {
             TextGenerator NameGen = new TextGenerator(WordTypes.Name);
-            int n =  Universe.rand.Next( 6, 9 ); 
+            int n =  u.Rand.Next( 6, 9 ); 
             
             _name = NameGen.GenerateWord( n );
             _inhabitantsName = _name + "ians";
             _name = _name + "us";
 
-            int t = Universe.rand.Next( 0, 10 );
+            int t = u.Rand.Next( 0, 10 );
             _type = PlanetAttributes.PlanetType(t);
 
-            GeneratePlanetAttributes( t );
+            GeneratePlanetAttributes(u, t);
             return;
             
         }
@@ -54,13 +54,13 @@ namespace gv
                 _inhabitantsName = "Dorados";
             }
         }
-        void GeneratePlanetAttributes( int t )
+        void GeneratePlanetAttributes( Universe u, int t )
         {
-            GenerateSurfaceAndClimate( t );
-            GenerateRessourcesAndHabitants( t );
+            GenerateSurfaceAndClimate(u, t );
+            GenerateRessourcesAndHabitants(u, t );
         }
 
-        void GenerateSurfaceAndClimate( int t )
+        void GenerateSurfaceAndClimate( Universe u, int t )
         {
             if( t == 3 )
             {
@@ -89,40 +89,40 @@ namespace gv
             }
             else
             {
-                _surface = PlanetAttributes.PlanetSurface( Universe.rand.Next( 5, 9 ) );
-                _climate = PlanetAttributes.PlanetClimate(Universe.rand.Next( 0, 3 ));
+                _surface = PlanetAttributes.PlanetSurface( u.Rand.Next( 5, 9 ) );
+                _climate = PlanetAttributes.PlanetClimate(u.Rand.Next( 0, 3 ));
             }
         }
-        void GenerateRessourcesAndHabitants( int t )
+        void GenerateRessourcesAndHabitants(Universe u, int t )
         {
             if( t == 0 || t == 6 )
             {
                 _ressource = PlanetAttributes.PlanetRessource( 0 );
-                _inhabited = (Universe.rand.Next(0,2) >0)?true:false ;
+                _inhabited = (u.Rand.Next(0,2) >0)?true:false ;
             }
             else if( t == 1 )
             {
                 _ressource = PlanetAttributes.PlanetRessource( 1 );
-                _inhabited = (Universe.rand.Next( 0, 2 ) > 0) ? true : false;
+                _inhabited = (u.Rand.Next( 0, 2 ) > 0) ? true : false;
             }
             else if( t == 2 )
             {
                 _ressource = PlanetAttributes.PlanetRessource( 3 );
-                _inhabited = (Universe.rand.Next( 0, 2 ) > 0) ? true : false;
+                _inhabited = (u.Rand.Next( 0, 2 ) > 0) ? true : false;
             }
             else if( t == 7 )
             {
                 _ressource = PlanetAttributes.PlanetRessource( 4 );
-                _inhabited = (Universe.rand.Next( 0, 2 ) > 0) ? true : false;
+                _inhabited = (u.Rand.Next( 0, 2 ) > 0) ? true : false;
             }
             else if( t == 8 )
             {
                 _ressource = PlanetAttributes.PlanetRessource( 5 );
-                _inhabited = (Universe.rand.Next( 0, 2 ) > 0) ? true : false;
+                _inhabited = (u.Rand.Next( 0, 2 ) > 0) ? true : false;
             }
             else if( t == 9 )
             {
-                _ressource = PlanetAttributes.PlanetRessource( Universe.rand.Next(1,3));
+                _ressource = PlanetAttributes.PlanetRessource( u.Rand.Next(1,3));
                 _inhabited = false;
             }
             else

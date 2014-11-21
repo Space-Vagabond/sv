@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using NUnit.Framework;
+using System.Linq;
 using gv;
 
 
@@ -148,22 +149,14 @@ namespace gv.Tests
                 //Console.WriteLine( "PositionX " + p.Position.X + "  Position Y  " + p.Position.Y );
             }
         }
-       /* [Test]
-        public void Earth_Position_Should_be_Equal_To_Player_Position()
+        [Test]
+        public void Checking_earth_spawn()
         {
             Universe u = new Universe();
-            Assert.That( Universe._p.X == 0 && Universe._p.Y == 0 );
-            foreach( Planet p in Universe.Planets)
-            {
-                Console.WriteLine( p.Name +" X"+ p.Position.X +" Y"+ p.Position.Y );
-                if( p.Name == "Earth" )
-                {
-                    Assert.That( p.Position.X == 0 && p.Position.Y == 0 );
-                    Console.WriteLine( p.Type );
-                }
-
-            }
-            Console.WriteLine(" List len"+ Universe.Planets.Count);
-        }*/
+            Assert.That( u.User.X == 0 && u.User.Y == 0 );
+            var cell = u.Cells.Where( c => c.Position.X == 0 && c.Position.Y == 0 ).Single();
+            Assert.That( cell.ContainsPlanet );
+            Console.WriteLine( cell.Position.X + "//"+cell.Position.Y );
+        }
     }
 }
