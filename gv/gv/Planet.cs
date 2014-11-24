@@ -4,7 +4,7 @@ using ET.FakeText;
 
 namespace gv
 {
-    public class Planet
+    public abstract class Planet
     {
          string _name;
          string _type;
@@ -14,6 +14,10 @@ namespace gv
          bool _inhabited; 
          string _inhabitantsName;
 
+         internal Planet()
+         {
+
+         }
         internal Planet(Universe u)
         {
             TextGenerator NameGen = new TextGenerator(WordTypes.Name);
