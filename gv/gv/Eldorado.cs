@@ -7,22 +7,23 @@ using System.Threading.Tasks;
 
 namespace gv
 {
-    class Earth : Planet
+    class Eldorado : Planet
     {
-        internal Earth( Universe u )
+        internal Eldorado( Universe u )
         {
+
         }
         public override string Name 
         {
-            get{return "Earth";}
+            get{return "Eldorado";}
         }
         public override string Type
         {
-            get { return "Destroyed"; }
+            get { return "Promised Land"; }
         }
         public override string Surface
         {
-            get { return "Ravaged"; }
+            get { return "Golden"; }
         }
         public override string Climate
         {
@@ -38,7 +39,7 @@ namespace gv
         }
         public override string InhabitantsName 
         {
-            get{return "Terrians";}
+            get{return "Dorados";}
         }
     }
-}
+}      

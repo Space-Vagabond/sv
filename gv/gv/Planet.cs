@@ -21,11 +21,20 @@ namespace gv
         
         internal static Planet CreatePlanet( Universe u )
         {
-            int iType = u.Rand.Next( 10 );
-            switch( iType )
+            
+            switch( u.Rand.Next( 10 ))
             {
-                case 0: return new PChthonian( u );
-                default: return new PTelluricMetal( u );
+                case 0: return new PTelluricSilicat( u );
+                case 1: return new PTelluricCarbon( u );
+                case 2: return new PTelluricMetal( u );
+                case 3: return new PTelluricLava( u );
+                case 4: return new PTelluricIce( u );
+                case 5: return new PCoreless( u );
+                case 6: return new PTelluricDesert( u );
+                case 7: return new PGazeousHydrogene( u );
+                case 8: return new PGazeousHelium( u );
+                case 9: return new PChthonian( u );
+                default: return new PTelluricSilicat( u );
             }
         }
         
