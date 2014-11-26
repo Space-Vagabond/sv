@@ -6,19 +6,34 @@ using System.Threading.Tasks;
 
 namespace gv
 {
-    class PChthonian :Planet
+    class PChthonian : Planet
     {
-        string _name;
-        string _type;
-        string _climate;
-        string _surface;
-        string _ressource;
-        bool _inhabited;
-        string _inhabitantsName;
-
+        string _ressources;
         internal PChthonian(Universe u)
+            : base( u )
         {
+            _ressources = PlanetAttributes.PlanetRessource( u.Rand.Next( 1, 3 ) );
+        }
 
+        public override string Type
+        {
+            get { return "Chtonian"; }
+        }
+        public override string Surface
+        {
+            get { return "Stone Desert"; }
+        }
+        public override string Climate
+        {
+            get { return "Hot"; }
+        }
+        public override bool IsInhabited
+        {
+            get { return false; }
+        }
+        public override string Ressources
+        {
+            get { return _ressources; }
         }
     }
 }

@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Cell.cs" />
     <Compile Include="Chunk.cs" />
+    <Compile Include="Earth.cs" />
     <Compile Include="PChthonian.cs" />
     <Compile Include="PCoreless.cs" />
     <Compile Include="PGazeousHelium.cs" />
