@@ -12,7 +12,7 @@ namespace gv
         string _climate;
         bool _inhabited;
         internal PTelluricCarbon( Universe u )
-            : base( u )
+            : base( u, null )
         {
             _surface = PlanetAttributes.PlanetSurface( u.Rand.Next( 5, 9 ) );
             _climate = PlanetAttributes.PlanetClimate( u.Rand.Next( 0, 3 ) );

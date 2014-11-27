@@ -9,7 +9,7 @@ namespace gv
     class PTelluricLava : Planet
     {
         internal PTelluricLava( Universe u )
-            : base( u )
+            : base( u, null )
         {
             
         }

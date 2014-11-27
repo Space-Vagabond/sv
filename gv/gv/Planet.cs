@@ -9,14 +9,27 @@ namespace gv
          string _name;
          string _inhabitantsName;
 
-        internal protected Planet(Universe u)
+        internal protected Planet(Universe u, string name)
         {
-            TextGenerator NameGen = new TextGenerator(WordTypes.Name);
-            int n =  u.Rand.Next( 6, 9 ); 
-            
-            _name = NameGen.GenerateWord( n );
-            _inhabitantsName = _name + "ians";
-            _name = _name + "us";           
+            if( name == null )
+            {
+                TextGenerator NameGen = new TextGenerator( WordTypes.Name );
+                int n =  u.Rand.Next( 6, 9 );
+
+                _name = NameGen.GenerateWord( n );
+                _inhabitantsName = _name + "ians";
+                _name = _name + "us";
+            }
+            else if( name == "Earth" )
+            {
+                _name = name;
+                _inhabitantsName = "Terrans";
+            }
+            else
+            {
+                _name = name;
+                _inhabitantsName = "Dorados";
+            }
         }
         
         internal static Planet CreatePlanet( Universe u )
@@ -44,15 +57,15 @@ namespace gv
         }
         public abstract string Type { get; }
 
-        public override string Climate { get; }
-        public override string Surface { get; }
-        public override string Ressource { get;  }
-        public override bool Inhabited { get; }
+        public abstract string Climate { get; }
+        public abstract string Surface { get; }
+        public abstract string Ressources { get; }
+        public abstract bool IsInhabited { get; }
         public string InhabitantsName
         {
             get
             {
-                if( this.Inhabited )
+                if( this.IsInhabited )
                 {
                     return _inhabitantsName;
                 }

@@ -10,7 +10,7 @@ namespace gv
     {
         string _ressources;
         internal PChthonian(Universe u)
-            : base( u )
+            : base( u, null )
         {
             _ressources = PlanetAttributes.PlanetRessource( u.Rand.Next( 1, 3 ) );
         }

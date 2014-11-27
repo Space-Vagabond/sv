@@ -28,19 +28,19 @@ namespace gv
         }       
         public Planet AddPlanet()
         {
-            Planet p = new Planet(this);
+            Planet p = Planet.CreatePlanet(this);
             _planets.Add(p);
             return p;
         }
         public Planet CreateEarth()
         {
-            Planet earth = new Planet( false );
+            Planet earth = new Earth( this );
             _planets.Add( earth );
             return earth;
         }
         public Planet CreateEldorado()
         {
-            Planet eldorado =  new Planet( true );
+            Planet eldorado =  new Eldorado( this );
             _planets.Add( eldorado );
             return eldorado;
         }

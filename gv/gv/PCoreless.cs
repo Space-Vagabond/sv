@@ -11,7 +11,7 @@ namespace gv
         string _surface;
         string _climate;
         internal PCoreless( Universe u )
-            : base( u )
+            : base( u, null )
         {
             _surface = PlanetAttributes.PlanetSurface( u.Rand.Next( 5, 9 ) );
             _climate = PlanetAttributes.PlanetClimate( u.Rand.Next( 0, 3 ) );

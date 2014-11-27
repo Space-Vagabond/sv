@@ -10,7 +10,7 @@ namespace gv
     {
         bool _inhabited;
         internal PTelluricDesert( Universe u )
-            : base( u )
+            : base( u, null )
         {
             _inhabited = (u.Rand.Next( 0, 2 ) > 0) ? true : false;
         }

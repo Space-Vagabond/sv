@@ -10,7 +10,7 @@ namespace gv
     {
 
         internal PTelluricIce( Universe u )
-            : base( u )
+            : base( u, null )
         {
         }
 

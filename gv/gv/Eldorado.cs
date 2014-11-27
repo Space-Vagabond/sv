@@ -1,5 +1,4 @@
 ﻿using System;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,12 +9,9 @@ namespace gv
     class Eldorado : Planet
     {
         internal Eldorado( Universe u )
+            :base(u, "Eldorado")
         {
 
-        }
-        public override string Name 
-        {
-            get{return "Eldorado";}
         }
         public override string Type
         {
@@ -36,10 +32,6 @@ namespace gv
         public override string Ressources
         {
             get { return "none"; }
-        }
-        public override string InhabitantsName 
-        {
-            get{return "Dorados";}
         }
     }
 }      

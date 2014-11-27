@@ -69,10 +69,10 @@ namespace gv.Tests
             {
                 Planet P = u.AddPlanet();
                 Console.WriteLine( i );
-                Console.WriteLine("type: "+P.Type+ "Surface: "+ P.Surface+" Ressource: "+P.Ressource);
+                Console.WriteLine("type: "+P.Type+ "Surface: "+ P.Surface+" Ressource: "+P.Ressources);
                 if( P.Type == PlanetAttributes.PlanetTypes[0] )
                 {
-                    Assert.That( P.Ressource == PlanetAttributes.PlanetRessources[0] );
+                    Assert.That( P.Ressources == PlanetAttributes.PlanetRessources[0] );
                     Assert.That(P.Surface == PlanetAttributes.PlanetSurfaces[5] ||
                                 P.Surface == PlanetAttributes.PlanetSurfaces[6] ||
                                 P.Surface == PlanetAttributes.PlanetSurfaces[7] || 
@@ -81,7 +81,7 @@ namespace gv.Tests
                 }
                 else if( P.Type == PlanetAttributes.PlanetTypes[1] )
                 {
-                    Assert.That( P.Ressource == PlanetAttributes.PlanetRessources[1] );
+                    Assert.That( P.Ressources == PlanetAttributes.PlanetRessources[1] );
                     Assert.That( P.Surface == PlanetAttributes.PlanetSurfaces[5] ||
                                 P.Surface == PlanetAttributes.PlanetSurfaces[6] ||
                                 P.Surface == PlanetAttributes.PlanetSurfaces[7] ||
@@ -89,7 +89,7 @@ namespace gv.Tests
                 }
                 else if( P.Type == PlanetAttributes.PlanetTypes[2] )
                 {
-                    Assert.That( P.Ressource == PlanetAttributes.PlanetRessources[3] );
+                    Assert.That( P.Ressources == PlanetAttributes.PlanetRessources[3] );
                     Assert.That( P.Surface == PlanetAttributes.PlanetSurfaces[5] ||
                                 P.Surface == PlanetAttributes.PlanetSurfaces[6] ||
                                 P.Surface == PlanetAttributes.PlanetSurfaces[7] ||
@@ -97,45 +97,45 @@ namespace gv.Tests
                 }
                 else if( P.Type == PlanetAttributes.PlanetTypes[3] )
                 {
-                    Assert.That( P.Ressource == PlanetAttributes.PlanetRessources[6] );
+                    Assert.That( P.Ressources == PlanetAttributes.PlanetRessources[6] );
                     Assert.That( P.Surface == PlanetAttributes.PlanetSurfaces[0]);
-                    Assert.That( P.Inhabited == true );
+                    Assert.That( P.IsInhabited == true );
                 }
                 else if( P.Type == PlanetAttributes.PlanetTypes[4] )
                 {
-                    Assert.That( P.Ressource == PlanetAttributes.PlanetRessources[6] );
+                    Assert.That( P.Ressources == PlanetAttributes.PlanetRessources[6] );
                     Assert.That( P.Surface == PlanetAttributes.PlanetSurfaces[3]);
-                    Assert.That( P.Inhabited == true );
+                    Assert.That( P.IsInhabited == true );
                 }
                 else if( P.Type == PlanetAttributes.PlanetTypes[5] )
                 {
-                    Assert.That( P.Ressource == PlanetAttributes.PlanetRessources[6] );
+                    Assert.That( P.Ressources == PlanetAttributes.PlanetRessources[6] );
                     Assert.That( P.Surface == PlanetAttributes.PlanetSurfaces[5] ||
                                 P.Surface == PlanetAttributes.PlanetSurfaces[6] ||
                                 P.Surface == PlanetAttributes.PlanetSurfaces[7] ||
                                 P.Surface == PlanetAttributes.PlanetSurfaces[8] );
-                    Assert.That( P.Inhabited == true );
+                    Assert.That( P.IsInhabited == true );
                 }
                 else if( P.Type == PlanetAttributes.PlanetTypes[6] )
                 {
-                    Assert.That( P.Ressource == PlanetAttributes.PlanetRessources[0] );
+                    Assert.That( P.Ressources == PlanetAttributes.PlanetRessources[0] );
                     Assert.That( P.Surface == PlanetAttributes.PlanetSurfaces[1] );
                 }
                 else if( P.Type == PlanetAttributes.PlanetTypes[7] )
                 {
-                    Assert.That( P.Ressource == PlanetAttributes.PlanetRessources[4] );
+                    Assert.That( P.Ressources == PlanetAttributes.PlanetRessources[4] );
                     Assert.That( P.Surface == PlanetAttributes.PlanetSurfaces[4]);
                 }
                 else if( P.Type == PlanetAttributes.PlanetTypes[8] )
                 {
-                    Assert.That( P.Ressource == PlanetAttributes.PlanetRessources[5] );
+                    Assert.That( P.Ressources == PlanetAttributes.PlanetRessources[5] );
                     Assert.That( P.Surface == PlanetAttributes.PlanetSurfaces[4] );
                 }
                 else if( P.Type == PlanetAttributes.PlanetTypes[9] )
                 {
-                    Assert.That( P.Ressource == PlanetAttributes.PlanetRessources[2] || P.Ressource == PlanetAttributes.PlanetRessources[1] );
+                    Assert.That( P.Ressources == PlanetAttributes.PlanetRessources[2] || P.Ressources == PlanetAttributes.PlanetRessources[1] );
                     Assert.That( P.Surface == PlanetAttributes.PlanetSurfaces[2] );
-                    Assert.That( P.Inhabited == false );
+                    Assert.That( P.IsInhabited == false );
                     Assert.AreEqual( P.InhabitantsName , "Inhabited planet" );
                 } 
             }
