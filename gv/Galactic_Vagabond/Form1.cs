@@ -183,7 +183,7 @@ namespace Galactic_Vagabond
                 caracs.Add( "Type: " + pos.ContainedPlanet.Type );
                 caracs.Add( "Climate: " + pos.ContainedPlanet.Climate );
                 caracs.Add( "Surface: " + pos.ContainedPlanet.Surface );
-                caracs.Add( "Resources: " + pos.ContainedPlanet.Ressource );
+                caracs.Add( "Resources: " + pos.ContainedPlanet.Ressources );
                 caracs.Add( "Inhabitants: " + pos.ContainedPlanet.InhabitantsName );
             }
             else
