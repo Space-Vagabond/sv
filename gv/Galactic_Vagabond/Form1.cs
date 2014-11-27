@@ -172,25 +172,29 @@ namespace Galactic_Vagabond
 
         private void KeyMove( object sender, KeyEventArgs e )
         {
-            if (e.KeyCode == Keys.Up)
+            if( this.map.Visible )
             {
-                _universe.User.Y = _universe.User.Y - 1;
-                button1_Click( this, EventArgs.Empty );
-            }
-            else if( e.KeyCode == Keys.Down )
-            {
-                _universe.User.Y = _universe.User.Y + 1;
-                button1_Click( this, EventArgs.Empty );
-            }
-            else if( e.KeyCode == Keys.Left )
-            {
-                _universe.User.X = _universe.User.X - 1;
-                button1_Click( this, EventArgs.Empty );
-            }
-            else if( e.KeyCode == Keys.Right )
-            {
-                _universe.User.X = _universe.User.X + 1;
-                button1_Click( this, EventArgs.Empty );
+
+                if( e.KeyCode == Keys.Up )
+                {
+                    _universe.User.Y = _universe.User.Y - 1;
+                    button1_Click( this, EventArgs.Empty );
+                }
+                else if( e.KeyCode == Keys.Down )
+                {
+                    _universe.User.Y = _universe.User.Y + 1;
+                    button1_Click( this, EventArgs.Empty );
+                }
+                else if( e.KeyCode == Keys.Left )
+                {
+                    _universe.User.X = _universe.User.X - 1;
+                    button1_Click( this, EventArgs.Empty );
+                }
+                else if( e.KeyCode == Keys.Right )
+                {
+                    _universe.User.X = _universe.User.X + 1;
+                    button1_Click( this, EventArgs.Empty );
+                }
             }
                 
         }
