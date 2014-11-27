@@ -145,30 +145,7 @@ namespace Galactic_Vagabond
 
         }
 
-        // Contrary directions Y because of GUI 0,0 left upper corner
-        private void up_Click( object sender, EventArgs e )
-        {
-            _universe.User.Y = _universe.User.Y - 1;
-            button1_Click( this, EventArgs.Empty );
-        }
-
-        private void down_Click( object sender, EventArgs e )
-        {
-            _universe.User.Y = _universe.User.Y + 1;
-            button1_Click( this, EventArgs.Empty );
-        }
-
-        private void left_Click( object sender, EventArgs e )
-        {
-            _universe.User.X = _universe.User.X - 1;
-            button1_Click( this, EventArgs.Empty );
-        }
-
-        private void right_Click( object sender, EventArgs e )
-        {
-            _universe.User.X = _universe.User.X + 1;
-            button1_Click( this, EventArgs.Empty );
-        }
+        
         ///
         private void ShowCurrentPlanet( object sender, EventArgs e )
         {
@@ -192,6 +169,35 @@ namespace Galactic_Vagabond
             }
             CurrentPlanet.DataSource = caracs;
         }
+
+        private void KeyMove( object sender, KeyEventArgs e )
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                _universe.User.Y = _universe.User.Y - 1;
+                button1_Click( this, EventArgs.Empty );
+            }
+            else if( e.KeyCode == Keys.Down )
+            {
+                _universe.User.Y = _universe.User.Y + 1;
+                button1_Click( this, EventArgs.Empty );
+            }
+            else if( e.KeyCode == Keys.Left )
+            {
+                _universe.User.X = _universe.User.X - 1;
+                button1_Click( this, EventArgs.Empty );
+            }
+            else if( e.KeyCode == Keys.Right )
+            {
+                _universe.User.X = _universe.User.X + 1;
+                button1_Click( this, EventArgs.Empty );
+            }
+                
+        }
+
+        
+
+        
     }
 }
  
