@@ -22,6 +22,7 @@ namespace Galactic_Vagabond
             _universe = new Universe();
             this.map.Universe = _universe;
             ShowCurrentPlanet();
+            this.Focus();
         }
 
 
@@ -29,26 +30,22 @@ namespace Galactic_Vagabond
         public void ShowCurrentPlanet()
         {
             List<object> caracs = new List<object>();
-
+            CurrentPlanet.Text = string.Empty;
             var pos = _universe.Cells.Where( c => c.Position.X == _universe.User.Position.X && c.Position.Y == _universe.User.Position.Y ).Single();
             if( pos.ContainsPlanet )
             {
                 
-                caracs.Add( "Name: " + pos.ContainedPlanet.Name );
-                caracs.Add( "Type: " + pos.ContainedPlanet.Type );
-                caracs.Add( "Climate: " + pos.ContainedPlanet.Climate );
-                caracs.Add( "Surface: " + pos.ContainedPlanet.Surface );
-                caracs.Add( "Resources: " + pos.ContainedPlanet.Ressources );
-                caracs.Add( "Inhabitants: " + pos.ContainedPlanet.InhabitantsName );
-
+                CurrentPlanet.Text+= "Name: " + pos.ContainedPlanet.Name+Environment.NewLine ;
+                CurrentPlanet.Text += "Type: " + pos.ContainedPlanet.Type + Environment.NewLine;
+                CurrentPlanet.Text += "Climate: " + pos.ContainedPlanet.Climate + Environment.NewLine;
+                CurrentPlanet.Text += "Surface: " + pos.ContainedPlanet.Surface + Environment.NewLine;
+                CurrentPlanet.Text += "Resources: " + pos.ContainedPlanet.Ressources + Environment.NewLine;
+                CurrentPlanet.Text += "Inhabitants: " + pos.ContainedPlanet.InhabitantsName + Environment.NewLine;
             }
             else
             {
-                caracs.Add( "No planet to interact with" );
+                CurrentPlanet.Text+= "No planet to interact with";
             }
-
-            CurrentPlanet.DataSource = caracs;
-            CurrentPlanet.Update();
         }
 
         private void KeyMove( object sender, KeyEventArgs e )
@@ -57,27 +54,34 @@ namespace Galactic_Vagabond
             {
                 if( e.KeyCode == Keys.Up )
                 {
-                    _universe.User.Y = _universe.User.Y - 1;
+                    if( _universe.User.Move( new Position( _universe.User.X, (_universe.User.Y - 1) ) ) )
+                    {
+                        map.Refresh();
+                    }
                 }
                 else if( e.KeyCode == Keys.Down )
                 {
-                    _universe.User.Y = _universe.User.Y + 1;
+                    if( _universe.User.Move( new Position( _universe.User.X, (_universe.User.Y + 1) ) ) )
+                    {
+                        map.Refresh();
+                    }
                 }
                 else if( e.KeyCode == Keys.Left )
                 {
-                    _universe.User.X = _universe.User.X - 1;
+                    if( _universe.User.Move( new Position( (_universe.User.X - 1), _universe.User.Y ) ) )
+                    {
+                        map.Refresh();
+                    }
                 }
                 else if( e.KeyCode == Keys.Right )
                 {
-                    _universe.User.X = _universe.User.X + 1;
+                    if( _universe.User.Move( new Position( (_universe.User.X + 1), _universe.User.Y ) ) )
+                    {
+                        map.Refresh();
+                    }
                 }
-                map.Refresh();
                 ShowCurrentPlanet();
             }
         }
-
-
-
-
     }
 }

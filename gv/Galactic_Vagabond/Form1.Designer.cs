@@ -29,27 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_GV_01));
-            this.CurrentPlanet = new System.Windows.Forms.ListBox();
+            this.CurrentPlanet = new System.Windows.Forms.Label();
             this.map = new Galactic_Vagabond.Map();
             this.SuspendLayout();
             // 
             // CurrentPlanet
             // 
             this.CurrentPlanet.BackColor = System.Drawing.Color.Black;
-            this.CurrentPlanet.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.CurrentPlanet.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.CurrentPlanet.Font = new System.Drawing.Font("Orator Std", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentPlanet.ForeColor = System.Drawing.Color.Yellow;
-            this.CurrentPlanet.FormattingEnabled = true;
-            this.CurrentPlanet.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.CurrentPlanet.ItemHeight = 17;
-            this.CurrentPlanet.Location = new System.Drawing.Point(671, 33);
+            this.CurrentPlanet.Font = new System.Drawing.Font("Orator Std", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentPlanet.ForeColor = System.Drawing.Color.Gold;
+            this.CurrentPlanet.Location = new System.Drawing.Point(709, 12);
             this.CurrentPlanet.Name = "CurrentPlanet";
-            this.CurrentPlanet.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.CurrentPlanet.Size = new System.Drawing.Size(516, 204);
-            this.CurrentPlanet.TabIndex = 7;
-            this.CurrentPlanet.TabStop = false;
-            //this.CurrentPlanet.
+            this.CurrentPlanet.Size = new System.Drawing.Size(543, 210);
+            this.CurrentPlanet.TabIndex = 2;
             // 
             // map
             // 
@@ -59,6 +52,7 @@
             this.map.Name = "map";
             this.map.Size = new System.Drawing.Size(604, 604);
             this.map.TabIndex = 0;
+            this.map.TabStop = false;
             this.map.Text = "map1";
             this.map.Universe = null;
             // 
@@ -83,8 +77,8 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox CurrentPlanet;
         private Map map;
+        private System.Windows.Forms.Label CurrentPlanet;
 
 
 

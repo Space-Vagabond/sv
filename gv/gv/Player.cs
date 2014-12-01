@@ -19,28 +19,28 @@ namespace gv
         {
             _universe = u;
             _position = new Position( 0, 0 );
-            _speed = 4;
+            _speed = 400;
             _canMove = true;
             _remainingSteps = _speed;
         }
-        public void MovePlayer( Position destination )
+        public bool Move( Position destination )
         {
-            int _movedX;
-            int _movedY;
-            int _movedOf;
-
-            _movedX = Math.Max( _position.X, destination.X ) - Math.Min( _position.X, destination.X );
-            _movedY = Math.Max( _position.Y, destination.Y ) - Math.Min( _position.Y, destination.Y );
-            _movedOf = _movedX + _movedY;
-
-            if( _movedOf <= _remainingSteps && _canMove == true )
+            if( _canMove == false )
             {
-                _position = _position.Move( destination );
-                _remainingSteps -= _movedOf;
+                return false;
             }
             else
             {
-                //write poopup error function
+                if( _remainingSteps > 0 )
+                {
+                    _remainingSteps--;
+                    _position = destination;
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
 
         }
