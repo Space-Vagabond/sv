@@ -49,12 +49,15 @@
             this.CurrentPlanet.Size = new System.Drawing.Size(516, 204);
             this.CurrentPlanet.TabIndex = 7;
             this.CurrentPlanet.TabStop = false;
+            //this.CurrentPlanet.
             // 
             // map
             // 
+            this.map.BackColor = System.Drawing.Color.Black;
+            this.map.Cursor = System.Windows.Forms.Cursors.Cross;
             this.map.Location = new System.Drawing.Point(12, 12);
             this.map.Name = "map";
-            this.map.Size = new System.Drawing.Size(557, 269);
+            this.map.Size = new System.Drawing.Size(604, 604);
             this.map.TabIndex = 0;
             this.map.Text = "map1";
             this.map.Universe = null;
@@ -75,7 +78,6 @@
             this.Text = "Galactic_Vagabond 0.1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyMove);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

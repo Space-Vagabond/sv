@@ -14,6 +14,9 @@ namespace Galactic_Vagabond
 {
     public partial class Map : Control
     {
+        static readonly Pen _limeGreenPen = new Pen( Color.LimeGreen );
+        static readonly Pen _whitePen = new Pen( Color.White );
+
         Universe _u;
 
         public Map()
@@ -44,7 +47,6 @@ namespace Galactic_Vagabond
             Font drawFont = new Font( "Verdana", 12 );
             SolidBrush drawBrush = new SolidBrush( Color.Cyan );
             SolidBrush drawPlayer = new SolidBrush( Color.Red );
-            this.Refresh();
 
             foreach( Cell cl in _u.Cells )
             {
@@ -114,24 +116,23 @@ namespace Galactic_Vagabond
                 }
             }
 
-            Pen p = new Pen( Color.LimeGreen );
-            Pen p1 = new Pen( Color.White );
+
 
             for( int i = 0; i < cellsNb; ++i )
             {
-                g.DrawLine( p, 0, i * cellSize, cellsNb * cellSize, i * cellSize );
+                g.DrawLine( _limeGreenPen, 0, i * cellSize, cellsNb * cellSize, i * cellSize );
                 if( i == cellsNb / 2 )
                 {
-                    g.DrawLine( p1, 0, i * cellSize, cellsNb * cellSize, i * cellSize );
+                    g.DrawLine( _whitePen, 0, i * cellSize, cellsNb * cellSize, i * cellSize );
                 }
             }
 
             for( int j = 0; j < cellsNb; ++j )
             {
-                g.DrawLine( p, j * cellSize, 0, j * cellSize, cellsNb * cellSize );
+                g.DrawLine( _limeGreenPen, j * cellSize, 0, j * cellSize, cellsNb * cellSize );
                 if( j == cellsNb / 2 )
                 {
-                    g.DrawLine( p1, j * cellSize, 0, j * cellSize, cellsNb * cellSize );
+                    g.DrawLine( _whitePen, j * cellSize, 0, j * cellSize, cellsNb * cellSize );
                 }
             }
         }
