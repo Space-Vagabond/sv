@@ -22,6 +22,7 @@ namespace Galactic_Vagabond
         public Map()
         {
             InitializeComponent();
+            this.SetStyle( ControlStyles.Selectable, false );
             this.DoubleBuffered = true;
         }
 
