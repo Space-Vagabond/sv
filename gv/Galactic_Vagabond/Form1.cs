@@ -22,7 +22,6 @@ namespace Galactic_Vagabond
             _universe = new Universe();
             this.map.Universe = _universe;
             ShowCurrentPlanet();
-            this.Focus();
         }
 
 
@@ -48,32 +47,32 @@ namespace Galactic_Vagabond
             }
         }
 
-        private void KeyMove( object sender, KeyEventArgs e )
+        protected override bool ProcessCmdKey( ref Message msg, Keys keyData )
         {
             if( this.map.Visible )
             {
-                if( e.KeyCode == Keys.Up )
+                if( keyData == Keys.Up )
                 {
                     if( _universe.User.Move( new Position( _universe.User.X, (_universe.User.Y - 1) ) ) )
                     {
                         map.Refresh();
                     }
                 }
-                else if( e.KeyCode == Keys.Down )
+                else if( keyData == Keys.Down )
                 {
                     if( _universe.User.Move( new Position( _universe.User.X, (_universe.User.Y + 1) ) ) )
                     {
                         map.Refresh();
                     }
                 }
-                else if( e.KeyCode == Keys.Left )
+                else if( keyData == Keys.Left )
                 {
                     if( _universe.User.Move( new Position( (_universe.User.X - 1), _universe.User.Y ) ) )
                     {
                         map.Refresh();
                     }
                 }
-                else if( e.KeyCode == Keys.Right )
+                else if( keyData == Keys.Right )
                 {
                     if( _universe.User.Move( new Position( (_universe.User.X + 1), _universe.User.Y ) ) )
                     {
@@ -82,6 +81,12 @@ namespace Galactic_Vagabond
                 }
                 ShowCurrentPlanet();
             }
+            return true;
+        }
+
+        private void EndTurn_Click( object sender, EventArgs e )
+        {
+            _universe.EndTurn();
         }
     }
 }

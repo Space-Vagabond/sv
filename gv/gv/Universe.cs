@@ -44,6 +44,10 @@ namespace gv
             _planets.Add( eldorado );
             return eldorado;
         }
+        public void EndTurn()
+        {
+            _player.EndTurn();
+        }
         public List<Planet> Planets
         {
             get { return _planets; }

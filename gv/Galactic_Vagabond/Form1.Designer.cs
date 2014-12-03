@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_GV_01));
             this.CurrentPlanet = new System.Windows.Forms.Label();
+            this.EndTurn = new System.Windows.Forms.Button();
             this.map = new Galactic_Vagabond.Map();
             this.SuspendLayout();
             // 
@@ -43,6 +44,19 @@
             this.CurrentPlanet.Name = "CurrentPlanet";
             this.CurrentPlanet.Size = new System.Drawing.Size(543, 210);
             this.CurrentPlanet.TabIndex = 2;
+            // 
+            // EndTurn
+            // 
+            this.EndTurn.BackColor = System.Drawing.Color.PaleGreen;
+            this.EndTurn.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.EndTurn.Font = new System.Drawing.Font("OCR A Std", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EndTurn.Location = new System.Drawing.Point(1134, 658);
+            this.EndTurn.Name = "EndTurn";
+            this.EndTurn.Size = new System.Drawing.Size(109, 51);
+            this.EndTurn.TabIndex = 1;
+            this.EndTurn.Text = "End Turn";
+            this.EndTurn.UseVisualStyleBackColor = false;
+            this.EndTurn.Click += new System.EventHandler(this.EndTurn_Click);
             // 
             // map
             // 
@@ -63,6 +77,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1264, 721);
+            this.Controls.Add(this.EndTurn);
             this.Controls.Add(this.CurrentPlanet);
             this.Controls.Add(this.map);
             this.DoubleBuffered = true;
@@ -70,7 +85,6 @@
             this.KeyPreview = true;
             this.Name = "Form_GV_01";
             this.Text = "Galactic_Vagabond 0.1";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyMove);
             this.ResumeLayout(false);
 
         }
@@ -79,6 +93,7 @@
 
         private Map map;
         private System.Windows.Forms.Label CurrentPlanet;
+        private System.Windows.Forms.Button EndTurn;
 
 
 
