@@ -8,10 +8,15 @@ namespace gv
 {
     class PTelluricLava : Planet
     {
+        string _surface;
+        string _climate;
+        bool _inhabited;
+
         internal PTelluricLava( Universe u )
             : base( u, null )
         {
-            
+            _surface = "Lava";
+            _climate = "Hot";
         }
 
         public override string Type
@@ -20,15 +25,21 @@ namespace gv
         }
         public override string Surface
         {
-            get { return "Lava"; }
+            get { return _surface; }
+            set { _surface = value;  }
+            
         }
         public override string Climate
         {
-            get { return "Hot"; }
+            get { return _climate; }
+            set { _climate = value; }
         }
+            
         public override bool IsInhabited
         {
-            get { return true; }
+            get { return _inhabited; }
+            set { _inhabited = value; }
+            
         }
         public override string Ressources
         {

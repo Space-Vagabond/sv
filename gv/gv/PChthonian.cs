@@ -9,6 +9,10 @@ namespace gv
     class PChthonian : Planet
     {
         string _ressources;
+        string _surface;
+        string _climate;
+        bool _inhabited;
+
         internal PChthonian(Universe u)
             : base( u, null )
         {
@@ -21,15 +25,19 @@ namespace gv
         }
         public override string Surface
         {
-            get { return "Stone Desert"; }
+            get { return _surface; }
+            set { _surface = value; }
         }
         public override string Climate
         {
-            get { return "Hot"; }
+            get { return _climate; }
+            set { _climate = value; }
         }
         public override bool IsInhabited
         {
-            get { return false; }
+            get { return _inhabited; }
+            set { _inhabited = value; }
+           
         }
         public override string Ressources
         {

@@ -46,6 +46,7 @@
     <Compile Include="Chunk.cs" />
     <Compile Include="Earth.cs" />
     <Compile Include="Eldorado.cs" />
+    <Compile Include="EventGenerator.cs" />
     <Compile Include="PChthonian.cs" />
     <Compile Include="PCoreless.cs" />
     <Compile Include="PGazeousHelium.cs" />

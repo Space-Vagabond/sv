@@ -8,6 +8,10 @@ namespace gv
 {
     class Eldorado : Planet
     {
+        string _surface;
+        string _climate;
+        bool _inhabited;
+        
         internal Eldorado( Universe u )
             :base(u, "Eldorado")
         {
@@ -20,14 +24,17 @@ namespace gv
         public override string Surface
         {
             get { return "Golden"; }
+            set { _surface = "Golden"; }
         }
         public override string Climate
         {
             get { return "Temperate"; }
+            set { _climate = "Temperate"; }
         }
         public override bool IsInhabited
         {
             get { return false; }
+            set { _inhabited = false; }
         }
         public override string Ressources
         {

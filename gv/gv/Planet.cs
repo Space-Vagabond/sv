@@ -57,10 +57,10 @@ namespace gv
         }
         public abstract string Type { get; }
 
-        public abstract string Climate { get; }
-        public abstract string Surface { get; }
+        public abstract string Climate { get; set; }
+        public abstract string Surface { get; set; }
         public abstract string Ressources { get; }
-        public abstract bool IsInhabited { get; }
+        public abstract bool IsInhabited { get; set; }
         public string InhabitantsName
         {
             get

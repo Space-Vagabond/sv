@@ -11,3 +11,4 @@ C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv\bin\Debug\FakeTextGenerator.pd
 C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv\obj\Debug\gv.csprojResolveAssemblyReference.cache
 C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv\obj\Debug\gv.dll
 C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv\obj\Debug\gv.pdb
+C:\myGit\sv\gv\gv\obj\Debug\gv.csprojResolveAssemblyReference.cache
