@@ -103,7 +103,7 @@ namespace Galactic_Vagabond
                         Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) ); ;
                         g.DrawString( "He", drawFont, drawBrush, drawPoint );
                     }
-                    else if( cl.ContainedPlanet.Type == "Chthonian" )
+                    else if( cl.ContainedPlanet.Type == "Chtonian" )
                     {
                         Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) ); ;
                         g.DrawString( "Ch", drawFont, drawBrush, drawPoint );

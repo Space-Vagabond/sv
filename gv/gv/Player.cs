@@ -19,7 +19,7 @@ namespace gv
         {
             _universe = u;
             _position = new Position( 0, 0 );
-            _speed = 400;
+            _speed = 4;
             _canMove = true;
             _remainingSteps = _speed;
         }
@@ -43,6 +43,10 @@ namespace gv
                 }
             }
 
+        }
+        internal void EndTurn()
+        {
+            _remainingSteps = _speed;
         }
 
         
