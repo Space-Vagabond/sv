@@ -15,11 +15,23 @@ namespace Galactic_Vagabond
 {
     public partial class Form_GV_01 : Form
     {
-        static Universe _universe;
+        Universe _universe;
         public Form_GV_01()
         {
             InitializeComponent();
-            _universe = new Universe();
+            this.Hide();
+            launcher form2 = new launcher();
+            var result = form2.ShowDialog();
+            if( result == DialogResult.Yes )
+            {
+                form2.Dispose();
+                this.Show();
+                _universe = new Universe();
+            }
+            else
+            {
+                //loadGame
+            }
             this.map.Universe = _universe;
             ShowCurrentPlanet();
         }
