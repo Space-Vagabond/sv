@@ -66,6 +66,10 @@ namespace gv
         {
             get { return rand ; }
         }
+        public EventGenerator Event
+        {
+            get { return _events; }
+        }
         
     }
 }
