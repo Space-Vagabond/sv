@@ -71,7 +71,8 @@ namespace gv
                             new XElement("Surface", p.Value.Surface),
                             new XElement("Ressources", p.Value.Ressources),
                             new XElement("IsInhabited", p.Value.IsInhabited),
-                            new XElement("InhabitantsName", p.Value.InhabitantsName)
+                            new XElement("InhabitantsName", p.Value.InhabitantsName),
+                            new XElement("Built", p.Value.Factory)
                         )
                     ),
                     new XElement("Cells",

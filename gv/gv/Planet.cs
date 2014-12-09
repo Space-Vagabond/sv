@@ -8,9 +8,11 @@ namespace gv
     {
          string _name;
          string _inhabitantsName;
+         bool _factory;
 
         internal protected Planet(Universe u, string name)
         {
+            _factory = false;
             if( name == null )
             {
                 int n =  u.Rand.Next( 6, 9 );
@@ -73,6 +75,11 @@ namespace gv
                     return "Inhabited planet";
                 }
             }
+        }
+        public bool Factory
+        {
+            get { return _factory; }
+            set { _factory = value; }
         }
         
     }

@@ -47,16 +47,34 @@ namespace Galactic_Vagabond
             var pos = _universe.Cells.Where( c => c.Position.X == _universe.User.Position.X && c.Position.Y == _universe.User.Position.Y ).Single();
             if( pos.ContainsPlanet )
             {
-                
+                if(pos.ContainedPlanet.Ressources != "none" && pos.ContainedPlanet.Factory == false)
+                {
+                    Build.Show();
+                }
+                else
+                { 
+                    Build.Hide();
+                }
                 CurrentPlanet.Text+= "Name: " + pos.ContainedPlanet.Name+Environment.NewLine ;
                 CurrentPlanet.Text += "Type: " + pos.ContainedPlanet.Type + Environment.NewLine;
                 CurrentPlanet.Text += "Climate: " + pos.ContainedPlanet.Climate + Environment.NewLine;
                 CurrentPlanet.Text += "Surface: " + pos.ContainedPlanet.Surface + Environment.NewLine;
                 CurrentPlanet.Text += "Resources: " + pos.ContainedPlanet.Ressources + Environment.NewLine;
                 CurrentPlanet.Text += "Inhabitants: " + pos.ContainedPlanet.InhabitantsName + Environment.NewLine;
+                if( pos.ContainedPlanet.Ressources != "none" )
+                {
+                    CurrentPlanet.Text += "Constructible: yes" + Environment.NewLine;
+                    CurrentPlanet.Text += "Built: " + ((pos.ContainedPlanet.Factory) ? "yes" : "no") + Environment.NewLine;
+                }
+                else 
+                {
+                    CurrentPlanet.Text += "Constructible: no" + Environment.NewLine;
+                }
+
             }
             else
             {
+                Build.Hide();
                 CurrentPlanet.Text+= "No planet to interact with";
             }
         }
@@ -102,6 +120,16 @@ namespace Galactic_Vagabond
         {
             _universe.EndTurn();
             _universe.ToXML();
+        }
+
+        private void Build_Click( object sender, EventArgs e )
+        {
+             var pos = _universe.Cells.Where( c => c.Position.X == _universe.User.Position.X && c.Position.Y == _universe.User.Position.Y ).Single();
+             if( pos.ContainsPlanet && pos.ContainedPlanet.Ressources !="none" )
+             {
+                 pos.ContainedPlanet.Factory = true;
+                 ShowCurrentPlanet();
+             }
         }
     }
 }
