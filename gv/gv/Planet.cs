@@ -13,10 +13,9 @@ namespace gv
         {
             if( name == null )
             {
-                TextGenerator NameGen = new TextGenerator( WordTypes.Name );
                 int n =  u.Rand.Next( 6, 9 );
 
-                _name = NameGen.GenerateWord( n );
+                _name = u.NameGen.GenerateWord( n );
                 _inhabitantsName = _name + "ians";
                 _name = _name + "us";
             }

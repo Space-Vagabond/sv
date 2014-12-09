@@ -23,7 +23,7 @@ namespace gv
         /// </summary>
         public void EventOccurs()
         {
-           foreach (Planet pl in _u.Planets) 
+           foreach (Planet pl in _u.Planets.Values) 
            {
               int caseEvent = _u.Rand.Next( 0, 4 );
               switch(caseEvent)

@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Linq;
+using ET.FakeText;
 
 
 namespace gv
@@ -16,6 +17,8 @@ namespace gv
         readonly List<Chunk> _chunks = new List<Chunk>();
         readonly List<Cell> _cells = new List<Cell>();
         Random rand = new Random();
+        internal TextGenerator NameGen;
+
         EventGenerator _events;
         Player _player;
 
@@ -23,6 +26,7 @@ namespace gv
         {
             _events = new EventGenerator( this );
             _player = new Player( this );
+            NameGen = new TextGenerator(WordTypes.Name);
 
             for( int i = -1; i < 1; i++ )
             {
@@ -83,7 +87,7 @@ namespace gv
                     ),
                     new XElement("Chunks",
                         from C in _chunks
-                        select new XElement("Chunck", 
+                        select new XElement("Chunk", 
                             new XElement("X", C.Position.X),
                             new XElement("Y", C.Position.Y)
                             )

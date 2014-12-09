@@ -11,3 +11,10 @@ C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv\bin\Debug\FakeTextGenerator.pd
 C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv\obj\Debug\gv.dll
 C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv\obj\Debug\gv.pdb
 C:\Users\BENOIT\Desktop\PI-SpaceVagabond\sv\gv\gv\obj\Debug\gv.csprojResolveAssemblyReference.cache
+C:\Users\Benoit\Desktop\PI\sv\gv\gv\bin\Debug\gv.dll
+C:\Users\Benoit\Desktop\PI\sv\gv\gv\bin\Debug\gv.pdb
+C:\Users\Benoit\Desktop\PI\sv\gv\gv\bin\Debug\FakeTextGenerator.dll
+C:\Users\Benoit\Desktop\PI\sv\gv\gv\bin\Debug\FakeTextGenerator.pdb
+C:\Users\Benoit\Desktop\PI\sv\gv\gv\obj\Debug\gv.csprojResolveAssemblyReference.cache
+C:\Users\Benoit\Desktop\PI\sv\gv\gv\obj\Debug\gv.dll
+C:\Users\Benoit\Desktop\PI\sv\gv\gv\obj\Debug\gv.pdb
