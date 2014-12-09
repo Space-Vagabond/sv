@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using gv;
 using Galactic_Vagabond;
 using System.Diagnostics;
+using System.IO;
 
 namespace Galactic_Vagabond
 {
@@ -19,6 +20,7 @@ namespace Galactic_Vagabond
         public Form_GV_01()
         {
             InitializeComponent();
+            Directory.CreateDirectory( @"./../../../Saves" );
             this.Hide();
             launcher form2 = new launcher();
             var result = form2.ShowDialog();
@@ -65,28 +67,28 @@ namespace Galactic_Vagabond
             {
                 if( keyData == Keys.Up )
                 {
-                    if( _universe.User.Move( new Position( _universe.User.X, (_universe.User.Y - 1) ) ) )
+                    if( _universe.User.Move( new Position( _universe.User.Position.X, (_universe.User.Position.Y - 1) ) ) )
                     {
                         map.Refresh();
                     }
                 }
                 else if( keyData == Keys.Down )
                 {
-                    if( _universe.User.Move( new Position( _universe.User.X, (_universe.User.Y + 1) ) ) )
+                    if( _universe.User.Move( new Position( _universe.User.Position.X, (_universe.User.Position.Y + 1) ) ) )
                     {
                         map.Refresh();
                     }
                 }
                 else if( keyData == Keys.Left )
                 {
-                    if( _universe.User.Move( new Position( (_universe.User.X - 1), _universe.User.Y ) ) )
+                    if( _universe.User.Move( new Position( (_universe.User.Position.X - 1), _universe.User.Position.Y ) ) )
                     {
                         map.Refresh();
                     }
                 }
                 else if( keyData == Keys.Right )
                 {
-                    if( _universe.User.Move( new Position( (_universe.User.X + 1), _universe.User.Y ) ) )
+                    if( _universe.User.Move( new Position( (_universe.User.Position.X + 1), _universe.User.Position.Y ) ) )
                     {
                         map.Refresh();
                     }
@@ -99,6 +101,7 @@ namespace Galactic_Vagabond
         private void EndTurn_Click( object sender, EventArgs e )
         {
             _universe.EndTurn();
+            _universe.ToXML();
         }
     }
 }

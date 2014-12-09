@@ -111,7 +111,7 @@ namespace Galactic_Vagabond
 
                     if( _u.User != null )
                     {
-                        Point drawPoint = new Point( (_u.User.X + 10) * 30 + 5, (_u.User.Y + 10) * 30 - 25 );
+                        Point drawPoint = new Point( (_u.User.Position.X + 10) * 30 + 5, (_u.User.Position.Y + 10) * 30 - 25 );
                         g.DrawString( "P", drawFont, drawPlayer, drawPoint );
                     }
                 }

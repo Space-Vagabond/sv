@@ -144,7 +144,7 @@ namespace gv.Tests
         public void Planets_Pos_test()
         {
             Universe u = new Universe();
-            foreach( Planet p in u.Planets )
+            foreach( Planet p in u.Planets.Values )
             {
                 //Console.WriteLine( "PositionX " + p.Position.X + "  Position Y  " + p.Position.Y );
             }
@@ -153,7 +153,7 @@ namespace gv.Tests
         public void Checking_earth_spawn()
         {
             Universe u = new Universe();
-            Assert.That( u.User.X == 0 && u.User.Y == 0 );
+            Assert.That( u.User.Position.X == 0 && u.User.Position.Y == 0 );
             var cell = u.Cells.Where( c => c.Position.X == 0 && c.Position.Y == 0 ).Single();
             Assert.That( cell.ContainsPlanet );
             Console.WriteLine( cell.Position.X + "//"+cell.Position.Y );

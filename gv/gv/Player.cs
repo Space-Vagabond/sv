@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
+using System.Xml.Linq;
 
 namespace gv
 {
@@ -48,9 +51,15 @@ namespace gv
         {
             _remainingSteps = _speed;
         }
-
-        
-
+        public XElement ToXML()
+        {
+            return new XElement( "Player", 
+                new XElement( "Speed", _speed ),
+                new XElement("X", Position.X),
+                new XElement("Y", Position.Y),
+                new XElement( "RemainingSteps", _remainingSteps ) 
+            );
+        }
         public int Speed
         {
             get { return _speed; }
@@ -66,20 +75,5 @@ namespace gv
             get { return _remainingSteps; }
             set { _remainingSteps = value; }
         }
-        public int X
-        {
-            get { return _position.X; }
-            set { _position.X = value; }
-        }
-
-        public int Y
-        {
-            get { return _position.Y; }
-            set { _position.Y = value; }
-        }
-        public Universe Univ
-        {
-            get { return _universe; }
-         }
     }
 }

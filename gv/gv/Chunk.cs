@@ -18,7 +18,7 @@ namespace gv
             {
                 for (int j = 0; j < 10; j++)
 			    {
-                    Cell c = new Cell( new Position( Begining.X + i, Begining.Y + j ), _container );
+                    Cell c = new Cell( new Position( Begining.X + i, Begining.Y + j ), _container, this );
                     _cells.Add( c );
                     _container.Cells.Add( c );
                 }
@@ -53,6 +53,10 @@ namespace gv
                 }
 
             }
+        }
+        public Position Position
+        {
+            get { return _position; }
         }
         
     }
