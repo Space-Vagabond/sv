@@ -8,9 +8,16 @@ namespace gv
 {
     class Earth : Planet
     {
+        string _surface;
+        string _climate;
+        bool _inhabited;
+
         internal Earth( Universe u )
             :base(u, "Earth")
         {
+            _surface = "Ravaged";
+            _climate = "Temperate";
+            _inhabited = false;
         }
         public override string Type
         {
@@ -18,15 +25,19 @@ namespace gv
         }
         public override string Surface
         {
-            get { return "Ravaged"; }
+            get { return _surface; }
+            set { _surface = "Ravaged"; }
+            
         }
         public override string Climate
         {
-            get { return "Temperate"; }
+            get { return _climate; }
+            set { _climate = "Temperate"; }
         }
         public override bool IsInhabited
         {
-            get { return false; }
+            get { return _inhabited; }
+            set { _inhabited = false; }
         }
         public override string Ressources
         {

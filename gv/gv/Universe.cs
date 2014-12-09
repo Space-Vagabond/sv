@@ -16,10 +16,12 @@ namespace gv
         readonly List<Chunk> _chunks = new List<Chunk>();
         readonly List<Cell> _cells = new List<Cell>();
         Random rand = new Random();
+        EventGenerator _events;
         Player _player;
 
         public Universe()
         {
+            _events = new EventGenerator( this );
             _player = new Player( this );
 
             for( int i = -1; i < 1; i++ )
@@ -113,6 +115,10 @@ namespace gv
         public Random Rand
         {
             get { return rand ; }
+        }
+        public EventGenerator Event
+        {
+            get { return _events; }
         }
         
     }

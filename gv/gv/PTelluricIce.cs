@@ -8,27 +8,35 @@ namespace gv
 {
     class PTelluricIce : Planet
     {
-
+        string _surface;
+        string _climate;
+        bool _inhabited;
         internal PTelluricIce( Universe u )
             : base( u, null )
         {
+            _surface = "Ice";
+            _climate = "Cold";
         }
 
         public override string Type
         {
             get { return "Telluric Ice"; }
+           
         }
         public override string Surface
         {
-            get { return "Ice Desert"; }
+            get { return _surface; }
+            set { _surface = value; }
         }
         public override string Climate
         {
-            get { return "Cold"; }
+            get { return _climate; }
+            set { _climate = value; }
         }
         public override bool IsInhabited
         {
-            get { return true; }
+            get { return _inhabited; }
+            set { _inhabited = value; }
         }
         public override string Ressources
         {
