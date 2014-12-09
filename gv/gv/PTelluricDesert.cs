@@ -41,7 +41,7 @@ namespace gv
         }
         public override string Ressources
         {
-            get { return "Sillicium"; }
+            get { return "Silicium"; }
         }
     }
 }

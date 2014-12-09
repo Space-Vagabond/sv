@@ -32,13 +32,14 @@
             this.CurrentPlanet = new System.Windows.Forms.Label();
             this.EndTurn = new System.Windows.Forms.Button();
             this.map = new Galactic_Vagabond.Map();
+            this.Build = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CurrentPlanet
             // 
             this.CurrentPlanet.BackColor = System.Drawing.Color.Black;
             this.CurrentPlanet.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.CurrentPlanet.Font = new System.Drawing.Font("Orator Std", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentPlanet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CurrentPlanet.ForeColor = System.Drawing.Color.Gold;
             this.CurrentPlanet.Location = new System.Drawing.Point(709, 12);
             this.CurrentPlanet.Name = "CurrentPlanet";
@@ -49,7 +50,7 @@
             // 
             this.EndTurn.BackColor = System.Drawing.Color.PaleGreen;
             this.EndTurn.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.EndTurn.Font = new System.Drawing.Font("OCR A Std", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EndTurn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EndTurn.Location = new System.Drawing.Point(1134, 658);
             this.EndTurn.Name = "EndTurn";
             this.EndTurn.Size = new System.Drawing.Size(109, 51);
@@ -70,6 +71,17 @@
             this.map.Text = "map1";
             this.map.Universe = null;
             // 
+            // Build
+            // 
+            this.Build.Location = new System.Drawing.Point(1134, 332);
+            this.Build.Name = "Build";
+            this.Build.Size = new System.Drawing.Size(75, 23);
+            this.Build.TabIndex = 3;
+            this.Build.Text = "Build";
+            this.Build.UseVisualStyleBackColor = true;
+            this.Build.Visible = false;
+            this.Build.Click += new System.EventHandler(this.Build_Click);
+            // 
             // Form_GV_01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -77,6 +89,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1264, 721);
+            this.Controls.Add(this.Build);
             this.Controls.Add(this.EndTurn);
             this.Controls.Add(this.CurrentPlanet);
             this.Controls.Add(this.map);
@@ -94,6 +107,7 @@
         private Map map;
         private System.Windows.Forms.Label CurrentPlanet;
         private System.Windows.Forms.Button EndTurn;
+        private System.Windows.Forms.Button Build;
 
 
 

@@ -20,7 +20,7 @@ namespace gv
 
         public override string Type
         {
-            get { return "Gazeous Hydrogene"; }
+            get { return "Gazeous Hydrogen"; }
         }
         public override string Surface
         {

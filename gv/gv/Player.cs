@@ -16,6 +16,7 @@ namespace gv
         int _speed;
         int _remainingSteps;
         Universe _universe;
+        Dictionary<string, int> _ressources = new Dictionary<string,int>();
 
 
        public Player(Universe u)
@@ -25,6 +26,13 @@ namespace gv
             _speed = 4;
             _canMove = true;
             _remainingSteps = _speed;
+            foreach( string s in PlanetAttributes.PlanetRessources )
+            {
+                if( s != "none" )
+                {
+                    _ressources.Add( s, 0 );
+                }
+            }
         }
         public bool Move( Position destination )
         {
@@ -50,6 +58,14 @@ namespace gv
         internal void EndTurn()
         {
             _remainingSteps = _speed;
+            foreach( Planet p in _universe.Planets.Values )
+            {
+                if( p.Ressources != "none" && p.Factory == true )
+                {
+                    _ressources[p.Ressources] += 10;
+                }
+            }
+
         }
         public XElement ToXML()
         {
@@ -57,7 +73,13 @@ namespace gv
                 new XElement( "Speed", _speed ),
                 new XElement("X", Position.X),
                 new XElement("Y", Position.Y),
-                new XElement( "RemainingSteps", _remainingSteps ) 
+                new XElement( "RemainingSteps", _remainingSteps ),
+                new XElement("Ressources",
+                    from p in _ressources
+                        select new XElement("Ressource",
+                            new XElement(p.Key,p.Value)
+                    )
+                )
             );
         }
         public int Speed
@@ -74,6 +96,10 @@ namespace gv
         {
             get { return _remainingSteps; }
             set { _remainingSteps = value; }
+        }
+        public Dictionary<string, int> Ressources
+        {
+            get { return _ressources; }
         }
     }
 }
