@@ -48,9 +48,13 @@
             // 
             // EndTurn
             // 
-            this.EndTurn.BackColor = System.Drawing.Color.PaleGreen;
+            this.EndTurn.BackColor = System.Drawing.Color.Purple;
             this.EndTurn.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.EndTurn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EndTurn.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            this.EndTurn.FlatAppearance.BorderSize = 2;
+            this.EndTurn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.EndTurn.Font = new System.Drawing.Font("Orator Std", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EndTurn.ForeColor = System.Drawing.Color.Lime;
             this.EndTurn.Location = new System.Drawing.Point(1134, 658);
             this.EndTurn.Name = "EndTurn";
             this.EndTurn.Size = new System.Drawing.Size(109, 51);
