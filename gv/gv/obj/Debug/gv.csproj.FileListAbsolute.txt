@@ -18,3 +18,4 @@ C:\Users\Benoit\Desktop\PI\sv\gv\gv\bin\Debug\FakeTextGenerator.pdb
 C:\Users\Benoit\Desktop\PI\sv\gv\gv\obj\Debug\gv.csprojResolveAssemblyReference.cache
 C:\Users\Benoit\Desktop\PI\sv\gv\gv\obj\Debug\gv.dll
 C:\Users\Benoit\Desktop\PI\sv\gv\gv\obj\Debug\gv.pdb
+C:\myGit\sv\gv\gv\obj\Debug\gv.csprojResolveAssemblyReference.cache
