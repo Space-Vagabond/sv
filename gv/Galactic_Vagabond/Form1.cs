@@ -119,7 +119,9 @@ namespace Galactic_Vagabond
         private void EndTurn_Click( object sender, EventArgs e )
         {
             _universe.EndTurn();
-            _universe.ToXML();
+           // _universe.ToXML();
+            map.Invalidate();
+            map.Refresh();
         }
 
         private void Build_Click( object sender, EventArgs e )

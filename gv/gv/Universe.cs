@@ -14,7 +14,8 @@ namespace gv
     public class Universe
     {
         readonly Dictionary<string,Planet> _planets = new Dictionary<string,Planet>();
-        readonly List<Chunk> _chunks = new List<Chunk>();
+        readonly Dictionary<Position,Chunk> _chunks = new Dictionary<Position,Chunk>();
+        List<Chunk> _shownChunks = new List<Chunk>();
         readonly List<Cell> _cells = new List<Cell>();
         Random rand = new Random();
         internal TextGenerator NameGen;
@@ -33,7 +34,8 @@ namespace gv
                 for( int j = -1; j < 1; j++ )
                 {
                     Chunk c = new Chunk( new Position( i * 10, j * 10 ), this );
-                    _chunks.Add( c );
+                    _chunks.Add(c.Position, c );
+                    _shownChunks.Add(c);
                 }
             }   
             
@@ -87,7 +89,7 @@ namespace gv
                         )
                     ),
                     new XElement("Chunks",
-                        from C in _chunks
+                        from C in _chunks.Values
                         select new XElement("Chunk", 
                             new XElement("X", C.Position.X),
                             new XElement("Y", C.Position.Y)
@@ -100,12 +102,83 @@ namespace gv
         public void EndTurn()
         {
             _player.EndTurn();
+            EnsureChunk();
+        }
+        public void EnsureChunk()
+        {
+
+            int maxX = _shownChunks.Max( Chunk => Chunk.Position.X );
+            int maxY = _shownChunks.Max( Chunk => Chunk.Position.Y );
+            int minX = _shownChunks.Min( Chunk => Chunk.Position.X );
+            int minY = _shownChunks.Min( Chunk => Chunk.Position.Y );
+            int maxiX = maxX + 9;
+            int maxiY = maxY + 9;
+            int miniX = minY;
+            int miniY = minY;
+            if( _player.Position.X >= maxiX - 2 && _player.Position.Y >= maxiY - 2 )
+            {
+                //need chunks
+            }
+            else if(_player.Position.X >= maxiX - 2 && _player.Position.Y <= miniY + 2)
+            {
+                //
+            }
+            else if( _player.Position.X <= miniX + 2 && _player.Position.Y >= maxiY - 2 )
+            {
+                //
+            }
+            else if( _player.Position.X <= miniX + 2 && _player.Position.Y <= miniY + 2 )
+            {
+                //
+            }
+            else if( _player.Position.X >= maxiX - 2 )
+            {
+                _shownChunks.Clear();
+                _shownChunks.Add( _chunks[new Position( maxX, minY )] );
+                _shownChunks.Add( _chunks[new Position( maxX, maxY )] );
+
+                if( _chunks.ContainsKey( new Position( maxX + 10, minY ) ) )
+                {
+                    _shownChunks.Add( _chunks[new Position( maxX + 10, minY )] );
+                }
+                else
+                {
+                    Chunk c = new Chunk( new Position( maxX + 10, minY ), this );
+                    _shownChunks.Add( c );
+                }
+                if( _chunks.ContainsKey( new Position( maxX + 10, maxY) ) )
+                {
+                    _shownChunks.Add( _chunks[new Position( maxX + 10, maxY )] );
+                }
+                else
+                {
+                    Chunk c = new Chunk(new Position(maxX+10,maxY), this);
+                    _shownChunks.Add( c );
+                }
+                
+            }
+            else if( _player.Position.X <= miniX + 2 )
+            {
+                //
+            }
+            else if( _player.Position.Y >= maxiY - 2 )
+            {
+                //
+            }
+            else if( _player.Position.Y <= miniY + 2 )
+            {
+                //
+            }
+            else
+            {
+                //
+            }
         }
         public Dictionary<string,Planet> Planets
         {
             get { return _planets; }
         }
-        public List<Chunk> Chunks
+        public Dictionary<Position,Chunk> Chunks
         {
            get { return _chunks;}
         }
@@ -125,6 +198,9 @@ namespace gv
         {
             get { return _events; }
         }
-        
+        public List<Chunk> ShownChunks
+        {
+            get { return _shownChunks; }
+        }      
     }
 }

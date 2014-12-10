@@ -58,6 +58,10 @@ namespace gv
         {
             get { return _position; }
         }
+        public List<Cell> Cells
+        {
+            get { return _cells; }
+        }
         
     }
 }

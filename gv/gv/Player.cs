@@ -23,7 +23,7 @@ namespace gv
         {
             _universe = u;
             _position = new Position( 0, 0 );
-            _speed = 4;
+            _speed = 4000;
             _canMove = true;
             _remainingSteps = _speed;
             foreach( string s in PlanetAttributes.PlanetRessources )
@@ -64,8 +64,7 @@ namespace gv
                 {
                     _ressources[p.Ressources] += 10;
                 }
-            }
-
+            }            
         }
         public XElement ToXML()
         {
