@@ -38,6 +38,7 @@
             this.MetalLabel = new System.Windows.Forms.Label();
             this.HydrogenLabel = new System.Windows.Forms.Label();
             this.HeliumLabel = new System.Windows.Forms.Label();
+            this.TurnEvents = new System.Windows.Forms.ListBox();
             this.map = new Galactic_Vagabond.Map();
             this.SuspendLayout();
             // 
@@ -81,7 +82,7 @@
             this.Build.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Build.Font = new System.Drawing.Font("Orator Std", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Build.ForeColor = System.Drawing.Color.Chartreuse;
-            this.Build.Location = new System.Drawing.Point(1143, 222);
+            this.Build.Location = new System.Drawing.Point(645, 184);
             this.Build.Name = "Build";
             this.Build.Size = new System.Drawing.Size(120, 32);
             this.Build.TabIndex = 3;
@@ -154,7 +155,6 @@
             this.HydrogenLabel.Size = new System.Drawing.Size(80, 17);
             this.HydrogenLabel.TabIndex = 9;
             this.HydrogenLabel.Text = "Hydrogene";
-            
             // 
             // HeliumLabel
             // 
@@ -168,6 +168,22 @@
             this.HeliumLabel.Size = new System.Drawing.Size(56, 17);
             this.HeliumLabel.TabIndex = 10;
             this.HeliumLabel.Text = "Helium";
+            // 
+            // TurnEvents
+            // 
+            this.TurnEvents.BackColor = System.Drawing.Color.Black;
+            this.TurnEvents.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TurnEvents.Font = new System.Drawing.Font("Orator Std", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TurnEvents.ForeColor = System.Drawing.Color.GhostWhite;
+            this.TurnEvents.FormattingEnabled = true;
+            this.TurnEvents.ItemHeight = 20;
+            this.TurnEvents.Location = new System.Drawing.Point(622, 222);
+            this.TurnEvents.Name = "TurnEvents";
+            this.TurnEvents.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.TurnEvents.ScrollAlwaysVisible = true;
+            this.TurnEvents.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.TurnEvents.Size = new System.Drawing.Size(641, 242);
+            this.TurnEvents.TabIndex = 11;
             // 
             // map
             // 
@@ -188,6 +204,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1264, 721);
+            this.Controls.Add(this.TurnEvents);
             this.Controls.Add(this.HeliumLabel);
             this.Controls.Add(this.HydrogenLabel);
             this.Controls.Add(this.MetalLabel);
@@ -220,6 +237,7 @@
         private System.Windows.Forms.Label MetalLabel;
         private System.Windows.Forms.Label HydrogenLabel;
         private System.Windows.Forms.Label HeliumLabel;
+        private System.Windows.Forms.ListBox TurnEvents;
 
 
 

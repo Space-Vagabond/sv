@@ -55,6 +55,14 @@ namespace Galactic_Vagabond
             this.HeliumLabel.Show();
         }
 
+        void DisplayTurnEvents() 
+        {
+            this.TurnEvents.DataSource = new List<string>();
+            this.TurnEvents.DataSource = _universe.Event.EventsOccured;
+            int visibleItem = this.TurnEvents.ClientSize.Height / this.TurnEvents.ItemHeight;
+            this.TurnEvents.TopIndex = Math.Max( this.TurnEvents.Items.Count - visibleItem + 1, 0 );
+        }
+
         public void ShowCurrentPlanet()
         {
             List<object> caracs = new List<object>();
@@ -137,6 +145,8 @@ namespace Galactic_Vagabond
 
         private void EndTurn_Click( object sender, EventArgs e )
         {
+            _universe.Event.EventOccurs();
+            DisplayTurnEvents();
             DisplayPlayerResources();
             _universe.EndTurn();
             _universe.ToXML();
