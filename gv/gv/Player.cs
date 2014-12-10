@@ -18,7 +18,7 @@ namespace gv
         Universe _universe;
         Dictionary<string, int> _ressources = new Dictionary<string,int>();
 
-
+        
        public Player(Universe u)
         {
             _universe = u;
@@ -65,7 +65,7 @@ namespace gv
                     _ressources[p.Ressources] += 10;
                 }
             }
-
+            
         }
         public XElement ToXML()
         {

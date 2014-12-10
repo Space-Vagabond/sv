@@ -34,9 +34,6 @@ namespace gv
                   break;
                   case 2: ElectricStorm(pl);
                   break;
-              
-           
-             
 
               }
               

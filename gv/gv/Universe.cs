@@ -18,7 +18,6 @@ namespace gv
         readonly List<Cell> _cells = new List<Cell>();
         Random rand = new Random();
         internal TextGenerator NameGen;
-
         EventGenerator _events;
         Player _player;
 
