@@ -33,9 +33,6 @@ namespace Galactic_Vagabond
             {
                 //loadGame
             }
-
-            LoadMap();
-            map.Focus();
             ShowCurrentPlanet();
         }
 
@@ -52,31 +49,59 @@ namespace Galactic_Vagabond
                 map.Rows.Add( s );
                 this.map.Rows[i].Height = 30;
             }
-            foreach( Chunk ch in _universe.ShownChunks )
+            foreach( KeyValuePair<int,Chunk> ch in _universe.ShownChunks )
             {
-                foreach( Cell cl in ch.Cells )
+                Position modulo;
+                switch( ch.Key )
+                {
+                    case 1:
+                        modulo.X = 10;
+                        modulo.Y = 10;
+                        break;
+                    case 2:
+                        modulo.X = 10;
+                        modulo.Y = 20;
+                        break;
+                    case 3:
+                        modulo.X = 20;
+                        modulo.Y = 10;
+                        break;
+                    default:
+                        modulo.X = 20;
+                        modulo.Y = 20;
+                        break;
+                }
+                foreach( Cell cl in ch.Value.Cells )
                 {
                     if( cl.ContainsPlanet )
                     {
                         if( _universe.User.Position.X == cl.Position.X && _universe.User.Position.Y == cl.Position.Y )
                         {
-                            this.map.Rows[cl.Position.X + 10].Cells[cl.Position.Y + 10].Style.BackColor = System.Drawing.Color.Yellow;
+                            this.map.Rows[cl.Position.Y%modulo.Y ].Cells[cl.Position.X%modulo.X ].Style.BackColor = System.Drawing.Color.Yellow;
                         }
                         else
                         {
-                            this.map.Rows[cl.Position.X + 10].Cells[cl.Position.Y + 10].Style.BackColor = System.Drawing.Color.Black;
+                            this.map.Rows[cl.Position.Y ].Cells[cl.Position.X ].Style.BackColor = System.Drawing.Color.Black;
                         }
-                        this.map.Rows[cl.Position.X + 10].Cells[cl.Position.Y + 10].Value = Image.FromFile( @".\..\..\..\images/planet1.png" );
+                        this.map.Rows[cl.Position.Y%modulo.Y ].Cells[cl.Position.X%modulo.X ].Value = Image.FromFile( @".\..\..\..\images/planet1.png" );
                     }
                     else
                     {
-                        this.map.Rows[cl.Position.X+10].Cells[cl.Position.Y+10].Value = square;
+                        if( _universe.User.Position.X == cl.Position.X && _universe.User.Position.Y == cl.Position.Y )
+                        {
+                            this.map.Rows[cl.Position.Y%modulo.Y ].Cells[cl.Position.X%modulo.X ].Value = Image.FromFile( @".\..\..\..\images/ship.png" );
+                        }
+                        else
+                        {
+                            this.map.Rows[cl.Position.Y%modulo.Y ].Cells[cl.Position.X%modulo.X ].Value = Image.FromFile( @".\..\..\..\images/square.png" );
+                        }
                     }
                 }
             }
         }
         public void ShowCurrentPlanet()
         {
+            LoadMap();
             List<object> caracs = new List<object>();
             CurrentPlanet.Text = string.Empty;
             var pos = _universe.Cells.Where( c => c.Position.X == _universe.User.Position.X && c.Position.Y == _universe.User.Position.Y ).Single();
@@ -114,34 +139,34 @@ namespace Galactic_Vagabond
             }
         }
 
-       /* protected override bool ProcessCmdKey( ref Message msg, Keys keyData )
+       protected override bool ProcessCmdKey( ref Message msg, Keys keyData )
         {
             if( this.map.Visible )
             {
                 if( keyData == Keys.Up )
                 {
-                    if( _universe.User.Move( new Position( _universe.User.Position.X, (_universe.User.Position.Y - 1) ) ) )
+                    if( _universe.User.Move( new Position( _universe.User.Position.X, _universe.User.Position.Y-1 ) ) )
                     {
                         map.Refresh();
                     }
                 }
                 else if( keyData == Keys.Down )
                 {
-                    if( _universe.User.Move( new Position( _universe.User.Position.X, (_universe.User.Position.Y + 1) ) ) )
+                    if( _universe.User.Move( new Position( _universe.User.Position.X, _universe.User.Position.Y+1 ) ) )
                     {
                         map.Refresh();
                     }
                 }
                 else if( keyData == Keys.Left )
                 {
-                    if( _universe.User.Move( new Position( (_universe.User.Position.X - 1), _universe.User.Position.Y ) ) )
+                    if( _universe.User.Move( new Position( _universe.User.Position.X-1 , _universe.User.Position.Y ) ) )
                     {
                         map.Refresh();
                     }
                 }
                 else if( keyData == Keys.Right )
                 {
-                    if( _universe.User.Move( new Position( (_universe.User.Position.X + 1), _universe.User.Position.Y ) ) )
+                    if( _universe.User.Move( new Position( _universe.User.Position.X+1 , _universe.User.Position.Y ) ) )
                     {
                         map.Refresh();
                     }
@@ -149,7 +174,7 @@ namespace Galactic_Vagabond
                 ShowCurrentPlanet();
             }
             return true;
-        }*/
+        }
 
         private void EndTurn_Click( object sender, EventArgs e )
         {
@@ -165,6 +190,6 @@ namespace Galactic_Vagabond
                  pos.ContainedPlanet.Factory = true;
                  ShowCurrentPlanet();
              }
-        }
+        }      
     }
 }

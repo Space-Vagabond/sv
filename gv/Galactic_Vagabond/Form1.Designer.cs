@@ -66,7 +66,7 @@
             this.CurrentPlanet.Cursor = System.Windows.Forms.Cursors.Cross;
             this.CurrentPlanet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CurrentPlanet.ForeColor = System.Drawing.Color.Gold;
-            this.CurrentPlanet.Location = new System.Drawing.Point(709, 12);
+            this.CurrentPlanet.Location = new System.Drawing.Point(719, 12);
             this.CurrentPlanet.Name = "CurrentPlanet";
             this.CurrentPlanet.Size = new System.Drawing.Size(543, 210);
             this.CurrentPlanet.TabIndex = 2;
@@ -103,7 +103,6 @@
             // 
             this.map.AllowUserToAddRows = false;
             this.map.AllowUserToDeleteRows = false;
-            this.map.AllowUserToOrderColumns = true;
             this.map.AllowUserToResizeColumns = false;
             this.map.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;

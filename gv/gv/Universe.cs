@@ -15,7 +15,7 @@ namespace gv
     {
         readonly Dictionary<string,Planet> _planets = new Dictionary<string,Planet>();
         readonly Dictionary<Position,Chunk> _chunks = new Dictionary<Position,Chunk>();
-        List<Chunk> _shownChunks = new List<Chunk>();
+        Dictionary<int,Chunk> _shownChunks = new Dictionary<int,Chunk>();
         readonly List<Cell> _cells = new List<Cell>();
         Random rand = new Random();
         internal TextGenerator NameGen;
@@ -28,14 +28,15 @@ namespace gv
             _events = new EventGenerator( this );
             _player = new Player( this );
             NameGen = new TextGenerator(WordTypes.Name);
-
+            int k = 1;
             for( int i = -1; i < 1; i++ )
             {
                 for( int j = -1; j < 1; j++ )
                 {
                     Chunk c = new Chunk( new Position( i * 10, j * 10 ), this );
                     _chunks.Add(c.Position, c );
-                    _shownChunks.Add(c);
+                    _shownChunks.Add(k,c);
+                    k++;
                 }
             }   
             
@@ -102,15 +103,15 @@ namespace gv
         public void EndTurn()
         {
             _player.EndTurn();
-            EnsureChunk();
+            //EnsureChunk();
         }
-        public void EnsureChunk()
+       /* public void EnsureChunk()
         {
 
-            int maxX = _shownChunks.Max( Chunk => Chunk.Position.X );
-            int maxY = _shownChunks.Max( Chunk => Chunk.Position.Y );
-            int minX = _shownChunks.Min( Chunk => Chunk.Position.X );
-            int minY = _shownChunks.Min( Chunk => Chunk.Position.Y );
+            int maxX = _shownChunks.Values.Max( Chunk => Chunk.Position.X );
+            int maxY = _shownChunks.Values.Max( Chunk => Chunk.Position.Y );
+            int minX = _shownChunks.Values.Min( Chunk => Chunk.Position.X );
+            int minY = _shownChunks.Values.Min( Chunk => Chunk.Position.Y );
             int maxiX = maxX + 9;
             int maxiY = maxY + 9;
             int miniX = minY;
@@ -173,7 +174,7 @@ namespace gv
             {
                 //
             }
-        }
+        }*/
         public Dictionary<string,Planet> Planets
         {
             get { return _planets; }
@@ -198,7 +199,7 @@ namespace gv
         {
             get { return _events; }
         }
-        public List<Chunk> ShownChunks
+        public Dictionary<int,Chunk> ShownChunks
         {
             get { return _shownChunks; }
         }      
