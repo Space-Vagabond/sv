@@ -38,7 +38,22 @@ namespace Galactic_Vagabond
             ShowCurrentPlanet();
         }
 
-
+        public void DisplayPlayerResources()
+        {
+      
+            this.SiliciumLabel.Text = "Silicium : " +_universe.User.Ressources["Silicium"];
+            this.SiliciumLabel.Show();
+            this.GemsLabel.Text = "Gems : " + _universe.User.Ressources["Gems"];
+            this.GemsLabel.Show();
+            this.PlutoniumLabel.Text = "Plutonium : "+ _universe.User.Ressources["Plutonium"];
+            this.PlutoniumLabel.Show();
+            this.MetalLabel.Text = "Metal : " + _universe.User.Ressources["Metal"];
+            this.MetalLabel.Show();
+            this.HydrogenLabel.Text = "Hydrogen : "+_universe.User.Ressources["Hydrogene"];
+            this.HydrogenLabel.Show();
+            this.HeliumLabel.Text = "Helium : " + _universe.User.Ressources["Helium"];
+            this.HeliumLabel.Show();
+        }
 
         public void ShowCurrentPlanet()
         {
@@ -102,6 +117,7 @@ namespace Galactic_Vagabond
                     if( _universe.User.Move( new Position( (_universe.User.Position.X - 1), _universe.User.Position.Y ) ) )
                     {
                         map.Refresh();
+                        
                     }
                 }
                 else if( keyData == Keys.Right )
@@ -109,15 +125,19 @@ namespace Galactic_Vagabond
                     if( _universe.User.Move( new Position( (_universe.User.Position.X + 1), _universe.User.Position.Y ) ) )
                     {
                         map.Refresh();
+                        
                     }
                 }
                 ShowCurrentPlanet();
+                DisplayPlayerResources();
+                
             }
             return true;
         }
 
         private void EndTurn_Click( object sender, EventArgs e )
         {
+            DisplayPlayerResources();
             _universe.EndTurn();
             _universe.ToXML();
         }

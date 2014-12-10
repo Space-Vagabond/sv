@@ -38,15 +38,15 @@
             // 
             this.NewGame.BackColor = System.Drawing.Color.Transparent;
             this.NewGame.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.NewGame.FlatAppearance.BorderSize = 0;
+            this.NewGame.FlatAppearance.BorderColor = System.Drawing.Color.OliveDrab;
             this.NewGame.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.NewGame.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.NewGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NewGame.Font = new System.Drawing.Font("Orator Std", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewGame.ForeColor = System.Drawing.Color.Chartreuse;
-            this.NewGame.Location = new System.Drawing.Point(55, 140);
+            this.NewGame.ForeColor = System.Drawing.Color.LawnGreen;
+            this.NewGame.Location = new System.Drawing.Point(73, 140);
             this.NewGame.Name = "NewGame";
-            this.NewGame.Size = new System.Drawing.Size(75, 73);
+            this.NewGame.Size = new System.Drawing.Size(57, 59);
             this.NewGame.TabIndex = 0;
             this.NewGame.Text = "New Game";
             this.NewGame.UseVisualStyleBackColor = false;
@@ -56,16 +56,16 @@
             // 
             this.LoadGame.BackColor = System.Drawing.Color.Transparent;
             this.LoadGame.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.LoadGame.FlatAppearance.BorderSize = 0;
+            this.LoadGame.FlatAppearance.BorderColor = System.Drawing.Color.OliveDrab;
             this.LoadGame.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.LoadGame.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.LoadGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LoadGame.Font = new System.Drawing.Font("Orator Std", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoadGame.ForeColor = System.Drawing.Color.Chartreuse;
-            this.LoadGame.Location = new System.Drawing.Point(197, 147);
+            this.LoadGame.Location = new System.Drawing.Point(215, 140);
             this.LoadGame.Name = "LoadGame";
-            this.LoadGame.Size = new System.Drawing.Size(75, 59);
-            this.LoadGame.TabIndex = 1;
+            this.LoadGame.Size = new System.Drawing.Size(57, 59);
+            this.LoadGame.TabIndex = 0;
             this.LoadGame.Text = "Load Game";
             this.LoadGame.UseVisualStyleBackColor = false;
             this.LoadGame.Click += new System.EventHandler(this.button1_Click);
@@ -78,9 +78,9 @@
             this.Welcome.ForeColor = System.Drawing.Color.White;
             this.Welcome.Location = new System.Drawing.Point(11, 9);
             this.Welcome.Name = "Welcome";
-            this.Welcome.Size = new System.Drawing.Size(261, 20);
+            this.Welcome.Size = new System.Drawing.Size(270, 20);
             this.Welcome.TabIndex = 2;
-            this.Welcome.Text = "Welcome to galactic vagabond";
+            this.Welcome.Text = "Welcome to galactic vagabond.";
             // 
             // launcher
             // 
