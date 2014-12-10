@@ -7,7 +7,7 @@ namespace gv
     {
         Position _position;
         Universe _container;
-        public readonly List<Cell>  _cells = new List<Cell>();
+        readonly List<Cell>  _cells = new List<Cell>();
 
         public Chunk( Position Begining, Universe u )
         {

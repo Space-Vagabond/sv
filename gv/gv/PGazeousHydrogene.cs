@@ -16,6 +16,8 @@ namespace gv
             : base( u, null )
         {
             _inhabited = (u.Rand.Next( 0, 2 ) > 0) ? true : false;
+            _climate = "Cold";
+            _surface = "Iced";
         }
 
         public override string Type

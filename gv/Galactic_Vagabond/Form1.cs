@@ -11,7 +11,6 @@ using gv;
 using Galactic_Vagabond;
 using System.Diagnostics;
 using System.IO;
-
 namespace Galactic_Vagabond
 {
     public partial class Form_GV_01 : Form
@@ -34,12 +33,48 @@ namespace Galactic_Vagabond
             {
                 //loadGame
             }
-            this.map.Universe = _universe;
+
+            LoadMap();
+            map.Focus();
             ShowCurrentPlanet();
         }
 
-
-
+        public void LoadMap()
+        {
+            for( int i = 0; i < 20; i++ )
+            {
+                this.map.Columns[i].Width = 35;
+            }
+            Image square = Image.FromFile( @".\..\..\..\images/square.png" );
+            for( int i = 0; i < 20; i++ )
+            {
+                Image[] s = new Image[] { square, square, square, square, square, square, square, square, square, square, square, square, square, square, square, square, square, square, square, square };
+                map.Rows.Add( s );
+                this.map.Rows[i].Height = 30;
+            }
+            foreach( Chunk ch in _universe.ShownChunks )
+            {
+                foreach( Cell cl in ch.Cells )
+                {
+                    if( cl.ContainsPlanet )
+                    {
+                        if( _universe.User.Position.X == cl.Position.X && _universe.User.Position.Y == cl.Position.Y )
+                        {
+                            this.map.Rows[cl.Position.X + 10].Cells[cl.Position.Y + 10].Style.BackColor = System.Drawing.Color.Yellow;
+                        }
+                        else
+                        {
+                            this.map.Rows[cl.Position.X + 10].Cells[cl.Position.Y + 10].Style.BackColor = System.Drawing.Color.Black;
+                        }
+                        this.map.Rows[cl.Position.X + 10].Cells[cl.Position.Y + 10].Value = Image.FromFile( @".\..\..\..\images/planet1.png" );
+                    }
+                    else
+                    {
+                        this.map.Rows[cl.Position.X+10].Cells[cl.Position.Y+10].Value = square;
+                    }
+                }
+            }
+        }
         public void ShowCurrentPlanet()
         {
             List<object> caracs = new List<object>();
@@ -79,7 +114,7 @@ namespace Galactic_Vagabond
             }
         }
 
-        protected override bool ProcessCmdKey( ref Message msg, Keys keyData )
+       /* protected override bool ProcessCmdKey( ref Message msg, Keys keyData )
         {
             if( this.map.Visible )
             {
@@ -114,14 +149,12 @@ namespace Galactic_Vagabond
                 ShowCurrentPlanet();
             }
             return true;
-        }
+        }*/
 
         private void EndTurn_Click( object sender, EventArgs e )
         {
             _universe.EndTurn();
            // _universe.ToXML();
-            map.Invalidate();
-            map.Refresh();
         }
 
         private void Build_Click( object sender, EventArgs e )
