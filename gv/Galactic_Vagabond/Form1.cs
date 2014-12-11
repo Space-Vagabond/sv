@@ -16,6 +16,8 @@ namespace Galactic_Vagabond
     public partial class Form_GV_01 : Form
     {
         Universe _universe;
+        Image _square = Image.FromFile( @".\..\..\..\images/square.png" );
+
         public Form_GV_01()
         {
             InitializeComponent();
@@ -33,26 +35,31 @@ namespace Galactic_Vagabond
             {
                 //loadGame
             }
+            InitMap();
             ShowCurrentPlanet();
         }
-
+        public void InitMap()
+        {
+            for( int i = 0; i < 20; i++ )
+            {
+                this.map.Columns[i].Width = 35;
+            }
+            for( int i = 0; i < 20; i++ )
+            {
+                Image[] s = new Image[] { _square, _square, _square, _square, _square, _square, _square, _square, _square, _square, _square, _square, _square, _square, _square, _square, _square, _square, _square, _square, _square };
+                map.Rows.Add( s );
+                this.map.Rows[i].Height = 30;
+            }
+        }
         public void LoadMap()
         {
             Image[] planets= new Image[20];
             for( int i = 0; i < 20; i++ )
             {
                 planets[i] = Image.FromFile( @".\..\..\..\images/planet"+(i+1)+".png" );
-                this.map.Columns[i].Width = 35;
-
             }
             Image ship = Image.FromFile( @".\..\..\..\images/ship.png" );
-            Image square = Image.FromFile( @".\..\..\..\images/square.png" );
-            for( int i = 0; i < 20; i++ )
-            {
-                Image[] s = new Image[] { square, square, square, square, square, square, square, square, square, square, square, square, square, square, square, square, square, square, square, square };
-                map.Rows.Add( s );
-                this.map.Rows[i].Height = 30;
-            }
+
             foreach( KeyValuePair<int,Chunk> ch in _universe.ShownChunks )
             {
                 Position modulo;
@@ -109,11 +116,14 @@ namespace Galactic_Vagabond
                         }
                         else
                         {
-                            this.map.Rows[ModAbs( cl.Position.Y, modulo.Y ) + addY].Cells[ModAbs( cl.Position.X, modulo.X ) + addX].Value = square;
+                            this.map.Rows[ModAbs( cl.Position.Y, modulo.Y ) + addY].Cells[ModAbs( cl.Position.X, modulo.X ) + addX].Value = _square;
                         }
                     }
                 }
             }
+            //this.map.Rows[10].Cells[10].Style.BackColor = System.Drawing.Color.White;
+            this.map.Rows[01].Cells[01].Style.BackColor = System.Drawing.Color.White;
+
         }
         public void ShowCurrentPlanet()
         {
