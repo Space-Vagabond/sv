@@ -38,10 +38,14 @@ namespace Galactic_Vagabond
 
         public void LoadMap()
         {
+            Image[] planets= new Image[20];
             for( int i = 0; i < 20; i++ )
             {
+                planets[i] = Image.FromFile( @".\..\..\..\images/planet"+(i+1)+".png" );
                 this.map.Columns[i].Width = 35;
+
             }
+            Image ship = Image.FromFile( @".\..\..\..\images/ship.png" );
             Image square = Image.FromFile( @".\..\..\..\images/square.png" );
             for( int i = 0; i < 20; i++ )
             {
@@ -52,23 +56,33 @@ namespace Galactic_Vagabond
             foreach( KeyValuePair<int,Chunk> ch in _universe.ShownChunks )
             {
                 Position modulo;
+                int addX;
+                int addY;
                 switch( ch.Key )
                 {
                     case 1:
                         modulo.X = 10;
                         modulo.Y = 10;
+                        addX = 0;
+                        addY = 0;
                         break;
                     case 2:
                         modulo.X = 10;
                         modulo.Y = 20;
+                        addX = 0;
+                        addY = 10;
                         break;
                     case 3:
                         modulo.X = 20;
                         modulo.Y = 10;
+                        addX = 10;
+                        addY = 0;
                         break;
                     default:
                         modulo.X = 20;
                         modulo.Y = 20;
+                        addX = 10;
+                        addY = 10;
                         break;
                 }
                 foreach( Cell cl in ch.Value.Cells )
@@ -77,23 +91,25 @@ namespace Galactic_Vagabond
                     {
                         if( _universe.User.Position.X == cl.Position.X && _universe.User.Position.Y == cl.Position.Y )
                         {
-                            this.map.Rows[cl.Position.Y%modulo.Y ].Cells[cl.Position.X%modulo.X ].Style.BackColor = System.Drawing.Color.Yellow;
+                            this.map.Rows[ModAbs( cl.Position.Y, modulo.Y ) + addY].Cells[ModAbs( cl.Position.X, modulo.X ) + addX].Style.BackColor =
+                                System.Drawing.Color.Yellow;
                         }
                         else
                         {
-                            this.map.Rows[cl.Position.Y ].Cells[cl.Position.X ].Style.BackColor = System.Drawing.Color.Black;
+                            this.map.Rows[ModAbs( cl.Position.Y, modulo.Y ) + addY].Cells[ModAbs( cl.Position.X, modulo.X ) + addX].Style.BackColor =
+                                System.Drawing.Color.Black;
                         }
-                        this.map.Rows[cl.Position.Y%modulo.Y ].Cells[cl.Position.X%modulo.X ].Value = Image.FromFile( @".\..\..\..\images/planet1.png" );
+                        this.map.Rows[ModAbs( cl.Position.Y, modulo.Y ) + addY].Cells[ModAbs( cl.Position.X, modulo.X ) + addX].Value = planets[1];
                     }
                     else
                     {
                         if( _universe.User.Position.X == cl.Position.X && _universe.User.Position.Y == cl.Position.Y )
                         {
-                            this.map.Rows[cl.Position.Y%modulo.Y ].Cells[cl.Position.X%modulo.X ].Value = Image.FromFile( @".\..\..\..\images/ship.png" );
+                            this.map.Rows[ModAbs( cl.Position.Y, modulo.Y ) + addY].Cells[ModAbs( cl.Position.X, modulo.X ) + addX].Value = ship;
                         }
                         else
                         {
-                            this.map.Rows[cl.Position.Y%modulo.Y ].Cells[cl.Position.X%modulo.X ].Value = Image.FromFile( @".\..\..\..\images/square.png" );
+                            this.map.Rows[ModAbs( cl.Position.Y, modulo.Y ) + addY].Cells[ModAbs( cl.Position.X, modulo.X ) + addX].Value = square;
                         }
                     }
                 }
@@ -145,28 +161,28 @@ namespace Galactic_Vagabond
             {
                 if( keyData == Keys.Up )
                 {
-                    if( _universe.User.Move( new Position( _universe.User.Position.X, _universe.User.Position.Y-1 ) ) )
+                    if( _universe.User.Move( new Position( _universe.User.Position.X, _universe.User.Position.Y - 1 ) ) )
                     {
                         map.Refresh();
                     }
                 }
                 else if( keyData == Keys.Down )
                 {
-                    if( _universe.User.Move( new Position( _universe.User.Position.X, _universe.User.Position.Y+1 ) ) )
+                    if( _universe.User.Move( new Position( _universe.User.Position.X, _universe.User.Position.Y + 1 ) ) )
                     {
                         map.Refresh();
                     }
                 }
                 else if( keyData == Keys.Left )
                 {
-                    if( _universe.User.Move( new Position( _universe.User.Position.X-1 , _universe.User.Position.Y ) ) )
+                    if( _universe.User.Move( new Position( _universe.User.Position.X - 1, _universe.User.Position.Y ) ) )
                     {
                         map.Refresh();
                     }
                 }
                 else if( keyData == Keys.Right )
                 {
-                    if( _universe.User.Move( new Position( _universe.User.Position.X+1 , _universe.User.Position.Y ) ) )
+                    if( _universe.User.Move( new Position( _universe.User.Position.X + 1, _universe.User.Position.Y ) ) )
                     {
                         map.Refresh();
                     }
@@ -190,6 +206,17 @@ namespace Galactic_Vagabond
                  pos.ContainedPlanet.Factory = true;
                  ShowCurrentPlanet();
              }
-        }      
+        }
+        public int ModAbs( int nb, int mod )
+        {
+            if( nb < 0 && mod > 0 )
+            {
+                return ((nb % mod) + mod);
+            }
+            else
+            {
+                return nb % mod;
+            }
+        }
     }
 }
