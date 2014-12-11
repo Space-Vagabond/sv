@@ -147,8 +147,8 @@ namespace Galactic_Vagabond
         {
             _universe.Event.EventOccurs();
             DisplayTurnEvents();
-            DisplayPlayerResources();
             _universe.EndTurn();
+            DisplayPlayerResources();
             _universe.ToXML();
         }
 

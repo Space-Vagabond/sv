@@ -54,9 +54,9 @@ namespace gv
         /// For immersion purposes
         /// </summary>
         /// <param name="pl"></param>
-        void RevolutionOnPlanet(Planet pl)
+        void RevolutionOnPlanet( Planet pl) 
         {
-            _eventsOccured.Add( String.Format("Revolution on {0}, hope the new power is nice to foreigners",pl.Name ));
+            _eventsOccured.Add( String.Format("Revolution on {0}, hope the new power is nice to foreigners.",pl.Name ));
         }
         /// <summary>
         /// Makes a planet inaccessible for 2 turns.

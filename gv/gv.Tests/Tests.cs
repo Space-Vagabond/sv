@@ -59,7 +59,7 @@ namespace gv.Tests
                 Console.WriteLine( count[i] );
             }
         }
-        [Test]
+        /*[Test]
         public void With_type_comes_ressources()
         {
             Universe u = new Universe();
@@ -139,7 +139,7 @@ namespace gv.Tests
                     Assert.AreEqual( P.InhabitantsName , "Inhabited planet" );
                 } 
             }
-        }
+        }*/
         [Test]
         public void Planets_Pos_test()
         {
@@ -158,5 +158,28 @@ namespace gv.Tests
             Assert.That( cell.ContainsPlanet );
             Console.WriteLine( cell.Position.X + "//"+cell.Position.Y );
         }
+        [Test]
+        public void event_added_to_EventOccured_list()
+        {
+            Universe sut = new Universe();
+            sut.Event.EventOccurs();
+            Assert.That( sut.Event.EventsOccured.Count != 0 );
+            for( int i = 0; i < sut.Event.EventsOccured.Count; i += 1 )
+            {
+                Console.WriteLine( sut.Event.EventsOccured[i] );
+            }
+        }
+        [Test]
+        public void player_resources_are_initialized_at_0()
+        {
+            Universe u = new Universe();
+            Assert.That( u.User.Ressources.ContainsKey( "Silicium" ) && u.User.Ressources["Silicium"] == 0 );
+            Assert.That( u.User.Ressources.ContainsKey( "Plutonium" ) && u.User.Ressources["Plutonium"] == 0 );
+            Assert.That( u.User.Ressources.ContainsKey( "Gems" ) && u.User.Ressources["Gems"] == 0 );
+            Assert.That( u.User.Ressources.ContainsKey( "Metal" ) && u.User.Ressources["Metal"] == 0 );
+            Assert.That( u.User.Ressources.ContainsKey( "Hydrogene" ) && u.User.Ressources["Hydrogene"] == 0 );
+            Assert.That( u.User.Ressources.ContainsKey( "Helium" ) && u.User.Ressources["Helium"] == 0 );
+        }
+        
     }
 }
