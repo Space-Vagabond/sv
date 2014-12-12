@@ -20,6 +20,7 @@ namespace gv
         internal TextGenerator NameGen;
         EventGenerator _events;
         Player _player;
+        int _turn;
 
         public Universe()
         {
@@ -98,6 +99,7 @@ namespace gv
         }
         public void EndTurn()
         {
+            _turn += 1;
             _player.EndTurn();
         }
         public Dictionary<string,Planet> Planets
@@ -123,6 +125,10 @@ namespace gv
         public EventGenerator Event
         {
             get { return _events; }
+        }
+        public int Turn
+        {
+            get { return _turn; }
         }
         
     }
