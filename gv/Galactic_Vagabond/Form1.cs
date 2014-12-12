@@ -62,68 +62,37 @@ namespace Galactic_Vagabond
 
             foreach( KeyValuePair<int,Chunk> ch in _universe.ShownChunks )
             {
-                Position modulo;
-                int addX;
-                int addY;
-                switch( ch.Key )
-                {
-                    case 1:
-                        modulo.X = 10;
-                        modulo.Y = 10;
-                        addX = 0;
-                        addY = 0;
-                        break;
-                    case 2:
-                        modulo.X = 10;
-                        modulo.Y = 20;
-                        addX = 0;
-                        addY = 10;
-                        break;
-                    case 3:
-                        modulo.X = 20;
-                        modulo.Y = 10;
-                        addX = 10;
-                        addY = 0;
-                        break;
-                    default:
-                        modulo.X = 20;
-                        modulo.Y = 20;
-                        addX = 10;
-                        addY = 10;
-                        break;
-                }
                 foreach( Cell cl in ch.Value.Cells )
                 {
                     if( cl.ContainsPlanet )
                     {
                         if( _universe.User.Position.X == cl.Position.X && _universe.User.Position.Y == cl.Position.Y )
                         {
-                            this.map.Rows[ModAbs( cl.Position.Y, modulo.Y ) + addY].Cells[ModAbs( cl.Position.X, modulo.X ) + addX].Style.BackColor =
+                            this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Style.BackColor =
                                 System.Drawing.Color.Yellow;
                         }
                         else
                         {
-                            this.map.Rows[ModAbs( cl.Position.Y, modulo.Y ) + addY].Cells[ModAbs( cl.Position.X, modulo.X ) + addX].Style.BackColor =
+                            this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Style.BackColor =
                                 System.Drawing.Color.Black;
                         }
-                        this.map.Rows[ModAbs( cl.Position.Y, modulo.Y ) + addY].Cells[ModAbs( cl.Position.X, modulo.X ) + addX].Value = planets[1];
+                        this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Value = planets[1];
                     }
                     else
                     {
                         if( _universe.User.Position.X == cl.Position.X && _universe.User.Position.Y == cl.Position.Y )
                         {
-                            this.map.Rows[ModAbs( cl.Position.Y, modulo.Y ) + addY].Cells[ModAbs( cl.Position.X, modulo.X ) + addX].Value = ship;
+                            this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Value = ship;
                         }
                         else
                         {
-                            this.map.Rows[ModAbs( cl.Position.Y, modulo.Y ) + addY].Cells[ModAbs( cl.Position.X, modulo.X ) + addX].Value = _square;
+                            this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Value = _square;
                         }
                     }
                 }
             }
             //this.map.Rows[10].Cells[10].Style.BackColor = System.Drawing.Color.White;
-            this.map.Rows[01].Cells[01].Style.BackColor = System.Drawing.Color.White;
-
+            //this.map.Rows[00].Cells[00].Value = ship;
         }
         public void ShowCurrentPlanet()
         {
@@ -219,13 +188,30 @@ namespace Galactic_Vagabond
         }
         public int ModAbs( int nb, int mod )
         {
-            if( nb < 0 && mod > 0 )
+                return (((nb % mod) + mod)%mod);
+        }
+        int ConvertX( int value, int nbChunk )
+        {
+            value = ModAbs( value, 10 );
+            if( nbChunk == 1 || nbChunk == 2 )
             {
-                return ((nb % mod) + mod);
+                return value;
             }
             else
             {
-                return nb % mod;
+                return (value + 10);
+            }
+        }
+        int ConvertY( int value, int nbChunk )
+        {
+            value = ModAbs( value, 10 );
+            if( nbChunk % 2 == 0 )
+            {
+                return value;
+            }
+            else
+            {
+                return (value + 10);
             }
         }
     }
