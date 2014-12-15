@@ -44,6 +44,7 @@
             this.EventsButton = new System.Windows.Forms.Button();
             this.CodexButton = new System.Windows.Forms.Button();
             this.StatisticsButton = new System.Windows.Forms.Button();
+            this.LastTurnLabel = new System.Windows.Forms.Label();
             this.map = new Galactic_Vagabond.Map();
             this.SuspendLayout();
             // 
@@ -182,12 +183,12 @@
             this.TurnEvents.ForeColor = System.Drawing.Color.GhostWhite;
             this.TurnEvents.FormattingEnabled = true;
             this.TurnEvents.ItemHeight = 20;
-            this.TurnEvents.Location = new System.Drawing.Point(622, 222);
+            this.TurnEvents.Location = new System.Drawing.Point(622, 260);
             this.TurnEvents.Name = "TurnEvents";
             this.TurnEvents.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.TurnEvents.ScrollAlwaysVisible = true;
             this.TurnEvents.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.TurnEvents.Size = new System.Drawing.Size(641, 242);
+            this.TurnEvents.Size = new System.Drawing.Size(641, 222);
             this.TurnEvents.TabIndex = 11;
             // 
             // OverviewButton
@@ -234,6 +235,7 @@
             this.EventsButton.TabIndex = 14;
             this.EventsButton.Text = "Events";
             this.EventsButton.UseVisualStyleBackColor = false;
+            this.EventsButton.Click += new System.EventHandler(this.EventsButton_Click);
             // 
             // CodexButton
             // 
@@ -265,6 +267,18 @@
             this.StatisticsButton.Text = "Statistics";
             this.StatisticsButton.UseVisualStyleBackColor = false;
             // 
+            // LastTurnLabel
+            // 
+            this.LastTurnLabel.AutoSize = true;
+            this.LastTurnLabel.BackColor = System.Drawing.Color.Transparent;
+            this.LastTurnLabel.Font = new System.Drawing.Font("Orator Std", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastTurnLabel.ForeColor = System.Drawing.Color.Yellow;
+            this.LastTurnLabel.Location = new System.Drawing.Point(642, 240);
+            this.LastTurnLabel.Name = "LastTurnLabel";
+            this.LastTurnLabel.Size = new System.Drawing.Size(152, 17);
+            this.LastTurnLabel.TabIndex = 17;
+            this.LastTurnLabel.Text = "Last turn events :";
+            // 
             // map
             // 
             this.map.BackColor = System.Drawing.Color.Black;
@@ -284,6 +298,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1264, 721);
+            this.Controls.Add(this.LastTurnLabel);
             this.Controls.Add(this.StatisticsButton);
             this.Controls.Add(this.CodexButton);
             this.Controls.Add(this.EventsButton);
@@ -328,6 +343,7 @@
         private System.Windows.Forms.Button EventsButton;
         private System.Windows.Forms.Button CodexButton;
         private System.Windows.Forms.Button StatisticsButton;
+        private System.Windows.Forms.Label LastTurnLabel;
 
 
 

@@ -2,24 +2,24 @@
 <Game>
   <Player>
     <Speed>4</Speed>
-    <X>2</X>
-    <Y>1</Y>
+    <X>-4</X>
+    <Y>-2</Y>
     <RemainingSteps>4</RemainingSteps>
     <Ressources>
       <Ressource>
-        <Silicium>60</Silicium>
+        <Silicium>50</Silicium>
       </Ressource>
       <Ressource>
         <Gems>0</Gems>
       </Ressource>
       <Ressource>
-        <Plutonium>0</Plutonium>
+        <Plutonium>20</Plutonium>
       </Ressource>
       <Ressource>
         <Metal>0</Metal>
       </Ressource>
       <Ressource>
-        <Hydrogene>0</Hydrogene>
+        <Hydrogene>30</Hydrogene>
       </Ressource>
       <Ressource>
         <Helium>0</Helium>
@@ -29,10 +29,10 @@
   <Planets>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Namenietus</Name>
+      <Name>Cheneeus</Name>
       <Type>Telluric Carbon</Type>
       <Climate>Temperate</Climate>
-      <Surface>Planetopolis</Surface>
+      <Surface>Destroyed by asteroid</Surface>
       <Ressources>Gems</Ressources>
       <IsInhabited>false</IsInhabited>
       <InhabitantsName>Inhabited planet</InhabitantsName>
@@ -40,7 +40,40 @@
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Sophabus</Name>
+      <Name>Liesamilus</Name>
+      <Type>Telluric Metal</Type>
+      <Climate>Cold</Climate>
+      <Surface>Glass</Surface>
+      <Ressources>Metal</Ressources>
+      <IsInhabited>true</IsInhabited>
+      <InhabitantsName>Liesamilians</InhabitantsName>
+      <Built>false</Built>
+    </Planet>
+    <Planet>
+      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+      <Name>Haviylynus</Name>
+      <Type>Telluric Lava</Type>
+      <Climate>Hot</Climate>
+      <Surface>Destroyed by asteroid</Surface>
+      <Ressources>none</Ressources>
+      <IsInhabited>false</IsInhabited>
+      <InhabitantsName>Inhabited planet</InhabitantsName>
+      <Built>false</Built>
+    </Planet>
+    <Planet>
+      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+      <Name>Mabriascus</Name>
+      <Type>Telluric Ice</Type>
+      <Climate>Cold</Climate>
+      <Surface>Destroyed by asteroid</Surface>
+      <Ressources>none</Ressources>
+      <IsInhabited>false</IsInhabited>
+      <InhabitantsName>Inhabited planet</InhabitantsName>
+      <Built>false</Built>
+    </Planet>
+    <Planet>
+      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+      <Name>Beabeaus</Name>
       <Type>Telluric Ice</Type>
       <Climate>Cold</Climate>
       <Surface>Ice</Surface>
@@ -51,54 +84,21 @@
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Ermesaynus</Name>
-      <Type>Telluric Lava</Type>
-      <Climate>Hot</Climate>
-      <Surface>Destroyed by asteroid</Surface>
-      <Ressources>none</Ressources>
-      <IsInhabited>false</IsInhabited>
-      <InhabitantsName>Inhabited planet</InhabitantsName>
-      <Built>false</Built>
-    </Planet>
-    <Planet>
-      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Lasthahaus</Name>
-      <Type>Coreless</Type>
-      <Climate>Temperate</Climate>
-      <Surface>Destroyed by asteroid</Surface>
-      <Ressources>none</Ressources>
-      <IsInhabited>false</IsInhabited>
-      <InhabitantsName>Inhabited planet</InhabitantsName>
-      <Built>false</Built>
-    </Planet>
-    <Planet>
-      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Lasiaius</Name>
-      <Type>Telluric Silicat</Type>
-      <Climate>Temperate</Climate>
-      <Surface>Glass</Surface>
-      <Ressources>Silicium</Ressources>
-      <IsInhabited>true</IsInhabited>
-      <InhabitantsName>Lasiaiians</InhabitantsName>
-      <Built>false</Built>
-    </Planet>
-    <Planet>
-      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Osmevinus</Name>
-      <Type>Telluric Lava</Type>
-      <Climate>Hot</Climate>
-      <Surface>Destroyed by asteroid</Surface>
-      <Ressources>none</Ressources>
-      <IsInhabited>false</IsInhabited>
-      <InhabitantsName>Inhabited planet</InhabitantsName>
-      <Built>false</Built>
-    </Planet>
-    <Planet>
-      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Maminnynus</Name>
-      <Type>Gazeous Hydrogen</Type>
+      <Name>Tabieeus</Name>
+      <Type>Chtonian</Type>
       <Climate />
       <Surface>Destroyed by asteroid</Surface>
+      <Ressources>Plutonium</Ressources>
+      <IsInhabited>false</IsInhabited>
+      <InhabitantsName>Inhabited planet</InhabitantsName>
+      <Built>true</Built>
+    </Planet>
+    <Planet>
+      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+      <Name>Tauzitius</Name>
+      <Type>Gazeous Hydrogen</Type>
+      <Climate />
+      <Surface />
       <Ressources>Hydrogene</Ressources>
       <IsInhabited>false</IsInhabited>
       <InhabitantsName>Inhabited planet</InhabitantsName>
@@ -106,106 +106,29 @@
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Geavelevus</Name>
-      <Type>Gazeous Hydrogen</Type>
-      <Climate />
-      <Surface>Destroyed by asteroid</Surface>
-      <Ressources>Hydrogene</Ressources>
-      <IsInhabited>false</IsInhabited>
-      <InhabitantsName>Inhabited planet</InhabitantsName>
-      <Built>false</Built>
-    </Planet>
-    <Planet>
-      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Immesous</Name>
-      <Type>Telluric Desert</Type>
+      <Name>Ivepeahaus</Name>
+      <Type>Telluric Silicat</Type>
       <Climate>Hot</Climate>
-      <Surface>Destroyed by asteroid</Surface>
-      <Ressources>Silicium</Ressources>
-      <IsInhabited>false</IsInhabited>
-      <InhabitantsName>Inhabited planet</InhabitantsName>
-      <Built>false</Built>
-    </Planet>
-    <Planet>
-      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Habreyus</Name>
-      <Type>Telluric Silicat</Type>
-      <Climate>Cold</Climate>
-      <Surface>Destroyed by asteroid</Surface>
-      <Ressources>Silicium</Ressources>
-      <IsInhabited>false</IsInhabited>
-      <InhabitantsName>Inhabited planet</InhabitantsName>
-      <Built>false</Built>
-    </Planet>
-    <Planet>
-      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Izulonzus</Name>
-      <Type>Telluric Carbon</Type>
-      <Climate>Cold</Climate>
-      <Surface>Glass</Surface>
-      <Ressources>Gems</Ressources>
-      <IsInhabited>false</IsInhabited>
-      <InhabitantsName>Inhabited planet</InhabitantsName>
-      <Built>false</Built>
-    </Planet>
-    <Planet>
-      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Mecodilus</Name>
-      <Type>Telluric Silicat</Type>
-      <Climate>Temperate</Climate>
       <Surface>Oceanic</Surface>
       <Ressources>Silicium</Ressources>
+      <IsInhabited>false</IsInhabited>
+      <InhabitantsName>Inhabited planet</InhabitantsName>
+      <Built>true</Built>
+    </Planet>
+    <Planet>
+      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+      <Name>Shlacinus</Name>
+      <Type>Telluric Carbon</Type>
+      <Climate>Hot</Climate>
+      <Surface>Planetopolis</Surface>
+      <Ressources>Gems</Ressources>
       <IsInhabited>true</IsInhabited>
-      <InhabitantsName>Mecodilians</InhabitantsName>
+      <InhabitantsName>Shlacinians</InhabitantsName>
       <Built>false</Built>
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Mielynus</Name>
-      <Type>Telluric Carbon</Type>
-      <Climate>Hot</Climate>
-      <Surface>Forest</Surface>
-      <Ressources>Gems</Ressources>
-      <IsInhabited>false</IsInhabited>
-      <InhabitantsName>Inhabited planet</InhabitantsName>
-      <Built>false</Built>
-    </Planet>
-    <Planet>
-      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Nimodilus</Name>
-      <Type>Coreless</Type>
-      <Climate>Cold</Climate>
-      <Surface>Glass</Surface>
-      <Ressources>none</Ressources>
-      <IsInhabited>false</IsInhabited>
-      <InhabitantsName>Inhabited planet</InhabitantsName>
-      <Built>false</Built>
-    </Planet>
-    <Planet>
-      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Eryaylus</Name>
-      <Type>Gazeous Helium</Type>
-      <Climate>Cold</Climate>
-      <Surface>Iced Atmosphere</Surface>
-      <Ressources>Helium</Ressources>
-      <IsInhabited>false</IsInhabited>
-      <InhabitantsName>Inhabited planet</InhabitantsName>
-      <Built>false</Built>
-    </Planet>
-    <Planet>
-      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Aayttnus</Name>
-      <Type>Telluric Desert</Type>
-      <Climate>Hot</Climate>
-      <Surface>Sand desert</Surface>
-      <Ressources>Silicium</Ressources>
-      <IsInhabited>true</IsInhabited>
-      <InhabitantsName>Aayttnians</InhabitantsName>
-      <Built>false</Built>
-    </Planet>
-    <Planet>
-      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Hauriannus</Name>
+      <Name>Habephanus</Name>
       <Type>Telluric Carbon</Type>
       <Climate>Hot</Climate>
       <Surface>Destroyed by asteroid</Surface>
@@ -216,51 +139,7 @@
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Aammedus</Name>
-      <Type>Telluric Ice</Type>
-      <Climate>Cold</Climate>
-      <Surface>Destroyed by asteroid</Surface>
-      <Ressources>none</Ressources>
-      <IsInhabited>false</IsInhabited>
-      <InhabitantsName>Inhabited planet</InhabitantsName>
-      <Built>false</Built>
-    </Planet>
-    <Planet>
-      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Iricanus</Name>
-      <Type>Telluric Carbon</Type>
-      <Climate>Temperate</Climate>
-      <Surface>Destroyed by asteroid</Surface>
-      <Ressources>Gems</Ressources>
-      <IsInhabited>false</IsInhabited>
-      <InhabitantsName>Inhabited planet</InhabitantsName>
-      <Built>false</Built>
-    </Planet>
-    <Planet>
-      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Clayeneus</Name>
-      <Type>Telluric Desert</Type>
-      <Climate>Hot</Climate>
-      <Surface>Destroyed by asteroid</Surface>
-      <Ressources>Silicium</Ressources>
-      <IsInhabited>false</IsInhabited>
-      <InhabitantsName>Inhabited planet</InhabitantsName>
-      <Built>false</Built>
-    </Planet>
-    <Planet>
-      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Gileloryus</Name>
-      <Type>Telluric Ice</Type>
-      <Climate>Cold</Climate>
-      <Surface>Destroyed by asteroid</Surface>
-      <Ressources>none</Ressources>
-      <IsInhabited>false</IsInhabited>
-      <InhabitantsName>Inhabited planet</InhabitantsName>
-      <Built>false</Built>
-    </Planet>
-    <Planet>
-      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Heckithus</Name>
+      <Name>Bataylyus</Name>
       <Type>Chtonian</Type>
       <Climate />
       <Surface />
@@ -271,9 +150,20 @@
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Targallus</Name>
-      <Type>Chtonian</Type>
-      <Climate />
+      <Name>Tromelus</Name>
+      <Type>Telluric Ice</Type>
+      <Climate>Cold</Climate>
+      <Surface>Ice</Surface>
+      <Ressources>none</Ressources>
+      <IsInhabited>false</IsInhabited>
+      <InhabitantsName>Inhabited planet</InhabitantsName>
+      <Built>false</Built>
+    </Planet>
+    <Planet>
+      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+      <Name>Brereahus</Name>
+      <Type>Telluric Carbon</Type>
+      <Climate>Temperate</Climate>
       <Surface>Destroyed by asteroid</Surface>
       <Ressources>Gems</Ressources>
       <IsInhabited>false</IsInhabited>
@@ -282,11 +172,121 @@
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Hocolous</Name>
+      <Name>Mostnius</Name>
+      <Type>Gazeous Hydrogen</Type>
+      <Climate />
+      <Surface />
+      <Ressources>Hydrogene</Ressources>
+      <IsInhabited>true</IsInhabited>
+      <InhabitantsName>Mostniians</InhabitantsName>
+      <Built>true</Built>
+    </Planet>
+    <Planet>
+      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+      <Name>Sydisius</Name>
+      <Type>Telluric Lava</Type>
+      <Climate>Hot</Climate>
+      <Surface>Destroyed by asteroid</Surface>
+      <Ressources>none</Ressources>
+      <IsInhabited>false</IsInhabited>
+      <InhabitantsName>Inhabited planet</InhabitantsName>
+      <Built>false</Built>
+    </Planet>
+    <Planet>
+      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+      <Name>Crasitus</Name>
+      <Type>Coreless</Type>
+      <Climate>Hot</Climate>
+      <Surface>Glass</Surface>
+      <Ressources>none</Ressources>
+      <IsInhabited>false</IsInhabited>
+      <InhabitantsName>Inhabited planet</InhabitantsName>
+      <Built>false</Built>
+    </Planet>
+    <Planet>
+      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+      <Name>Geckitilus</Name>
+      <Type>Chtonian</Type>
+      <Climate />
+      <Surface />
+      <Ressources>Gems</Ressources>
+      <IsInhabited>false</IsInhabited>
+      <InhabitantsName>Inhabited planet</InhabitantsName>
+      <Built>false</Built>
+    </Planet>
+    <Planet>
+      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+      <Name>Oslaerus</Name>
+      <Type>Telluric Silicat</Type>
+      <Climate>Hot</Climate>
+      <Surface>Destroyed by asteroid</Surface>
+      <Ressources>Silicium</Ressources>
+      <IsInhabited>false</IsInhabited>
+      <InhabitantsName>Inhabited planet</InhabitantsName>
+      <Built>false</Built>
+    </Planet>
+    <Planet>
+      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+      <Name>Izaimyus</Name>
+      <Type>Telluric Metal</Type>
+      <Climate>Temperate</Climate>
+      <Surface>Destroyed by asteroid</Surface>
+      <Ressources>Metal</Ressources>
+      <IsInhabited>false</IsInhabited>
+      <InhabitantsName>Inhabited planet</InhabitantsName>
+      <Built>false</Built>
+    </Planet>
+    <Planet>
+      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+      <Name>Merndreus</Name>
+      <Type>Coreless</Type>
+      <Climate>Temperate</Climate>
+      <Surface>Forest</Surface>
+      <Ressources>none</Ressources>
+      <IsInhabited>false</IsInhabited>
+      <InhabitantsName>Inhabited planet</InhabitantsName>
+      <Built>false</Built>
+    </Planet>
+    <Planet>
+      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+      <Name>Abirialaus</Name>
+      <Type>Telluric Metal</Type>
+      <Climate>Hot</Climate>
+      <Surface>Planetopolis</Surface>
+      <Ressources>Metal</Ressources>
+      <IsInhabited>false</IsInhabited>
+      <InhabitantsName>Inhabited planet</InhabitantsName>
+      <Built>false</Built>
+    </Planet>
+    <Planet>
+      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+      <Name>Trmeithus</Name>
       <Type>Telluric Desert</Type>
       <Climate>Hot</Climate>
       <Surface>Destroyed by asteroid</Surface>
       <Ressources>Silicium</Ressources>
+      <IsInhabited>false</IsInhabited>
+      <InhabitantsName>Inhabited planet</InhabitantsName>
+      <Built>false</Built>
+    </Planet>
+    <Planet>
+      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+      <Name>Itzbaheus</Name>
+      <Type>Telluric Ice</Type>
+      <Climate>Cold</Climate>
+      <Surface>Ice</Surface>
+      <Ressources>none</Ressources>
+      <IsInhabited>false</IsInhabited>
+      <InhabitantsName>Inhabited planet</InhabitantsName>
+      <Built>false</Built>
+    </Planet>
+    <Planet>
+      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+      <Name>Owerlasus</Name>
+      <Type>Coreless</Type>
+      <Climate>Hot</Climate>
+      <Surface>Destroyed by asteroid</Surface>
+      <Ressources>none</Ressources>
       <IsInhabited>false</IsInhabited>
       <InhabitantsName>Inhabited planet</InhabitantsName>
       <Built>false</Built>
@@ -304,9 +304,9 @@
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Stheifeus</Name>
-      <Type>Telluric Desert</Type>
-      <Climate>Hot</Climate>
+      <Name>Omizahus</Name>
+      <Type>Telluric Silicat</Type>
+      <Climate>Cold</Climate>
       <Surface>Destroyed by asteroid</Surface>
       <Ressources>Silicium</Ressources>
       <IsInhabited>false</IsInhabited>
@@ -315,54 +315,21 @@
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Isheedus</Name>
-      <Type>Telluric Metal</Type>
-      <Climate>Cold</Climate>
-      <Surface>Planetopolis</Surface>
-      <Ressources>Metal</Ressources>
-      <IsInhabited>true</IsInhabited>
-      <InhabitantsName>Isheedians</InhabitantsName>
-      <Built>false</Built>
-    </Planet>
-    <Planet>
-      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Syaharus</Name>
-      <Type>Gazeous Hydrogen</Type>
-      <Climate />
-      <Surface />
-      <Ressources>Hydrogene</Ressources>
+      <Name>Grmmiallus</Name>
+      <Type>Coreless</Type>
+      <Climate>Temperate</Climate>
+      <Surface>Destroyed by asteroid</Surface>
+      <Ressources>none</Ressources>
       <IsInhabited>false</IsInhabited>
       <InhabitantsName>Inhabited planet</InhabitantsName>
       <Built>false</Built>
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Gayahius</Name>
-      <Type>Telluric Carbon</Type>
+      <Name>Trovisus</Name>
+      <Type>Telluric Desert</Type>
       <Climate>Hot</Climate>
-      <Surface>Destroyed by asteroid</Surface>
-      <Ressources>Gems</Ressources>
-      <IsInhabited>false</IsInhabited>
-      <InhabitantsName>Inhabited planet</InhabitantsName>
-      <Built>false</Built>
-    </Planet>
-    <Planet>
-      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Ostaylaus</Name>
-      <Type>Telluric Carbon</Type>
-      <Climate>Hot</Climate>
-      <Surface>Destroyed by asteroid</Surface>
-      <Ressources>Gems</Ressources>
-      <IsInhabited>false</IsInhabited>
-      <InhabitantsName>Inhabited planet</InhabitantsName>
-      <Built>false</Built>
-    </Planet>
-    <Planet>
-      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Heacelus</Name>
-      <Type>Telluric Silicat</Type>
-      <Climate>Hot</Climate>
-      <Surface>Destroyed by asteroid</Surface>
+      <Surface>Sand desert</Surface>
       <Ressources>Silicium</Ressources>
       <IsInhabited>false</IsInhabited>
       <InhabitantsName>Inhabited planet</InhabitantsName>
@@ -370,22 +337,33 @@
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Olegidaus</Name>
-      <Type>Gazeous Helium</Type>
-      <Climate>Cold</Climate>
-      <Surface>Destroyed by asteroid</Surface>
-      <Ressources>Helium</Ressources>
+      <Name>Bimmoreus</Name>
+      <Type>Telluric Desert</Type>
+      <Climate>Hot</Climate>
+      <Surface>Sand desert</Surface>
+      <Ressources>Silicium</Ressources>
       <IsInhabited>false</IsInhabited>
       <InhabitantsName>Inhabited planet</InhabitantsName>
       <Built>false</Built>
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Naturasius</Name>
-      <Type>Telluric Ice</Type>
-      <Climate>Cold</Climate>
-      <Surface>Ice</Surface>
-      <Ressources>none</Ressources>
+      <Name>Tiacaminus</Name>
+      <Type>Telluric Carbon</Type>
+      <Climate>Temperate</Climate>
+      <Surface>Destroyed by asteroid</Surface>
+      <Ressources>Gems</Ressources>
+      <IsInhabited>false</IsInhabited>
+      <InhabitantsName>Inhabited planet</InhabitantsName>
+      <Built>false</Built>
+    </Planet>
+    <Planet>
+      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+      <Name>Sylirilyus</Name>
+      <Type>Chtonian</Type>
+      <Climate />
+      <Surface>Destroyed by asteroid</Surface>
+      <Ressources>Gems</Ressources>
       <IsInhabited>false</IsInhabited>
       <InhabitantsName>Inhabited planet</InhabitantsName>
       <Built>false</Built>
@@ -403,26 +381,26 @@
     <Cell>
       <containerX>-10</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>true</ContainsPlanet>
+      <ContainsPlanet>false</ContainsPlanet>
       <X>-10</X>
       <Y>-9</Y>
-      <ContainedPlanet>Namenietus</ContainedPlanet>
+      <ContainedPlanet />
     </Cell>
     <Cell>
       <containerX>-10</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>true</ContainsPlanet>
+      <ContainsPlanet>false</ContainsPlanet>
       <X>-10</X>
       <Y>-8</Y>
-      <ContainedPlanet>Sophabus</ContainedPlanet>
+      <ContainedPlanet />
     </Cell>
     <Cell>
       <containerX>-10</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>true</ContainsPlanet>
+      <ContainsPlanet>false</ContainsPlanet>
       <X>-10</X>
       <Y>-7</Y>
-      <ContainedPlanet>Ermesaynus</ContainedPlanet>
+      <ContainedPlanet />
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -435,10 +413,10 @@
     <Cell>
       <containerX>-10</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>true</ContainsPlanet>
+      <ContainsPlanet>false</ContainsPlanet>
       <X>-10</X>
       <Y>-5</Y>
-      <ContainedPlanet>Lasthahaus</ContainedPlanet>
+      <ContainedPlanet />
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -563,10 +541,10 @@
     <Cell>
       <containerX>-10</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>true</ContainsPlanet>
+      <ContainsPlanet>false</ContainsPlanet>
       <X>-8</X>
       <Y>-9</Y>
-      <ContainedPlanet>Lasiaius</ContainedPlanet>
+      <ContainedPlanet />
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -590,22 +568,6 @@
       <ContainsPlanet>false</ContainsPlanet>
       <X>-8</X>
       <Y>-6</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>-10</containerX>
-      <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>-8</X>
-      <Y>-5</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>-10</containerX>
-      <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>-8</X>
-      <Y>-4</Y>
       <ContainedPlanet />
     </Cell>
     <Cell>
@@ -613,15 +575,15 @@
       <containerY>-10</containerY>
       <ContainsPlanet>true</ContainsPlanet>
       <X>-8</X>
-      <Y>-3</Y>
-      <ContainedPlanet>Osmevinus</ContainedPlanet>
+      <Y>-5</Y>
+      <ContainedPlanet>Cheneeus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>-10</containerX>
       <containerY>-10</containerY>
       <ContainsPlanet>false</ContainsPlanet>
       <X>-8</X>
-      <Y>-2</Y>
+      <Y>-4</Y>
       <ContainedPlanet />
     </Cell>
     <Cell>
@@ -629,7 +591,95 @@
       <containerY>-10</containerY>
       <ContainsPlanet>false</ContainsPlanet>
       <X>-8</X>
+      <Y>-3</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>-10</containerX>
+      <containerY>-10</containerY>
+      <ContainsPlanet>true</ContainsPlanet>
+      <X>-8</X>
+      <Y>-2</Y>
+      <ContainedPlanet>Liesamilus</ContainedPlanet>
+    </Cell>
+    <Cell>
+      <containerX>-10</containerX>
+      <containerY>-10</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>-8</X>
       <Y>-1</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>-10</containerX>
+      <containerY>-10</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>-7</X>
+      <Y>-10</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>-10</containerX>
+      <containerY>-10</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>-7</X>
+      <Y>-9</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>-10</containerX>
+      <containerY>-10</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>-7</X>
+      <Y>-8</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>-10</containerX>
+      <containerY>-10</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>-7</X>
+      <Y>-7</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>-10</containerX>
+      <containerY>-10</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>-7</X>
+      <Y>-6</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>-10</containerX>
+      <containerY>-10</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>-7</X>
+      <Y>-5</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>-10</containerX>
+      <containerY>-10</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>-7</X>
+      <Y>-4</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>-10</containerX>
+      <containerY>-10</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>-7</X>
+      <Y>-3</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>-10</containerX>
+      <containerY>-10</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>-7</X>
+      <Y>-2</Y>
       <ContainedPlanet />
     </Cell>
     <Cell>
@@ -637,14 +687,22 @@
       <containerY>-10</containerY>
       <ContainsPlanet>true</ContainsPlanet>
       <X>-7</X>
-      <Y>-10</Y>
-      <ContainedPlanet>Maminnynus</ContainedPlanet>
+      <Y>-1</Y>
+      <ContainedPlanet>Haviylynus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>-10</containerX>
       <containerY>-10</containerY>
       <ContainsPlanet>false</ContainsPlanet>
-      <X>-7</X>
+      <X>-6</X>
+      <Y>-10</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>-10</containerX>
+      <containerY>-10</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>-6</X>
       <Y>-9</Y>
       <ContainedPlanet />
     </Cell>
@@ -652,105 +710,25 @@
       <containerX>-10</containerX>
       <containerY>-10</containerY>
       <ContainsPlanet>false</ContainsPlanet>
-      <X>-7</X>
+      <X>-6</X>
       <Y>-8</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>-10</containerX>
+      <containerY>-10</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>-6</X>
+      <Y>-7</Y>
       <ContainedPlanet />
     </Cell>
     <Cell>
       <containerX>-10</containerX>
       <containerY>-10</containerY>
       <ContainsPlanet>true</ContainsPlanet>
-      <X>-7</X>
-      <Y>-7</Y>
-      <ContainedPlanet>Geavelevus</ContainedPlanet>
-    </Cell>
-    <Cell>
-      <containerX>-10</containerX>
-      <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>-7</X>
-      <Y>-6</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>-10</containerX>
-      <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>-7</X>
-      <Y>-5</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>-10</containerX>
-      <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>-7</X>
-      <Y>-4</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>-10</containerX>
-      <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>-7</X>
-      <Y>-3</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>-10</containerX>
-      <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>-7</X>
-      <Y>-2</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>-10</containerX>
-      <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>-7</X>
-      <Y>-1</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>-10</containerX>
-      <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>-6</X>
-      <Y>-10</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>-10</containerX>
-      <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>-6</X>
-      <Y>-9</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>-10</containerX>
-      <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>-6</X>
-      <Y>-8</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>-10</containerX>
-      <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>-6</X>
-      <Y>-7</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>-10</containerX>
-      <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
       <X>-6</X>
       <Y>-6</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Mabriascus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -883,10 +861,10 @@
     <Cell>
       <containerX>-10</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>-4</X>
       <Y>-9</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Beabeaus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -939,10 +917,10 @@
     <Cell>
       <containerX>-10</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>-4</X>
       <Y>-2</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Tabieeus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -955,10 +933,10 @@
     <Cell>
       <containerX>-10</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>-3</X>
       <Y>-10</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Tauzitius</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -1027,10 +1005,10 @@
     <Cell>
       <containerX>-10</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>-3</X>
       <Y>-1</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Ivepeahaus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -1203,10 +1181,10 @@
     <Cell>
       <containerX>-10</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>true</ContainsPlanet>
+      <ContainsPlanet>false</ContainsPlanet>
       <X>-10</X>
       <Y>1</Y>
-      <ContainedPlanet>Immesous</ContainedPlanet>
+      <ContainedPlanet />
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -1235,10 +1213,10 @@
     <Cell>
       <containerX>-10</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>true</ContainsPlanet>
+      <ContainsPlanet>false</ContainsPlanet>
       <X>-10</X>
       <Y>5</Y>
-      <ContainedPlanet>Habreyus</ContainedPlanet>
+      <ContainedPlanet />
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -1323,32 +1301,32 @@
     <Cell>
       <containerX>-10</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>true</ContainsPlanet>
+      <ContainsPlanet>false</ContainsPlanet>
       <X>-9</X>
       <Y>6</Y>
-      <ContainedPlanet>Izulonzus</ContainedPlanet>
+      <ContainedPlanet />
     </Cell>
     <Cell>
       <containerX>-10</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>-9</X>
       <Y>7</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>-10</containerX>
-      <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>-9</X>
-      <Y>8</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Shlacinus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>-10</containerX>
       <containerY>0</containerY>
       <ContainsPlanet>false</ContainsPlanet>
       <X>-9</X>
+      <Y>8</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>-10</containerX>
+      <containerY>0</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>-9</X>
       <Y>9</Y>
       <ContainedPlanet />
     </Cell>
@@ -1387,10 +1365,10 @@
     <Cell>
       <containerX>-10</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>true</ContainsPlanet>
+      <ContainsPlanet>false</ContainsPlanet>
       <X>-8</X>
       <Y>4</Y>
-      <ContainedPlanet>Mecodilus</ContainedPlanet>
+      <ContainedPlanet />
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -1475,33 +1453,9 @@
     <Cell>
       <containerX>-10</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>true</ContainsPlanet>
+      <ContainsPlanet>false</ContainsPlanet>
       <X>-7</X>
       <Y>5</Y>
-      <ContainedPlanet>Mielynus</ContainedPlanet>
-    </Cell>
-    <Cell>
-      <containerX>-10</containerX>
-      <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>-7</X>
-      <Y>6</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>-10</containerX>
-      <containerY>0</containerY>
-      <ContainsPlanet>true</ContainsPlanet>
-      <X>-7</X>
-      <Y>7</Y>
-      <ContainedPlanet>Nimodilus</ContainedPlanet>
-    </Cell>
-    <Cell>
-      <containerX>-10</containerX>
-      <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>-7</X>
-      <Y>8</Y>
       <ContainedPlanet />
     </Cell>
     <Cell>
@@ -1509,8 +1463,32 @@
       <containerY>0</containerY>
       <ContainsPlanet>false</ContainsPlanet>
       <X>-7</X>
-      <Y>9</Y>
+      <Y>6</Y>
       <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>-10</containerX>
+      <containerY>0</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>-7</X>
+      <Y>7</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>-10</containerX>
+      <containerY>0</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>-7</X>
+      <Y>8</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>-10</containerX>
+      <containerY>0</containerY>
+      <ContainsPlanet>true</ContainsPlanet>
+      <X>-7</X>
+      <Y>9</Y>
+      <ContainedPlanet>Habephanus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -1643,18 +1621,18 @@
     <Cell>
       <containerX>-10</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>-5</X>
       <Y>6</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Bataylyus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>-10</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>-5</X>
       <Y>7</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Tromelus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -1707,10 +1685,10 @@
     <Cell>
       <containerX>-10</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>true</ContainsPlanet>
+      <ContainsPlanet>false</ContainsPlanet>
       <X>-4</X>
       <Y>4</Y>
-      <ContainedPlanet>Eryaylus</ContainedPlanet>
+      <ContainedPlanet />
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -1723,10 +1701,10 @@
     <Cell>
       <containerX>-10</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>true</ContainsPlanet>
+      <ContainsPlanet>false</ContainsPlanet>
       <X>-4</X>
       <Y>6</Y>
-      <ContainedPlanet>Aayttnus</ContainedPlanet>
+      <ContainedPlanet />
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -1779,10 +1757,10 @@
     <Cell>
       <containerX>-10</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>-3</X>
       <Y>3</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Brereahus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -1835,10 +1813,10 @@
     <Cell>
       <containerX>-10</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>-2</X>
       <Y>0</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Mostnius</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -1875,10 +1853,10 @@
     <Cell>
       <containerX>-10</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>-2</X>
       <Y>5</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Sydisius</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -1923,10 +1901,10 @@
     <Cell>
       <containerX>-10</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>-1</X>
       <Y>1</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Crasitus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -2027,18 +2005,18 @@
     <Cell>
       <containerX>0</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>0</X>
       <Y>-6</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Geckitilus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>0</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>0</X>
       <Y>-5</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Oslaerus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>0</containerX>
@@ -2046,14 +2024,6 @@
       <ContainsPlanet>false</ContainsPlanet>
       <X>0</X>
       <Y>-4</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>0</containerX>
-      <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>0</X>
-      <Y>-3</Y>
       <ContainedPlanet />
     </Cell>
     <Cell>
@@ -2061,6 +2031,14 @@
       <containerY>-10</containerY>
       <ContainsPlanet>false</ContainsPlanet>
       <X>0</X>
+      <Y>-3</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>0</containerX>
+      <containerY>-10</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>0</X>
       <Y>-2</Y>
       <ContainedPlanet />
     </Cell>
@@ -2099,17 +2077,9 @@
     <Cell>
       <containerX>0</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>true</ContainsPlanet>
-      <X>1</X>
-      <Y>-7</Y>
-      <ContainedPlanet>Hauriannus</ContainedPlanet>
-    </Cell>
-    <Cell>
-      <containerX>0</containerX>
-      <containerY>-10</containerY>
       <ContainsPlanet>false</ContainsPlanet>
       <X>1</X>
-      <Y>-6</Y>
+      <Y>-7</Y>
       <ContainedPlanet />
     </Cell>
     <Cell>
@@ -2117,6 +2087,14 @@
       <containerY>-10</containerY>
       <ContainsPlanet>false</ContainsPlanet>
       <X>1</X>
+      <Y>-6</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>0</containerX>
+      <containerY>-10</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>1</X>
       <Y>-5</Y>
       <ContainedPlanet />
     </Cell>
@@ -2219,16 +2197,16 @@
     <Cell>
       <containerX>0</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>true</ContainsPlanet>
-      <X>2</X>
-      <Y>-2</Y>
-      <ContainedPlanet>Aammedus</ContainedPlanet>
-    </Cell>
-    <Cell>
-      <containerX>0</containerX>
-      <containerY>-10</containerY>
       <ContainsPlanet>false</ContainsPlanet>
       <X>2</X>
+      <Y>-2</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>0</containerX>
+      <containerY>-10</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>2</X>
       <Y>-1</Y>
       <ContainedPlanet />
     </Cell>
@@ -2246,6 +2224,22 @@
       <ContainsPlanet>false</ContainsPlanet>
       <X>3</X>
       <Y>-9</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>0</containerX>
+      <containerY>-10</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>3</X>
+      <Y>-8</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>0</containerX>
+      <containerY>-10</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>3</X>
+      <Y>-7</Y>
       <ContainedPlanet />
     </Cell>
     <Cell>
@@ -2253,24 +2247,8 @@
       <containerY>-10</containerY>
       <ContainsPlanet>true</ContainsPlanet>
       <X>3</X>
-      <Y>-8</Y>
-      <ContainedPlanet>Iricanus</ContainedPlanet>
-    </Cell>
-    <Cell>
-      <containerX>0</containerX>
-      <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>3</X>
-      <Y>-7</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>0</containerX>
-      <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>3</X>
       <Y>-6</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Izaimyus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>0</containerX>
@@ -2310,46 +2288,6 @@
       <ContainsPlanet>false</ContainsPlanet>
       <X>3</X>
       <Y>-1</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>0</containerX>
-      <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>4</X>
-      <Y>-10</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>0</containerX>
-      <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>4</X>
-      <Y>-9</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>0</containerX>
-      <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>4</X>
-      <Y>-8</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>0</containerX>
-      <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>4</X>
-      <Y>-7</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>0</containerX>
-      <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>4</X>
-      <Y>-6</Y>
       <ContainedPlanet />
     </Cell>
     <Cell>
@@ -2357,8 +2295,48 @@
       <containerY>-10</containerY>
       <ContainsPlanet>true</ContainsPlanet>
       <X>4</X>
+      <Y>-10</Y>
+      <ContainedPlanet>Merndreus</ContainedPlanet>
+    </Cell>
+    <Cell>
+      <containerX>0</containerX>
+      <containerY>-10</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>4</X>
+      <Y>-9</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>0</containerX>
+      <containerY>-10</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>4</X>
+      <Y>-8</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>0</containerX>
+      <containerY>-10</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>4</X>
+      <Y>-7</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>0</containerX>
+      <containerY>-10</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>4</X>
+      <Y>-6</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>0</containerX>
+      <containerY>-10</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>4</X>
       <Y>-5</Y>
-      <ContainedPlanet>Clayeneus</ContainedPlanet>
+      <ContainedPlanet />
     </Cell>
     <Cell>
       <containerX>0</containerX>
@@ -2403,10 +2381,10 @@
     <Cell>
       <containerX>0</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>5</X>
       <Y>-9</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Abirialaus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>0</containerX>
@@ -2419,10 +2397,10 @@
     <Cell>
       <containerX>0</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>5</X>
       <Y>-7</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Trmeithus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>0</containerX>
@@ -2435,10 +2413,10 @@
     <Cell>
       <containerX>0</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>5</X>
       <Y>-5</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Itzbaheus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>0</containerX>
@@ -2451,10 +2429,10 @@
     <Cell>
       <containerX>0</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>5</X>
       <Y>-3</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Owerlasus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>0</containerX>
@@ -2555,18 +2533,18 @@
     <Cell>
       <containerX>0</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>true</ContainsPlanet>
+      <ContainsPlanet>false</ContainsPlanet>
       <X>7</X>
       <Y>-10</Y>
-      <ContainedPlanet>Gileloryus</ContainedPlanet>
+      <ContainedPlanet />
     </Cell>
     <Cell>
       <containerX>0</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>true</ContainsPlanet>
+      <ContainsPlanet>false</ContainsPlanet>
       <X>7</X>
       <Y>-9</Y>
-      <ContainedPlanet>Heckithus</ContainedPlanet>
+      <ContainedPlanet />
     </Cell>
     <Cell>
       <containerX>0</containerX>
@@ -2659,10 +2637,10 @@
     <Cell>
       <containerX>0</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>true</ContainsPlanet>
+      <ContainsPlanet>false</ContainsPlanet>
       <X>8</X>
       <Y>-7</Y>
-      <ContainedPlanet>Targallus</ContainedPlanet>
+      <ContainedPlanet />
     </Cell>
     <Cell>
       <containerX>0</containerX>
@@ -2787,10 +2765,10 @@
     <Cell>
       <containerX>0</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>true</ContainsPlanet>
+      <ContainsPlanet>false</ContainsPlanet>
       <X>9</X>
       <Y>-1</Y>
-      <ContainedPlanet>Hocolous</ContainedPlanet>
+      <ContainedPlanet />
     </Cell>
     <Cell>
       <containerX>0</containerX>
@@ -2875,98 +2853,98 @@
     <Cell>
       <containerX>0</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>1</X>
-      <Y>0</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>0</containerX>
-      <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>1</X>
-      <Y>1</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>0</containerX>
-      <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>1</X>
-      <Y>2</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>0</containerX>
-      <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>1</X>
-      <Y>3</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>0</containerX>
-      <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>1</X>
-      <Y>4</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>0</containerX>
-      <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>1</X>
-      <Y>5</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>0</containerX>
-      <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>1</X>
-      <Y>6</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>0</containerX>
-      <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>1</X>
-      <Y>7</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>0</containerX>
-      <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>1</X>
-      <Y>8</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>0</containerX>
-      <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>1</X>
-      <Y>9</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>0</containerX>
-      <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>2</X>
-      <Y>0</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>0</containerX>
-      <containerY>0</containerY>
       <ContainsPlanet>true</ContainsPlanet>
+      <X>1</X>
+      <Y>0</Y>
+      <ContainedPlanet>Omizahus</ContainedPlanet>
+    </Cell>
+    <Cell>
+      <containerX>0</containerX>
+      <containerY>0</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>1</X>
+      <Y>1</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>0</containerX>
+      <containerY>0</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>1</X>
+      <Y>2</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>0</containerX>
+      <containerY>0</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>1</X>
+      <Y>3</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>0</containerX>
+      <containerY>0</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>1</X>
+      <Y>4</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>0</containerX>
+      <containerY>0</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>1</X>
+      <Y>5</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>0</containerX>
+      <containerY>0</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>1</X>
+      <Y>6</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>0</containerX>
+      <containerY>0</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>1</X>
+      <Y>7</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>0</containerX>
+      <containerY>0</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>1</X>
+      <Y>8</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>0</containerX>
+      <containerY>0</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>1</X>
+      <Y>9</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>0</containerX>
+      <containerY>0</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>2</X>
+      <Y>0</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>0</containerX>
+      <containerY>0</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
       <X>2</X>
       <Y>1</Y>
-      <ContainedPlanet>Stheifeus</ContainedPlanet>
+      <ContainedPlanet />
     </Cell>
     <Cell>
       <containerX>0</containerX>
@@ -3211,10 +3189,10 @@
     <Cell>
       <containerX>0</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>true</ContainsPlanet>
+      <ContainsPlanet>false</ContainsPlanet>
       <X>5</X>
       <Y>2</Y>
-      <ContainedPlanet>Isheedus</ContainedPlanet>
+      <ContainedPlanet />
     </Cell>
     <Cell>
       <containerX>0</containerX>
@@ -3259,10 +3237,10 @@
     <Cell>
       <containerX>0</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>true</ContainsPlanet>
+      <ContainsPlanet>false</ContainsPlanet>
       <X>5</X>
       <Y>8</Y>
-      <ContainedPlanet>Syaharus</ContainedPlanet>
+      <ContainedPlanet />
     </Cell>
     <Cell>
       <containerX>0</containerX>
@@ -3302,30 +3280,6 @@
       <ContainsPlanet>false</ContainsPlanet>
       <X>6</X>
       <Y>3</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>0</containerX>
-      <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>6</X>
-      <Y>4</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>0</containerX>
-      <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>6</X>
-      <Y>5</Y>
-      <ContainedPlanet />
-    </Cell>
-    <Cell>
-      <containerX>0</containerX>
-      <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
-      <X>6</X>
-      <Y>6</Y>
       <ContainedPlanet />
     </Cell>
     <Cell>
@@ -3333,22 +3287,46 @@
       <containerY>0</containerY>
       <ContainsPlanet>true</ContainsPlanet>
       <X>6</X>
-      <Y>7</Y>
-      <ContainedPlanet>Gayahius</ContainedPlanet>
-    </Cell>
-    <Cell>
-      <containerX>0</containerX>
-      <containerY>0</containerY>
-      <ContainsPlanet>true</ContainsPlanet>
-      <X>6</X>
-      <Y>8</Y>
-      <ContainedPlanet>Ostaylaus</ContainedPlanet>
+      <Y>4</Y>
+      <ContainedPlanet>Grmmiallus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>0</containerX>
       <containerY>0</containerY>
       <ContainsPlanet>false</ContainsPlanet>
       <X>6</X>
+      <Y>5</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>0</containerX>
+      <containerY>0</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>6</X>
+      <Y>6</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>0</containerX>
+      <containerY>0</containerY>
+      <ContainsPlanet>true</ContainsPlanet>
+      <X>6</X>
+      <Y>7</Y>
+      <ContainedPlanet>Trovisus</ContainedPlanet>
+    </Cell>
+    <Cell>
+      <containerX>0</containerX>
+      <containerY>0</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>6</X>
+      <Y>8</Y>
+      <ContainedPlanet />
+    </Cell>
+    <Cell>
+      <containerX>0</containerX>
+      <containerY>0</containerY>
+      <ContainsPlanet>false</ContainsPlanet>
+      <X>6</X>
       <Y>9</Y>
       <ContainedPlanet />
     </Cell>
@@ -3371,10 +3349,10 @@
     <Cell>
       <containerX>0</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>true</ContainsPlanet>
+      <ContainsPlanet>false</ContainsPlanet>
       <X>7</X>
       <Y>2</Y>
-      <ContainedPlanet>Heacelus</ContainedPlanet>
+      <ContainedPlanet />
     </Cell>
     <Cell>
       <containerX>0</containerX>
@@ -3403,18 +3381,18 @@
     <Cell>
       <containerX>0</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>true</ContainsPlanet>
+      <ContainsPlanet>false</ContainsPlanet>
       <X>7</X>
       <Y>6</Y>
-      <ContainedPlanet>Olegidaus</ContainedPlanet>
+      <ContainedPlanet />
     </Cell>
     <Cell>
       <containerX>0</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>true</ContainsPlanet>
+      <ContainsPlanet>false</ContainsPlanet>
       <X>7</X>
       <Y>7</Y>
-      <ContainedPlanet>Naturasius</ContainedPlanet>
+      <ContainedPlanet />
     </Cell>
     <Cell>
       <containerX>0</containerX>
@@ -3507,10 +3485,10 @@
     <Cell>
       <containerX>0</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>8</X>
       <Y>9</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Bimmoreus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>0</containerX>
@@ -3579,18 +3557,18 @@
     <Cell>
       <containerX>0</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>9</X>
       <Y>8</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Tiacaminus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>0</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>9</X>
       <Y>9</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Sylirilyus</ContainedPlanet>
     </Cell>
   </Cells>
   <Chunks>

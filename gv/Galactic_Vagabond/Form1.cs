@@ -58,7 +58,7 @@ namespace Galactic_Vagabond
         void DisplayTurnEvents() 
         {
             this.TurnEvents.DataSource = new List<string>();
-            this.TurnEvents.DataSource = _universe.Event.EventsOccured;
+            this.TurnEvents.DataSource = _universe.Event.EventsOccured[_universe.Turn];
             int visibleItem = this.TurnEvents.ClientSize.Height / this.TurnEvents.ItemHeight;
             this.TurnEvents.TopIndex = Math.Max( this.TurnEvents.Items.Count - visibleItem + 1, 0 );
         }
@@ -145,7 +145,7 @@ namespace Galactic_Vagabond
 
         private void EndTurn_Click( object sender, EventArgs e )
         {
-            _universe.Event.EventOccurs();
+            _universe.Event.EventOccurs( _universe.Turn );
             DisplayTurnEvents();
             _universe.EndTurn();
             DisplayPlayerResources();
@@ -160,6 +160,12 @@ namespace Galactic_Vagabond
                  pos.ContainedPlanet.Factory = true;
                  ShowCurrentPlanet();
              }
+        }
+
+        private void EventsButton_Click( object sender, EventArgs e )
+        {
+            EventLog eventLog = new EventLog( _universe );
+            eventLog.ShowDialog();
         }
     }
 }
