@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using NUnit.Framework;
 using System.Linq;
-using gv;
+using NUnit.Framework;
 
 
 namespace gv.Tests

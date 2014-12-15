@@ -1,16 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using gv;
-using Galactic_Vagabond;
-using System.Diagnostics;
-using System.IO;
 namespace Galactic_Vagabond
 {
     public partial class Form_GV_01 : Form
@@ -54,7 +48,7 @@ namespace Galactic_Vagabond
         public void LoadMap()
         {
             Image[] planets= new Image[20];
-            for( int i = 0; i < 20; i++ )
+            for( int i = 0; i < 18; i++ )
             {
                 planets[i] = Image.FromFile( @".\..\..\..\images/planet" + (i + 1) + ".png" );
             }
@@ -70,13 +64,22 @@ namespace Galactic_Vagabond
                         {
                             this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Style.BackColor =
                                 System.Drawing.Color.Yellow;
+                            cl.ContainedPlanet.IsDiscovered = true;
                         }
                         else
                         {
                             this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Style.BackColor =
                                 System.Drawing.Color.Black;
                         }
-                        this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Value = planets[1];
+                        if( cl.ContainedPlanet.IsDiscovered )
+                        {
+                            this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Value = planets[cl.ContainedPlanet.Img - 1];
+                        }
+                        else
+                        {
+                            this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Value = planets[6 - 1];
+                            
+                        }
                     }
                     else
                     {

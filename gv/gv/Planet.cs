@@ -9,10 +9,14 @@ namespace gv
          string _name;
          string _inhabitantsName;
          bool _factory;
+         bool _discovered;
+         int _blocked;
 
         internal protected Planet(Universe u, string name)
         {
             _factory = false;
+            _discovered = false;
+            _blocked = 0;
             if( name == null )
             {
                 int n =  u.Rand.Next( 6, 9 );
@@ -81,6 +85,16 @@ namespace gv
             get { return _factory; }
             set { _factory = value; }
         }
-        
+        public abstract int Img { get;}
+        public bool IsDiscovered
+        {
+            get { return _discovered; }
+            set { _discovered = value; }
+        }
+        public int Blocked
+        {
+            get { return _blocked; } 
+            set { _blocked = value;}
+        }
     }
 }

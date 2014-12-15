@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml;
 using System.Xml.Linq;
 using ET.FakeText;
 
@@ -75,7 +71,10 @@ namespace gv
                             new XElement("Ressources", p.Value.Ressources),
                             new XElement("IsInhabited", p.Value.IsInhabited),
                             new XElement("InhabitantsName", p.Value.InhabitantsName),
-                            new XElement("Built", p.Value.Factory)
+                            new XElement("Built", p.Value.Factory),
+                            new XElement("Blocked", p.Value.Blocked),
+                            new XElement("Discovered", p.Value.IsDiscovered),
+                            new XElement("ImgId", p.Value.Img)
                         )
                     ),
                     new XElement("Cells",

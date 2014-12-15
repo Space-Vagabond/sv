@@ -12,11 +12,13 @@ namespace gv
         string _surface;
         string _climate;
         bool _inhabited;
+        int _img;
 
         internal PChthonian(Universe u)
             : base( u, null )
         {
             _ressources = PlanetAttributes.PlanetRessource( u.Rand.Next( 1, 3 ) );
+            _img = 5;
         }
 
         public override string Type
@@ -42,6 +44,10 @@ namespace gv
         public override string Ressources
         {
             get { return _ressources; }
+        }
+        public override int Img
+        {
+            get { return _img; }
         }
     }
 }

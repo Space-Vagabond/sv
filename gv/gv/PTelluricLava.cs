@@ -11,12 +11,14 @@ namespace gv
         string _surface;
         string _climate;
         bool _inhabited;
+        int _img;
 
         internal PTelluricLava( Universe u )
             : base( u, null )
         {
             _surface = "Lava";
             _climate = "Hot";
+            _img = 14;
         }
 
         public override string Type
@@ -44,6 +46,10 @@ namespace gv
         public override string Ressources
         {
             get { return "none"; }
+        }
+        public override int Img
+        {
+            get { return _img; }
         }
     }
 }

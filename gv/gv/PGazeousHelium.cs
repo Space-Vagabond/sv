@@ -11,6 +11,7 @@ namespace gv
         bool _inhabited;
         string _surface;
         string _climate;
+        int _img;
 
         internal PGazeousHelium( Universe u )
             : base( u, null )
@@ -18,6 +19,7 @@ namespace gv
             _inhabited = (u.Rand.Next( 0, 2 ) > 0) ? true : false;
             _surface = "Iced Atmosphere";
             _climate = "Cold";
+            _img = 11;
         }
 
         public override string Type
@@ -42,6 +44,10 @@ namespace gv
         public override string Ressources
         {
             get { return "Helium"; }
+        }
+        public override int Img
+        {
+            get { return _img; }
         }
     }
 }

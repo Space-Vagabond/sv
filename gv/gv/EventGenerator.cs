@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 
 namespace gv
@@ -15,10 +13,8 @@ namespace gv
 
         public EventGenerator(Universe universe)
         {
-            _u = universe;
-            
+            _u = universe;            
         }
-
         /// <summary>
         /// Chooses if planet is affected by a universe event 
         /// </summary>
@@ -36,15 +32,11 @@ namespace gv
                   break;
                   case 2: ElectricStorm(turnEvents, pl );
                   break;
-
-              }
-              
-              
+              }              
            }
            _eventsOccured.Add( turn, turnEvents );
            _allEvents = EventsTolist();
         }
-
         /// <summary>
         /// Changing surface and inhabitants 
         /// </summary>
@@ -53,8 +45,7 @@ namespace gv
         {
             pl.Surface = "Destroyed by asteroid";
             pl.IsInhabited = false;
-            turnEvents.Add( String.Format( "{0} struck by asteroid, surface destroyed, inhabitants killed", pl.Name.ToUpper() ) );
-  
+            turnEvents.Add( String.Format( "{0} struck by asteroid, surface destroyed, inhabitants killed", pl.Name.ToUpper() ) );  
         }
         /// <summary>
         /// For immersion purposes
@@ -62,8 +53,7 @@ namespace gv
         /// <param name="pl"></param>
         void RevolutionOnPlanet(List<string> turnEvents, Planet pl) 
         {
-            turnEvents.Add(String.Format("Revolution on {0}, hope the new power is nice to foreigners.",pl.Name.ToUpper() ) );
-   
+            turnEvents.Add(String.Format("Revolution on {0}, hope the new power is nice to foreigners.",pl.Name.ToUpper() ) );   
         }
         /// <summary>
         /// Makes a planet inaccessible for 2 turns.
@@ -71,9 +61,8 @@ namespace gv
         /// <param name="pl"></param>
         void ElectricStorm(List<string> turnEvents, Planet pl )
         {
-            //pl.IsBlocked = 2;
-            turnEvents.Add( String.Format( "Electric storm on {0}, planet inaccessible for two turns.", pl.Name.ToUpper() ) );
-   
+            pl.Blocked = 2;
+            turnEvents.Add( String.Format( "Electric storm on {0}, planet inaccessible for two turns.", pl.Name.ToUpper() ) ); 
         }
 
         /// <summary>
@@ -90,13 +79,11 @@ namespace gv
         public Universe Universe
         {
             get { return _u; }
-        }
-        
+        }      
         public IReadOnlyDictionary<int,List<string>> EventsOccured
         {
             get { return _eventsOccured; }
         }
-
         public IReadOnlyList<string> AllEvents
         {
             get { return _allEvents; }
