@@ -64,8 +64,12 @@ namespace gv
                 {
                     _ressources[p.Ressources] += 10;
                 }
+<<<<<<< HEAD
             }
-
+            
+=======
+            }            
+>>>>>>> F_Change_chunk
         }
         public XElement ToXML()
         {

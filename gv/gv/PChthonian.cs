@@ -25,12 +25,12 @@ namespace gv
         }
         public override string Surface
         {
-            get { return _surface; }
+            get { return "Stone"; }
             set { _surface = value; }
         }
         public override string Climate
         {
-            get { return _climate; }
+            get { return "Hot"; }
             set { _climate = value; }
         }
         public override bool IsInhabited

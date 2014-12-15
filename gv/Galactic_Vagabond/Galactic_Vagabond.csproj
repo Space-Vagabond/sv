@@ -62,12 +62,6 @@
     <Compile Include="launcher.Designer.cs">
       <DependentUpon>launcher.cs</DependentUpon>
     </Compile>
-    <Compile Include="map.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="map.Designer.cs">
-      <DependentUpon>map.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="EventLog.resx">
@@ -78,9 +72,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="launcher.resx">
       <DependentUpon>launcher.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="map.resx">
-      <DependentUpon>map.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

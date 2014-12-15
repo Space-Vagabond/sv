@@ -14,7 +14,8 @@ namespace gv
     public class Universe
     {
         readonly Dictionary<string,Planet> _planets = new Dictionary<string,Planet>();
-        readonly List<Chunk> _chunks = new List<Chunk>();
+        readonly Dictionary<Position,Chunk> _chunks = new Dictionary<Position,Chunk>();
+        Dictionary<int,Chunk> _shownChunks = new Dictionary<int,Chunk>();
         readonly List<Cell> _cells = new List<Cell>();
         Random rand = new Random();
         internal TextGenerator NameGen;
@@ -27,13 +28,15 @@ namespace gv
             _events = new EventGenerator( this );
             _player = new Player( this );
             NameGen = new TextGenerator(WordTypes.Name);
-
+            int k = 1;
             for( int i = -1; i < 1; i++ )
             {
                 for( int j = -1; j < 1; j++ )
                 {
                     Chunk c = new Chunk( new Position( i * 10, j * 10 ), this );
-                    _chunks.Add( c );
+                    _chunks.Add(c.Position, c );
+                    _shownChunks.Add(k,c);
+                    k++;
                 }
             }   
             
@@ -87,7 +90,7 @@ namespace gv
                         )
                     ),
                     new XElement("Chunks",
-                        from C in _chunks
+                        from C in _chunks.Values
                         select new XElement("Chunk", 
                             new XElement("X", C.Position.X),
                             new XElement("Y", C.Position.Y)
@@ -106,7 +109,7 @@ namespace gv
         {
             get { return _planets; }
         }
-        public List<Chunk> Chunks
+        public Dictionary<Position,Chunk> Chunks
         {
            get { return _chunks;}
         }
@@ -130,6 +133,9 @@ namespace gv
         {
             get { return _turn; }
         }
-        
+        public Dictionary<int,Chunk> ShownChunks
+        {
+            get { return _shownChunks; }
+        }      
     }
 }

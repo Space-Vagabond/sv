@@ -35,6 +35,22 @@
             this.CurrentPlanet = new System.Windows.Forms.Label();
             this.EndTurn = new System.Windows.Forms.Button();
             this.Build = new System.Windows.Forms.Button();
+<<<<<<< HEAD
+            this.SiliciumLabel = new System.Windows.Forms.Label();
+            this.GemsLabel = new System.Windows.Forms.Label();
+            this.PlutoniumLabel = new System.Windows.Forms.Label();
+            this.MetalLabel = new System.Windows.Forms.Label();
+            this.HydrogenLabel = new System.Windows.Forms.Label();
+            this.HeliumLabel = new System.Windows.Forms.Label();
+            this.TurnEvents = new System.Windows.Forms.ListBox();
+            this.OverviewButton = new System.Windows.Forms.Button();
+            this.TechButton = new System.Windows.Forms.Button();
+            this.EventsButton = new System.Windows.Forms.Button();
+            this.CodexButton = new System.Windows.Forms.Button();
+            this.StatisticsButton = new System.Windows.Forms.Button();
+            this.LastTurnLabel = new System.Windows.Forms.Label();
+            this.map = new Galactic_Vagabond.Map();
+=======
             this.map = new System.Windows.Forms.DataGridView();
             this.Column21 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column20 = new System.Windows.Forms.DataGridViewImageColumn();
@@ -49,19 +65,6 @@
             this.Column11 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.SiliciumLabel = new System.Windows.Forms.Label();
-            this.GemsLabel = new System.Windows.Forms.Label();
-            this.PlutoniumLabel = new System.Windows.Forms.Label();
-            this.MetalLabel = new System.Windows.Forms.Label();
-            this.HydrogenLabel = new System.Windows.Forms.Label();
-            this.HeliumLabel = new System.Windows.Forms.Label();
-            this.TurnEvents = new System.Windows.Forms.ListBox();
-            this.OverviewButton = new System.Windows.Forms.Button();
-            this.TechButton = new System.Windows.Forms.Button();
-            this.EventsButton = new System.Windows.Forms.Button();
-            this.CodexButton = new System.Windows.Forms.Button();
-            this.StatisticsButton = new System.Windows.Forms.Button();
-            this.LastTurnLabel = new System.Windows.Forms.Label();
             this.Column8 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewImageColumn();
@@ -71,6 +74,7 @@
             this.Column2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.map)).BeginInit();
+>>>>>>> F_Change_chunk
             this.SuspendLayout();
             // 
             // CurrentPlanet
@@ -79,7 +83,11 @@
             this.CurrentPlanet.Cursor = System.Windows.Forms.Cursors.Cross;
             this.CurrentPlanet.Font = new System.Drawing.Font("Orator Std", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CurrentPlanet.ForeColor = System.Drawing.Color.Gold;
+<<<<<<< HEAD
             this.CurrentPlanet.Location = new System.Drawing.Point(771, 9);
+=======
+            this.CurrentPlanet.Location = new System.Drawing.Point(719, 12);
+>>>>>>> F_Change_chunk
             this.CurrentPlanet.Name = "CurrentPlanet";
             this.CurrentPlanet.Size = new System.Drawing.Size(492, 210);
             this.CurrentPlanet.TabIndex = 2;
@@ -90,11 +98,17 @@
             this.EndTurn.Cursor = System.Windows.Forms.Cursors.Cross;
             this.EndTurn.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
             this.EndTurn.FlatAppearance.BorderSize = 2;
+<<<<<<< HEAD
             this.EndTurn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.EndTurn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
             this.EndTurn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EndTurn.Font = new System.Drawing.Font("Orator Std", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EndTurn.ForeColor = System.Drawing.Color.Black;
+=======
+            this.EndTurn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.EndTurn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EndTurn.ForeColor = System.Drawing.Color.Lime;
+>>>>>>> F_Change_chunk
             this.EndTurn.Location = new System.Drawing.Point(1134, 658);
             this.EndTurn.Name = "EndTurn";
             this.EndTurn.Size = new System.Drawing.Size(109, 51);
@@ -105,6 +119,7 @@
             // 
             // Build
             // 
+<<<<<<< HEAD
             this.Build.BackColor = System.Drawing.Color.Transparent;
             this.Build.FlatAppearance.BorderColor = System.Drawing.Color.Chartreuse;
             this.Build.FlatAppearance.BorderSize = 2;
@@ -306,6 +321,27 @@
             // 
             // map
             // 
+            this.map.BackColor = System.Drawing.Color.Black;
+            this.map.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.map.Location = new System.Drawing.Point(12, 12);
+            this.map.Name = "map";
+            this.map.Size = new System.Drawing.Size(604, 604);
+            this.map.TabIndex = 0;
+            this.map.TabStop = false;
+            this.map.Text = "map1";
+            this.map.Universe = null;
+=======
+            this.Build.Location = new System.Drawing.Point(1134, 332);
+            this.Build.Name = "Build";
+            this.Build.Size = new System.Drawing.Size(75, 23);
+            this.Build.TabIndex = 3;
+            this.Build.Text = "Build";
+            this.Build.UseVisualStyleBackColor = true;
+            this.Build.Visible = false;
+            this.Build.Click += new System.EventHandler(this.Build_Click);
+            // 
+            // map
+            // 
             this.map.AllowUserToAddRows = false;
             this.map.AllowUserToDeleteRows = false;
             this.map.AllowUserToResizeColumns = false;
@@ -503,6 +539,7 @@
             this.Column1.HeaderText = "Column1";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+>>>>>>> F_Change_chunk
             // 
             // Form_GV_01
             // 
@@ -511,6 +548,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1264, 721);
+<<<<<<< HEAD
             this.Controls.Add(this.LastTurnLabel);
             this.Controls.Add(this.StatisticsButton);
             this.Controls.Add(this.CodexButton);
@@ -524,10 +562,12 @@
             this.Controls.Add(this.PlutoniumLabel);
             this.Controls.Add(this.GemsLabel);
             this.Controls.Add(this.SiliciumLabel);
+=======
+            this.Controls.Add(this.map);
+>>>>>>> F_Change_chunk
             this.Controls.Add(this.Build);
             this.Controls.Add(this.EndTurn);
             this.Controls.Add(this.CurrentPlanet);
-            this.Controls.Add(this.map);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
@@ -542,6 +582,7 @@
         private System.Windows.Forms.Label CurrentPlanet;
         private System.Windows.Forms.Button EndTurn;
         private System.Windows.Forms.Button Build;
+<<<<<<< HEAD
         private System.Windows.Forms.Label SiliciumLabel;
         private System.Windows.Forms.Label GemsLabel;
         private System.Windows.Forms.Label PlutoniumLabel;
@@ -555,6 +596,7 @@
         private System.Windows.Forms.Button CodexButton;
         private System.Windows.Forms.Button StatisticsButton;
         private System.Windows.Forms.Label LastTurnLabel;
+=======
         private System.Windows.Forms.DataGridView map;
         private System.Windows.Forms.DataGridViewImageColumn Column1;
         private System.Windows.Forms.DataGridViewImageColumn Column2;
@@ -577,6 +619,7 @@
         private System.Windows.Forms.DataGridViewImageColumn Column19;
         private System.Windows.Forms.DataGridViewImageColumn Column20;
         private System.Windows.Forms.DataGridViewImageColumn Column21;
+>>>>>>> F_Change_chunk
 
 
 

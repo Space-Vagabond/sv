@@ -1,25 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Game>
   <Player>
+<<<<<<< HEAD
+    <Speed>4</Speed>
+    <X>-4</X>
+    <Y>-2</Y>
+    <RemainingSteps>4</RemainingSteps>
+=======
     <Speed>4000</Speed>
     <X>8</X>
     <Y>0</Y>
     <RemainingSteps>4000</RemainingSteps>
+>>>>>>> F_Change_chunk
     <Ressources>
       <Ressource>
-        <Silicium>0</Silicium>
+        <Silicium>50</Silicium>
       </Ressource>
       <Ressource>
         <Gems>0</Gems>
       </Ressource>
       <Ressource>
-        <Plutonium>0</Plutonium>
+        <Plutonium>20</Plutonium>
       </Ressource>
       <Ressource>
         <Metal>0</Metal>
       </Ressource>
       <Ressource>
-        <Hydrogene>0</Hydrogene>
+        <Hydrogene>30</Hydrogene>
       </Ressource>
       <Ressource>
         <Helium>0</Helium>
@@ -29,10 +36,17 @@
   <Planets>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+<<<<<<< HEAD
+      <Name>Cheneeus</Name>
+      <Type>Telluric Carbon</Type>
+      <Climate>Temperate</Climate>
+      <Surface>Destroyed by asteroid</Surface>
+=======
       <Name>Beasylasus</Name>
       <Type>Chtonian</Type>
       <Climate />
       <Surface />
+>>>>>>> F_Change_chunk
       <Ressources>Gems</Ressources>
       <IsInhabited>false</IsInhabited>
       <InhabitantsName>Inhabited planet</InhabitantsName>
@@ -40,6 +54,15 @@
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+<<<<<<< HEAD
+      <Name>Liesamilus</Name>
+      <Type>Telluric Metal</Type>
+      <Climate>Cold</Climate>
+      <Surface>Glass</Surface>
+      <Ressources>Metal</Ressources>
+      <IsInhabited>true</IsInhabited>
+      <InhabitantsName>Liesamilians</InhabitantsName>
+=======
       <Name>Owexanaus</Name>
       <Type>Coreless</Type>
       <Climate>Temperate</Climate>
@@ -47,10 +70,20 @@
       <Ressources>none</Ressources>
       <IsInhabited>false</IsInhabited>
       <InhabitantsName>Inhabited planet</InhabitantsName>
+>>>>>>> F_Change_chunk
       <Built>false</Built>
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+<<<<<<< HEAD
+      <Name>Haviylynus</Name>
+      <Type>Telluric Lava</Type>
+      <Climate>Hot</Climate>
+      <Surface>Destroyed by asteroid</Surface>
+      <Ressources>none</Ressources>
+      <IsInhabited>false</IsInhabited>
+      <InhabitantsName>Inhabited planet</InhabitantsName>
+=======
       <Name>Nadintius</Name>
       <Type>Telluric Carbon</Type>
       <Climate>Hot</Climate>
@@ -58,10 +91,20 @@
       <Ressources>Gems</Ressources>
       <IsInhabited>true</IsInhabited>
       <InhabitantsName>Nadintiians</InhabitantsName>
+>>>>>>> F_Change_chunk
       <Built>false</Built>
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+<<<<<<< HEAD
+      <Name>Mabriascus</Name>
+      <Type>Telluric Ice</Type>
+      <Climate>Cold</Climate>
+      <Surface>Destroyed by asteroid</Surface>
+      <Ressources>none</Ressources>
+      <IsInhabited>false</IsInhabited>
+      <InhabitantsName>Inhabited planet</InhabitantsName>
+=======
       <Name>Lestteius</Name>
       <Type>Gazeous Helium</Type>
       <Climate>Cold</Climate>
@@ -69,10 +112,20 @@
       <Ressources>Helium</Ressources>
       <IsInhabited>true</IsInhabited>
       <InhabitantsName>Lestteiians</InhabitantsName>
+>>>>>>> F_Change_chunk
       <Built>false</Built>
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+<<<<<<< HEAD
+      <Name>Beabeaus</Name>
+      <Type>Telluric Ice</Type>
+      <Climate>Cold</Climate>
+      <Surface>Ice</Surface>
+      <Ressources>none</Ressources>
+      <IsInhabited>false</IsInhabited>
+      <InhabitantsName>Inhabited planet</InhabitantsName>
+=======
       <Name>Autussonus</Name>
       <Type>Telluric Silicat</Type>
       <Climate>Temperate</Climate>
@@ -80,10 +133,31 @@
       <Ressources>Silicium</Ressources>
       <IsInhabited>true</IsInhabited>
       <InhabitantsName>Autussonians</InhabitantsName>
+>>>>>>> F_Change_chunk
       <Built>false</Built>
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+<<<<<<< HEAD
+      <Name>Tabieeus</Name>
+      <Type>Chtonian</Type>
+      <Climate />
+      <Surface>Destroyed by asteroid</Surface>
+      <Ressources>Plutonium</Ressources>
+      <IsInhabited>false</IsInhabited>
+      <InhabitantsName>Inhabited planet</InhabitantsName>
+      <Built>true</Built>
+    </Planet>
+    <Planet>
+      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+      <Name>Tauzitius</Name>
+      <Type>Gazeous Hydrogen</Type>
+      <Climate />
+      <Surface />
+      <Ressources>Hydrogene</Ressources>
+      <IsInhabited>false</IsInhabited>
+      <InhabitantsName>Inhabited planet</InhabitantsName>
+=======
       <Name>Beckssus</Name>
       <Type>Gazeous Hydrogen</Type>
       <Climate />
@@ -102,10 +176,31 @@
       <Ressources>Silicium</Ressources>
       <IsInhabited>true</IsInhabited>
       <InhabitantsName>Stesynahians</InhabitantsName>
+>>>>>>> F_Change_chunk
       <Built>false</Built>
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+<<<<<<< HEAD
+      <Name>Ivepeahaus</Name>
+      <Type>Telluric Silicat</Type>
+      <Climate>Hot</Climate>
+      <Surface>Oceanic</Surface>
+      <Ressources>Silicium</Ressources>
+      <IsInhabited>false</IsInhabited>
+      <InhabitantsName>Inhabited planet</InhabitantsName>
+      <Built>true</Built>
+    </Planet>
+    <Planet>
+      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+      <Name>Shlacinus</Name>
+      <Type>Telluric Carbon</Type>
+      <Climate>Hot</Climate>
+      <Surface>Planetopolis</Surface>
+      <Ressources>Gems</Ressources>
+      <IsInhabited>true</IsInhabited>
+      <InhabitantsName>Shlacinians</InhabitantsName>
+=======
       <Name>Gireynus</Name>
       <Type>Coreless</Type>
       <Climate>Hot</Climate>
@@ -113,14 +208,19 @@
       <Ressources>none</Ressources>
       <IsInhabited>false</IsInhabited>
       <InhabitantsName>Inhabited planet</InhabitantsName>
+>>>>>>> F_Change_chunk
       <Built>false</Built>
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+<<<<<<< HEAD
+      <Name>Habephanus</Name>
+=======
       <Name>Molinthus</Name>
+>>>>>>> F_Change_chunk
       <Type>Telluric Carbon</Type>
       <Climate>Hot</Climate>
-      <Surface>Glass</Surface>
+      <Surface>Destroyed by asteroid</Surface>
       <Ressources>Gems</Ressources>
       <IsInhabited>false</IsInhabited>
       <InhabitantsName>Inhabited planet</InhabitantsName>
@@ -128,17 +228,28 @@
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+<<<<<<< HEAD
+      <Name>Bataylyus</Name>
+      <Type>Chtonian</Type>
+      <Climate />
+      <Surface />
+      <Ressources>Gems</Ressources>
+=======
       <Name>Tisliceus</Name>
       <Type>Telluric Lava</Type>
       <Climate>Hot</Climate>
       <Surface>Lava</Surface>
       <Ressources>none</Ressources>
+>>>>>>> F_Change_chunk
       <IsInhabited>false</IsInhabited>
       <InhabitantsName>Inhabited planet</InhabitantsName>
       <Built>false</Built>
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+<<<<<<< HEAD
+      <Name>Tromelus</Name>
+=======
       <Name>Sydrlius</Name>
       <Type>Chtonian</Type>
       <Climate />
@@ -162,6 +273,7 @@
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
       <Name>Tiacarynus</Name>
+>>>>>>> F_Change_chunk
       <Type>Telluric Ice</Type>
       <Climate>Cold</Climate>
       <Surface>Ice</Surface>
@@ -172,10 +284,17 @@
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+<<<<<<< HEAD
+      <Name>Brereahus</Name>
+      <Type>Telluric Carbon</Type>
+      <Climate>Temperate</Climate>
+      <Surface>Destroyed by asteroid</Surface>
+=======
       <Name>Evepehasus</Name>
       <Type>Chtonian</Type>
       <Climate />
       <Surface />
+>>>>>>> F_Change_chunk
       <Ressources>Gems</Ressources>
       <IsInhabited>false</IsInhabited>
       <InhabitantsName>Inhabited planet</InhabitantsName>
@@ -183,6 +302,20 @@
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+<<<<<<< HEAD
+      <Name>Mostnius</Name>
+      <Type>Gazeous Hydrogen</Type>
+      <Climate />
+      <Surface />
+      <Ressources>Hydrogene</Ressources>
+      <IsInhabited>true</IsInhabited>
+      <InhabitantsName>Mostniians</InhabitantsName>
+      <Built>true</Built>
+    </Planet>
+    <Planet>
+      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+      <Name>Sydisius</Name>
+=======
       <Name>Genilynus</Name>
       <Type>Telluric Desert</Type>
       <Climate>Hot</Climate>
@@ -228,9 +361,10 @@
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
       <Name>Osilohahus</Name>
+>>>>>>> F_Change_chunk
       <Type>Telluric Lava</Type>
       <Climate>Hot</Climate>
-      <Surface>Lava</Surface>
+      <Surface>Destroyed by asteroid</Surface>
       <Ressources>none</Ressources>
       <IsInhabited>false</IsInhabited>
       <InhabitantsName>Inhabited planet</InhabitantsName>
@@ -238,10 +372,17 @@
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+<<<<<<< HEAD
+      <Name>Crasitus</Name>
+      <Type>Coreless</Type>
+      <Climate>Hot</Climate>
+      <Surface>Glass</Surface>
+=======
       <Name>Lenecius</Name>
       <Type>Telluric Lava</Type>
       <Climate>Hot</Climate>
       <Surface>Lava</Surface>
+>>>>>>> F_Change_chunk
       <Ressources>none</Ressources>
       <IsInhabited>false</IsInhabited>
       <InhabitantsName>Inhabited planet</InhabitantsName>
@@ -249,6 +390,12 @@
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+<<<<<<< HEAD
+      <Name>Geckitilus</Name>
+      <Type>Chtonian</Type>
+      <Climate />
+      <Surface />
+=======
       <Name>Osaysius</Name>
       <Type>Telluric Metal</Type>
       <Climate>Cold</Climate>
@@ -275,6 +422,7 @@
       <Type>Telluric Carbon</Type>
       <Climate>Cold</Climate>
       <Surface>Oceanic</Surface>
+>>>>>>> F_Change_chunk
       <Ressources>Gems</Ressources>
       <IsInhabited>false</IsInhabited>
       <InhabitantsName>Inhabited planet</InhabitantsName>
@@ -282,6 +430,15 @@
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+<<<<<<< HEAD
+      <Name>Oslaerus</Name>
+      <Type>Telluric Silicat</Type>
+      <Climate>Hot</Climate>
+      <Surface>Destroyed by asteroid</Surface>
+      <Ressources>Silicium</Ressources>
+      <IsInhabited>false</IsInhabited>
+      <InhabitantsName>Inhabited planet</InhabitantsName>
+=======
       <Name>Mauacius</Name>
       <Type>Telluric Silicat</Type>
       <Climate>Temperate</Climate>
@@ -289,14 +446,41 @@
       <Ressources>Silicium</Ressources>
       <IsInhabited>true</IsInhabited>
       <InhabitantsName>Mauaciians</InhabitantsName>
+>>>>>>> F_Change_chunk
       <Built>false</Built>
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+<<<<<<< HEAD
+      <Name>Izaimyus</Name>
+      <Type>Telluric Metal</Type>
+      <Climate>Temperate</Climate>
+      <Surface>Destroyed by asteroid</Surface>
+      <Ressources>Metal</Ressources>
+=======
       <Name>Earth</Name>
       <Type>Destroyed</Type>
       <Climate>Temperate</Climate>
       <Surface>Ravaged</Surface>
+      <Ressources>none</Ressources>
+>>>>>>> F_Change_chunk
+      <IsInhabited>false</IsInhabited>
+      <InhabitantsName>Inhabited planet</InhabitantsName>
+      <Built>false</Built>
+    </Planet>
+    <Planet>
+      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+<<<<<<< HEAD
+      <Name>Merndreus</Name>
+      <Type>Coreless</Type>
+      <Climate>Temperate</Climate>
+      <Surface>Forest</Surface>
+=======
+      <Name>Adyndyus</Name>
+      <Type>Telluric Ice</Type>
+      <Climate>Cold</Climate>
+      <Surface>Ice</Surface>
+>>>>>>> F_Change_chunk
       <Ressources>none</Ressources>
       <IsInhabited>false</IsInhabited>
       <InhabitantsName>Inhabited planet</InhabitantsName>
@@ -304,7 +488,46 @@
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Adyndyus</Name>
+<<<<<<< HEAD
+      <Name>Abirialaus</Name>
+      <Type>Telluric Metal</Type>
+      <Climate>Hot</Climate>
+      <Surface>Planetopolis</Surface>
+      <Ressources>Metal</Ressources>
+=======
+      <Name>Lirmeeaus</Name>
+      <Type>Telluric Lava</Type>
+      <Climate>Hot</Climate>
+      <Surface>Lava</Surface>
+      <Ressources>none</Ressources>
+>>>>>>> F_Change_chunk
+      <IsInhabited>false</IsInhabited>
+      <InhabitantsName>Inhabited planet</InhabitantsName>
+      <Built>false</Built>
+    </Planet>
+    <Planet>
+      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+<<<<<<< HEAD
+      <Name>Trmeithus</Name>
+      <Type>Telluric Desert</Type>
+      <Climate>Hot</Climate>
+      <Surface>Destroyed by asteroid</Surface>
+      <Ressources>Silicium</Ressources>
+=======
+      <Name>Ammantinus</Name>
+      <Type>Telluric Lava</Type>
+      <Climate>Hot</Climate>
+      <Surface>Lava</Surface>
+      <Ressources>none</Ressources>
+>>>>>>> F_Change_chunk
+      <IsInhabited>false</IsInhabited>
+      <InhabitantsName>Inhabited planet</InhabitantsName>
+      <Built>false</Built>
+    </Planet>
+    <Planet>
+      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+<<<<<<< HEAD
+      <Name>Itzbaheus</Name>
       <Type>Telluric Ice</Type>
       <Climate>Cold</Climate>
       <Surface>Ice</Surface>
@@ -315,28 +538,11 @@
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Lirmeeaus</Name>
-      <Type>Telluric Lava</Type>
+      <Name>Owerlasus</Name>
+      <Type>Coreless</Type>
       <Climate>Hot</Climate>
-      <Surface>Lava</Surface>
-      <Ressources>none</Ressources>
-      <IsInhabited>false</IsInhabited>
-      <InhabitantsName>Inhabited planet</InhabitantsName>
-      <Built>false</Built>
-    </Planet>
-    <Planet>
-      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
-      <Name>Ammantinus</Name>
-      <Type>Telluric Lava</Type>
-      <Climate>Hot</Climate>
-      <Surface>Lava</Surface>
-      <Ressources>none</Ressources>
-      <IsInhabited>false</IsInhabited>
-      <InhabitantsName>Inhabited planet</InhabitantsName>
-      <Built>false</Built>
-    </Planet>
-    <Planet>
-      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+      <Surface>Destroyed by asteroid</Surface>
+=======
       <Name>Olydarus</Name>
       <Type>Telluric Silicat</Type>
       <Climate>Temperate</Climate>
@@ -363,6 +569,7 @@
       <Type>Coreless</Type>
       <Climate>Temperate</Climate>
       <Surface>Glass</Surface>
+>>>>>>> F_Change_chunk
       <Ressources>none</Ressources>
       <IsInhabited>false</IsInhabited>
       <InhabitantsName>Inhabited planet</InhabitantsName>
@@ -370,10 +577,17 @@
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+<<<<<<< HEAD
+      <Name>Earth</Name>
+      <Type>Destroyed</Type>
+      <Climate>Temperate</Climate>
+      <Surface>Ravaged</Surface>
+=======
       <Name>Araylanus</Name>
       <Type>Telluric Ice</Type>
       <Climate>Cold</Climate>
       <Surface>Ice</Surface>
+>>>>>>> F_Change_chunk
       <Ressources>none</Ressources>
       <IsInhabited>false</IsInhabited>
       <InhabitantsName>Inhabited planet</InhabitantsName>
@@ -381,6 +595,23 @@
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+<<<<<<< HEAD
+      <Name>Omizahus</Name>
+      <Type>Telluric Silicat</Type>
+      <Climate>Cold</Climate>
+      <Surface>Destroyed by asteroid</Surface>
+      <Ressources>Silicium</Ressources>
+      <IsInhabited>false</IsInhabited>
+      <InhabitantsName>Inhabited planet</InhabitantsName>
+      <Built>true</Built>
+    </Planet>
+    <Planet>
+      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+      <Name>Grmmiallus</Name>
+      <Type>Coreless</Type>
+      <Climate>Temperate</Climate>
+      <Surface>Destroyed by asteroid</Surface>
+=======
       <Name>Aameehilus</Name>
       <Type>Coreless</Type>
       <Climate>Cold</Climate>
@@ -396,6 +627,7 @@
       <Type>Telluric Ice</Type>
       <Climate>Cold</Climate>
       <Surface>Ice</Surface>
+>>>>>>> F_Change_chunk
       <Ressources>none</Ressources>
       <IsInhabited>false</IsInhabited>
       <InhabitantsName>Inhabited planet</InhabitantsName>
@@ -403,6 +635,13 @@
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+<<<<<<< HEAD
+      <Name>Trovisus</Name>
+      <Type>Telluric Desert</Type>
+      <Climate>Hot</Climate>
+      <Surface>Sand desert</Surface>
+      <Ressources>Silicium</Ressources>
+=======
       <Name>Armahaus</Name>
       <Type>Coreless</Type>
       <Climate>Temperate</Climate>
@@ -419,13 +658,18 @@
       <Climate>Hot</Climate>
       <Surface>Lava</Surface>
       <Ressources>none</Ressources>
+>>>>>>> F_Change_chunk
       <IsInhabited>false</IsInhabited>
       <InhabitantsName>Inhabited planet</InhabitantsName>
       <Built>false</Built>
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+<<<<<<< HEAD
+      <Name>Bimmoreus</Name>
+=======
       <Name>Taialyus</Name>
+>>>>>>> F_Change_chunk
       <Type>Telluric Desert</Type>
       <Climate>Hot</Climate>
       <Surface>Sand desert</Surface>
@@ -433,6 +677,26 @@
       <IsInhabited>false</IsInhabited>
       <InhabitantsName>Inhabited planet</InhabitantsName>
       <Built>false</Built>
+<<<<<<< HEAD
+    </Planet>
+    <Planet>
+      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+      <Name>Tiacaminus</Name>
+      <Type>Telluric Carbon</Type>
+      <Climate>Temperate</Climate>
+      <Surface>Destroyed by asteroid</Surface>
+      <Ressources>Gems</Ressources>
+      <IsInhabited>false</IsInhabited>
+      <InhabitantsName>Inhabited planet</InhabitantsName>
+      <Built>false</Built>
+    </Planet>
+    <Planet>
+      <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
+      <Name>Sylirilyus</Name>
+      <Type>Chtonian</Type>
+      <Climate />
+      <Surface>Destroyed by asteroid</Surface>
+=======
     </Planet>
     <Planet>
       <Class>System.Collections.Generic.KeyValuePair`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[gv.Planet, gv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Class>
@@ -440,6 +704,7 @@
       <Type>Telluric Carbon</Type>
       <Climate>Cold</Climate>
       <Surface>Glass</Surface>
+>>>>>>> F_Change_chunk
       <Ressources>Gems</Ressources>
       <IsInhabited>false</IsInhabited>
       <InhabitantsName>Inhabited planet</InhabitantsName>
@@ -727,10 +992,10 @@
     <Cell>
       <containerX>-10</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>-8</X>
       <Y>-5</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Cheneeus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -751,10 +1016,10 @@
     <Cell>
       <containerX>-10</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>-8</X>
       <Y>-2</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Liesamilus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -842,7 +1107,11 @@
       <ContainsPlanet>true</ContainsPlanet>
       <X>-7</X>
       <Y>-1</Y>
+<<<<<<< HEAD
+      <ContainedPlanet>Haviylynus</ContainedPlanet>
+=======
       <ContainedPlanet>Stesynahus</ContainedPlanet>
+>>>>>>> F_Change_chunk
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -879,10 +1148,10 @@
     <Cell>
       <containerX>-10</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>-6</X>
       <Y>-6</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Mabriascus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -1015,10 +1284,10 @@
     <Cell>
       <containerX>-10</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>-4</X>
       <Y>-9</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Beabeaus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -1071,10 +1340,10 @@
     <Cell>
       <containerX>-10</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>-4</X>
       <Y>-2</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Tabieeus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -1087,10 +1356,10 @@
     <Cell>
       <containerX>-10</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>-3</X>
       <Y>-10</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Tauzitius</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -1159,10 +1428,10 @@
     <Cell>
       <containerX>-10</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>-3</X>
       <Y>-1</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Ivepeahaus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -1463,10 +1732,10 @@
     <Cell>
       <containerX>-10</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>-9</X>
       <Y>7</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Shlacinus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -1599,10 +1868,14 @@
     <Cell>
       <containerX>-10</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>true</ContainsPlanet>
+      <ContainsPlanet>false</ContainsPlanet>
       <X>-7</X>
       <Y>4</Y>
+<<<<<<< HEAD
+      <ContainedPlanet />
+=======
       <ContainedPlanet>Tiacarynus</ContainedPlanet>
+>>>>>>> F_Change_chunk
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -1639,10 +1912,10 @@
     <Cell>
       <containerX>-10</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>-7</X>
       <Y>9</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Habephanus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -1775,10 +2048,10 @@
     <Cell>
       <containerX>-10</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>-5</X>
       <Y>6</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Bataylyus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -1786,7 +2059,11 @@
       <ContainsPlanet>true</ContainsPlanet>
       <X>-5</X>
       <Y>7</Y>
+<<<<<<< HEAD
+      <ContainedPlanet>Tromelus</ContainedPlanet>
+=======
       <ContainedPlanet>Avelifeus</ContainedPlanet>
+>>>>>>> F_Change_chunk
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -1911,10 +2188,10 @@
     <Cell>
       <containerX>-10</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>-3</X>
       <Y>3</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Brereahus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -1970,7 +2247,11 @@
       <ContainsPlanet>false</ContainsPlanet>
       <X>-2</X>
       <Y>0</Y>
+<<<<<<< HEAD
+      <ContainedPlanet>Mostnius</ContainedPlanet>
+=======
       <ContainedPlanet />
+>>>>>>> F_Change_chunk
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -2007,10 +2288,10 @@
     <Cell>
       <containerX>-10</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>-2</X>
       <Y>5</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Sydisius</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -2055,10 +2336,10 @@
     <Cell>
       <containerX>-10</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>-1</X>
       <Y>1</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Crasitus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>-10</containerX>
@@ -2159,18 +2440,18 @@
     <Cell>
       <containerX>0</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>0</X>
       <Y>-6</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Geckitilus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>0</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>0</X>
       <Y>-5</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Oslaerus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>0</containerX>
@@ -2402,7 +2683,11 @@
       <ContainsPlanet>true</ContainsPlanet>
       <X>3</X>
       <Y>-6</Y>
+<<<<<<< HEAD
+      <ContainedPlanet>Izaimyus</ContainedPlanet>
+=======
       <ContainedPlanet>Oshecaus</ContainedPlanet>
+>>>>>>> F_Change_chunk
     </Cell>
     <Cell>
       <containerX>0</containerX>
@@ -2447,10 +2732,10 @@
     <Cell>
       <containerX>0</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>4</X>
       <Y>-10</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Merndreus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>0</containerX>
@@ -2535,10 +2820,10 @@
     <Cell>
       <containerX>0</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>5</X>
       <Y>-9</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Abirialaus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>0</containerX>
@@ -2554,7 +2839,11 @@
       <ContainsPlanet>true</ContainsPlanet>
       <X>5</X>
       <Y>-7</Y>
+<<<<<<< HEAD
+      <ContainedPlanet>Trmeithus</ContainedPlanet>
+=======
       <ContainedPlanet>Osaysius</ContainedPlanet>
+>>>>>>> F_Change_chunk
     </Cell>
     <Cell>
       <containerX>0</containerX>
@@ -2567,10 +2856,10 @@
     <Cell>
       <containerX>0</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>5</X>
       <Y>-5</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Itzbaheus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>0</containerX>
@@ -2583,10 +2872,10 @@
     <Cell>
       <containerX>0</containerX>
       <containerY>-10</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>5</X>
       <Y>-3</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Owerlasus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>0</containerX>
@@ -3010,7 +3299,11 @@
       <ContainsPlanet>false</ContainsPlanet>
       <X>1</X>
       <Y>0</Y>
+<<<<<<< HEAD
+      <ContainedPlanet>Omizahus</ContainedPlanet>
+=======
       <ContainedPlanet />
+>>>>>>> F_Change_chunk
     </Cell>
     <Cell>
       <containerX>0</containerX>
@@ -3439,10 +3732,10 @@
     <Cell>
       <containerX>0</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>6</X>
       <Y>4</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Grmmiallus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>0</containerX>
@@ -3463,10 +3756,10 @@
     <Cell>
       <containerX>0</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>6</X>
       <Y>7</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Trovisus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>0</containerX>
@@ -3639,10 +3932,10 @@
     <Cell>
       <containerX>0</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>8</X>
       <Y>9</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Bimmoreus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>0</containerX>
@@ -3711,18 +4004,18 @@
     <Cell>
       <containerX>0</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>9</X>
       <Y>8</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Tiacaminus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>0</containerX>
       <containerY>0</containerY>
-      <ContainsPlanet>false</ContainsPlanet>
+      <ContainsPlanet>true</ContainsPlanet>
       <X>9</X>
       <Y>9</Y>
-      <ContainedPlanet />
+      <ContainedPlanet>Sylirilyus</ContainedPlanet>
     </Cell>
     <Cell>
       <containerX>10</containerX>
