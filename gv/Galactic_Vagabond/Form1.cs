@@ -56,7 +56,7 @@ namespace Galactic_Vagabond
             Image[] planets= new Image[20];
             for( int i = 0; i < 20; i++ )
             {
-                planets[i] = Image.FromFile( @".\..\..\..\images/planet"+(i+1)+".png" );
+                planets[i] = Image.FromFile( @".\..\..\..\images/planet" + (i + 1) + ".png" );
             }
             Image ship = Image.FromFile( @".\..\..\..\images/ship.png" );
 
@@ -84,7 +84,7 @@ namespace Galactic_Vagabond
                             System.Drawing.Color.Black;
                         if( _universe.User.Position.X == cl.Position.X && _universe.User.Position.Y == cl.Position.Y )
                         {
-                            this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Value = ship;                           
+                            this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Value = ship;
                         }
                         else
                         {
@@ -102,15 +102,15 @@ namespace Galactic_Vagabond
             var pos = _universe.Cells.Where( c => c.Position.X == _universe.User.Position.X && c.Position.Y == _universe.User.Position.Y ).Single();
             if( pos.ContainsPlanet )
             {
-                if(pos.ContainedPlanet.Ressources != "none" && pos.ContainedPlanet.Factory == false)
+                if( pos.ContainedPlanet.Ressources != "none" && pos.ContainedPlanet.Factory == false )
                 {
                     Build.Show();
                 }
                 else
-                { 
+                {
                     Build.Hide();
                 }
-                CurrentPlanet.Text+= "Name: " + pos.ContainedPlanet.Name+Environment.NewLine ;
+                CurrentPlanet.Text += "Name: " + pos.ContainedPlanet.Name + Environment.NewLine;
                 CurrentPlanet.Text += "Type: " + pos.ContainedPlanet.Type + Environment.NewLine;
                 CurrentPlanet.Text += "Climate: " + pos.ContainedPlanet.Climate + Environment.NewLine;
                 CurrentPlanet.Text += "Surface: " + pos.ContainedPlanet.Surface + Environment.NewLine;
@@ -121,7 +121,7 @@ namespace Galactic_Vagabond
                     CurrentPlanet.Text += "Constructible: yes" + Environment.NewLine;
                     CurrentPlanet.Text += "Built: " + ((pos.ContainedPlanet.Factory) ? "yes" : "no") + Environment.NewLine;
                 }
-                else 
+                else
                 {
                     CurrentPlanet.Text += "Constructible: no" + Environment.NewLine;
                 }
@@ -129,10 +129,10 @@ namespace Galactic_Vagabond
             else
             {
                 Build.Hide();
-                CurrentPlanet.Text+= "No planet to interact with";
+                CurrentPlanet.Text += "No planet to interact with";
             }
         }
-       protected override bool ProcessCmdKey( ref Message msg, Keys keyData )
+        protected override bool ProcessCmdKey( ref Message msg, Keys keyData )
         {
             if( this.map.Visible )
             {
@@ -155,7 +155,7 @@ namespace Galactic_Vagabond
                     if( _universe.User.Move( new Position( _universe.User.Position.X - 1, _universe.User.Position.Y ) ) )
                     {
                         EnsureChunk();
-                        
+
                     }
                 }
                 else if( keyData == Keys.Right )
@@ -163,139 +163,139 @@ namespace Galactic_Vagabond
                     if( _universe.User.Move( new Position( _universe.User.Position.X + 1, _universe.User.Position.Y ) ) )
                     {
                         EnsureChunk();
-                        
+
                     }
-                }                
+                }
                 ShowCurrentPlanet();
                 DisplayPlayerResources();
-                
+
                 return true;
             }
             return false;
         }
         void EnsureChunk()
-       {
-           int maxX = _universe.ShownChunks.Values.Max( Chunk => Chunk.Position.X );
-           int maxY = _universe.ShownChunks.Values.Max( Chunk => Chunk.Position.Y );
-           int minX = _universe.ShownChunks.Values.Min( Chunk => Chunk.Position.X );
-           int minY = _universe.ShownChunks.Values.Min( Chunk => Chunk.Position.Y );
+        {
+            int maxX = _universe.ShownChunks.Values.Max( Chunk => Chunk.Position.X );
+            int maxY = _universe.ShownChunks.Values.Max( Chunk => Chunk.Position.Y );
+            int minX = _universe.ShownChunks.Values.Min( Chunk => Chunk.Position.X );
+            int minY = _universe.ShownChunks.Values.Min( Chunk => Chunk.Position.Y );
 
-           int maxiX = maxX + 9;
-           int maxiY = maxY + 9;
-           int miniX = minX;
-           int miniY = minY;
+            int maxiX = maxX + 9;
+            int maxiY = maxY + 9;
+            int miniX = minX;
+            int miniY = minY;
 
 
-           if( _universe.User.Position.X > maxiX )
-           {
-               _universe.ShownChunks.Clear();
-               _universe.ShownChunks.Add( 1,_universe.Chunks[new Position( maxX, minY )] );
-               _universe.ShownChunks.Add( 2,_universe.Chunks[new Position( maxX, maxY )] );
-               if( _universe.Chunks.ContainsKey( new Position( maxX + 10, minY ) ) )
-               {
-                   _universe.ShownChunks.Add( 3,_universe.Chunks[new Position( maxX + 10, minY )] );
-               }
-               else
-               {
-                   Chunk c = new Chunk( new Position( maxX + 10, minY ), _universe );
-                   _universe.Chunks.Add( c.Position, c );
-                   _universe.ShownChunks.Add( 3, c );
-               }
-               if( _universe.Chunks.ContainsKey( new Position( maxX + 10, maxY ) ) )
-               {
-                   _universe.ShownChunks.Add( 4, _universe.Chunks[new Position( maxX + 10, maxY )] );
-               }
-               else
-               {
-                   Chunk c = new Chunk( new Position( maxX + 10, maxY ), _universe );
-                   _universe.Chunks.Add( c.Position, c );
-                   _universe.ShownChunks.Add( 4, c );
-               }
+            if( _universe.User.Position.X > maxiX )
+            {
+                _universe.ShownChunks.Clear();
+                _universe.ShownChunks.Add( 1, _universe.Chunks[new Position( maxX, minY )] );
+                _universe.ShownChunks.Add( 2, _universe.Chunks[new Position( maxX, maxY )] );
+                if( _universe.Chunks.ContainsKey( new Position( maxX + 10, minY ) ) )
+                {
+                    _universe.ShownChunks.Add( 3, _universe.Chunks[new Position( maxX + 10, minY )] );
+                }
+                else
+                {
+                    Chunk c = new Chunk( new Position( maxX + 10, minY ), _universe );
+                    _universe.Chunks.Add( c.Position, c );
+                    _universe.ShownChunks.Add( 3, c );
+                }
+                if( _universe.Chunks.ContainsKey( new Position( maxX + 10, maxY ) ) )
+                {
+                    _universe.ShownChunks.Add( 4, _universe.Chunks[new Position( maxX + 10, maxY )] );
+                }
+                else
+                {
+                    Chunk c = new Chunk( new Position( maxX + 10, maxY ), _universe );
+                    _universe.Chunks.Add( c.Position, c );
+                    _universe.ShownChunks.Add( 4, c );
+                }
 
-           }
-           else if( _universe.User.Position.X < miniX )
-           {
-               _universe.ShownChunks.Clear();
-               _universe.ShownChunks.Add( 3, _universe.Chunks[new Position( minX, minY )] );
-               _universe.ShownChunks.Add( 4, _universe.Chunks[new Position( minX, maxY )] );
-               if( _universe.Chunks.ContainsKey( new Position( minX - 10, minY ) ) )
-               {
-                   _universe.ShownChunks.Add( 1, _universe.Chunks[new Position( minX - 10, minY )] );
-               }
-               else
-               {
-                   Chunk c = new Chunk( new Position( minX - 10, minY ), _universe );
-                   _universe.Chunks.Add( c.Position, c );
-                   _universe.ShownChunks.Add( 1, c );
-               }
-               if( _universe.Chunks.ContainsKey( new Position( minX - 10, maxY ) ) )
-               {
-                   _universe.ShownChunks.Add( 2, _universe.Chunks[new Position( minX- 10, maxY )] );
-               }
-               else
-               {
-                   Chunk c = new Chunk( new Position( minX - 10, maxY ), _universe );
-                   _universe.Chunks.Add( c.Position, c );
-                   _universe.ShownChunks.Add( 2, c );
-               }
-           }
-           else if( _universe.User.Position.Y > maxiY )
-           {
-               _universe.ShownChunks.Clear();
-               _universe.ShownChunks.Add( 1, _universe.Chunks[new Position( minX, maxY )] );
-               _universe.ShownChunks.Add( 3, _universe.Chunks[new Position( maxX, maxY )] );
-               if( _universe.Chunks.ContainsKey( new Position( minX , maxY + 10 ) ) )
-               {
-                   _universe.ShownChunks.Add( 2, _universe.Chunks[new Position( minX , maxY +10 )] );
-               }
-               else
-               {
-                   Chunk c = new Chunk( new Position( minX , maxY + 10 ), _universe );
-                   _universe.Chunks.Add( c.Position, c );
-                   _universe.ShownChunks.Add( 2, c );
-               }
-               if( _universe.Chunks.ContainsKey( new Position( maxX , maxY + 10 ) ) )
-               {
-                   _universe.ShownChunks.Add( 4, _universe.Chunks[new Position( maxX, maxY + 10 )] );
-               }
-               else
-               {
-                   Chunk c = new Chunk( new Position( maxX, maxY + 10 ), _universe );
-                   _universe.Chunks.Add( c.Position, c );
-                   _universe.ShownChunks.Add( 4, c );
-               }
-           }
-           else if( _universe.User.Position.Y < miniY )
-           {
-               _universe.ShownChunks.Clear();
+            }
+            else if( _universe.User.Position.X < miniX )
+            {
+                _universe.ShownChunks.Clear();
+                _universe.ShownChunks.Add( 3, _universe.Chunks[new Position( minX, minY )] );
+                _universe.ShownChunks.Add( 4, _universe.Chunks[new Position( minX, maxY )] );
+                if( _universe.Chunks.ContainsKey( new Position( minX - 10, minY ) ) )
+                {
+                    _universe.ShownChunks.Add( 1, _universe.Chunks[new Position( minX - 10, minY )] );
+                }
+                else
+                {
+                    Chunk c = new Chunk( new Position( minX - 10, minY ), _universe );
+                    _universe.Chunks.Add( c.Position, c );
+                    _universe.ShownChunks.Add( 1, c );
+                }
+                if( _universe.Chunks.ContainsKey( new Position( minX - 10, maxY ) ) )
+                {
+                    _universe.ShownChunks.Add( 2, _universe.Chunks[new Position( minX - 10, maxY )] );
+                }
+                else
+                {
+                    Chunk c = new Chunk( new Position( minX - 10, maxY ), _universe );
+                    _universe.Chunks.Add( c.Position, c );
+                    _universe.ShownChunks.Add( 2, c );
+                }
+            }
+            else if( _universe.User.Position.Y > maxiY )
+            {
+                _universe.ShownChunks.Clear();
+                _universe.ShownChunks.Add( 1, _universe.Chunks[new Position( minX, maxY )] );
+                _universe.ShownChunks.Add( 3, _universe.Chunks[new Position( maxX, maxY )] );
+                if( _universe.Chunks.ContainsKey( new Position( minX, maxY + 10 ) ) )
+                {
+                    _universe.ShownChunks.Add( 2, _universe.Chunks[new Position( minX, maxY + 10 )] );
+                }
+                else
+                {
+                    Chunk c = new Chunk( new Position( minX, maxY + 10 ), _universe );
+                    _universe.Chunks.Add( c.Position, c );
+                    _universe.ShownChunks.Add( 2, c );
+                }
+                if( _universe.Chunks.ContainsKey( new Position( maxX, maxY + 10 ) ) )
+                {
+                    _universe.ShownChunks.Add( 4, _universe.Chunks[new Position( maxX, maxY + 10 )] );
+                }
+                else
+                {
+                    Chunk c = new Chunk( new Position( maxX, maxY + 10 ), _universe );
+                    _universe.Chunks.Add( c.Position, c );
+                    _universe.ShownChunks.Add( 4, c );
+                }
+            }
+            else if( _universe.User.Position.Y < miniY )
+            {
+                _universe.ShownChunks.Clear();
                 _universe.ShownChunks.Add( 2, _universe.Chunks[new Position( minX, minY )] );
-               _universe.ShownChunks.Add( 4, _universe.Chunks[new Position( maxX, minY )] );
-               if( _universe.Chunks.ContainsKey( new Position( minX , minY - 10 ) ) )
-               {
-                   _universe.ShownChunks.Add( 1, _universe.Chunks[new Position( minX , minY - 10 )] );
-               }
-               else
-               {
-                   Chunk c = new Chunk( new Position( minX , minY - 10 ), _universe );
-                   _universe.Chunks.Add( c.Position, c );
-                   _universe.ShownChunks.Add( 1, c );
-               }
-               if( _universe.Chunks.ContainsKey( new Position( maxX , minY - 10 ) ) )
-               {
-                   _universe.ShownChunks.Add( 3, _universe.Chunks[new Position( maxX, minY - 10 )] );
-               }
-               else
-               {
-                   Chunk c = new Chunk( new Position( maxX, minY - 10 ), _universe );
-                   _universe.Chunks.Add( c.Position, c );
-                   _universe.ShownChunks.Add( 3, c );
-               }
-           }
-           else
-           {
-               //
-           }
-       }
+                _universe.ShownChunks.Add( 4, _universe.Chunks[new Position( maxX, minY )] );
+                if( _universe.Chunks.ContainsKey( new Position( minX, minY - 10 ) ) )
+                {
+                    _universe.ShownChunks.Add( 1, _universe.Chunks[new Position( minX, minY - 10 )] );
+                }
+                else
+                {
+                    Chunk c = new Chunk( new Position( minX, minY - 10 ), _universe );
+                    _universe.Chunks.Add( c.Position, c );
+                    _universe.ShownChunks.Add( 1, c );
+                }
+                if( _universe.Chunks.ContainsKey( new Position( maxX, minY - 10 ) ) )
+                {
+                    _universe.ShownChunks.Add( 3, _universe.Chunks[new Position( maxX, minY - 10 )] );
+                }
+                else
+                {
+                    Chunk c = new Chunk( new Position( maxX, minY - 10 ), _universe );
+                    _universe.Chunks.Add( c.Position, c );
+                    _universe.ShownChunks.Add( 3, c );
+                }
+            }
+            else
+            {
+                //
+            }
+        }
 
         private void EndTurn_Click( object sender, EventArgs e )
         {
@@ -307,16 +307,16 @@ namespace Galactic_Vagabond
 
         private void Build_Click( object sender, EventArgs e )
         {
-             var pos = _universe.Cells.Where( c => c.Position.X == _universe.User.Position.X && c.Position.Y == _universe.User.Position.Y ).Single();
-             if( pos.ContainsPlanet && pos.ContainedPlanet.Ressources !="none" )
-             {
-                 pos.ContainedPlanet.Factory = true;
-                 ShowCurrentPlanet();
-             }
+            var pos = _universe.Cells.Where( c => c.Position.X == _universe.User.Position.X && c.Position.Y == _universe.User.Position.Y ).Single();
+            if( pos.ContainsPlanet && pos.ContainedPlanet.Ressources != "none" )
+            {
+                pos.ContainedPlanet.Factory = true;
+                ShowCurrentPlanet();
+            }
         }
         public int ModAbs( int nb, int mod )
         {
-                return (((nb % mod) + mod)%mod);
+            return (((nb % mod) + mod) % mod);
         }
         int ConvertX( int value, int nbChunk )
         {
@@ -335,55 +335,36 @@ namespace Galactic_Vagabond
             value = ModAbs( value, 10 );
             if( nbChunk % 2 == 0 )
             {
-                return (9-value);
+                return (9 - value);
             }
             else
             {
-                return (19-value);
+                return (19 - value);
             }
         }
-    }
-            public void DisplayPlayerResources()
+        public void DisplayPlayerResources()
         {
-      
-            this.SiliciumLabel.Text = "Silicium : " +_universe.User.Ressources["Silicium"];
+            this.SiliciumLabel.Text = "Silicium : " + _universe.User.Ressources["Silicium"];
             this.SiliciumLabel.Show();
             this.GemsLabel.Text = "Gems : " + _universe.User.Ressources["Gems"];
             this.GemsLabel.Show();
-            this.PlutoniumLabel.Text = "Plutonium : "+ _universe.User.Ressources["Plutonium"];
+            this.PlutoniumLabel.Text = "Plutonium : " + _universe.User.Ressources["Plutonium"];
             this.PlutoniumLabel.Show();
             this.MetalLabel.Text = "Metal : " + _universe.User.Ressources["Metal"];
             this.MetalLabel.Show();
-            this.HydrogenLabel.Text = "Hydrogen : "+_universe.User.Ressources["Hydrogene"];
+            this.HydrogenLabel.Text = "Hydrogen : " + _universe.User.Ressources["Hydrogene"];
             this.HydrogenLabel.Show();
             this.HeliumLabel.Text = "Helium : " + _universe.User.Ressources["Helium"];
             this.HeliumLabel.Show();
         }
-
-        void DisplayTurnEvents() 
+        void DisplayTurnEvents()
         {
             this.TurnEvents.DataSource = new List<string>();
             this.TurnEvents.DataSource = _universe.Event.EventsOccured[_universe.Turn];
             int visibleItem = this.TurnEvents.ClientSize.Height / this.TurnEvents.ItemHeight;
             this.TurnEvents.TopIndex = Math.Max( this.TurnEvents.Items.Count - visibleItem + 1, 0 );
         }
-                public void DisplayPlayerResources()
-        {
-      
-            this.SiliciumLabel.Text = "Silicium : " +_universe.User.Ressources["Silicium"];
-            this.SiliciumLabel.Show();
-            this.GemsLabel.Text = "Gems : " + _universe.User.Ressources["Gems"];
-            this.GemsLabel.Show();
-            this.PlutoniumLabel.Text = "Plutonium : "+ _universe.User.Ressources["Plutonium"];
-            this.PlutoniumLabel.Show();
-            this.MetalLabel.Text = "Metal : " + _universe.User.Ressources["Metal"];
-            this.MetalLabel.Show();
-            this.HydrogenLabel.Text = "Hydrogen : "+_universe.User.Ressources["Hydrogene"];
-            this.HydrogenLabel.Show();
-            this.HeliumLabel.Text = "Helium : " + _universe.User.Ressources["Helium"];
-            this.HeliumLabel.Show();
-        }
-                private void EventsButton_Click( object sender, EventArgs e )
+        private void EventsButton_Click( object sender, EventArgs e )
         {
             EventLog eventLog = new EventLog( _universe );
             eventLog.ShowDialog();
