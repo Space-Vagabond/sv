@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using System.Drawing;
+using System;
 namespace gv
 {
     class Earth : Planet
@@ -11,13 +7,15 @@ namespace gv
         string _surface;
         string _climate;
         bool _inhabited;
-
+        int _img;
         internal Earth( Universe u )
             :base(u, "Earth")
         {
             _surface = "Ravaged";
             _climate = "Temperate";
             _inhabited = false;
+            _img = 18;
+            base.IsDiscovered = true;
         }
         public override string Type
         {
@@ -42,6 +40,10 @@ namespace gv
         public override string Ressources
         {
             get { return "none"; }
+        }
+        public override int Img
+        {
+            get { return _img; }
         }
     }
 }

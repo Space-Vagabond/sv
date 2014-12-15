@@ -79,7 +79,7 @@
             this.CurrentPlanet.Cursor = System.Windows.Forms.Cursors.Cross;
             this.CurrentPlanet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CurrentPlanet.ForeColor = System.Drawing.Color.Gold;
-            this.CurrentPlanet.Location = new System.Drawing.Point(697, 0);
+            this.CurrentPlanet.Location = new System.Drawing.Point(698, 0);
             this.CurrentPlanet.Name = "CurrentPlanet";
             this.CurrentPlanet.Size = new System.Drawing.Size(310, 193);
             this.CurrentPlanet.TabIndex = 2;
@@ -178,6 +178,7 @@
             this.map.GridColor = System.Drawing.Color.Turquoise;
             this.map.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.map.Location = new System.Drawing.Point(0, 0);
+            this.map.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.map.Name = "map";
             this.map.ReadOnly = true;
             this.map.RowHeadersVisible = false;

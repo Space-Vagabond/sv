@@ -11,12 +11,15 @@ namespace gv
         string _surface;
         string _climate;
         bool _inhabited;
+        int _img;
+
         internal PTelluricCarbon( Universe u )
             : base( u, null )
         {
             _surface = PlanetAttributes.PlanetSurface( u.Rand.Next( 5, 9 ) );
             _climate = PlanetAttributes.PlanetClimate( u.Rand.Next( 0, 3 ) );
             _inhabited = (u.Rand.Next( 0, 2 ) > 0) ? true : false;
+            _img = 5;
 
         }
 
@@ -42,6 +45,10 @@ namespace gv
         public override string Ressources
         {
             get { return "Gems"; }
+        }
+        public override int Img
+        {
+            get { return _img; }
         }
     }
 }

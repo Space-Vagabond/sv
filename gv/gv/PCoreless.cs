@@ -11,11 +11,13 @@ namespace gv
         string _surface;
         string _climate;
         bool _inhabited;
+        int _img;
         internal PCoreless( Universe u )
             : base( u, null )
         {
             _surface = PlanetAttributes.PlanetSurface( u.Rand.Next( 5, 9 ) );
             _climate = PlanetAttributes.PlanetClimate( u.Rand.Next( 0, 3 ) );
+            _img = 7;
         }
 
         public override string Type
@@ -40,6 +42,10 @@ namespace gv
         public override string Ressources
         {
             get { return "none"; }
+        }
+        public override int Img
+        {
+            get { return _img; }
         }
     }
 }

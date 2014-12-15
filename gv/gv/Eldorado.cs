@@ -11,6 +11,7 @@ namespace gv
         string _surface;
         string _climate;
         bool _inhabited;
+        int _img;
         
         internal Eldorado( Universe u )
             :base(u, "Eldorado")
@@ -18,6 +19,8 @@ namespace gv
             _inhabited = false;
             _climate = "Temperate";
             _surface = "Golden";
+            _img = 1;
+            base.IsDiscovered = true;
         }
         public override string Type
         {
@@ -41,6 +44,10 @@ namespace gv
         public override string Ressources
         {
             get { return "none"; }
+        }
+        public override int Img
+        {
+            get { return _img; }
         }
     }
 }      

@@ -11,6 +11,7 @@ namespace gv
         bool _inhabited;
         string _climate;
         string _surface;
+        int _img;
 
         internal PTelluricSilicat( Universe u )
             : base( u, null )
@@ -18,6 +19,7 @@ namespace gv
             _surface = PlanetAttributes.PlanetSurface( u.Rand.Next( 5, 9 ) );
             _climate = PlanetAttributes.PlanetClimate( u.Rand.Next( 0, 3 ) );
             _inhabited = (u.Rand.Next( 0, 2 ) > 0) ? true : false;
+            _img = 13;
         }
 
         public override string Type
@@ -43,6 +45,10 @@ namespace gv
         {
             get { return "Silicium"; }
             
+        }
+        public override int Img
+        {
+            get { return _img; }
         }
     }
 }

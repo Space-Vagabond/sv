@@ -11,6 +11,7 @@ namespace gv
         bool _inhabited;
         string _surface;
         string _climate;
+        int _img;
 
         internal PGazeousHydrogene( Universe u )
             : base( u, null )
@@ -18,6 +19,7 @@ namespace gv
             _inhabited = (u.Rand.Next( 0, 2 ) > 0) ? true : false;
             _climate = "Cold";
             _surface = "Iced";
+            _img = 8;
         }
 
         public override string Type
@@ -43,6 +45,10 @@ namespace gv
         public override string Ressources
         {
             get { return "Hydrogene"; }
+        }
+        public override int Img
+        {
+            get { return _img; }
         }
     }
 }
