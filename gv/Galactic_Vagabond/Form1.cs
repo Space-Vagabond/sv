@@ -140,14 +140,14 @@ namespace Galactic_Vagabond
             {
                 if( keyData == Keys.Up )
                 {
-                    if( _universe.User.Move( new Position( _universe.User.Position.X, _universe.User.Position.Y - 1 ) ) )
+                    if( _universe.User.Move( new Position( _universe.User.Position.X, _universe.User.Position.Y + 1 ) ) )
                     {
                         map.Refresh();
                     }
                 }
                 else if( keyData == Keys.Down )
                 {
-                    if( _universe.User.Move( new Position( _universe.User.Position.X, _universe.User.Position.Y + 1 ) ) )
+                    if( _universe.User.Move( new Position( _universe.User.Position.X, _universe.User.Position.Y - 1 ) ) )
                     {
                         map.Refresh();
                     }
@@ -207,11 +207,11 @@ namespace Galactic_Vagabond
             value = ModAbs( value, 10 );
             if( nbChunk % 2 == 0 )
             {
-                return value;
+                return (9-value);
             }
             else
             {
-                return (value + 10);
+                return (19-value);
             }
         }
     }
