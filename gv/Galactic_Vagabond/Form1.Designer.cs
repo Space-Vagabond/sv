@@ -38,6 +38,12 @@
             this.MetalLabel = new System.Windows.Forms.Label();
             this.HydrogenLabel = new System.Windows.Forms.Label();
             this.HeliumLabel = new System.Windows.Forms.Label();
+            this.TurnEvents = new System.Windows.Forms.ListBox();
+            this.OverviewButton = new System.Windows.Forms.Button();
+            this.TechButton = new System.Windows.Forms.Button();
+            this.EventsButton = new System.Windows.Forms.Button();
+            this.CodexButton = new System.Windows.Forms.Button();
+            this.StatisticsButton = new System.Windows.Forms.Button();
             this.map = new Galactic_Vagabond.Map();
             this.SuspendLayout();
             // 
@@ -81,7 +87,7 @@
             this.Build.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Build.Font = new System.Drawing.Font("Orator Std", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Build.ForeColor = System.Drawing.Color.Chartreuse;
-            this.Build.Location = new System.Drawing.Point(1143, 222);
+            this.Build.Location = new System.Drawing.Point(645, 184);
             this.Build.Name = "Build";
             this.Build.Size = new System.Drawing.Size(120, 32);
             this.Build.TabIndex = 3;
@@ -154,7 +160,6 @@
             this.HydrogenLabel.Size = new System.Drawing.Size(80, 17);
             this.HydrogenLabel.TabIndex = 9;
             this.HydrogenLabel.Text = "Hydrogene";
-            
             // 
             // HeliumLabel
             // 
@@ -168,6 +173,97 @@
             this.HeliumLabel.Size = new System.Drawing.Size(56, 17);
             this.HeliumLabel.TabIndex = 10;
             this.HeliumLabel.Text = "Helium";
+            // 
+            // TurnEvents
+            // 
+            this.TurnEvents.BackColor = System.Drawing.Color.Black;
+            this.TurnEvents.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TurnEvents.Font = new System.Drawing.Font("Orator Std", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TurnEvents.ForeColor = System.Drawing.Color.GhostWhite;
+            this.TurnEvents.FormattingEnabled = true;
+            this.TurnEvents.ItemHeight = 20;
+            this.TurnEvents.Location = new System.Drawing.Point(622, 222);
+            this.TurnEvents.Name = "TurnEvents";
+            this.TurnEvents.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.TurnEvents.ScrollAlwaysVisible = true;
+            this.TurnEvents.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.TurnEvents.Size = new System.Drawing.Size(641, 242);
+            this.TurnEvents.TabIndex = 11;
+            // 
+            // OverviewButton
+            // 
+            this.OverviewButton.BackColor = System.Drawing.Color.Black;
+            this.OverviewButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.OverviewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OverviewButton.Font = new System.Drawing.Font("Orator Std", 9.749999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OverviewButton.ForeColor = System.Drawing.Color.OrangeRed;
+            this.OverviewButton.Location = new System.Drawing.Point(116, 670);
+            this.OverviewButton.Margin = new System.Windows.Forms.Padding(0);
+            this.OverviewButton.Name = "OverviewButton";
+            this.OverviewButton.Size = new System.Drawing.Size(100, 39);
+            this.OverviewButton.TabIndex = 12;
+            this.OverviewButton.Text = "Overview";
+            this.OverviewButton.UseVisualStyleBackColor = false;
+            // 
+            // TechButton
+            // 
+            this.TechButton.BackColor = System.Drawing.Color.Black;
+            this.TechButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.TechButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TechButton.Font = new System.Drawing.Font("Orator Std", 9.749999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TechButton.ForeColor = System.Drawing.Color.OrangeRed;
+            this.TechButton.Location = new System.Drawing.Point(216, 670);
+            this.TechButton.Margin = new System.Windows.Forms.Padding(0);
+            this.TechButton.Name = "TechButton";
+            this.TechButton.Size = new System.Drawing.Size(100, 39);
+            this.TechButton.TabIndex = 13;
+            this.TechButton.Text = "Techs";
+            this.TechButton.UseVisualStyleBackColor = false;
+            // 
+            // EventsButton
+            // 
+            this.EventsButton.BackColor = System.Drawing.Color.Black;
+            this.EventsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.EventsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EventsButton.Font = new System.Drawing.Font("Orator Std", 9.749999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EventsButton.ForeColor = System.Drawing.Color.OrangeRed;
+            this.EventsButton.Location = new System.Drawing.Point(316, 670);
+            this.EventsButton.Margin = new System.Windows.Forms.Padding(0);
+            this.EventsButton.Name = "EventsButton";
+            this.EventsButton.Size = new System.Drawing.Size(100, 39);
+            this.EventsButton.TabIndex = 14;
+            this.EventsButton.Text = "Events";
+            this.EventsButton.UseVisualStyleBackColor = false;
+            // 
+            // CodexButton
+            // 
+            this.CodexButton.BackColor = System.Drawing.Color.Black;
+            this.CodexButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.CodexButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CodexButton.Font = new System.Drawing.Font("Orator Std", 9.749999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CodexButton.ForeColor = System.Drawing.Color.OrangeRed;
+            this.CodexButton.Location = new System.Drawing.Point(416, 670);
+            this.CodexButton.Margin = new System.Windows.Forms.Padding(0);
+            this.CodexButton.Name = "CodexButton";
+            this.CodexButton.Size = new System.Drawing.Size(100, 39);
+            this.CodexButton.TabIndex = 15;
+            this.CodexButton.Text = "Codex";
+            this.CodexButton.UseVisualStyleBackColor = false;
+            // 
+            // StatisticsButton
+            // 
+            this.StatisticsButton.BackColor = System.Drawing.Color.Black;
+            this.StatisticsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.StatisticsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StatisticsButton.Font = new System.Drawing.Font("Orator Std", 9.749999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StatisticsButton.ForeColor = System.Drawing.Color.OrangeRed;
+            this.StatisticsButton.Location = new System.Drawing.Point(516, 670);
+            this.StatisticsButton.Margin = new System.Windows.Forms.Padding(0);
+            this.StatisticsButton.Name = "StatisticsButton";
+            this.StatisticsButton.Size = new System.Drawing.Size(100, 39);
+            this.StatisticsButton.TabIndex = 16;
+            this.StatisticsButton.Text = "Statistics";
+            this.StatisticsButton.UseVisualStyleBackColor = false;
             // 
             // map
             // 
@@ -188,6 +284,12 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1264, 721);
+            this.Controls.Add(this.StatisticsButton);
+            this.Controls.Add(this.CodexButton);
+            this.Controls.Add(this.EventsButton);
+            this.Controls.Add(this.TechButton);
+            this.Controls.Add(this.OverviewButton);
+            this.Controls.Add(this.TurnEvents);
             this.Controls.Add(this.HeliumLabel);
             this.Controls.Add(this.HydrogenLabel);
             this.Controls.Add(this.MetalLabel);
@@ -220,6 +322,12 @@
         private System.Windows.Forms.Label MetalLabel;
         private System.Windows.Forms.Label HydrogenLabel;
         private System.Windows.Forms.Label HeliumLabel;
+        private System.Windows.Forms.ListBox TurnEvents;
+        private System.Windows.Forms.Button OverviewButton;
+        private System.Windows.Forms.Button TechButton;
+        private System.Windows.Forms.Button EventsButton;
+        private System.Windows.Forms.Button CodexButton;
+        private System.Windows.Forms.Button StatisticsButton;
 
 
 
