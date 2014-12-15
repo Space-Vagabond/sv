@@ -162,7 +162,7 @@ namespace gv.Tests
         public void event_added_to_EventOccured_list()
         {
             Universe sut = new Universe();
-            sut.Event.EventOccurs();
+            sut.Event.EventOccurs(1);
             Assert.That( sut.Event.EventsOccured.Count != 0 );
             for( int i = 0; i < sut.Event.EventsOccured.Count; i += 1 )
             {
