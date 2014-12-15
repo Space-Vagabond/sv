@@ -55,6 +55,9 @@ namespace gv
             _planets.Add( eldorado.Name, eldorado );
             return eldorado;
         }
+        /// <summary>
+        /// to sav the whole universe as XML
+        /// </summary>
         public void ToXML()
         {
             XDocument save = new XDocument(

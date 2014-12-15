@@ -11,27 +11,40 @@ namespace Galactic_Vagabond
     {
         Universe _universe;
         Image _square = Image.FromFile( @".\..\..\..\images/square.png" );
+        Image _ship = Image.FromFile( @".\..\..\..\images/ship.png" );
+        Image[] _planets= new Image[20];
+            
 
         public Form_GV_01()
         {
             InitializeComponent();
+            for( int i = 0; i < 18; i++ )
+            {
+                _planets[i] = Image.FromFile( @".\..\..\..\images/planet" + (i + 1) + ".png" );
+            }
+            
+            //Find or Creates the saves directory
             Directory.CreateDirectory( @"./../../../Saves" );
+            //hiding main form and displays launcher
             this.Hide();
             launcher form2 = new launcher();
             var result = form2.ShowDialog();
-            if( result == DialogResult.Yes )
+            if( result == DialogResult.Yes )//new game
             {
                 form2.Dispose();
                 this.Show();
                 _universe = new Universe();
             }
-            else
+            else//Load game
             {
                 //loadGame
             }
             InitMap();
             ShowCurrentPlanet();
         }
+        /// <summary>
+        /// Initiaizing the map controller
+        /// </summary>
         public void InitMap()
         {
             for( int i = 0; i < 20; i++ )
@@ -45,15 +58,11 @@ namespace Galactic_Vagabond
                 this.map.Rows[i].Height = 30;
             }
         }
+        /// <summary>
+        /// Bindng Datas int the map
+        /// </summary>
         public void LoadMap()
         {
-            Image[] planets= new Image[20];
-            for( int i = 0; i < 18; i++ )
-            {
-                planets[i] = Image.FromFile( @".\..\..\..\images/planet" + (i + 1) + ".png" );
-            }
-            Image ship = Image.FromFile( @".\..\..\..\images/ship.png" );
-
             foreach( KeyValuePair<int,Chunk> ch in _universe.ShownChunks )
             {
                 foreach( Cell cl in ch.Value.Cells )
@@ -64,7 +73,7 @@ namespace Galactic_Vagabond
                         {
                             this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Style.BackColor =
                                 System.Drawing.Color.Yellow;
-                            cl.ContainedPlanet.IsDiscovered = true;
+                            cl.ContainedPlanet.IsDiscovered = true;//sets the plaet to discovered to show its own sprite
                         }
                         else
                         {
@@ -73,12 +82,11 @@ namespace Galactic_Vagabond
                         }
                         if( cl.ContainedPlanet.IsDiscovered )
                         {
-                            this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Value = planets[cl.ContainedPlanet.Img - 1];
+                            this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Value = _planets[cl.ContainedPlanet.Img - 1];
                         }
                         else
                         {
-                            this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Value = planets[6 - 1];
-                            
+                            this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Value = _planets[6 - 1];                            
                         }
                     }
                     else
@@ -87,7 +95,7 @@ namespace Galactic_Vagabond
                             System.Drawing.Color.Black;
                         if( _universe.User.Position.X == cl.Position.X && _universe.User.Position.Y == cl.Position.Y )
                         {
-                            this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Value = ship;
+                            this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Value = _ship;
                         }
                         else
                         {
@@ -97,6 +105,9 @@ namespace Galactic_Vagabond
                 }
             }
         }
+        /// <summary>
+        /// Shows Planet's info
+        /// </summary>
         public void ShowCurrentPlanet()
         {
             LoadMap();
@@ -135,6 +146,12 @@ namespace Galactic_Vagabond
                 CurrentPlanet.Text += "No planet to interact with";
             }
         }
+        /// <summary>
+        /// Using arrows to move, needs to always input them on the map
+        /// </summary>
+        /// <param name="msg"></param>
+        /// <param name="keyData">The pressed key</param>
+        /// <returns></returns>
         protected override bool ProcessCmdKey( ref Message msg, Keys keyData )
         {
             if( this.map.Visible )
@@ -171,25 +188,27 @@ namespace Galactic_Vagabond
                 }
                 ShowCurrentPlanet();
                 DisplayPlayerResources();
-
                 return true;
             }
             return false;
         }
+        /// <summary>
+        /// Checks if a chunk exists , if not creates it where needed
+        /// </summary>
         void EnsureChunk()
         {
+            //max values from chunks origins
             int maxX = _universe.ShownChunks.Values.Max( Chunk => Chunk.Position.X );
             int maxY = _universe.ShownChunks.Values.Max( Chunk => Chunk.Position.Y );
             int minX = _universe.ShownChunks.Values.Min( Chunk => Chunk.Position.X );
             int minY = _universe.ShownChunks.Values.Min( Chunk => Chunk.Position.Y );
-
+            //max values of cells in these chunks
             int maxiX = maxX + 9;
             int maxiY = maxY + 9;
             int miniX = minX;
             int miniY = minY;
 
-
-            if( _universe.User.Position.X > maxiX )
+            if( _universe.User.Position.X > maxiX )// top of screen
             {
                 _universe.ShownChunks.Clear();
                 _universe.ShownChunks.Add( 1, _universe.Chunks[new Position( maxX, minY )] );
@@ -216,7 +235,7 @@ namespace Galactic_Vagabond
                 }
 
             }
-            else if( _universe.User.Position.X < miniX )
+            else if( _universe.User.Position.X < miniX )// bot of screen
             {
                 _universe.ShownChunks.Clear();
                 _universe.ShownChunks.Add( 3, _universe.Chunks[new Position( minX, minY )] );
@@ -242,7 +261,7 @@ namespace Galactic_Vagabond
                     _universe.ShownChunks.Add( 2, c );
                 }
             }
-            else if( _universe.User.Position.Y > maxiY )
+            else if( _universe.User.Position.Y > maxiY )//right of screen
             {
                 _universe.ShownChunks.Clear();
                 _universe.ShownChunks.Add( 1, _universe.Chunks[new Position( minX, maxY )] );
@@ -268,7 +287,7 @@ namespace Galactic_Vagabond
                     _universe.ShownChunks.Add( 4, c );
                 }
             }
-            else if( _universe.User.Position.Y < miniY )
+            else if( _universe.User.Position.Y < miniY )//Left of screen
             {
                 _universe.ShownChunks.Clear();
                 _universe.ShownChunks.Add( 2, _universe.Chunks[new Position( minX, minY )] );
@@ -299,7 +318,11 @@ namespace Galactic_Vagabond
                 //
             }
         }
-
+        /// <summary>
+        /// Button end Turn click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void EndTurn_Click( object sender, EventArgs e )
         {
             _universe.Event.EventOccurs( _universe.Turn );
@@ -307,7 +330,11 @@ namespace Galactic_Vagabond
             _universe.EndTurn();
             DisplayPlayerResources();
         }
-
+        /// <summary>
+        /// Button build click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Build_Click( object sender, EventArgs e )
         {
             var pos = _universe.Cells.Where( c => c.Position.X == _universe.User.Position.X && c.Position.Y == _universe.User.Position.Y ).Single();
@@ -317,10 +344,22 @@ namespace Galactic_Vagabond
                 ShowCurrentPlanet();
             }
         }
+        /// <summary>
+        /// Mathematical modulo (always positive)
+        /// </summary>
+        /// <param name="nb">the number to divide</param>
+        /// <param name="mod">the modulo</param>
+        /// <returns>the absolute positive modulo</returns>
         public int ModAbs( int nb, int mod )
         {
             return (((nb % mod) + mod) % mod);
         }
+        /// <summary>
+        /// the value converting an X value from the universe to a X value for the gridview
+        /// </summary>
+        /// <param name="value">the X input</param>
+        /// <param name="nbChunk">the position of the chunk</param>
+        /// <returns>returns a value betwen 0 and 19 to go in the grid</returns>
         int ConvertX( int value, int nbChunk )
         {
             value = ModAbs( value, 10 );
@@ -333,6 +372,12 @@ namespace Galactic_Vagabond
                 return (value + 10);
             }
         }
+        /// <summary>
+        /// the value converting an Y value from the universe to a Y value for the gridview
+        /// </summary>
+        /// <param name="value">the Y input</param>
+        /// <param name="nbChunk">the position of the chunk</param>
+        /// <returns>returns a value betwen 0 and 19 to go in the grid</returns>
         int ConvertY( int value, int nbChunk )
         {
             value = ModAbs( value, 10 );
@@ -345,6 +390,9 @@ namespace Galactic_Vagabond
                 return (19 - value);
             }
         }
+        /// <summary>
+        /// displays the ressoures of ten player
+        /// </summary>
         public void DisplayPlayerResources()
         {
             this.SiliciumLabel.Text = "Silicium : " + _universe.User.Ressources["Silicium"];
@@ -360,6 +408,9 @@ namespace Galactic_Vagabond
             this.HeliumLabel.Text = "Helium : " + _universe.User.Ressources["Helium"];
             this.HeliumLabel.Show();
         }
+        /// <summary>
+        /// Shows events that happend on this turn
+        /// </summary>
         void DisplayTurnEvents()
         {
             this.TurnEvents.DataSource = new List<string>();
@@ -367,6 +418,11 @@ namespace Galactic_Vagabond
             int visibleItem = this.TurnEvents.ClientSize.Height / this.TurnEvents.ItemHeight;
             this.TurnEvents.TopIndex = Math.Max( this.TurnEvents.Items.Count - visibleItem + 1, 0 );
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void EventsButton_Click( object sender, EventArgs e )
         {
             EventLog eventLog = new EventLog( _universe );
