@@ -103,78 +103,7 @@ namespace gv
         public void EndTurn()
         {
             _player.EndTurn();
-            //EnsureChunk();
         }
-       /* public void EnsureChunk()
-        {
-
-            int maxX = _shownChunks.Values.Max( Chunk => Chunk.Position.X );
-            int maxY = _shownChunks.Values.Max( Chunk => Chunk.Position.Y );
-            int minX = _shownChunks.Values.Min( Chunk => Chunk.Position.X );
-            int minY = _shownChunks.Values.Min( Chunk => Chunk.Position.Y );
-            int maxiX = maxX + 9;
-            int maxiY = maxY + 9;
-            int miniX = minY;
-            int miniY = minY;
-            if( _player.Position.X >= maxiX - 2 && _player.Position.Y >= maxiY - 2 )
-            {
-                //need chunks
-            }
-            else if(_player.Position.X >= maxiX - 2 && _player.Position.Y <= miniY + 2)
-            {
-                //
-            }
-            else if( _player.Position.X <= miniX + 2 && _player.Position.Y >= maxiY - 2 )
-            {
-                //
-            }
-            else if( _player.Position.X <= miniX + 2 && _player.Position.Y <= miniY + 2 )
-            {
-                //
-            }
-            else if( _player.Position.X >= maxiX - 2 )
-            {
-                _shownChunks.Clear();
-                _shownChunks.Add( _chunks[new Position( maxX, minY )] );
-                _shownChunks.Add( _chunks[new Position( maxX, maxY )] );
-
-                if( _chunks.ContainsKey( new Position( maxX + 10, minY ) ) )
-                {
-                    _shownChunks.Add( _chunks[new Position( maxX + 10, minY )] );
-                }
-                else
-                {
-                    Chunk c = new Chunk( new Position( maxX + 10, minY ), this );
-                    _shownChunks.Add( c );
-                }
-                if( _chunks.ContainsKey( new Position( maxX + 10, maxY) ) )
-                {
-                    _shownChunks.Add( _chunks[new Position( maxX + 10, maxY )] );
-                }
-                else
-                {
-                    Chunk c = new Chunk(new Position(maxX+10,maxY), this);
-                    _shownChunks.Add( c );
-                }
-                
-            }
-            else if( _player.Position.X <= miniX + 2 )
-            {
-                //
-            }
-            else if( _player.Position.Y >= maxiY - 2 )
-            {
-                //
-            }
-            else if( _player.Position.Y <= miniY + 2 )
-            {
-                //
-            }
-            else
-            {
-                //
-            }
-        }*/
         public Dictionary<string,Planet> Planets
         {
             get { return _planets; }
