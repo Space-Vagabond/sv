@@ -41,6 +41,7 @@ namespace Galactic_Vagabond
             }
             InitMap();
             ShowCurrentPlanet();
+            DisplayPlayerDatas();
         }
         /// <summary>
         /// Initiaizing the map controller
@@ -193,7 +194,7 @@ namespace Galactic_Vagabond
                     }
                 }
                 ShowCurrentPlanet();
-                DisplayPlayerResources();
+                DisplayPlayerDatas();
                 return true;
             }
             return false;
@@ -334,7 +335,7 @@ namespace Galactic_Vagabond
             _universe.Event.EventOccurs( _universe.Turn );
             DisplayTurnEvents();
             _universe.EndTurn();
-            DisplayPlayerResources();
+            DisplayPlayerDatas();
         }
         /// <summary>
         /// Button build click
@@ -399,7 +400,7 @@ namespace Galactic_Vagabond
         /// <summary>
         /// displays the ressoures of ten player
         /// </summary>
-        public void DisplayPlayerResources()
+        public void DisplayPlayerDatas()
         {
             this.SiliciumLabel.Text = "Silicium : " + _universe.User.Ressources["Silicium"];
             this.SiliciumLabel.Show();
@@ -413,6 +414,12 @@ namespace Galactic_Vagabond
             this.HydrogenLabel.Show();
             this.HeliumLabel.Text = "Helium : " + _universe.User.Ressources["Helium"];
             this.HeliumLabel.Show();
+            this.PosX.Text = "Position on X : " + _universe.User.Position.X;
+            this.PosX.Show();
+            this.PosY.Text = "Position on Y : " + _universe.User.Position.Y;
+            this.PosY.Show();
+            this.TurnNumber.Text = "Turn number: " + _universe.Turn;
+            this.TurnNumber.Show();
         }
         /// <summary>
         /// Shows events that happend on this turn

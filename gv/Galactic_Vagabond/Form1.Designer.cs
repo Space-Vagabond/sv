@@ -70,6 +70,10 @@
             this.CodexButton = new System.Windows.Forms.Button();
             this.StatisticsButton = new System.Windows.Forms.Button();
             this.LastTurnLabel = new System.Windows.Forms.Label();
+            this.PosX = new System.Windows.Forms.Label();
+            this.Pos = new System.Windows.Forms.Label();
+            this.PosY = new System.Windows.Forms.Label();
+            this.TurnNumber = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.map)).BeginInit();
             this.SuspendLayout();
             // 
@@ -505,6 +509,58 @@
             this.LastTurnLabel.TabIndex = 17;
             this.LastTurnLabel.Text = "Last turn events :";
             // 
+            // PosX
+            // 
+            this.PosX.AutoSize = true;
+            this.PosX.BackColor = System.Drawing.Color.Black;
+            this.PosX.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.PosX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PosX.ForeColor = System.Drawing.Color.Chartreuse;
+            this.PosX.Location = new System.Drawing.Point(706, 486);
+            this.PosX.Name = "PosX";
+            this.PosX.Size = new System.Drawing.Size(44, 16);
+            this.PosX.TabIndex = 18;
+            this.PosX.Text = "PosX";
+            // 
+            // Pos
+            // 
+            this.Pos.AutoSize = true;
+            this.Pos.BackColor = System.Drawing.Color.Black;
+            this.Pos.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.Pos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pos.ForeColor = System.Drawing.Color.Chartreuse;
+            this.Pos.Location = new System.Drawing.Point(706, 457);
+            this.Pos.Name = "Pos";
+            this.Pos.Size = new System.Drawing.Size(100, 16);
+            this.Pos.TabIndex = 19;
+            this.Pos.Text = "Your Position";
+            // 
+            // PosY
+            // 
+            this.PosY.AutoSize = true;
+            this.PosY.BackColor = System.Drawing.Color.Black;
+            this.PosY.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.PosY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PosY.ForeColor = System.Drawing.Color.Chartreuse;
+            this.PosY.Location = new System.Drawing.Point(706, 502);
+            this.PosY.Name = "PosY";
+            this.PosY.Size = new System.Drawing.Size(45, 16);
+            this.PosY.TabIndex = 20;
+            this.PosY.Text = "PosY";
+            // 
+            // TurnNumber
+            // 
+            this.TurnNumber.AutoSize = true;
+            this.TurnNumber.BackColor = System.Drawing.Color.Black;
+            this.TurnNumber.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.TurnNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TurnNumber.ForeColor = System.Drawing.Color.Chartreuse;
+            this.TurnNumber.Location = new System.Drawing.Point(1131, 560);
+            this.TurnNumber.Name = "TurnNumber";
+            this.TurnNumber.Size = new System.Drawing.Size(93, 16);
+            this.TurnNumber.TabIndex = 21;
+            this.TurnNumber.Text = "TurnNumber";
+            // 
             // Form_GV_01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -512,6 +568,10 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1253, 646);
+            this.Controls.Add(this.TurnNumber);
+            this.Controls.Add(this.PosY);
+            this.Controls.Add(this.Pos);
+            this.Controls.Add(this.PosX);
             this.Controls.Add(this.LastTurnLabel);
             this.Controls.Add(this.StatisticsButton);
             this.Controls.Add(this.CodexButton);
@@ -579,6 +639,10 @@
         private System.Windows.Forms.DataGridViewImageColumn Column19;
         private System.Windows.Forms.DataGridViewImageColumn Column20;
         private System.Windows.Forms.DataGridViewImageColumn Column21;
+        private System.Windows.Forms.Label PosX;
+        private System.Windows.Forms.Label Pos;
+        private System.Windows.Forms.Label PosY;
+        private System.Windows.Forms.Label TurnNumber;
 
 
 
