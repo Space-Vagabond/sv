@@ -74,7 +74,7 @@ namespace Galactic_Vagabond
                         {
                             this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Style.BackColor =
                                 System.Drawing.Color.Yellow;
-                            cl.ContainedPlanet.IsDiscovered = true;//sets the plaet to discovered to show its own sprite
+                            cl.ContainedPlanet.IsDiscovered = true;//sets the planet to discovered to show its own sprite
                         }
                         else
                         {
@@ -440,6 +440,13 @@ namespace Galactic_Vagabond
         {
             EventLog eventLog = new EventLog( _universe );
             eventLog.ShowDialog();
+        }
+
+        private void OverviewButton_Click(object sender, EventArgs e)
+        {
+            var planetList = _universe.Planets.Keys.ToList();
+            planetList.Sort();
+            OverViewList.DataSource = planetList;
         }
     }
 }
