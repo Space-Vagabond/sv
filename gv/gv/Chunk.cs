@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace gv
 {
@@ -35,7 +36,6 @@ namespace gv
                 {
                     c.ContainsPlanet = true;
                     c.ContainedPlanet = _container.CreateEarth();
-
                 }
                 else if( planetCounter < 8 )
                 {
@@ -51,7 +51,18 @@ namespace gv
                 {
                     c.ContainsPlanet = false;
                 }
-
+            }
+            if( _container.ShouldSpawnEldorado() )
+            {
+                Cell pos;
+                do
+                {
+                    int X = _container.Rand.Next( _position.X, _position.X + 10 );
+                    int Y = _container.Rand.Next( _position.Y, _position.Y + 10 );
+                    pos = _cells.Where( c => c.Position.X == X && c.Position.Y == Y ).Single();
+                } while(pos.ContainsPlanet );
+                pos.ContainsPlanet = true;
+                pos.ContainedPlanet = _container.Planets["Eldorado"];
             }
         }
         public Position Position

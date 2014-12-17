@@ -39,7 +39,12 @@ namespace gv
         }       
         public Planet AddPlanet()
         {
-            Planet p = Planet.CreatePlanet(this);
+            Planet p;
+            do
+            {
+                p = Planet.CreatePlanet( this );
+            } while( _planets.ContainsKey(p.Name )); 
+           
             _planets.Add(p.Name, p);
             return p;
         }
@@ -54,6 +59,36 @@ namespace gv
             Planet eldorado =  new Eldorado( this );
             _planets.Add( eldorado.Name, eldorado );
             return eldorado;
+        }
+        public bool ShouldSpawnEldorado()
+        {
+            if( !_planets.ContainsKey( "Eldorado" ) )
+            {
+                int n = _turn * _chunks.Count();
+                if( n > 100 )
+                {
+                    int k = (int)(100 - Math.Exp( ((n - 100) / 50) ));
+
+
+                    if( k <= 0 || rand.Next( 1, k ) == 1 )
+                    {
+                        CreateEldorado();
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    return false;
+                }     
+            }
+            else
+            {
+                return false;
+            }       
         }
         /// <summary>
         /// to sav the whole universe as XML

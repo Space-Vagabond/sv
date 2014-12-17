@@ -68,7 +68,7 @@ namespace Galactic_Vagabond
                 foreach( Cell cl in ch.Value.Cells )
                 {
                     if( cl.ContainsPlanet )
-                    {
+                    {                        
                         if( _universe.User.Position.X == cl.Position.X && _universe.User.Position.Y == cl.Position.Y )
                         {
                             this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Style.BackColor =
@@ -101,6 +101,12 @@ namespace Galactic_Vagabond
                         {
                             this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Value = _square;
                         }
+                    }
+                    if( cl.ContainsPlanet && cl.ContainedPlanet.Name == "Eldorado" )
+                    {
+                        cl.ContainedPlanet.IsDiscovered = true;
+                        this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Style.BackColor =
+                                System.Drawing.Color.LightPink;
                     }
                 }
             }
@@ -343,7 +349,7 @@ namespace Galactic_Vagabond
                 pos.ContainedPlanet.Factory = true;
                 ShowCurrentPlanet();
             }
-        }
+        }        
         /// <summary>
         /// Mathematical modulo (always positive)
         /// </summary>

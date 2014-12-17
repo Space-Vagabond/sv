@@ -23,16 +23,19 @@ namespace gv
            List<string> turnEvents = new List<string>();
            foreach (Planet pl in _u.Planets.Values) 
            {
-              int caseEvent = _u.Rand.Next( 0, 12 );
-              switch(caseEvent)
-              {
-                  case 0: MeteorStrikesPlanet(turnEvents, pl );
-                  break;
-                  case 1: RevolutionOnPlanet(turnEvents, pl );
-                  break;
-                  case 2: ElectricStorm(turnEvents, pl );
-                  break;
-              }              
+               if( pl.Name != "Earth" && pl.Name != "Eldorado" )
+               {
+                   int caseEvent = _u.Rand.Next( 0, 12 );
+                   switch( caseEvent )
+                   {
+                       case 0: MeteorStrikesPlanet( turnEvents, pl );
+                           break;
+                       case 1: RevolutionOnPlanet( turnEvents, pl );
+                           break;
+                       case 2: ElectricStorm( turnEvents, pl );
+                           break;
+                   }    
+               }          
            }
            _eventsOccured.Add( turn, turnEvents );
            _allEvents = EventsTolist();
