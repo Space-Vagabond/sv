@@ -13,7 +13,9 @@ namespace Galactic_Vagabond
         Image _square = Image.FromFile( @".\..\..\..\images/square.png" );
         Image _ship = Image.FromFile( @".\..\..\..\images/ship.png" );
         Image[] _planets= new Image[20];
-            
+        List<Control> _displayedControls = new List<Control>();
+        List<Control> _cockpitControls = new List<Control>();
+        List<Control> _overviewControls = new List<Control>();      
 
         public Form_GV_01()
         {
@@ -42,6 +44,24 @@ namespace Galactic_Vagabond
             InitMap();
             ShowCurrentPlanet();
             DisplayPlayerDatas();
+            _cockpitControls.Add(map);
+            _cockpitControls.Add(TurnEvents);
+            _cockpitControls.Add(CurrentPlanet);
+            _cockpitControls.Add(LastTurnLabel);
+            _cockpitControls.Add(Pos);
+            _cockpitControls.Add(TurnNumber);
+            _cockpitControls.Add(GemsLabel);
+            _cockpitControls.Add(SiliciumLabel);
+            _cockpitControls.Add(MetalLabel);
+            _cockpitControls.Add(HydrogenLabel);
+            _cockpitControls.Add(PlutoniumLabel);
+            _cockpitControls.Add(HeliumLabel);
+            _cockpitControls.Add(PosX);
+            _cockpitControls.Add(PosY);
+            _cockpitControls.Add(Build);
+            _cockpitControls.Add(EndTurn);
+
+            _overviewControls.Add(OverViewList);
         }
         /// <summary>
         /// Initiaizing the map controller
@@ -447,6 +467,16 @@ namespace Galactic_Vagabond
             var planetList = _universe.Planets.Keys.ToList();
             planetList.Sort();
             OverViewList.DataSource = planetList;
+            foreach (Control c in _cockpitControls) 
+            {
+                c.Hide();
+            }
+            foreach (Control c in _overviewControls)
+            {
+                c.Show();
+
+            }
+
         }
     }
 }

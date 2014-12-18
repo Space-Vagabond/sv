@@ -77,6 +77,7 @@
             this.PosY = new System.Windows.Forms.Label();
             this.TurnNumber = new System.Windows.Forms.Label();
             this.OverViewList = new System.Windows.Forms.ListBox();
+            this.CockpitButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.map)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,7 +85,7 @@
             // 
             this.CurrentPlanet.BackColor = System.Drawing.Color.Black;
             this.CurrentPlanet.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.CurrentPlanet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentPlanet.Font = new System.Drawing.Font("Orator", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CurrentPlanet.ForeColor = System.Drawing.Color.Gold;
             this.CurrentPlanet.Location = new System.Drawing.Point(698, 0);
             this.CurrentPlanet.Name = "CurrentPlanet";
@@ -118,7 +119,7 @@
             this.Build.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
             this.Build.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
             this.Build.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Build.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Build.Font = new System.Drawing.Font("Orator", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Build.ForeColor = System.Drawing.Color.Chartreuse;
             this.Build.Location = new System.Drawing.Point(1016, 161);
             this.Build.Name = "Build";
@@ -351,11 +352,11 @@
             this.SiliciumLabel.AutoSize = true;
             this.SiliciumLabel.BackColor = System.Drawing.Color.Transparent;
             this.SiliciumLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SiliciumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SiliciumLabel.Font = new System.Drawing.Font("Orator", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SiliciumLabel.ForeColor = System.Drawing.Color.Yellow;
             this.SiliciumLabel.Location = new System.Drawing.Point(1013, 89);
             this.SiliciumLabel.Name = "SiliciumLabel";
-            this.SiliciumLabel.Size = new System.Drawing.Size(67, 18);
+            this.SiliciumLabel.Size = new System.Drawing.Size(88, 18);
             this.SiliciumLabel.TabIndex = 5;
             this.SiliciumLabel.Text = "Silicium";
             // 
@@ -364,11 +365,11 @@
             this.GemsLabel.AutoSize = true;
             this.GemsLabel.BackColor = System.Drawing.Color.Transparent;
             this.GemsLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GemsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GemsLabel.Font = new System.Drawing.Font("Orator", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GemsLabel.ForeColor = System.Drawing.Color.Yellow;
             this.GemsLabel.Location = new System.Drawing.Point(1013, 9);
             this.GemsLabel.Name = "GemsLabel";
-            this.GemsLabel.Size = new System.Drawing.Size(53, 18);
+            this.GemsLabel.Size = new System.Drawing.Size(48, 18);
             this.GemsLabel.TabIndex = 6;
             this.GemsLabel.Text = "Gems";
             // 
@@ -377,11 +378,11 @@
             this.PlutoniumLabel.AutoSize = true;
             this.PlutoniumLabel.BackColor = System.Drawing.Color.Transparent;
             this.PlutoniumLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PlutoniumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlutoniumLabel.Font = new System.Drawing.Font("Orator", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PlutoniumLabel.ForeColor = System.Drawing.Color.Yellow;
             this.PlutoniumLabel.Location = new System.Drawing.Point(1013, 73);
             this.PlutoniumLabel.Name = "PlutoniumLabel";
-            this.PlutoniumLabel.Size = new System.Drawing.Size(83, 18);
+            this.PlutoniumLabel.Size = new System.Drawing.Size(98, 18);
             this.PlutoniumLabel.TabIndex = 7;
             this.PlutoniumLabel.Text = "Plutonium";
             // 
@@ -390,11 +391,11 @@
             this.MetalLabel.AutoSize = true;
             this.MetalLabel.BackColor = System.Drawing.Color.Transparent;
             this.MetalLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MetalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MetalLabel.Font = new System.Drawing.Font("Orator", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MetalLabel.ForeColor = System.Drawing.Color.Yellow;
             this.MetalLabel.Location = new System.Drawing.Point(1013, 57);
             this.MetalLabel.Name = "MetalLabel";
-            this.MetalLabel.Size = new System.Drawing.Size(49, 18);
+            this.MetalLabel.Size = new System.Drawing.Size(58, 18);
             this.MetalLabel.TabIndex = 8;
             this.MetalLabel.Text = "Metal";
             // 
@@ -403,11 +404,11 @@
             this.HydrogenLabel.AutoSize = true;
             this.HydrogenLabel.BackColor = System.Drawing.Color.Transparent;
             this.HydrogenLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HydrogenLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HydrogenLabel.Font = new System.Drawing.Font("Orator", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HydrogenLabel.ForeColor = System.Drawing.Color.Yellow;
             this.HydrogenLabel.Location = new System.Drawing.Point(1013, 41);
             this.HydrogenLabel.Name = "HydrogenLabel";
-            this.HydrogenLabel.Size = new System.Drawing.Size(89, 18);
+            this.HydrogenLabel.Size = new System.Drawing.Size(98, 18);
             this.HydrogenLabel.TabIndex = 9;
             this.HydrogenLabel.Text = "Hydrogene";
             // 
@@ -416,11 +417,11 @@
             this.HeliumLabel.AutoSize = true;
             this.HeliumLabel.BackColor = System.Drawing.Color.Transparent;
             this.HeliumLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HeliumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HeliumLabel.Font = new System.Drawing.Font("Orator", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HeliumLabel.ForeColor = System.Drawing.Color.Yellow;
             this.HeliumLabel.Location = new System.Drawing.Point(1013, 25);
             this.HeliumLabel.Name = "HeliumLabel";
-            this.HeliumLabel.Size = new System.Drawing.Size(60, 18);
+            this.HeliumLabel.Size = new System.Drawing.Size(68, 18);
             this.HeliumLabel.TabIndex = 10;
             this.HeliumLabel.Text = "Helium";
             // 
@@ -428,7 +429,7 @@
             // 
             this.TurnEvents.BackColor = System.Drawing.Color.Black;
             this.TurnEvents.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TurnEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TurnEvents.Font = new System.Drawing.Font("Orator", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TurnEvents.ForeColor = System.Drawing.Color.GhostWhite;
             this.TurnEvents.FormattingEnabled = true;
             this.TurnEvents.ItemHeight = 18;
@@ -445,9 +446,9 @@
             this.OverviewButton.BackColor = System.Drawing.Color.Black;
             this.OverviewButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.OverviewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OverviewButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OverviewButton.Font = new System.Drawing.Font("Orator", 9.749999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OverviewButton.ForeColor = System.Drawing.Color.OrangeRed;
-            this.OverviewButton.Location = new System.Drawing.Point(9, 603);
+            this.OverviewButton.Location = new System.Drawing.Point(156, 603);
             this.OverviewButton.Margin = new System.Windows.Forms.Padding(0);
             this.OverviewButton.Name = "OverviewButton";
             this.OverviewButton.Size = new System.Drawing.Size(100, 39);
@@ -461,9 +462,9 @@
             this.TechButton.BackColor = System.Drawing.Color.Black;
             this.TechButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.TechButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TechButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TechButton.Font = new System.Drawing.Font("Orator", 9.749999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TechButton.ForeColor = System.Drawing.Color.OrangeRed;
-            this.TechButton.Location = new System.Drawing.Point(109, 603);
+            this.TechButton.Location = new System.Drawing.Point(256, 603);
             this.TechButton.Margin = new System.Windows.Forms.Padding(0);
             this.TechButton.Name = "TechButton";
             this.TechButton.Size = new System.Drawing.Size(100, 39);
@@ -476,9 +477,9 @@
             this.EventsButton.BackColor = System.Drawing.Color.Black;
             this.EventsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.EventsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EventsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EventsButton.Font = new System.Drawing.Font("Orator", 9.749999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EventsButton.ForeColor = System.Drawing.Color.OrangeRed;
-            this.EventsButton.Location = new System.Drawing.Point(209, 603);
+            this.EventsButton.Location = new System.Drawing.Point(356, 603);
             this.EventsButton.Margin = new System.Windows.Forms.Padding(0);
             this.EventsButton.Name = "EventsButton";
             this.EventsButton.Size = new System.Drawing.Size(100, 39);
@@ -492,9 +493,9 @@
             this.CodexButton.BackColor = System.Drawing.Color.Black;
             this.CodexButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.CodexButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CodexButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CodexButton.Font = new System.Drawing.Font("Orator", 9.749999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CodexButton.ForeColor = System.Drawing.Color.OrangeRed;
-            this.CodexButton.Location = new System.Drawing.Point(309, 603);
+            this.CodexButton.Location = new System.Drawing.Point(456, 603);
             this.CodexButton.Margin = new System.Windows.Forms.Padding(0);
             this.CodexButton.Name = "CodexButton";
             this.CodexButton.Size = new System.Drawing.Size(100, 39);
@@ -507,9 +508,9 @@
             this.StatisticsButton.BackColor = System.Drawing.Color.Black;
             this.StatisticsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.StatisticsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StatisticsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StatisticsButton.Font = new System.Drawing.Font("Orator", 9.749999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StatisticsButton.ForeColor = System.Drawing.Color.OrangeRed;
-            this.StatisticsButton.Location = new System.Drawing.Point(409, 603);
+            this.StatisticsButton.Location = new System.Drawing.Point(556, 603);
             this.StatisticsButton.Margin = new System.Windows.Forms.Padding(0);
             this.StatisticsButton.Name = "StatisticsButton";
             this.StatisticsButton.Size = new System.Drawing.Size(100, 39);
@@ -521,11 +522,11 @@
             // 
             this.LastTurnLabel.AutoSize = true;
             this.LastTurnLabel.BackColor = System.Drawing.Color.Transparent;
-            this.LastTurnLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastTurnLabel.Font = new System.Drawing.Font("Orator", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastTurnLabel.ForeColor = System.Drawing.Color.Yellow;
             this.LastTurnLabel.Location = new System.Drawing.Point(706, 204);
             this.LastTurnLabel.Name = "LastTurnLabel";
-            this.LastTurnLabel.Size = new System.Drawing.Size(138, 18);
+            this.LastTurnLabel.Size = new System.Drawing.Size(188, 18);
             this.LastTurnLabel.TabIndex = 17;
             this.LastTurnLabel.Text = "Last turn events :";
             // 
@@ -534,11 +535,11 @@
             this.PosX.AutoSize = true;
             this.PosX.BackColor = System.Drawing.Color.Black;
             this.PosX.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.PosX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PosX.Font = new System.Drawing.Font("Orator", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PosX.ForeColor = System.Drawing.Color.Chartreuse;
             this.PosX.Location = new System.Drawing.Point(706, 486);
             this.PosX.Name = "PosX";
-            this.PosX.Size = new System.Drawing.Size(44, 16);
+            this.PosX.Size = new System.Drawing.Size(43, 15);
             this.PosX.TabIndex = 18;
             this.PosX.Text = "PosX";
             // 
@@ -547,11 +548,11 @@
             this.Pos.AutoSize = true;
             this.Pos.BackColor = System.Drawing.Color.Black;
             this.Pos.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.Pos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pos.Font = new System.Drawing.Font("Orator", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pos.ForeColor = System.Drawing.Color.Chartreuse;
             this.Pos.Location = new System.Drawing.Point(706, 457);
             this.Pos.Name = "Pos";
-            this.Pos.Size = new System.Drawing.Size(100, 16);
+            this.Pos.Size = new System.Drawing.Size(124, 15);
             this.Pos.TabIndex = 19;
             this.Pos.Text = "Your Position";
             // 
@@ -560,11 +561,11 @@
             this.PosY.AutoSize = true;
             this.PosY.BackColor = System.Drawing.Color.Black;
             this.PosY.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.PosY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PosY.Font = new System.Drawing.Font("Orator", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PosY.ForeColor = System.Drawing.Color.Chartreuse;
             this.PosY.Location = new System.Drawing.Point(706, 502);
             this.PosY.Name = "PosY";
-            this.PosY.Size = new System.Drawing.Size(45, 16);
+            this.PosY.Size = new System.Drawing.Size(43, 15);
             this.PosY.TabIndex = 20;
             this.PosY.Text = "PosY";
             // 
@@ -583,13 +584,34 @@
             // 
             // OverViewList
             // 
+            this.OverViewList.BackColor = System.Drawing.Color.Black;
+            this.OverViewList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.OverViewList.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.OverViewList.Font = new System.Drawing.Font("Orator", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OverViewList.ForeColor = System.Drawing.Color.White;
             this.OverViewList.FormattingEnabled = true;
+            this.OverViewList.ItemHeight = 15;
             this.OverViewList.Location = new System.Drawing.Point(12, 12);
             this.OverViewList.Name = "OverViewList";
             this.OverViewList.ScrollAlwaysVisible = true;
-            this.OverViewList.Size = new System.Drawing.Size(766, 316);
+            this.OverViewList.Size = new System.Drawing.Size(683, 585);
             this.OverViewList.TabIndex = 22;
+            this.OverViewList.Visible = false;
+            // 
+            // CockpitButton
+            // 
+            this.CockpitButton.BackColor = System.Drawing.Color.Black;
+            this.CockpitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.CockpitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CockpitButton.Font = new System.Drawing.Font("Orator", 9.749999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CockpitButton.ForeColor = System.Drawing.Color.OrangeRed;
+            this.CockpitButton.Location = new System.Drawing.Point(56, 603);
+            this.CockpitButton.Margin = new System.Windows.Forms.Padding(0);
+            this.CockpitButton.Name = "CockpitButton";
+            this.CockpitButton.Size = new System.Drawing.Size(100, 39);
+            this.CockpitButton.TabIndex = 23;
+            this.CockpitButton.Text = "Cockpit";
+            this.CockpitButton.UseVisualStyleBackColor = false;
             // 
             // Form_GV_01
             // 
@@ -598,6 +620,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1261, 657);
+            this.Controls.Add(this.CockpitButton);
             this.Controls.Add(this.OverViewList);
             this.Controls.Add(this.TurnNumber);
             this.Controls.Add(this.PosY);
@@ -675,6 +698,7 @@
         private System.Windows.Forms.Label PosY;
         private System.Windows.Forms.Label TurnNumber;
         private System.Windows.Forms.ListBox OverViewList;
+        private System.Windows.Forms.Button CockpitButton;
 
 
 
