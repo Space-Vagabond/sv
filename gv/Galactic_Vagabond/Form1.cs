@@ -514,7 +514,9 @@ namespace Galactic_Vagabond
                     details.Add("Surface: "+pl.Surface);
                     details.Add("Resources: "+pl.Ressources);
                     details.Add("Inhabitants: "+pl.InhabitantsName);
-                    
+                    details.Add("Has factory: "+pl.Factory);
+                    details.Add("Look: ");
+                    PlanetImg.Image = _planets[pl.Img-1];
                     
                     OverviewDetails.DataSource = details;
                 }

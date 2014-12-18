@@ -79,7 +79,9 @@
             this.OverViewList = new System.Windows.Forms.ListBox();
             this.CockpitButton = new System.Windows.Forms.Button();
             this.OverviewDetails = new System.Windows.Forms.ListBox();
+            this.PlanetImg = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.map)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlanetImg)).BeginInit();
             this.SuspendLayout();
             // 
             // CurrentPlanet
@@ -630,6 +632,15 @@
             this.OverviewDetails.TabIndex = 24;
             this.OverviewDetails.Visible = false;
             // 
+            // PlanetImg
+            // 
+            this.PlanetImg.BackColor = System.Drawing.Color.Black;
+            this.PlanetImg.Location = new System.Drawing.Point(848, 142);
+            this.PlanetImg.Name = "PlanetImg";
+            this.PlanetImg.Size = new System.Drawing.Size(30, 30);
+            this.PlanetImg.TabIndex = 25;
+            this.PlanetImg.TabStop = false;
+            // 
             // Form_GV_01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -637,6 +648,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1261, 657);
+            this.Controls.Add(this.PlanetImg);
             this.Controls.Add(this.OverviewDetails);
             this.Controls.Add(this.CockpitButton);
             this.Controls.Add(this.OverViewList);
@@ -668,6 +680,7 @@
             this.Text = "Galactic_Vagabond 0.1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.map)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PlanetImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -718,6 +731,7 @@
         private System.Windows.Forms.ListBox OverViewList;
         private System.Windows.Forms.Button CockpitButton;
         private System.Windows.Forms.ListBox OverviewDetails;
+        private System.Windows.Forms.PictureBox PlanetImg;
 
 
 
