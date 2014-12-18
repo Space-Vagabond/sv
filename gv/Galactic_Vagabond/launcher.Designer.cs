@@ -42,11 +42,11 @@
             this.NewGame.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.NewGame.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.NewGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NewGame.Font = new System.Drawing.Font("Orator Std", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NewGame.ForeColor = System.Drawing.Color.LawnGreen;
             this.NewGame.Location = new System.Drawing.Point(73, 140);
             this.NewGame.Name = "NewGame";
-            this.NewGame.Size = new System.Drawing.Size(57, 59);
+            this.NewGame.Size = new System.Drawing.Size(63, 59);
             this.NewGame.TabIndex = 0;
             this.NewGame.Text = "New Game";
             this.NewGame.UseVisualStyleBackColor = false;
@@ -60,11 +60,11 @@
             this.LoadGame.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.LoadGame.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.LoadGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LoadGame.Font = new System.Drawing.Font("Orator Std", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoadGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoadGame.ForeColor = System.Drawing.Color.Chartreuse;
-            this.LoadGame.Location = new System.Drawing.Point(215, 140);
+            this.LoadGame.Location = new System.Drawing.Point(207, 140);
             this.LoadGame.Name = "LoadGame";
-            this.LoadGame.Size = new System.Drawing.Size(57, 59);
+            this.LoadGame.Size = new System.Drawing.Size(65, 59);
             this.LoadGame.TabIndex = 0;
             this.LoadGame.Text = "Load Game";
             this.LoadGame.UseVisualStyleBackColor = false;
@@ -74,11 +74,11 @@
             // 
             this.Welcome.AutoSize = true;
             this.Welcome.BackColor = System.Drawing.Color.Transparent;
-            this.Welcome.Font = new System.Drawing.Font("Orator Std", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Welcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Welcome.ForeColor = System.Drawing.Color.White;
             this.Welcome.Location = new System.Drawing.Point(11, 9);
             this.Welcome.Name = "Welcome";
-            this.Welcome.Size = new System.Drawing.Size(270, 20);
+            this.Welcome.Size = new System.Drawing.Size(215, 18);
             this.Welcome.TabIndex = 2;
             this.Welcome.Text = "Welcome to galactic vagabond.";
             // 

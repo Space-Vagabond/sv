@@ -13,7 +13,9 @@ namespace Galactic_Vagabond
         Image _square = Image.FromFile( @".\..\..\..\images/square.png" );
         Image _ship = Image.FromFile( @".\..\..\..\images/ship.png" );
         Image[] _planets= new Image[20];
-            
+        List<Control> _displayedControls = new List<Control>();
+        List<Control> _cockpitControls = new List<Control>();
+        List<Control> _overviewControls = new List<Control>();      
 
         public Form_GV_01()
         {
@@ -42,6 +44,25 @@ namespace Galactic_Vagabond
             InitMap();
             ShowCurrentPlanet();
             DisplayPlayerDatas();
+            _cockpitControls.Add(map);
+            _cockpitControls.Add(TurnEvents);
+            _cockpitControls.Add(CurrentPlanet);
+            _cockpitControls.Add(LastTurnLabel);
+            _cockpitControls.Add(Pos);
+            _cockpitControls.Add(TurnNumber);
+            _cockpitControls.Add(GemsLabel);
+            _cockpitControls.Add(SiliciumLabel);
+            _cockpitControls.Add(MetalLabel);
+            _cockpitControls.Add(HydrogenLabel);
+            _cockpitControls.Add(PlutoniumLabel);
+            _cockpitControls.Add(HeliumLabel);
+            _cockpitControls.Add(PosX);
+            _cockpitControls.Add(PosY);
+            _cockpitControls.Add(Build);
+            _cockpitControls.Add(EndTurn);
+
+            _overviewControls.Add(OverViewList);
+            _overviewControls.Add(OverviewDetails);
         }
         /// <summary>
         /// Initiaizing the map controller
@@ -74,7 +95,7 @@ namespace Galactic_Vagabond
                         {
                             this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Style.BackColor =
                                 System.Drawing.Color.Yellow;
-                            cl.ContainedPlanet.IsDiscovered = true;//sets the plaet to discovered to show its own sprite
+                            cl.ContainedPlanet.IsDiscovered = true;//sets the planet to discovered to show its own sprite
                         }
                         else
                         {
@@ -441,5 +462,67 @@ namespace Galactic_Vagabond
             EventLog eventLog = new EventLog( _universe );
             eventLog.ShowDialog();
         }
+
+        private void OverviewButton_Click(object sender, EventArgs e)
+        {
+            List<object> toDisplay = new List<object>();
+            
+            foreach (Planet pl in _universe.Planets.Values)
+            {
+                if (pl.IsDiscovered)
+                {
+                    string name = pl.Name.ToString();
+                    toDisplay.Add(name);
+                }
+            }
+            OverViewList.DataSource = toDisplay;
+            foreach (Control c in _cockpitControls) 
+            {
+                c.Hide();
+            }
+            foreach (Control c in _overviewControls)
+            {
+                c.Show();
+
+            }
+
+        }
+
+        private void CockpitButton_Click(object sender, EventArgs e)
+        {
+            foreach(Control c in _cockpitControls)
+            {
+                c.Show();
+            }
+            foreach(Control c in _overviewControls)
+            {
+                c.Hide();
+            }
+        }
+
+        private void DisplayOverviewDetails(object sender, EventArgs e)
+        {
+            List<object> details = new List<object>();
+            var curSelected = OverViewList.SelectedValue;
+            foreach (Planet pl in _universe.Planets.Values)
+            {
+                if(pl.Name == curSelected.ToString() && pl.IsDiscovered) 
+                {
+                    details.Add("Name: "+pl.Name);
+                    details.Add("Type: " +pl.Type);
+                    details.Add("Climate: "+pl.Climate);
+                    details.Add("Surface: "+pl.Surface);
+                    details.Add("Resources: "+pl.Ressources);
+                    details.Add("Inhabitants: "+pl.InhabitantsName);
+                    details.Add("Has factory: "+pl.Factory);
+                    details.Add("Look: ");
+                    PlanetImg.Image = _planets[pl.Img-1];
+                    
+                    OverviewDetails.DataSource = details;
+                }
+            }
+        }
+
+        
     }
 }
