@@ -78,6 +78,7 @@
             this.TurnNumber = new System.Windows.Forms.Label();
             this.OverViewList = new System.Windows.Forms.ListBox();
             this.CockpitButton = new System.Windows.Forms.Button();
+            this.OverviewDetails = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.map)).BeginInit();
             this.SuspendLayout();
             // 
@@ -191,7 +192,7 @@
             this.map.DefaultCellStyle = dataGridViewCellStyle3;
             this.map.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.map.EnableHeadersVisualStyles = false;
-            this.map.GridColor = System.Drawing.Color.Turquoise;
+            this.map.GridColor = System.Drawing.Color.Black;
             this.map.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.map.Location = new System.Drawing.Point(0, 0);
             this.map.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
@@ -587,16 +588,17 @@
             this.OverViewList.BackColor = System.Drawing.Color.Black;
             this.OverViewList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.OverViewList.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.OverViewList.Font = new System.Drawing.Font("Orator", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OverViewList.ForeColor = System.Drawing.Color.White;
+            this.OverViewList.Font = new System.Drawing.Font("Orator", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OverViewList.ForeColor = System.Drawing.Color.LimeGreen;
             this.OverViewList.FormattingEnabled = true;
-            this.OverViewList.ItemHeight = 15;
+            this.OverViewList.ItemHeight = 18;
             this.OverViewList.Location = new System.Drawing.Point(12, 12);
             this.OverViewList.Name = "OverViewList";
             this.OverViewList.ScrollAlwaysVisible = true;
-            this.OverViewList.Size = new System.Drawing.Size(683, 585);
+            this.OverViewList.Size = new System.Drawing.Size(683, 576);
             this.OverViewList.TabIndex = 22;
             this.OverViewList.Visible = false;
+            this.OverViewList.SelectedValueChanged += new System.EventHandler(this.DisplayOverviewDetails);
             // 
             // CockpitButton
             // 
@@ -612,6 +614,21 @@
             this.CockpitButton.TabIndex = 23;
             this.CockpitButton.Text = "Cockpit";
             this.CockpitButton.UseVisualStyleBackColor = false;
+            this.CockpitButton.Click += new System.EventHandler(this.CockpitButton_Click);
+            // 
+            // OverviewDetails
+            // 
+            this.OverviewDetails.BackColor = System.Drawing.Color.Black;
+            this.OverviewDetails.Font = new System.Drawing.Font("Orator", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OverviewDetails.ForeColor = System.Drawing.Color.Chartreuse;
+            this.OverviewDetails.FormattingEnabled = true;
+            this.OverviewDetails.ItemHeight = 18;
+            this.OverviewDetails.Location = new System.Drawing.Point(707, 13);
+            this.OverviewDetails.Name = "OverviewDetails";
+            this.OverviewDetails.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.OverviewDetails.Size = new System.Drawing.Size(536, 310);
+            this.OverviewDetails.TabIndex = 24;
+            this.OverviewDetails.Visible = false;
             // 
             // Form_GV_01
             // 
@@ -620,6 +637,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1261, 657);
+            this.Controls.Add(this.OverviewDetails);
             this.Controls.Add(this.CockpitButton);
             this.Controls.Add(this.OverViewList);
             this.Controls.Add(this.TurnNumber);
@@ -699,6 +717,7 @@
         private System.Windows.Forms.Label TurnNumber;
         private System.Windows.Forms.ListBox OverViewList;
         private System.Windows.Forms.Button CockpitButton;
+        private System.Windows.Forms.ListBox OverviewDetails;
 
 
 

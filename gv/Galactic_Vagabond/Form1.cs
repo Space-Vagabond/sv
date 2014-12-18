@@ -62,6 +62,7 @@ namespace Galactic_Vagabond
             _cockpitControls.Add(EndTurn);
 
             _overviewControls.Add(OverViewList);
+            _overviewControls.Add(OverviewDetails);
         }
         /// <summary>
         /// Initiaizing the map controller
@@ -464,9 +465,17 @@ namespace Galactic_Vagabond
 
         private void OverviewButton_Click(object sender, EventArgs e)
         {
-            var planetList = _universe.Planets.Keys.ToList();
-            planetList.Sort();
-            OverViewList.DataSource = planetList;
+            List<object> toDisplay = new List<object>();
+            
+            foreach (Planet pl in _universe.Planets.Values)
+            {
+                if (pl.IsDiscovered)
+                {
+                    string name = pl.Name.ToString();
+                    toDisplay.Add(name);
+                }
+            }
+            OverViewList.DataSource = toDisplay;
             foreach (Control c in _cockpitControls) 
             {
                 c.Hide();
@@ -478,5 +487,40 @@ namespace Galactic_Vagabond
             }
 
         }
+
+        private void CockpitButton_Click(object sender, EventArgs e)
+        {
+            foreach(Control c in _cockpitControls)
+            {
+                c.Show();
+            }
+            foreach(Control c in _overviewControls)
+            {
+                c.Hide();
+            }
+        }
+
+        private void DisplayOverviewDetails(object sender, EventArgs e)
+        {
+            List<object> details = new List<object>();
+            var curSelected = OverViewList.SelectedValue;
+            foreach (Planet pl in _universe.Planets.Values)
+            {
+                if(pl.Name == curSelected.ToString() && pl.IsDiscovered) 
+                {
+                    details.Add("Name: "+pl.Name);
+                    details.Add("Type: " +pl.Type);
+                    details.Add("Climate: "+pl.Climate);
+                    details.Add("Surface: "+pl.Surface);
+                    details.Add("Resources: "+pl.Ressources);
+                    details.Add("Inhabitants: "+pl.InhabitantsName);
+                    
+                    
+                    OverviewDetails.DataSource = details;
+                }
+            }
+        }
+
+        
     }
 }
