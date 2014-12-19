@@ -156,16 +156,7 @@ namespace gv.Tests
             Assert.That( cell.ContainsPlanet );
             Console.WriteLine( cell.Position.X + "//"+cell.Position.Y );
         }
-        [Test]
-        public void event_added_to_EventOccured_list()
-        {
-            Universe sut = new Universe();
-            Assert.That( sut.Event.EventsOccured.Count != 0 );
-            for( int i = 0; i < sut.Event.EventsOccured.Count; i += 1 )
-            {
-                Console.WriteLine( sut.Event.EventsOccured[i] );
-            }
-        }
+        
         [Test]
         public void player_resources_are_initialized_at_0()
         {
@@ -177,6 +168,8 @@ namespace gv.Tests
             Assert.That( u.User.Ressources.ContainsKey( "Hydrogene" ) && u.User.Ressources["Hydrogene"] == 0 );
             Assert.That( u.User.Ressources.ContainsKey( "Helium" ) && u.User.Ressources["Helium"] == 0 );
         }
+        
+
         
     }
 }

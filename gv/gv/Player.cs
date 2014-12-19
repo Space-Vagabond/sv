@@ -100,6 +100,7 @@ namespace gv
         public Dictionary<string, int> Ressources
         {
             get { return _ressources; }
+            set { _ressources = value; }
         }
     }
 }

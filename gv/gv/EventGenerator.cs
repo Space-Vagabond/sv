@@ -25,7 +25,7 @@ namespace gv
            {
                if( pl.Name != "Earth" && pl.Name != "Eldorado" )
                {
-                   int caseEvent = _u.Rand.Next( 0, 12 );
+                   int caseEvent = _u.Rand.Next( 0, 25 );
                    switch( caseEvent )
                    {
                        case 0: MeteorStrikesPlanet( turnEvents, pl );
@@ -33,6 +33,10 @@ namespace gv
                        case 1: RevolutionOnPlanet( turnEvents, pl );
                            break;
                        case 2: ElectricStorm( turnEvents, pl );
+                           break;
+                       case 3: SpaceshipNoMove(turnEvents);
+                           break;
+                       case 4: PlResourcesStolen(turnEvents);
                            break;
                    }    
                }          
@@ -66,6 +70,35 @@ namespace gv
         {
             pl.Blocked = 2;
             turnEvents.Add( String.Format( "Electric storm on {0}, planet inaccessible for two turns.", pl.Name.ToUpper() ) ); 
+        }
+
+        /// <summary>
+        /// Disabling player movement for one turn
+        /// </summary>
+        /// <param name="turnEvents"></param>
+        void SpaceshipNoMove(List<string> turnEvents)
+        {
+            if (_u.User.RemainingSteps > 0)
+            {
+                _u.User.RemainingSteps = 0;
+                turnEvents.Add("Your spaceship was damaged, you can't move this turn");
+            }
+        }
+
+        void PlResourcesStolen(List<string> turnEvents) 
+        {
+            int amount = _u.Rand.Next(5,20);
+            if (_u.User.Ressources["Metal"] > amount)
+            {
+                _u.User.Ressources["Metal"] -= amount;
+                
+                turnEvents.Add(String.Format("Income was stolen by local smugglers, you lost {0} metal", amount));
+            }
+            if ( _u.User.Ressources["Gems"] > amount) 
+            {
+                _u.User.Ressources["Gems"] -= amount;
+                turnEvents.Add(String.Format("Income was stolen by local smugglers, you lost {0} gems", amount));
+            }
         }
 
         /// <summary>
