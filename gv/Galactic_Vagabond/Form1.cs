@@ -365,7 +365,7 @@ namespace Galactic_Vagabond
             
             
             _universe.EndTurn();
-            _universe.Event.EventOccurs(_universe.Turn);
+            _universe.Event.EventOccurs();
             DisplayTurnEvents();
             DisplayPlayerDatas();
         }
@@ -459,7 +459,7 @@ namespace Galactic_Vagabond
         void DisplayTurnEvents()
         {
             this.TurnEvents.DataSource = new List<string>();
-            this.TurnEvents.DataSource = _universe.Event.EventsOccured[_universe.Turn];
+            this.TurnEvents.DataSource = _universe.Event.AllEvents[_universe.Turn];
             int visibleItem = this.TurnEvents.ClientSize.Height / this.TurnEvents.ItemHeight;
             this.TurnEvents.TopIndex = Math.Max( this.TurnEvents.Items.Count - visibleItem + 1, 0 );
         }
