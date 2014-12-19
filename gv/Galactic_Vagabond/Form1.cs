@@ -4,6 +4,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using gv;
 namespace Galactic_Vagabond
 {
@@ -27,23 +28,30 @@ namespace Galactic_Vagabond
             
             //Find or Creates the saves directory
             Directory.CreateDirectory( @"./../../../Saves" );
+
             //hiding main form and displays launcher
             this.Hide();
-            launcher form2 = new launcher();
-            var result = form2.ShowDialog();
-            if( result == DialogResult.Yes )//new game
+            using( launcher form2 = new launcher() )
             {
-                form2.Dispose();
-                this.Show();
-                _universe = new Universe();
+                var result = form2.ShowDialog();
+                if( result == DialogResult.Yes )//new game
+                {
+                    form2.Dispose();
+                    this.Show();
+                    _universe = new Universe();
+                    _universe.User.Name = form2.PName;
+                }
+                else//Load game
+                {
+
+                    XDocument doc = form2.Doc;
+                }
             }
-            else//Load game
-            {
-                //loadGame
-            }
+            
             InitMap();
             ShowCurrentPlanet();
             DisplayPlayerDatas();
+
             _cockpitControls.Add(map);
             _cockpitControls.Add(TurnEvents);
             _cockpitControls.Add(CurrentPlanet);
