@@ -23,7 +23,7 @@ namespace gv
            List<string> turnEvents = new List<string>();
            foreach (Planet pl in _u.Planets.Values) 
            {
-               if( pl.Name != "Earth" && pl.Name != "Eldorado" )
+               if( pl.Name != "Earth" && pl.Name != "Eldorado" && pl.IsDiscovered)
                {
                    int caseEvent = _u.Rand.Next( 0, 50);
                    switch( caseEvent )
