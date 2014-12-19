@@ -11,6 +11,7 @@ namespace gv
 {
     public class Player
     {
+        string _name;
         Position _position;
         bool _canMove;
         int _speed;
@@ -69,7 +70,8 @@ namespace gv
         }
         public XElement ToXML()
         {
-            return new XElement( "Player", 
+            return new XElement( "Player",
+                new XElement( "Name", _name ),
                 new XElement( "Speed", _speed ),
                 new XElement("X", Position.X),
                 new XElement("Y", Position.Y),
@@ -101,6 +103,11 @@ namespace gv
         {
             get { return _ressources; }
             set { _ressources = value; }
+        }
+        public string Name
+        {
+            get { return _name; }
+            set { _name = value; }
         }
     }
 }

@@ -22,7 +22,7 @@ namespace gv
         public Universe()
         {
             _events = new EventGenerator( this );
-            _player = new Player( this );
+            _player = new Player(this);
             NameGen = new TextGenerator(WordTypes.Name);
             int k = 1;
             for( int i = -1; i < 1; i++ )
@@ -115,6 +115,13 @@ namespace gv
                             new XElement("ImgId", p.Value.Img)
                         )
                     ),
+                    new XElement("Chunks",
+                        from C in _chunks.Values
+                        select new XElement("Chunk", 
+                            new XElement("X", C.Position.X),
+                            new XElement("Y", C.Position.Y)
+                            )
+                    ),
                     new XElement("Cells",
                         from c in _cells
                         select new XElement("Cell",
@@ -125,17 +132,10 @@ namespace gv
                             new XElement("Y", c.Position.Y),
                             new XElement("ContainedPlanet", (c.ContainsPlanet?c.ContainedPlanet.Name : null))
                         )
-                    ),
-                    new XElement("Chunks",
-                        from C in _chunks.Values
-                        select new XElement("Chunk", 
-                            new XElement("X", C.Position.X),
-                            new XElement("Y", C.Position.Y)
-                            )
                     )
-               )
+                )
             );
-            save.Save( @".\..\..\..\Saves/saveTest.xml" );
+            save.Save( @".\..\..\..\Saves/save"+_player.Name+".xml" );
         }
         public void EndTurn()
         {

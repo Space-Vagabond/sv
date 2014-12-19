@@ -32,6 +32,8 @@
             this.NewGame = new System.Windows.Forms.Button();
             this.LoadGame = new System.Windows.Forms.Button();
             this.Welcome = new System.Windows.Forms.Label();
+            this.playerName = new System.Windows.Forms.TextBox();
+            this.StartGame = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // NewGame
@@ -82,6 +84,33 @@
             this.Welcome.TabIndex = 2;
             this.Welcome.Text = "Welcome to galactic vagabond.";
             // 
+            // playerName
+            // 
+            this.playerName.Location = new System.Drawing.Point(57, 205);
+            this.playerName.Name = "playerName";
+            this.playerName.Size = new System.Drawing.Size(100, 20);
+            this.playerName.TabIndex = 3;
+            this.playerName.Visible = false;
+            // 
+            // StartGame
+            // 
+            this.StartGame.BackColor = System.Drawing.Color.Transparent;
+            this.StartGame.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.StartGame.FlatAppearance.BorderColor = System.Drawing.Color.OliveDrab;
+            this.StartGame.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.StartGame.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.StartGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StartGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StartGame.ForeColor = System.Drawing.Color.LawnGreen;
+            this.StartGame.Location = new System.Drawing.Point(163, 205);
+            this.StartGame.Name = "StartGame";
+            this.StartGame.Size = new System.Drawing.Size(63, 59);
+            this.StartGame.TabIndex = 4;
+            this.StartGame.Text = "Start Game";
+            this.StartGame.UseVisualStyleBackColor = false;
+            this.StartGame.Visible = false;
+            this.StartGame.Click += new System.EventHandler(this.StartGame_Click);
+            // 
             // launcher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -90,6 +119,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.StartGame);
+            this.Controls.Add(this.playerName);
             this.Controls.Add(this.Welcome);
             this.Controls.Add(this.LoadGame);
             this.Controls.Add(this.NewGame);
@@ -109,5 +140,7 @@
         private System.Windows.Forms.Button NewGame;
         private System.Windows.Forms.Button LoadGame;
         private System.Windows.Forms.Label Welcome;
+        private System.Windows.Forms.TextBox playerName;
+        private System.Windows.Forms.Button StartGame;
     }
 }
