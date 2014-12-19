@@ -25,7 +25,7 @@ namespace gv
            {
                if( pl.Name != "Earth" && pl.Name != "Eldorado" )
                {
-                   int caseEvent = _u.Rand.Next( 0, 25 );
+                   int caseEvent = _u.Rand.Next( 0, 50);
                    switch( caseEvent )
                    {
                        case 0: MeteorStrikesPlanet( turnEvents, pl );
@@ -38,6 +38,9 @@ namespace gv
                            break;
                        case 4: PlResourcesStolen(turnEvents);
                            break;
+                       case 5: GainSpeed(turnEvents);
+                           break;
+                           
                    }    
                }          
            }
@@ -78,27 +81,37 @@ namespace gv
         /// <param name="turnEvents"></param>
         void SpaceshipNoMove(List<string> turnEvents)
         {
-            if (_u.User.RemainingSteps > 0)
+            int luck = _u.Rand.Next(0, 10);
+            if (_u.User.RemainingSteps > 0 && luck == 1)
             {
                 _u.User.RemainingSteps = 0;
                 turnEvents.Add("Your spaceship was damaged, you can't move this turn");
             }
         }
 
-        void PlResourcesStolen(List<string> turnEvents) 
+        void PlResourcesStolen(List<string> turnEvents)
         {
-            int amount = _u.Rand.Next(5,20);
-            if (_u.User.Ressources["Metal"] > amount)
+            int luck = _u.Rand.Next(0, 10);
+            if (luck == 1)
             {
-                _u.User.Ressources["Metal"] -= amount;
-                
-                turnEvents.Add(String.Format("Income was stolen by local smugglers, you lost {0} metal", amount));
+                int amount = _u.Rand.Next(5, 20);
+                if (_u.User.Ressources["Metal"] > amount)
+                {
+                    _u.User.Ressources["Metal"] -= amount;
+                    turnEvents.Add(String.Format("Income was stolen by local smugglers, you lost {0} metal", amount));
+                }
+                if (_u.User.Ressources["Gems"] > amount)
+                {
+                    _u.User.Ressources["Gems"] -= amount;
+                    turnEvents.Add(String.Format("Income was stolen by local smugglers, you lost {0} gems", amount));
+                }
             }
-            if ( _u.User.Ressources["Gems"] > amount) 
-            {
-                _u.User.Ressources["Gems"] -= amount;
-                turnEvents.Add(String.Format("Income was stolen by local smugglers, you lost {0} gems", amount));
-            }
+        }
+
+        void GainSpeed( List<string> turnEvents)
+        {
+            _u.User.RemainingSteps += 1;
+            turnEvents.Add("Favourable conditions, you gain 1 speed this turn.");
         }
 
         /// <summary>
