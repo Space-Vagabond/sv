@@ -63,6 +63,7 @@ namespace Galactic_Vagabond
 
             _overviewControls.Add(OverViewList);
             _overviewControls.Add(OverviewDetails);
+            _overviewControls.Add(PlanetImg);
         }
         /// <summary>
         /// Initiaizing the map controller
@@ -353,9 +354,11 @@ namespace Galactic_Vagabond
         /// <param name="e"></param>
         private void EndTurn_Click( object sender, EventArgs e )
         {
-            _universe.Event.EventOccurs( _universe.Turn );
-            DisplayTurnEvents();
+            
+            
             _universe.EndTurn();
+            _universe.Event.EventOccurs(_universe.Turn);
+            DisplayTurnEvents();
             DisplayPlayerDatas();
         }
         /// <summary>
