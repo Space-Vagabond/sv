@@ -86,6 +86,8 @@
             // 
             // playerName
             // 
+            this.playerName.BackColor = System.Drawing.Color.Black;
+            this.playerName.ForeColor = System.Drawing.Color.White;
             this.playerName.Location = new System.Drawing.Point(57, 205);
             this.playerName.Name = "playerName";
             this.playerName.Size = new System.Drawing.Size(100, 20);
@@ -104,9 +106,9 @@
             this.StartGame.ForeColor = System.Drawing.Color.LawnGreen;
             this.StartGame.Location = new System.Drawing.Point(163, 205);
             this.StartGame.Name = "StartGame";
-            this.StartGame.Size = new System.Drawing.Size(63, 59);
+            this.StartGame.Size = new System.Drawing.Size(76, 29);
             this.StartGame.TabIndex = 4;
-            this.StartGame.Text = "Start Game";
+            this.StartGame.Text = "Start";
             this.StartGame.UseVisualStyleBackColor = false;
             this.StartGame.Visible = false;
             this.StartGame.Click += new System.EventHandler(this.StartGame_Click);
