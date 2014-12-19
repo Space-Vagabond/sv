@@ -8,8 +8,7 @@ namespace gv
     public class EventGenerator
     {
         Universe _u;
-        Dictionary<int,List<string>> _eventsOccured = new Dictionary<int,List<string>>();
-        List<string> _allEvents;
+        Dictionary<int,List<string>> _allEvents = new Dictionary<int,List<string>>();
 
         public EventGenerator(Universe universe)
         {
@@ -18,7 +17,7 @@ namespace gv
         /// <summary>
         /// Chooses if planet is affected by a universe event 
         /// </summary>
-        public void EventOccurs(int turn )
+        public void EventOccurs()
         {
            List<string> turnEvents = new List<string>();
            foreach (Planet pl in _u.Planets.Values) 
@@ -44,8 +43,7 @@ namespace gv
                    }    
                }          
            }
-           _eventsOccured.Add( turn, turnEvents );
-           _allEvents = EventsTolist();
+           _allEvents.Add( _u.Turn, turnEvents );
         }
         /// <summary>
         /// Changing surface and inhabitants 
@@ -114,26 +112,11 @@ namespace gv
             turnEvents.Add("Favourable conditions, you gain 1 speed this turn.");
         }
 
-        /// <summary>
-        /// Building list from dict, for display purposes.
-        /// </summary>
-        /// <returns></returns>
-        List<string> EventsTolist()
-        {
-            var items = _eventsOccured.SelectMany (d => d.Value).ToList();
-            List<string>allevents = items;
-            return allevents;
-        }
-
         public Universe Universe
         {
             get { return _u; }
         }      
-        public IReadOnlyDictionary<int,List<string>> EventsOccured
-        {
-            get { return _eventsOccured; }
-        }
-        public IReadOnlyList<string> AllEvents
+        public IReadOnlyDictionary<int,List<string>> AllEvents
         {
             get { return _allEvents; }
         }

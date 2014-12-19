@@ -98,6 +98,7 @@ namespace gv
             XDocument save = new XDocument(
                 new XElement( "Game",
                     new XElement(_player .ToXML()),
+                    new XElement("Turn", _turn),
                     new XElement("Planets",
                         from p in _planets
                         select new XElement("Planet",
