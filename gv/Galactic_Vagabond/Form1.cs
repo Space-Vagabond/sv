@@ -1,206 +1,539 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using gv;
-using Galactic_Vagabond;
-
 namespace Galactic_Vagabond
 {
     public partial class Form_GV_01 : Form
     {
+        Universe _universe;
+        Image _square = Image.FromFile( @".\..\..\..\images/square.png" );
+        Image _ship = Image.FromFile( @".\..\..\..\images/ship.png" );
+        Image[] _planets= new Image[20];
+        List<Control> _displayedControls = new List<Control>();
+        List<Control> _cockpitControls = new List<Control>();
+        List<Control> _overviewControls = new List<Control>();      
+
         public Form_GV_01()
         {
             InitializeComponent();
-            Universe universe = new Universe();
-
-        }
-
-        private int ConvertX( int x )
-        {
-
-            return (x + 10) * (30) + 5;
-        }
-
-        private int ConvertY( int y )
-        {
-            return (y + 10) * (30) - (25);
-        }
-
-        /// <summary>
-        /// Displaying planets and player on grid
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void button1_Click( object sender, EventArgs e )
-        {
-            using( Graphics g = this.map.CreateGraphics() )
+            for( int i = 0; i < 18; i++ )
             {
+                _planets[i] = Image.FromFile( @".\..\..\..\images/planet" + (i + 1) + ".png" );
+            }
+            
+            //Find or Creates the saves directory
+            Directory.CreateDirectory( @"./../../../Saves" );
 
-                int cellsNb = 20;
-                int cellSize = 30;
-                Font drawFont = new Font( "Verdana", 12 );
-                SolidBrush drawBrush = new SolidBrush( Color.Cyan );
-                SolidBrush drawPlayer = new SolidBrush( Color.Red );
-                ShowCurrentPlanet( this, EventArgs.Empty );
-                map.Refresh();
-
-                foreach( Chunk ch in Universe.Chunks )
+            //hiding main form and displays launcher
+            this.Hide();
+            using( launcher form2 = new launcher() )
+            {
+                var result = form2.ShowDialog();
+                if( result == DialogResult.Yes )//new game
                 {
-                    foreach( Cell cl in ch._cells )
-                    {
-                        if( cl.ContainsPlanet )
-                        {
-                            if( cl.ContainedPlanet.Type == "Destroyed" )
-                            {
-                                Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) );
-                                g.DrawString( "E", drawFont, drawBrush, drawPoint );
-                            }
-                            else if( cl.ContainedPlanet.Type == "Telluric Silicat" )
-                            {
-                                Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) );
-                                g.DrawString( "S", drawFont, drawBrush, drawPoint );
-                            }
-                            else if( cl.ContainedPlanet.Type == "Coreless" )
-                            {
-                                Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) );
-                                g.DrawString( "C", drawFont, drawBrush, drawPoint );
-                            }
-                            else if( cl.ContainedPlanet.Type == "Telluric Carbon" )
-                            {
-                                Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) );
-                                g.DrawString( "Ca", drawFont, drawBrush, drawPoint );
-                            }
-                            else if( cl.ContainedPlanet.Type == "Telluric Metal" )
-                            {
-                                Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) ); ;
-                                g.DrawString( "M", drawFont, drawBrush, drawPoint );
-                            }
-                            else if( cl.ContainedPlanet.Type == "Telluric Lava" )
-                            {
-                                Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) ); ;
-                                g.DrawString( "L", drawFont, drawBrush, drawPoint );
-                            }
-                            else if( cl.ContainedPlanet.Type == "Telluric Ice" )
-                            {
-                                Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) ); ;
-                                g.DrawString( "I", drawFont, drawBrush, drawPoint );
-                            }
-                            else if( cl.ContainedPlanet.Type == "Telluric Desert" )
-                            {
-                                Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) ); ;
-                                g.DrawString( "D", drawFont, drawBrush, drawPoint );
-                            }
-                            else if( cl.ContainedPlanet.Type == "Gazeous Hydrogen" )
-                            {
-                                Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) ); ;
-                                g.DrawString( "Hy", drawFont, drawBrush, drawPoint );
-                            }
-                            else if( cl.ContainedPlanet.Type == "Gazeous Helium" )
-                            {
-                                Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) ); ;
-                                g.DrawString( "He", drawFont, drawBrush, drawPoint );
-                            }
-                            else if( cl.ContainedPlanet.Type == "Chthonian" )
-                            {
-                                Point drawPoint = new Point( ConvertX( cl.Position.X ), ConvertY( cl.Position.Y ) ); ;
-                                g.DrawString( "Ch", drawFont, drawBrush, drawPoint );
-                            }
+                    form2.Dispose();
+                    this.Show();
+                    _universe = new Universe();
+                    _universe.User.Name = form2.PName;
+                }
+                else//Load game
+                {
 
-                            if( Universe._p != null )
-                            {
-                                Point drawPoint = new Point( (Universe._p.X + 10) * 30 + 5, (Universe._p.Y + 10) * 30 - 25 );
-                                g.DrawString( "P", drawFont, drawPlayer, drawPoint );
-                            }
+                    XDocument doc = form2.Doc;
+                }
+            }
+            
+            InitMap();
+            ShowCurrentPlanet();
+            DisplayPlayerDatas();
+
+            _cockpitControls.Add(map);
+            _cockpitControls.Add(TurnEvents);
+            _cockpitControls.Add(CurrentPlanet);
+            _cockpitControls.Add(LastTurnLabel);
+            _cockpitControls.Add(Pos);
+            _cockpitControls.Add(TurnNumber);
+            _cockpitControls.Add(GemsLabel);
+            _cockpitControls.Add(SiliciumLabel);
+            _cockpitControls.Add(MetalLabel);
+            _cockpitControls.Add(HydrogenLabel);
+            _cockpitControls.Add(PlutoniumLabel);
+            _cockpitControls.Add(HeliumLabel);
+            _cockpitControls.Add(PosX);
+            _cockpitControls.Add(PosY);
+            _cockpitControls.Add(Build);
+            _cockpitControls.Add(EndTurn);
+
+            _overviewControls.Add(OverViewList);
+            _overviewControls.Add(OverviewDetails);
+            _overviewControls.Add(PlanetImg);
+        }
+        /// <summary>
+        /// Initiaizing the map controller
+        /// </summary>
+        public void InitMap()
+        {
+            for( int i = 0; i < 20; i++ )
+            {
+                this.map.Columns[i].Width = 35;
+            }
+            for( int i = 0; i < 20; i++ )
+            {
+                Image[] s = new Image[] { _square, _square, _square, _square, _square, _square, _square, _square, _square, _square, _square, _square, _square, _square, _square, _square, _square, _square, _square, _square, _square };
+                map.Rows.Add( s );
+                this.map.Rows[i].Height = 30;
+            }
+        }
+        /// <summary>
+        /// Bindng Datas int the map
+        /// </summary>
+        public void LoadMap()
+        {
+            foreach( KeyValuePair<int,Chunk> ch in _universe.ShownChunks )
+            {
+                foreach( Cell cl in ch.Value.Cells )
+                {
+                    if( cl.ContainsPlanet )
+                    {                        
+                        if( _universe.User.Position.X == cl.Position.X && _universe.User.Position.Y == cl.Position.Y )
+                        {
+                            this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Style.BackColor =
+                                System.Drawing.Color.Yellow;
+                            cl.ContainedPlanet.IsDiscovered = true;//sets the planet to discovered to show its own sprite
+                        }
+                        else
+                        {
+                            this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Style.BackColor =
+                                System.Drawing.Color.Black;
+                        }
+                        if( cl.ContainedPlanet.IsDiscovered )
+                        {
+                            this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Value = _planets[cl.ContainedPlanet.Img - 1];
+                        }
+                        else
+                        {
+                            this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Value = _planets[6 - 1];                            
                         }
                     }
-
-
-
-                }
-
-                Pen p = new Pen( Color.LimeGreen );
-                Pen p1 = new Pen( Color.White );
-
-                for( int i = 0; i < cellsNb; ++i )
-                {
-                    g.DrawLine( p, 0, i * cellSize, cellsNb * cellSize, i * cellSize );
-                    if( i == cellsNb / 2 )
+                    else
                     {
-                        g.DrawLine( p1, 0, i * cellSize, cellsNb * cellSize, i * cellSize );
+                        this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Style.BackColor =
+                            System.Drawing.Color.Black;
+                        if( _universe.User.Position.X == cl.Position.X && _universe.User.Position.Y == cl.Position.Y )
+                        {
+                            this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Value = _ship;
+                        }
+                        else
+                        {
+                            this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Value = _square;
+                        }
+                    }
+                    if( cl.ContainsPlanet && cl.ContainedPlanet.Name == "Eldorado" )
+                    {
+                        cl.ContainedPlanet.IsDiscovered = true;
+                        this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Style.BackColor =
+                                System.Drawing.Color.LightPink;
                     }
                 }
-
-                for( int j = 0; j < cellsNb; ++j )
-                {
-                    g.DrawLine( p, j * cellSize, 0, j * cellSize, cellsNb * cellSize );
-                    if( j == cellsNb / 2 )
-                    {
-                        g.DrawLine( p1, j * cellSize, 0, j * cellSize, cellsNb * cellSize );
-                    }
-                }
-
             }
-
-
         }
-
-        // Contrary directions Y because of GUI 0,0 left upper corner
-        private void up_Click( object sender, EventArgs e )
+        /// <summary>
+        /// Shows Planet's info
+        /// </summary>
+        public void ShowCurrentPlanet()
         {
-            Universe._p.Y = Universe._p.Y - 1;
-            button1_Click( this, EventArgs.Empty );
-        }
-
-        private void down_Click( object sender, EventArgs e )
-        {
-            Universe._p.Y = Universe._p.Y + 1;
-            button1_Click( this, EventArgs.Empty );
-        }
-
-        private void left_Click( object sender, EventArgs e )
-        {
-            Universe._p.X = Universe._p.X - 1;
-            button1_Click( this, EventArgs.Empty );
-        }
-
-        private void right_Click( object sender, EventArgs e )
-        {
-            Universe._p.X = Universe._p.X + 1;
-            button1_Click( this, EventArgs.Empty );
-        }
-        ///
-        private void ShowCurrentPlanet( object sender, EventArgs e )
-        {
+            LoadMap();
             List<object> caracs = new List<object>();
-
-            IEnumerable<Cell> Req = from c in Universe.Cells
-                                    where c.Position.X == Universe._p.Position.X && c.Position.Y == Universe._p.Position.Y
-                                    select c;
-
-            Cell pos = Req.First();
+            CurrentPlanet.Text = string.Empty;
+            var pos = _universe.Cells.Where( c => c.Position.X == _universe.User.Position.X && c.Position.Y == _universe.User.Position.Y ).Single();
             if( pos.ContainsPlanet )
             {
-                CurrentPlanet.Refresh();
-
-                caracs.Add( "Name: " + pos.ContainedPlanet.Name );
-                caracs.Add( "Type: " + pos.ContainedPlanet.Type );
-                caracs.Add( "Climate: " + pos.ContainedPlanet.Climate );
-                caracs.Add( "Surface: " + pos.ContainedPlanet.Surface );
-                caracs.Add( "Resources: " + pos.ContainedPlanet.Ressource );
-                caracs.Add( "Inhabitants: " + pos.ContainedPlanet.InhabitantsName );
+                if( pos.ContainedPlanet.Ressources != "none" && pos.ContainedPlanet.Factory == false )
+                {
+                    Build.Show();
+                }
+                else
+                {
+                    Build.Hide();
+                }
+                CurrentPlanet.Text += "Name: " + pos.ContainedPlanet.Name + Environment.NewLine;
+                CurrentPlanet.Text += "Type: " + pos.ContainedPlanet.Type + Environment.NewLine;
+                CurrentPlanet.Text += "Climate: " + pos.ContainedPlanet.Climate + Environment.NewLine;
+                CurrentPlanet.Text += "Surface: " + pos.ContainedPlanet.Surface + Environment.NewLine;
+                CurrentPlanet.Text += "Resources: " + pos.ContainedPlanet.Ressources + Environment.NewLine;
+                CurrentPlanet.Text += "Inhabitants: " + pos.ContainedPlanet.InhabitantsName + Environment.NewLine;
+                if( pos.ContainedPlanet.Ressources != "none" )
+                {
+                    CurrentPlanet.Text += "Constructible: yes" + Environment.NewLine;
+                    CurrentPlanet.Text += "Built: " + ((pos.ContainedPlanet.Factory) ? "yes" : "no") + Environment.NewLine;
+                }
+                else
+                {
+                    CurrentPlanet.Text += "Constructible: no" + Environment.NewLine;
+                }
             }
             else
             {
-                caracs.Add( "No planet to interact with" );
+                Build.Hide();
+                CurrentPlanet.Text += "No planet to interact with";
             }
-            CurrentPlanet.DataSource = caracs;
         }
+        /// <summary>
+        /// Using arrows to move, needs to always input them on the map
+        /// </summary>
+        /// <param name="msg"></param>
+        /// <param name="keyData">The pressed key</param>
+        /// <returns></returns>
+        protected override bool ProcessCmdKey( ref Message msg, Keys keyData )
+        {
+            if( this.map.Visible )
+            {
+                if( keyData == Keys.Up )
+                {
+                    if( _universe.User.Move( new Position( _universe.User.Position.X, _universe.User.Position.Y + 1 ) ) )
+                    {
+                        EnsureChunk();
+                    }
+                }
+                else if( keyData == Keys.Down )
+                {
+                    if( _universe.User.Move( new Position( _universe.User.Position.X, _universe.User.Position.Y - 1 ) ) )
+                    {
+                        EnsureChunk();
+                    }
+                }
+                else if( keyData == Keys.Left )
+                {
+                    if( _universe.User.Move( new Position( _universe.User.Position.X - 1, _universe.User.Position.Y ) ) )
+                    {
+                        EnsureChunk();
+
+                    }
+                }
+                else if( keyData == Keys.Right )
+                {
+                    if( _universe.User.Move( new Position( _universe.User.Position.X + 1, _universe.User.Position.Y ) ) )
+                    {
+                        EnsureChunk();
+
+                    }
+                }
+                ShowCurrentPlanet();
+                DisplayPlayerDatas();
+                return true;
+            }
+            return false;
+        }
+        /// <summary>
+        /// Checks if a chunk exists , if not creates it where needed
+        /// </summary>
+        void EnsureChunk()
+        {
+            //max values from chunks origins
+            int maxX = _universe.ShownChunks.Values.Max( Chunk => Chunk.Position.X );
+            int maxY = _universe.ShownChunks.Values.Max( Chunk => Chunk.Position.Y );
+            int minX = _universe.ShownChunks.Values.Min( Chunk => Chunk.Position.X );
+            int minY = _universe.ShownChunks.Values.Min( Chunk => Chunk.Position.Y );
+            //max values of cells in these chunks
+            int maxiX = maxX + 9;
+            int maxiY = maxY + 9;
+            int miniX = minX;
+            int miniY = minY;
+
+            if( _universe.User.Position.X > maxiX )// top of screen
+            {
+                _universe.ShownChunks.Clear();
+                _universe.ShownChunks.Add( 1, _universe.Chunks[new Position( maxX, minY )] );
+                _universe.ShownChunks.Add( 2, _universe.Chunks[new Position( maxX, maxY )] );
+                if( _universe.Chunks.ContainsKey( new Position( maxX + 10, minY ) ) )
+                {
+                    _universe.ShownChunks.Add( 3, _universe.Chunks[new Position( maxX + 10, minY )] );
+                }
+                else
+                {
+                    Chunk c = new Chunk( new Position( maxX + 10, minY ), _universe );
+                    _universe.Chunks.Add( c.Position, c );
+                    _universe.ShownChunks.Add( 3, c );
+                }
+                if( _universe.Chunks.ContainsKey( new Position( maxX + 10, maxY ) ) )
+                {
+                    _universe.ShownChunks.Add( 4, _universe.Chunks[new Position( maxX + 10, maxY )] );
+                }
+                else
+                {
+                    Chunk c = new Chunk( new Position( maxX + 10, maxY ), _universe );
+                    _universe.Chunks.Add( c.Position, c );
+                    _universe.ShownChunks.Add( 4, c );
+                }
+
+            }
+            else if( _universe.User.Position.X < miniX )// bot of screen
+            {
+                _universe.ShownChunks.Clear();
+                _universe.ShownChunks.Add( 3, _universe.Chunks[new Position( minX, minY )] );
+                _universe.ShownChunks.Add( 4, _universe.Chunks[new Position( minX, maxY )] );
+                if( _universe.Chunks.ContainsKey( new Position( minX - 10, minY ) ) )
+                {
+                    _universe.ShownChunks.Add( 1, _universe.Chunks[new Position( minX - 10, minY )] );
+                }
+                else
+                {
+                    Chunk c = new Chunk( new Position( minX - 10, minY ), _universe );
+                    _universe.Chunks.Add( c.Position, c );
+                    _universe.ShownChunks.Add( 1, c );
+                }
+                if( _universe.Chunks.ContainsKey( new Position( minX - 10, maxY ) ) )
+                {
+                    _universe.ShownChunks.Add( 2, _universe.Chunks[new Position( minX - 10, maxY )] );
+                }
+                else
+                {
+                    Chunk c = new Chunk( new Position( minX - 10, maxY ), _universe );
+                    _universe.Chunks.Add( c.Position, c );
+                    _universe.ShownChunks.Add( 2, c );
+                }
+            }
+            else if( _universe.User.Position.Y > maxiY )//right of screen
+            {
+                _universe.ShownChunks.Clear();
+                _universe.ShownChunks.Add( 1, _universe.Chunks[new Position( minX, maxY )] );
+                _universe.ShownChunks.Add( 3, _universe.Chunks[new Position( maxX, maxY )] );
+                if( _universe.Chunks.ContainsKey( new Position( minX, maxY + 10 ) ) )
+                {
+                    _universe.ShownChunks.Add( 2, _universe.Chunks[new Position( minX, maxY + 10 )] );
+                }
+                else
+                {
+                    Chunk c = new Chunk( new Position( minX, maxY + 10 ), _universe );
+                    _universe.Chunks.Add( c.Position, c );
+                    _universe.ShownChunks.Add( 2, c );
+                }
+                if( _universe.Chunks.ContainsKey( new Position( maxX, maxY + 10 ) ) )
+                {
+                    _universe.ShownChunks.Add( 4, _universe.Chunks[new Position( maxX, maxY + 10 )] );
+                }
+                else
+                {
+                    Chunk c = new Chunk( new Position( maxX, maxY + 10 ), _universe );
+                    _universe.Chunks.Add( c.Position, c );
+                    _universe.ShownChunks.Add( 4, c );
+                }
+            }
+            else if( _universe.User.Position.Y < miniY )//Left of screen
+            {
+                _universe.ShownChunks.Clear();
+                _universe.ShownChunks.Add( 2, _universe.Chunks[new Position( minX, minY )] );
+                _universe.ShownChunks.Add( 4, _universe.Chunks[new Position( maxX, minY )] );
+                if( _universe.Chunks.ContainsKey( new Position( minX, minY - 10 ) ) )
+                {
+                    _universe.ShownChunks.Add( 1, _universe.Chunks[new Position( minX, minY - 10 )] );
+                }
+                else
+                {
+                    Chunk c = new Chunk( new Position( minX, minY - 10 ), _universe );
+                    _universe.Chunks.Add( c.Position, c );
+                    _universe.ShownChunks.Add( 1, c );
+                }
+                if( _universe.Chunks.ContainsKey( new Position( maxX, minY - 10 ) ) )
+                {
+                    _universe.ShownChunks.Add( 3, _universe.Chunks[new Position( maxX, minY - 10 )] );
+                }
+                else
+                {
+                    Chunk c = new Chunk( new Position( maxX, minY - 10 ), _universe );
+                    _universe.Chunks.Add( c.Position, c );
+                    _universe.ShownChunks.Add( 3, c );
+                }
+            }
+            else
+            {
+                //
+            }
+        }
+        /// <summary>
+        /// Button end Turn click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void EndTurn_Click( object sender, EventArgs e )
+        {
+            
+            
+            _universe.EndTurn();
+            _universe.Event.EventOccurs();
+            DisplayTurnEvents();
+            DisplayPlayerDatas();
+        }
+        /// <summary>
+        /// Button build click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Build_Click( object sender, EventArgs e )
+        {
+            var pos = _universe.Cells.Where( c => c.Position.X == _universe.User.Position.X && c.Position.Y == _universe.User.Position.Y ).Single();
+            if( pos.ContainsPlanet && pos.ContainedPlanet.Ressources != "none" )
+            {
+                pos.ContainedPlanet.Factory = true;
+                ShowCurrentPlanet();
+            }
+        }        
+        /// <summary>
+        /// Mathematical modulo (always positive)
+        /// </summary>
+        /// <param name="nb">the number to divide</param>
+        /// <param name="mod">the modulo</param>
+        /// <returns>the absolute positive modulo</returns>
+        public int ModAbs( int nb, int mod )
+        {
+            return (((nb % mod) + mod) % mod);
+        }
+        /// <summary>
+        /// the value converting an X value from the universe to a X value for the gridview
+        /// </summary>
+        /// <param name="value">the X input</param>
+        /// <param name="nbChunk">the position of the chunk</param>
+        /// <returns>returns a value betwen 0 and 19 to go in the grid</returns>
+        int ConvertX( int value, int nbChunk )
+        {
+            value = ModAbs( value, 10 );
+            if( nbChunk == 1 || nbChunk == 2 )
+            {
+                return value;
+            }
+            else
+            {
+                return (value + 10);
+            }
+        }
+        /// <summary>
+        /// the value converting an Y value from the universe to a Y value for the gridview
+        /// </summary>
+        /// <param name="value">the Y input</param>
+        /// <param name="nbChunk">the position of the chunk</param>
+        /// <returns>returns a value betwen 0 and 19 to go in the grid</returns>
+        int ConvertY( int value, int nbChunk )
+        {
+            value = ModAbs( value, 10 );
+            if( nbChunk % 2 == 0 )
+            {
+                return (9 - value);
+            }
+            else
+            {
+                return (19 - value);
+            }
+        }
+        /// <summary>
+        /// displays the ressoures of ten player
+        /// </summary>
+        public void DisplayPlayerDatas()
+        {
+            this.SiliciumLabel.Text = "Silicium : " + _universe.User.Ressources["Silicium"];
+            this.SiliciumLabel.Show();
+            this.GemsLabel.Text = "Gems : " + _universe.User.Ressources["Gems"];
+            this.GemsLabel.Show();
+            this.PlutoniumLabel.Text = "Plutonium : " + _universe.User.Ressources["Plutonium"];
+            this.PlutoniumLabel.Show();
+            this.MetalLabel.Text = "Metal : " + _universe.User.Ressources["Metal"];
+            this.MetalLabel.Show();
+            this.HydrogenLabel.Text = "Hydrogen : " + _universe.User.Ressources["Hydrogene"];
+            this.HydrogenLabel.Show();
+            this.HeliumLabel.Text = "Helium : " + _universe.User.Ressources["Helium"];
+            this.HeliumLabel.Show();
+            this.PosX.Text = "Position on X : " + _universe.User.Position.X;
+            this.PosX.Show();
+            this.PosY.Text = "Position on Y : " + _universe.User.Position.Y;
+            this.PosY.Show();
+            this.TurnNumber.Text = "Turn number: " + _universe.Turn;
+            this.TurnNumber.Show();
+        }
+        /// <summary>
+        /// Shows events that happend on this turn
+        /// </summary>
+        void DisplayTurnEvents()
+        {
+            this.TurnEvents.DataSource = new List<string>();
+            this.TurnEvents.DataSource = _universe.Event.AllEvents[_universe.Turn];
+            int visibleItem = this.TurnEvents.ClientSize.Height / this.TurnEvents.ItemHeight;
+            this.TurnEvents.TopIndex = Math.Max( this.TurnEvents.Items.Count - visibleItem + 1, 0 );
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void EventsButton_Click( object sender, EventArgs e )
+        {
+            EventLog eventLog = new EventLog( _universe );
+            eventLog.ShowDialog();
+        }
+
+        private void OverviewButton_Click(object sender, EventArgs e)
+        {
+            List<object> toDisplay = new List<object>();
+            
+            foreach (Planet pl in _universe.Planets.Values)
+            {
+                if (pl.IsDiscovered)
+                {
+                    string name = pl.Name.ToString();
+                    toDisplay.Add(name);
+                }
+            }
+            OverViewList.DataSource = toDisplay;
+            foreach (Control c in _cockpitControls) 
+            {
+                c.Hide();
+            }
+            foreach (Control c in _overviewControls)
+            {
+                c.Show();
+
+            }
+
+        }
+
+        private void CockpitButton_Click(object sender, EventArgs e)
+        {
+            foreach(Control c in _cockpitControls)
+            {
+                c.Show();
+            }
+            foreach(Control c in _overviewControls)
+            {
+                c.Hide();
+            }
+        }
+
+        private void DisplayOverviewDetails(object sender, EventArgs e)
+        {
+            List<object> details = new List<object>();
+            var curSelected = OverViewList.SelectedValue;
+            foreach (Planet pl in _universe.Planets.Values)
+            {
+                if(pl.Name == curSelected.ToString() && pl.IsDiscovered) 
+                {
+                    details.Add("Name: "+pl.Name);
+                    details.Add("Type: " +pl.Type);
+                    details.Add("Climate: "+pl.Climate);
+                    details.Add("Surface: "+pl.Surface);
+                    details.Add("Resources: "+pl.Ressources);
+                    details.Add("Inhabitants: "+pl.InhabitantsName);
+                    details.Add("Has factory: "+pl.Factory);
+                    details.Add("Look: ");
+                    PlanetImg.Image = _planets[pl.Img-1];
+                    
+                    OverviewDetails.DataSource = details;
+                }
+            }
+        }
+
+        
     }
 }
- 

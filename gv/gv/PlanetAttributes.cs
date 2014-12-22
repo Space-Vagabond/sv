@@ -5,7 +5,7 @@ namespace gv
 {
     public class PlanetAttributes
     {
-       internal static readonly List<string> _planetTypes = new List<string>()
+       static readonly List<string> _planetTypes = new List<string>()
        {
                 "Telluric Silicat" ,
                 "Telluric Carbon" ,
@@ -18,6 +18,7 @@ namespace gv
                 "Gazeous Helium" ,
                 "Chthonian"
         };
+
         internal static readonly List<string> _planetSurfaces = new List<string>()
         {
             "Lava",
@@ -50,7 +51,7 @@ namespace gv
         {
             return _planetTypes[i] ;
         }
-        public static List<string> PlanetTypes
+        public static IReadOnlyList<string> PlanetTypes
         {
             get { return _planetTypes; }
         }

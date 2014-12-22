@@ -44,16 +44,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EventLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventLog.Designer.cs">
+      <DependentUpon>EventLog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameLoader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameLoader.Designer.cs">
+      <DependentUpon>GameLoader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="launcher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="launcher.Designer.cs">
+      <DependentUpon>launcher.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EventLog.resx">
+      <DependentUpon>EventLog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameLoader.resx">
+      <DependentUpon>GameLoader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="launcher.resx">
+      <DependentUpon>launcher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

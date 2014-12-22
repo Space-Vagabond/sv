@@ -8,14 +8,18 @@ namespace gv
         Position _position;
         bool _containsPlanet;
         Planet _planet;
+        Universe _containerU;
+        Chunk _containerC;
 
-        public Cell( Position Pos )
+        public Cell( Position Pos, Universe u, Chunk c )
         {
+            _containerU = u;
+            _containerC = c;
             _position = Pos;
         }
         public void AddPlanet()
         {
-            _planet = Universe.AddPlanet();
+            _planet = _containerU.AddPlanet();
         }
 
         public bool ContainsPlanet
@@ -32,6 +36,10 @@ namespace gv
         {
             get { return _planet; }
             set { _planet = value; }
+        }
+        public Chunk ContainerChunck
+        {
+            get { return _containerC; }
         }
     }
 }

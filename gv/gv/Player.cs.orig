@@ -11,7 +11,6 @@ namespace gv
 {
     public class Player
     {
-        string _name;
         Position _position;
         bool _canMove;
         int _speed;
@@ -65,13 +64,16 @@ namespace gv
                 {
                     _ressources[p.Ressources] += 10;
                 }
+<<<<<<< HEAD
             }
-
+            
+=======
+            }            
+>>>>>>> F_Change_chunk
         }
         public XElement ToXML()
         {
-            return new XElement( "Player",
-                new XElement( "Name", _name ),
+            return new XElement( "Player", 
                 new XElement( "Speed", _speed ),
                 new XElement("X", Position.X),
                 new XElement("Y", Position.Y),
@@ -102,12 +104,6 @@ namespace gv
         public Dictionary<string, int> Ressources
         {
             get { return _ressources; }
-            set { _ressources = value; }
-        }
-        public string Name
-        {
-            get { return _name; }
-            set { _name = value; }
         }
     }
 }

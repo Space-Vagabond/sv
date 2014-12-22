@@ -1,60 +1,179 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Xml.Linq;
+using ET.FakeText;
 
 
 namespace gv
 {
     public class Universe
     {
-        static readonly List<Planet> _planets = new List<Planet>();
-        public static readonly List<Chunk> _chunks = new List<Chunk>();
-        public static readonly List<Cell> _cells = new List<Cell>();
-        public static Random rand = new Random();
-        public static Player _p = new Player();
+        readonly Dictionary<string,Planet> _planets = new Dictionary<string,Planet>();
+        readonly Dictionary<Position,Chunk> _chunks = new Dictionary<Position,Chunk>();
+        Dictionary<int,Chunk> _shownChunks = new Dictionary<int,Chunk>();
+        readonly List<Cell> _cells = new List<Cell>();
+        Random rand = new Random();
+        internal TextGenerator NameGen;
+        EventGenerator _events;
+        Player _player;
+        int _turn;
 
         public Universe()
         {
+            _events = new EventGenerator( this );
+            _player = new Player(this);
+            NameGen = new TextGenerator(WordTypes.Name);
+            int k = 1;
             for( int i = -1; i < 1; i++ )
             {
                 for( int j = -1; j < 1; j++ )
                 {
-                    Chunk c = new Chunk( new Position( i * 10, j * 10 ) );
-                    _chunks.Add( c );
+                    Chunk c = new Chunk( new Position( i * 10, j * 10 ), this );
+                    _chunks.Add(c.Position, c );
+                    _shownChunks.Add(k,c);
+                    k++;
                 }
             }   
             
         }       
-        public static Planet AddPlanet()
-
+        public Planet AddPlanet()
         {
-            Planet p = new Planet();
-            _planets.Add(p);
+            Planet p;
+            do
+            {
+                p = Planet.CreatePlanet( this );
+            } while( _planets.ContainsKey(p.Name )); 
+           
+            _planets.Add(p.Name, p);
             return p;
         }
-        public static Planet CreateEarth()
+        public Planet CreateEarth()
         {
-            Planet earth = new Planet( false );
-            _planets.Add( earth );
+            Planet earth = new Earth( this );
+            _planets.Add( earth.Name, earth );
             return earth;
         }
         public Planet CreateEldorado()
         {
-            Planet eldorado =  new Planet( true );
-            _planets.Add( eldorado );
+            Planet eldorado =  new Eldorado( this );
+            _planets.Add( eldorado.Name, eldorado );
             return eldorado;
         }
-        public static List<Planet> Planets
+        public bool ShouldSpawnEldorado()
+        {
+            if( !_planets.ContainsKey( "Eldorado" ) )
+            {
+                int n = _turn * _chunks.Count();
+                if( n > 100 )
+                {
+                    int k = (int)(100 - Math.Exp( ((n - 100) / 50) ));
+
+
+                    if( k <= 0 || rand.Next( 1, k ) == 1 )
+                    {
+                        CreateEldorado();
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    return false;
+                }     
+            }
+            else
+            {
+                return false;
+            }       
+        }
+        /// <summary>
+        /// to sav the whole universe as XML
+        /// </summary>
+        public void ToXML()
+        {
+            XDocument save = new XDocument(
+                new XElement( "Game",
+                    new XElement(_player .ToXML()),
+                    new XElement("Turn", _turn),
+                    new XElement("Planets",
+                        from p in _planets
+                        select new XElement("Planet",
+                            new XElement("Class",p.GetType().AssemblyQualifiedName),
+                            new XElement("Name", p.Value.Name),
+                            new XElement("Type", p.Value.Type),
+                            new XElement("Climate", p.Value.Climate),
+                            new XElement("Surface", p.Value.Surface),
+                            new XElement("Ressources", p.Value.Ressources),
+                            new XElement("IsInhabited", p.Value.IsInhabited),
+                            new XElement("InhabitantsName", p.Value.InhabitantsName),
+                            new XElement("Built", p.Value.Factory),
+                            new XElement("Blocked", p.Value.Blocked),
+                            new XElement("Discovered", p.Value.IsDiscovered),
+                            new XElement("ImgId", p.Value.Img)
+                        )
+                    ),
+                    new XElement("Chunks",
+                        from C in _chunks.Values
+                        select new XElement("Chunk", 
+                            new XElement("X", C.Position.X),
+                            new XElement("Y", C.Position.Y)
+                            )
+                    ),
+                    new XElement("Cells",
+                        from c in _cells
+                        select new XElement("Cell",
+                            new XElement("containerX", c.ContainerChunck.Position.X),
+                            new XElement("containerY", c.ContainerChunck.Position.Y),
+                            new XElement("ContainsPlanet", c.ContainsPlanet),
+                            new XElement("X", c.Position.X),
+                            new XElement("Y", c.Position.Y),
+                            new XElement("ContainedPlanet", (c.ContainsPlanet?c.ContainedPlanet.Name : null))
+                        )
+                    )
+                )
+            );
+            save.Save( @".\..\..\..\Saves/save"+_player.Name+".xml" );
+        }
+        public void EndTurn()
+        {
+            _turn += 1;
+            _player.EndTurn();
+        }
+        public Dictionary<string,Planet> Planets
         {
             get { return _planets; }
         }
-        public static List<Chunk> Chunks
+        public Dictionary<Position,Chunk> Chunks
         {
-            get { return _chunks;}
+           get { return _chunks;}
         }
-        public static List<Cell> Cells
+        public List<Cell> Cells
         {
             get { return _cells; }
         }
-        
+        public Player User
+        {
+            get { return _player; }
+        }
+        public Random Rand
+        {
+            get { return rand ; }
+        }
+        public EventGenerator Event
+        {
+            get { return _events; }
+        }
+        public int Turn
+        {
+            get { return _turn; }
+        }
+        public Dictionary<int,Chunk> ShownChunks
+        {
+            get { return _shownChunks; }
+        }      
     }
 }
