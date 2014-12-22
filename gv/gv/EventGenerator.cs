@@ -24,7 +24,7 @@ namespace gv
            {
                if( pl.Name != "Earth" && pl.Name != "Eldorado" && pl.IsDiscovered)
                {
-                   int caseEvent = _u.Rand.Next( 0, 50);
+                   int caseEvent = _u.Rand.Next( 0, 40);
                    switch( caseEvent )
                    {
                        case 0: MeteorStrikesPlanet( turnEvents, pl );
@@ -33,17 +33,31 @@ namespace gv
                            break;
                        case 2: ElectricStorm( turnEvents, pl );
                            break;
-                       case 3: SpaceshipNoMove(turnEvents);
-                           break;
-                       case 4: PlResourcesStolen(turnEvents);
-                           break;
-                       case 5: GainSpeed(turnEvents);
-                           break;
+                     
                            
                    }    
                }          
            }
-           _allEvents.Add( _u.Turn, turnEvents );
+           PlayerEvents( turnEvents );
+           _allEvents.Add(_u.Turn, turnEvents);
+        }
+
+        void PlayerEvents(List<string> turnEvents)
+        {
+            int choice = _u.Rand.Next(0, 5);  
+
+            if (choice == 0) 
+            {
+                SpaceshipNoMove( turnEvents );
+            }
+            else if (choice == 1)
+            {
+                PlResourcesStolen( turnEvents );
+            }
+            else if (choice == 2)
+            {
+                GainSpeed( turnEvents );
+            }
         }
         /// <summary>
         /// Changing surface and inhabitants 
@@ -79,20 +93,14 @@ namespace gv
         /// <param name="turnEvents"></param>
         void SpaceshipNoMove(List<string> turnEvents)
         {
-            int luck = _u.Rand.Next(0, 10);
-            if (_u.User.RemainingSteps > 0 && luck == 1)
-            {
-                _u.User.RemainingSteps = 0;
-                turnEvents.Add("Your spaceship was damaged, you can't move this turn");
-            }
+            _u.User.RemainingSteps = 0;
+            turnEvents.Add("Your spaceship was damaged, you can't move this turn");
         }
 
         void PlResourcesStolen(List<string> turnEvents)
         {
-            int luck = _u.Rand.Next(0, 10);
-            if (luck == 1)
-            {
-                int amount = _u.Rand.Next(5, 20);
+            
+                int amount = _u.Rand.Next(0, 5);
                 if (_u.User.Ressources["Metal"] > amount)
                 {
                     _u.User.Ressources["Metal"] -= amount;
@@ -103,7 +111,7 @@ namespace gv
                     _u.User.Ressources["Gems"] -= amount;
                     turnEvents.Add(String.Format("Income was stolen by local smugglers, you lost {0} gems", amount));
                 }
-            }
+            
         }
 
         void GainSpeed( List<string> turnEvents)
