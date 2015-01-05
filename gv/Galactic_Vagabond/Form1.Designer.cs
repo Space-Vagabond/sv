@@ -505,6 +505,7 @@
             this.CodexButton.TabIndex = 15;
             this.CodexButton.Text = "Codex";
             this.CodexButton.UseVisualStyleBackColor = false;
+            this.CodexButton.Click += new System.EventHandler(this.CodexButton_Click);
             // 
             // StatisticsButton
             // 

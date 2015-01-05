@@ -16,7 +16,8 @@ namespace Galactic_Vagabond
         Image[] _planets= new Image[20];
         List<Control> _displayedControls = new List<Control>();
         List<Control> _cockpitControls = new List<Control>();
-        List<Control> _overviewControls = new List<Control>();      
+        List<Control> _overviewControls = new List<Control>();
+       
 
         public Form_GV_01()
         {
@@ -72,6 +73,8 @@ namespace Galactic_Vagabond
             _overviewControls.Add(OverViewList);
             _overviewControls.Add(OverviewDetails);
             _overviewControls.Add(PlanetImg);
+
+           
         }
         /// <summary>
         /// Initiaizing the map controller
@@ -532,6 +535,12 @@ namespace Galactic_Vagabond
                     OverviewDetails.DataSource = details;
                 }
             }
+        }
+
+        private void CodexButton_Click(object sender, EventArgs e)
+        {
+            Codex codex = new Codex();
+            codex.ShowDialog();
         }
 
         

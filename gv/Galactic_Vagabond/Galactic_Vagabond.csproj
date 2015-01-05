@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Codex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Codex.Designer.cs">
+      <DependentUpon>Codex.cs</DependentUpon>
+    </Compile>
     <Compile Include="EventLog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Codex.resx">
+      <DependentUpon>Codex.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EventLog.resx">
       <DependentUpon>EventLog.cs</DependentUpon>
     </EmbeddedResource>
