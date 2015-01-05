@@ -18,6 +18,17 @@ namespace gv
         int _remainingSteps;
         Universe _universe;
         Dictionary<string, int> _ressources = new Dictionary<string,int>();
+        bool _gazExtractor;
+        bool _gemsExtractor;
+        bool _plutoniumExtractor;
+        bool _hydrogenEngine;
+        bool _heliumEngine;
+        bool _plutoniumEngine;
+        bool _factoryUpgrade;
+        bool _radar;
+        bool _diplomacy;
+        bool _workers;
+        bool _slavery;
 
         
        public Player(Universe u)
@@ -27,6 +38,19 @@ namespace gv
             _speed = 4000;
             _canMove = true;
             _remainingSteps = _speed;
+
+            _gazExtractor = false;
+            _gemsExtractor = false;
+            _plutoniumExtractor = false;
+            _hydrogenEngine = false;
+            _heliumEngine = false;
+            _plutoniumEngine = false;
+            _factoryUpgrade = false;
+            _radar = false;
+            _diplomacy = false;
+            _workers = false;
+            _slavery = false;
+
             foreach( string s in PlanetAttributes.PlanetRessources )
             {
                 if( s != "none" )
@@ -108,6 +132,50 @@ namespace gv
         {
             get { return _name; }
             set { _name = value; }
+        }
+        public bool GazExtractor
+        {
+            get { return _gazExtractor; }
+        }
+        public bool GemsExtractor
+        {
+            get { return _gemsExtractor; }
+        }
+        public bool PlutoniumExtractor
+        {
+            get { return _plutoniumExtractor; }
+        }
+        public bool HydrogenEngine
+        {
+            get { return _hydrogenEngine; }
+        }
+        public bool HeliumEngine
+        {
+            get { return _heliumEngine; }
+        }
+        public bool PlutoniumEngine
+        {
+            get { return _plutoniumEngine; }
+        }
+        public bool FactoryUpgrade
+        {
+            get { return _factoryUpgrade; }
+        }
+        public bool Radar
+        {
+            get { return _radar; }
+        }
+        public bool Diplomacy
+        {
+            get { return _diplomacy; }
+        }
+        public bool Workers
+        {
+            get { return _workers; }
+        }
+        public bool Slavery
+        {
+            get { return _slavery; }
         }
     }
 }

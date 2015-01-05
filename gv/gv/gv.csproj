@@ -62,6 +62,7 @@
     <Compile Include="PTelluricLava.cs" />
     <Compile Include="PTelluricMetal.cs" />
     <Compile Include="PTelluricSilicat.cs" />
+    <Compile Include="Tech.cs" />
     <Compile Include="Universe.cs" />
   </ItemGroup>
   <ItemGroup>
