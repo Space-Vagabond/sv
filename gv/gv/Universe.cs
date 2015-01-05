@@ -11,6 +11,7 @@ namespace gv
     {
         readonly Dictionary<string,Planet> _planets = new Dictionary<string,Planet>();
         readonly Dictionary<Position,Chunk> _chunks = new Dictionary<Position,Chunk>();
+        readonly Dictionary<string,Tech> Techs = new Dictionary<string, Tech>();
         Dictionary<int,Chunk> _shownChunks = new Dictionary<int,Chunk>();
         readonly List<Cell> _cells = new List<Cell>();
         Random rand = new Random();
@@ -23,6 +24,25 @@ namespace gv
         {
             _events = new EventGenerator( this );
             _player = new Player(this);
+            Tech[] T ;
+
+            T[0] = new Tech( "Gaz Extractor", "Allows you to extract Helium and Hydrogen", 50, 50, 0, 0, 0, 0 );
+            T[1] = new Tech( "Gems Extractor", "Allows you to extract Gems", 100, 100, 100, 100, 0, 0, T[0] );
+
+
+            Techs = T.ToDictionary( t => t.Name, t => t );
+            /*
+            {"Gems Extractor","Allows you to extract Gems"},
+            {"Plutonium Extractor","Allows you to extract Plutonium"},
+            {"Hydrogen Engine","Increases your max speed to 10"},
+            {"Helium Engine","Increases your max speed to 15"},
+            {"Plutonium Engine","Increases your max speed to 20"},
+            {"Factory Upgrade", "Multiplies your income by 1.5"},
+            {"Radar","Allows you to know where are planets in Overview"},
+            {"Diplomacy","Aliens are now your friends they help for you, adds 10% income for inhabited planets"},
+            {"Workers","Aliens are now your workers they work for you, adds 20% income for inhabited planets"},
+            {"Slavery", "Aliens are now your slaves, you force them to work for you, adds 50% income for inhabited planets"}
+        };*/
             NameGen = new TextGenerator(WordTypes.Name);
             int k = 1;
             for( int i = -1; i < 1; i++ )
