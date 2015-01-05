@@ -31,8 +31,10 @@
             this.HydrogenButton = new System.Windows.Forms.Button();
             this.SiliciumButton = new System.Windows.Forms.Button();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.GemsButton = new System.Windows.Forms.Button();
+            this.PlutoniumButton = new System.Windows.Forms.Button();
+            this.MetalButton = new System.Windows.Forms.Button();
+            this.HeliumButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // HydrogenButton
@@ -73,33 +75,61 @@
             this.webBrowser1.Visible = false;
             this.webBrowser1.WebBrowserShortcutsEnabled = false;
             // 
-            // button1
+            // GemsButton
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Chartreuse;
-            this.button1.Location = new System.Drawing.Point(12, 71);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Gems";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.GemsButton.BackColor = System.Drawing.Color.Transparent;
+            this.GemsButton.FlatAppearance.BorderSize = 0;
+            this.GemsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GemsButton.ForeColor = System.Drawing.Color.Chartreuse;
+            this.GemsButton.Location = new System.Drawing.Point(12, 71);
+            this.GemsButton.Name = "GemsButton";
+            this.GemsButton.Size = new System.Drawing.Size(115, 23);
+            this.GemsButton.TabIndex = 3;
+            this.GemsButton.Text = "Gems";
+            this.GemsButton.UseVisualStyleBackColor = false;
+            this.GemsButton.Click += new System.EventHandler(this.GemsButton_Click);
             // 
-            // button2
+            // PlutoniumButton
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.Chartreuse;
-            this.button2.Location = new System.Drawing.Point(12, 100);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(115, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Plutonium";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.PlutoniumButton.BackColor = System.Drawing.Color.Transparent;
+            this.PlutoniumButton.FlatAppearance.BorderSize = 0;
+            this.PlutoniumButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PlutoniumButton.ForeColor = System.Drawing.Color.Chartreuse;
+            this.PlutoniumButton.Location = new System.Drawing.Point(12, 100);
+            this.PlutoniumButton.Name = "PlutoniumButton";
+            this.PlutoniumButton.Size = new System.Drawing.Size(115, 23);
+            this.PlutoniumButton.TabIndex = 4;
+            this.PlutoniumButton.Text = "Plutonium";
+            this.PlutoniumButton.UseVisualStyleBackColor = false;
+            this.PlutoniumButton.Click += new System.EventHandler(this.PlutoniumButton_Click);
+            // 
+            // MetalButton
+            // 
+            this.MetalButton.BackColor = System.Drawing.Color.Transparent;
+            this.MetalButton.FlatAppearance.BorderSize = 0;
+            this.MetalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MetalButton.ForeColor = System.Drawing.Color.Chartreuse;
+            this.MetalButton.Location = new System.Drawing.Point(13, 129);
+            this.MetalButton.Name = "MetalButton";
+            this.MetalButton.Size = new System.Drawing.Size(115, 23);
+            this.MetalButton.TabIndex = 5;
+            this.MetalButton.Text = "Metal";
+            this.MetalButton.UseVisualStyleBackColor = false;
+            this.MetalButton.Click += new System.EventHandler(this.MetalButton_Click);
+            // 
+            // HeliumButton
+            // 
+            this.HeliumButton.BackColor = System.Drawing.Color.Transparent;
+            this.HeliumButton.FlatAppearance.BorderSize = 0;
+            this.HeliumButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HeliumButton.ForeColor = System.Drawing.Color.Chartreuse;
+            this.HeliumButton.Location = new System.Drawing.Point(13, 158);
+            this.HeliumButton.Name = "HeliumButton";
+            this.HeliumButton.Size = new System.Drawing.Size(115, 23);
+            this.HeliumButton.TabIndex = 6;
+            this.HeliumButton.Text = "Helium";
+            this.HeliumButton.UseVisualStyleBackColor = false;
+            this.HeliumButton.Click += new System.EventHandler(this.HeliumButton_Click);
             // 
             // Codex
             // 
@@ -107,8 +137,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1016, 687);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.HeliumButton);
+            this.Controls.Add(this.MetalButton);
+            this.Controls.Add(this.PlutoniumButton);
+            this.Controls.Add(this.GemsButton);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.SiliciumButton);
             this.Controls.Add(this.HydrogenButton);
@@ -123,7 +155,9 @@
         private System.Windows.Forms.Button HydrogenButton;
         private System.Windows.Forms.Button SiliciumButton;
         private System.Windows.Forms.WebBrowser webBrowser1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button GemsButton;
+        private System.Windows.Forms.Button PlutoniumButton;
+        private System.Windows.Forms.Button MetalButton;
+        private System.Windows.Forms.Button HeliumButton;
     }
 }

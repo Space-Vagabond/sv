@@ -29,17 +29,30 @@ namespace Galactic_Vagabond
             this.webBrowser1.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void GemsButton_Click(object sender, EventArgs e)
         {
             this.webBrowser1.Navigate("en.wikipedia.org/wiki/Gemstone");
             this.webBrowser1.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void PlutoniumButton_Click(object sender, EventArgs e)
         {
             this.webBrowser1.Navigate("en.wikipedia.org/wiki/Plutonium");
             this.webBrowser1.Show();
         }
+
+        private void MetalButton_Click(object sender, EventArgs e)
+        {
+            this.webBrowser1.Navigate("en.wikipedia.org/wiki/Metal");
+            this.webBrowser1.Show();
+        }
+
+        private void HeliumButton_Click(object sender, EventArgs e)
+        {
+            this.webBrowser1.Navigate("en.wikipedia.org/wiki/Helium");
+            this.webBrowser1.Show();
+        }
+
 
     }
 }
