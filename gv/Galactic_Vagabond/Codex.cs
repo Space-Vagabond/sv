@@ -53,6 +53,36 @@ namespace Galactic_Vagabond
             this.webBrowser1.Show();
         }
 
+        private void CarbonButton_Click(object sender, EventArgs e)
+        {
+            this.webBrowser1.Navigate("en.wikipedia.org/wiki/Carbon_planet");
+            this.webBrowser1.Show();
+        }
+
+        private void CorelessButton_Click(object sender, EventArgs e)
+        {
+            this.webBrowser1.Navigate("en.wikipedia.org/wiki/Coreless_planet");
+            this.webBrowser1.Show();
+        }
+
+        private void ChthonianButton_Click(object sender, EventArgs e)
+        {
+            this.webBrowser1.Navigate("en.wikipedia.org/wiki/Chthonian_planet");
+            this.webBrowser1.Show();
+        }
+
+        private void IronButton_Click(object sender, EventArgs e)
+        {
+            this.webBrowser1.Navigate("en.wikipedia.org/wiki/Iron_planet");
+            this.webBrowser1.Show();
+        }
+
+        private void TelluricButton_Click(object sender, EventArgs e)
+        {
+            this.webBrowser1.Navigate("en.wikipedia.org/wiki/Terrestrial_planet");
+            this.webBrowser1.Show();
+        }
+
 
     }
 }
