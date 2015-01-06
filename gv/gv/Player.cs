@@ -84,6 +84,29 @@ namespace gv
                 )
             );
         }
+        public bool UnlockTech( int idAsked )
+        {
+            bool canBuy = false;
+            
+            foreach( string s in PlanetAttributes.PlanetRessources )
+            {
+                if( s != "none" )
+                {
+                    var type = _universe.Techs[idAsked].GetType();
+                    var property = type.GetProperty( "Cost" + s );
+                    var value =  property.Attributes;
+                    if( _ressources[s] < (int)value )
+                    {
+                        canBuy = false;
+                    }
+                }
+            }
+            if( canBuy )
+            {
+                _universe.BuyTech( idAsked );
+            }
+            return canBuy;
+        }
         public int Speed
         {
             get { return _speed; }

@@ -11,7 +11,6 @@ namespace gv
     {
         readonly Dictionary<string,Planet> _planets = new Dictionary<string,Planet>();
         readonly Dictionary<Position,Chunk> _chunks = new Dictionary<Position,Chunk>();
-        readonly Dictionary<string,Tech> Techs = new Dictionary<string, Tech>();
         Dictionary<int,Chunk> _shownChunks = new Dictionary<int,Chunk>();
         readonly List<Cell> _cells = new List<Cell>();
         Random rand = new Random();
@@ -19,7 +18,7 @@ namespace gv
         EventGenerator _events;
         Player _player;
         int _turn; 
-        List<Tech> _techs = new List<Tech>();
+        readonly List<Tech> _techs = new List<Tech>();
 
         public Universe()
         {
@@ -159,6 +158,10 @@ namespace gv
             _turn += 1;
             _player.EndTurn();
         }
+        public void BuyTech( int idBought )
+        {
+            _techs[idBought].IsDiscovered = true;
+        }
         public Dictionary<string,Planet> Planets
         {
             get { return _planets; }
@@ -190,6 +193,10 @@ namespace gv
         public Dictionary<int,Chunk> ShownChunks
         {
             get { return _shownChunks; }
-        }      
+        }
+        public List<Tech> Techs
+        {
+            get { return _techs; }
+        }
     }
 }
