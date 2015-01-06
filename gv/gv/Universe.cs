@@ -158,9 +158,9 @@ namespace gv
             _turn += 1;
             _player.EndTurn();
         }
-        public void BuyTech( int idBought )
+        public bool BuyTech( int idBought )
         {
-            _techs[idBought].IsDiscovered = true;
+            return(_techs[idBought].IsDiscovered = _player.UnlockTech( idBought ));          
         }
         public Dictionary<string,Planet> Planets
         {

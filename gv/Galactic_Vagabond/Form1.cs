@@ -16,7 +16,9 @@ namespace Galactic_Vagabond
         Image[] _planets= new Image[20];
         List<Control> _displayedControls = new List<Control>();
         List<Control> _cockpitControls = new List<Control>();
-        List<Control> _overviewControls = new List<Control>();      
+        List<Control> _overviewControls = new List<Control>();
+        List<Control> _techControls = new List<Control>();
+        List<Control> _tabControls = new List<Control>();
 
         public Form_GV_01()
         {
@@ -52,6 +54,14 @@ namespace Galactic_Vagabond
             ShowCurrentPlanet();
             DisplayPlayerDatas();
 
+            _tabControls.Add( CockpitButton );
+            _tabControls.Add( OverviewButton );
+            _tabControls.Add( TechButton );
+            _tabControls.Add( EventsButton );
+            _tabControls.Add( CodexButton );
+            _tabControls.Add( StatisticsButton );
+            _tabControls.Add( EndTurn );
+
             _cockpitControls.Add(map);
             _cockpitControls.Add(TurnEvents);
             _cockpitControls.Add(CurrentPlanet);
@@ -72,6 +82,9 @@ namespace Galactic_Vagabond
             _overviewControls.Add(OverViewList);
             _overviewControls.Add(OverviewDetails);
             _overviewControls.Add(PlanetImg);
+
+            _techControls.Add( TechPanel );
+            TechPanel.Hide();
         }
         /// <summary>
         /// Initiaizing the map controller
@@ -534,6 +547,26 @@ namespace Galactic_Vagabond
             }
         }
 
-        
+        private void TechButton_Click( object sender, EventArgs e )
+        {
+            foreach( Control c in Controls )
+            {
+                c.Hide();
+            }
+            foreach( Control c in _tabControls )
+            {
+                c.Show();
+            }
+            TechPanel.Show();
+        }
+
+        private void TGazEx_Click( object sender, EventArgs e )
+        {
+            bool msg = _universe.BuyTech( 0 );
+        }
+        private void TGemsEx_Click( object sender, EventArgs e )
+        {
+            bool msg = _universe.BuyTech( 1 );
+        }
     }
 }

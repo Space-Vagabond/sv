@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
@@ -86,26 +88,22 @@ namespace gv
         }
         public bool UnlockTech( int idAsked )
         {
-            bool canBuy = false;
+            Type type = typeof( Tech );           
             
             foreach( string s in PlanetAttributes.PlanetRessources )
             {
                 if( s != "none" )
                 {
-                    var type = _universe.Techs[idAsked].GetType();
-                    var property = type.GetProperty( "Cost" + s );
-                    var value =  property.Attributes;
-                    if( _ressources[s] < (int)value )
-                    {
-                        canBuy = false;
-                    }
+                    object o = _universe.Techs[idAsked];
+                    PropertyInfo property = type.GetProperty( "Cost" + s, typeof( int ) );
+                    Debug.Assert( property != null, "CostXXX must be int!" );
+
+                    object value =  property.GetValue( o );
+
+                    if( _ressources[s] < (int)value ) return false;
                 }
             }
-            if( canBuy )
-            {
-                _universe.BuyTech( idAsked );
-            }
-            return canBuy;
+            return true;
         }
         public int Speed
         {
