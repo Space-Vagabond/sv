@@ -83,6 +83,24 @@ namespace Galactic_Vagabond
             this.webBrowser1.Show();
         }
 
+        private void HydroEngButton_Click(object sender, EventArgs e)
+        {
+            this.webBrowser1.Navigate("en.wikipedia.org/wiki/Hydrogen_internal_combustion_engine_vehicle");
+            this.webBrowser1.Show();
+        }
+
+        private void PlutoEngButton_Click(object sender, EventArgs e)
+        {
+            this.webBrowser1.Navigate("en.wikipedia.org/wiki/Nuclear_propulsion");
+            this.webBrowser1.Show();
+        }
+
+        private void BiodomeButton_Click(object sender, EventArgs e)
+        {
+            this.webBrowser1.Navigate("en.wikipedia.org/wiki/Closed_ecological_system");
+            this.webBrowser1.Show();
+        }
+
 
     }
 }

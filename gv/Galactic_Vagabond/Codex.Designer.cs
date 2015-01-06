@@ -42,6 +42,10 @@
             this.CarbonButton = new System.Windows.Forms.Button();
             this.ResourcesLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.TechLabel = new System.Windows.Forms.Label();
+            this.HydroEngButton = new System.Windows.Forms.Button();
+            this.PlutoEngButton = new System.Windows.Forms.Button();
+            this.BiodomeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // HydrogenButton
@@ -77,7 +81,7 @@
             this.webBrowser1.Location = new System.Drawing.Point(151, 0);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(864, 686);
+            this.webBrowser1.Size = new System.Drawing.Size(1101, 686);
             this.webBrowser1.TabIndex = 2;
             this.webBrowser1.Visible = false;
             this.webBrowser1.WebBrowserShortcutsEnabled = false;
@@ -230,12 +234,69 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Types";
             // 
+            // TechLabel
+            // 
+            this.TechLabel.AutoSize = true;
+            this.TechLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TechLabel.ForeColor = System.Drawing.Color.White;
+            this.TechLabel.Location = new System.Drawing.Point(12, 373);
+            this.TechLabel.Name = "TechLabel";
+            this.TechLabel.Size = new System.Drawing.Size(103, 16);
+            this.TechLabel.TabIndex = 14;
+            this.TechLabel.Text = "Technologies";
+            // 
+            // HydroEngButton
+            // 
+            this.HydroEngButton.BackColor = System.Drawing.Color.Transparent;
+            this.HydroEngButton.FlatAppearance.BorderSize = 0;
+            this.HydroEngButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HydroEngButton.ForeColor = System.Drawing.Color.Chartreuse;
+            this.HydroEngButton.Location = new System.Drawing.Point(13, 392);
+            this.HydroEngButton.Name = "HydroEngButton";
+            this.HydroEngButton.Size = new System.Drawing.Size(115, 23);
+            this.HydroEngButton.TabIndex = 15;
+            this.HydroEngButton.Text = "Hydrogen engine";
+            this.HydroEngButton.UseVisualStyleBackColor = false;
+            this.HydroEngButton.Click += new System.EventHandler(this.HydroEngButton_Click);
+            // 
+            // PlutoEngButton
+            // 
+            this.PlutoEngButton.BackColor = System.Drawing.Color.Transparent;
+            this.PlutoEngButton.FlatAppearance.BorderSize = 0;
+            this.PlutoEngButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PlutoEngButton.ForeColor = System.Drawing.Color.Chartreuse;
+            this.PlutoEngButton.Location = new System.Drawing.Point(12, 421);
+            this.PlutoEngButton.Name = "PlutoEngButton";
+            this.PlutoEngButton.Size = new System.Drawing.Size(115, 23);
+            this.PlutoEngButton.TabIndex = 16;
+            this.PlutoEngButton.Text = "Plutonium engine";
+            this.PlutoEngButton.UseVisualStyleBackColor = false;
+            this.PlutoEngButton.Click += new System.EventHandler(this.PlutoEngButton_Click);
+            // 
+            // BiodomeButton
+            // 
+            this.BiodomeButton.BackColor = System.Drawing.Color.Transparent;
+            this.BiodomeButton.FlatAppearance.BorderSize = 0;
+            this.BiodomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BiodomeButton.ForeColor = System.Drawing.Color.Chartreuse;
+            this.BiodomeButton.Location = new System.Drawing.Point(15, 450);
+            this.BiodomeButton.Name = "BiodomeButton";
+            this.BiodomeButton.Size = new System.Drawing.Size(115, 23);
+            this.BiodomeButton.TabIndex = 17;
+            this.BiodomeButton.Text = "Bio Dome";
+            this.BiodomeButton.UseVisualStyleBackColor = false;
+            this.BiodomeButton.Click += new System.EventHandler(this.BiodomeButton_Click);
+            // 
             // Codex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1016, 687);
+            this.ClientSize = new System.Drawing.Size(1252, 653);
+            this.Controls.Add(this.BiodomeButton);
+            this.Controls.Add(this.PlutoEngButton);
+            this.Controls.Add(this.HydroEngButton);
+            this.Controls.Add(this.TechLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ResourcesLabel);
             this.Controls.Add(this.CarbonButton);
@@ -273,5 +334,9 @@
         private System.Windows.Forms.Button CarbonButton;
         private System.Windows.Forms.Label ResourcesLabel;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label TechLabel;
+        private System.Windows.Forms.Button HydroEngButton;
+        private System.Windows.Forms.Button PlutoEngButton;
+        private System.Windows.Forms.Button BiodomeButton;
     }
 }
