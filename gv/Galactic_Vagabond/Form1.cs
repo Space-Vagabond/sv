@@ -545,8 +545,14 @@ namespace Galactic_Vagabond
             {
                 if(pl.Name == curSelected.ToString() && pl.IsDiscovered) 
                 {
+                    Cell plCell = _universe.Cells.Where( c => c.ContainedPlanet == pl ).Single();
                     details.Add("Name: "+pl.Name);
                     details.Add("Type: " +pl.Type);
+                    if(_universe.Techs[8].IsDiscovered)
+                    {
+                        details.Add( "Position X: " + plCell.Position.X.ToString() );
+                        details.Add( "Position Y: " + plCell.Position.Y.ToString() );
+                    }
                     details.Add("Climate: "+pl.Climate);
                     details.Add("Surface: "+pl.Surface);
                     details.Add("Resources: "+pl.Ressources);
@@ -601,71 +607,83 @@ namespace Galactic_Vagabond
         {
             bool msg = _universe.BuyTech( 0 );
             if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
+            Refresh();
         }
         private void TGemsEx_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 1 );
             if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
+            Refresh();
         }
 
         private void T02PlutoEx_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 2 );
             if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
+            Refresh();
         }
 
         private void T03HydroEn_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 3 );
             if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
+            Refresh();
         }
 
         private void T04HelEn_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 4 );
             if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
+            Refresh();
         }
 
         private void T05PlutoEn_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 5 );
             if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
+            Refresh();
         }
 
         private void T06FacUp_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 6 );
             if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
+            Refresh();
         }
 
         private void T07BioDome_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 7 );
             if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
+            Refresh();
         }
 
         private void T08Radar_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 8 );
             if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
+            Refresh();
         }
 
         private void T09Diplomacy_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 9 );
             if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
+            Refresh();
         }
 
         private void T10Workers_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 10 );
             if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
+            Refresh();
         }
 
         private void T11Firm_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 11 );
             if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
+            Refresh();
         }
     }
 }
