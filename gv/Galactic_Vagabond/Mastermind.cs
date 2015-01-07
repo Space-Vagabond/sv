@@ -13,23 +13,27 @@ namespace Galactic_Vagabond
     public partial class Mastermind : Form
     {
         string _toDisplay;
+
         public Mastermind()
         {
             InitializeComponent();
             LettersSequence _l = new LettersSequence();
-            string _toDisplay =  _l.GenerateSequence();
-            this.SequenceLabel.Text = _toDisplay.ToUpper();  
+            _toDisplay =  _l.GenerateSequence();
+            this.SequenceLabel.Text = _toDisplay.ToUpper();
+            _toDisplay = this.SequenceLabel.Text;
         }
 
         private void ValidateButton_Click(object sender, EventArgs e)
         {
-            if (this.UserInput.Text.ToLower() == _toDisplay)
+            if (this.UserInput.Text == _toDisplay)
             {
-
+                MessageBox.Show("You are welcome on our planet, noble traveler");
             }
-
+            else
+            {
+                MessageBox.Show("Go back to your planet with your inferior brain");
+            }
         }
-
     }
 
     public class LettersSequence
