@@ -93,6 +93,7 @@
             this.T02PlutoEx = new System.Windows.Forms.Button();
             this.T01GemsEx = new System.Windows.Forms.Button();
             this.T00GazEx = new System.Windows.Forms.Button();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.map)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlanetImg)).BeginInit();
             this.TechPanel.SuspendLayout();
@@ -660,6 +661,7 @@
             // TechPanel
             // 
             this.TechPanel.BackColor = System.Drawing.Color.White;
+            this.TechPanel.Controls.Add(this.progressBar1);
             this.TechPanel.Controls.Add(this.T11Firm);
             this.TechPanel.Controls.Add(this.T10Workers);
             this.TechPanel.Controls.Add(this.T09Diplomacy);
@@ -797,6 +799,14 @@
             this.T00GazEx.UseVisualStyleBackColor = true;
             this.T00GazEx.Click += new System.EventHandler(this.TGazEx_Click);
             // 
+            // progressBar1
+            // 
+            this.progressBar1.BackColor = System.Drawing.Color.Red;
+            this.progressBar1.Location = new System.Drawing.Point(137, 258);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(67, 21);
+            this.progressBar1.TabIndex = 12;
+            // 
             // Form_GV_01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -903,6 +913,7 @@
         private System.Windows.Forms.Button T04HelEn;
         private System.Windows.Forms.Button T03HydroEn;
         private System.Windows.Forms.Button T02PlutoEx;
+        private System.Windows.Forms.ProgressBar progressBar1;
 
 
 

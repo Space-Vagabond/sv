@@ -91,7 +91,7 @@ namespace Galactic_Vagabond
             _techControls.Add( TechPanel );
             TechPanel.Hide();
             TechPanel.BackColor = Color.Transparent;
-            foreach( Button b in TechPanel.Controls )
+            foreach( Button b in TechPanel.Controls.OfType<Button>() )
             {
                 string n1 = b.Name[1].ToString();
                 string n2 = b.Name[2].ToString();
@@ -627,7 +627,7 @@ namespace Galactic_Vagabond
                 c.Show();
             }
             TechPanel.Show();
-            foreach( Button b in TechPanel.Controls )
+            foreach( Button b in TechPanel.Controls.OfType<Button>() )
             {
                 string n1 = b.Name[1].ToString();
                 string n2 = b.Name[2].ToString();
