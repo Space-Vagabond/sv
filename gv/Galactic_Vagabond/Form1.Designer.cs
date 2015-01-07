@@ -651,7 +651,7 @@
             // PlanetImg
             // 
             this.PlanetImg.BackColor = System.Drawing.Color.Black;
-            this.PlanetImg.Location = new System.Drawing.Point(848, 142);
+            this.PlanetImg.Location = new System.Drawing.Point(848, 200);
             this.PlanetImg.Name = "PlanetImg";
             this.PlanetImg.Size = new System.Drawing.Size(30, 30);
             this.PlanetImg.TabIndex = 25;

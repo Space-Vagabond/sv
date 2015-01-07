@@ -110,10 +110,8 @@ namespace gv
                 {
                     _u.User.Ressources["Gems"] -= amount;
                     turnEvents.Add(String.Format("Income was stolen by local smugglers, you lost {0} gems", amount));
-                }
-            
+                }            
         }
-
         void GainSpeed( List<string> turnEvents)
         {
             _u.User.RemainingSteps += 1;

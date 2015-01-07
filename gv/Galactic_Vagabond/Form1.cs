@@ -87,6 +87,7 @@ namespace Galactic_Vagabond
 
             _techControls.Add( TechPanel );
             TechPanel.Hide();
+            TechPanel.BackColor = Color.Transparent;
         }
         /// <summary>
         /// Initiaizing the map controller
@@ -196,7 +197,18 @@ namespace Galactic_Vagabond
                 }
                 else
                 {
-                    CurrentPlanet.Text += "Constructible: no" + Environment.NewLine;
+                    if( pos.ContainedPlanet.Name == "Eldorado" )
+                    {
+                        CurrentPlanet.Text += "Constructible: Yes" + Environment.NewLine;
+                        CurrentPlanet.Text += "Built: " + ((pos.ContainedPlanet.Factory) ? "yes" : "no") + Environment.NewLine;
+
+                        CurrentPlanet.Text += "Build BioDome to recreate humanity" + Environment.NewLine;
+                        Build.Show();
+                    }
+                    else
+                    {
+                        CurrentPlanet.Text += "Constructible: no" + Environment.NewLine;
+                    }
                 }
             }
             else
@@ -221,6 +233,10 @@ namespace Galactic_Vagabond
                     {
                         EnsureChunk();
                     }
+                    else
+                    {
+                        MessageBox.Show( "No more move points" );
+                    }
                 }
                 else if( keyData == Keys.Down )
                 {
@@ -228,13 +244,20 @@ namespace Galactic_Vagabond
                     {
                         EnsureChunk();
                     }
+                    else
+                    {
+                        MessageBox.Show( "No more move points" );
+                    }
                 }
                 else if( keyData == Keys.Left )
                 {
                     if( _universe.User.Move( new Position( _universe.User.Position.X - 1, _universe.User.Position.Y ) ) )
                     {
                         EnsureChunk();
-
+                    }
+                    else
+                    {
+                        MessageBox.Show( "No more move points" );
                     }
                 }
                 else if( keyData == Keys.Right )
@@ -242,7 +265,10 @@ namespace Galactic_Vagabond
                     if( _universe.User.Move( new Position( _universe.User.Position.X + 1, _universe.User.Position.Y ) ) )
                     {
                         EnsureChunk();
-
+                    }
+                    else
+                    {
+                        MessageBox.Show( "No more move points" );
                     }
                 }
                 ShowCurrentPlanet();
@@ -401,6 +427,10 @@ namespace Galactic_Vagabond
             {
                 pos.ContainedPlanet.Factory = true;
                 ShowCurrentPlanet();
+            }
+            else if( pos.ContainsPlanet && pos.ContainedPlanet.Name == "Eldorado" )
+            {
+                MessageBox.Show( "You won the game" );
             }
         }        
         /// <summary>
@@ -591,106 +621,107 @@ namespace Galactic_Vagabond
 
                 int nb = Convert.ToInt32(n1) * 10 + Convert.ToInt32(n2);
                 b.Enabled = false;
+                b.FlatStyle = FlatStyle.Flat;
+                b.FlatAppearance.BorderColor = Color.Red;
+                b.FlatAppearance.BorderSize = 1;
+                
 
                 if( _universe.Techs[nb].Prev1 == null && _universe.Techs[nb].Prev2 == null )
                 {
                     b.Enabled = true;
+                    b.FlatAppearance.BorderColor = Color.Blue;
                 }
                 else if( _universe.Techs[nb].Prev1 != null && _universe.Techs[nb].Prev1.IsDiscovered )
                 {
                     if( _universe.Techs[nb].Prev2 != null && _universe.Techs[nb].Prev2.IsDiscovered )
                     {
                         b.Enabled = true;
+                        b.FlatAppearance.BorderColor = Color.Blue;
                     }
                     else if( _universe.Techs[nb].Prev2 == null )
                     {
                         b.Enabled = true;
+                        b.FlatAppearance.BorderColor = Color.Blue;
                     }
+                }
+                if( _universe.Techs[nb].IsDiscovered )
+                {
+                    b.Enabled = false;
+                    b.FlatAppearance.BorderColor = Color.Green;
                 }
             }
         }
-
         private void TGazEx_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 0 );
             if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
-            Refresh();
+            TechButton_Click(sender, e);
         }
         private void TGemsEx_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 1 );
             if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
-            Refresh();
+            TechButton_Click(sender, e);
         }
-
         private void T02PlutoEx_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 2 );
             if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
-            Refresh();
+            TechButton_Click(sender, e);
         }
-
         private void T03HydroEn_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 3 );
             if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
-            Refresh();
+            TechButton_Click(sender, e);
         }
-
         private void T04HelEn_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 4 );
             if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
-            Refresh();
+            TechButton_Click(sender, e);
         }
-
         private void T05PlutoEn_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 5 );
             if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
-            Refresh();
+            TechButton_Click(sender, e);
         }
-
         private void T06FacUp_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 6 );
             if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
-            Refresh();
+            TechButton_Click(sender, e);
         }
-
         private void T07BioDome_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 7 );
             if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
-            Refresh();
+            TechButton_Click(sender, e);
         }
-
         private void T08Radar_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 8 );
             if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
-            Refresh();
+            TechButton_Click(sender, e);
         }
-
         private void T09Diplomacy_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 9 );
             if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
-            Refresh();
+            TechButton_Click(sender, e);
         }
-
         private void T10Workers_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 10 );
             if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
-            Refresh();
+            TechButton_Click(sender, e);
         }
-
         private void T11Firm_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 11 );
             if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
-            Refresh();
+            TechButton_Click(sender, e);
         }
     }
 }
