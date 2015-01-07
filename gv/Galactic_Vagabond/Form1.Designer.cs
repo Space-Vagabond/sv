@@ -81,18 +81,18 @@
             this.OverviewDetails = new System.Windows.Forms.ListBox();
             this.PlanetImg = new System.Windows.Forms.PictureBox();
             this.TechPanel = new System.Windows.Forms.Panel();
-            this.TGemsEx = new System.Windows.Forms.Button();
-            this.TGazEx = new System.Windows.Forms.Button();
-            this.TPlutoEx = new System.Windows.Forms.Button();
-            this.THydroEn = new System.Windows.Forms.Button();
-            this.THelEn = new System.Windows.Forms.Button();
-            this.TPlutoEn = new System.Windows.Forms.Button();
-            this.TFacUp = new System.Windows.Forms.Button();
-            this.TBioDome = new System.Windows.Forms.Button();
-            this.TRadar = new System.Windows.Forms.Button();
-            this.TDiplomacy = new System.Windows.Forms.Button();
-            this.TWorkers = new System.Windows.Forms.Button();
-            this.TFirm = new System.Windows.Forms.Button();
+            this.T11Firm = new System.Windows.Forms.Button();
+            this.T10Workers = new System.Windows.Forms.Button();
+            this.T09Diplomacy = new System.Windows.Forms.Button();
+            this.T08Radar = new System.Windows.Forms.Button();
+            this.T07BioDome = new System.Windows.Forms.Button();
+            this.T06FacUp = new System.Windows.Forms.Button();
+            this.T05PlutoEn = new System.Windows.Forms.Button();
+            this.T04HelEn = new System.Windows.Forms.Button();
+            this.T03HydroEn = new System.Windows.Forms.Button();
+            this.T02PlutoEx = new System.Windows.Forms.Button();
+            this.T01GemsEx = new System.Windows.Forms.Button();
+            this.T00GazEx = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.map)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlanetImg)).BeginInit();
             this.TechPanel.SuspendLayout();
@@ -659,132 +659,132 @@
             // TechPanel
             // 
             this.TechPanel.BackColor = System.Drawing.Color.White;
-            this.TechPanel.Controls.Add(this.TFirm);
-            this.TechPanel.Controls.Add(this.TWorkers);
-            this.TechPanel.Controls.Add(this.TDiplomacy);
-            this.TechPanel.Controls.Add(this.TRadar);
-            this.TechPanel.Controls.Add(this.TBioDome);
-            this.TechPanel.Controls.Add(this.TFacUp);
-            this.TechPanel.Controls.Add(this.TPlutoEn);
-            this.TechPanel.Controls.Add(this.THelEn);
-            this.TechPanel.Controls.Add(this.THydroEn);
-            this.TechPanel.Controls.Add(this.TPlutoEx);
-            this.TechPanel.Controls.Add(this.TGemsEx);
-            this.TechPanel.Controls.Add(this.TGazEx);
+            this.TechPanel.Controls.Add(this.T11Firm);
+            this.TechPanel.Controls.Add(this.T10Workers);
+            this.TechPanel.Controls.Add(this.T09Diplomacy);
+            this.TechPanel.Controls.Add(this.T08Radar);
+            this.TechPanel.Controls.Add(this.T07BioDome);
+            this.TechPanel.Controls.Add(this.T06FacUp);
+            this.TechPanel.Controls.Add(this.T05PlutoEn);
+            this.TechPanel.Controls.Add(this.T04HelEn);
+            this.TechPanel.Controls.Add(this.T03HydroEn);
+            this.TechPanel.Controls.Add(this.T02PlutoEx);
+            this.TechPanel.Controls.Add(this.T01GemsEx);
+            this.TechPanel.Controls.Add(this.T00GazEx);
             this.TechPanel.Location = new System.Drawing.Point(0, 0);
             this.TechPanel.Name = "TechPanel";
             this.TechPanel.Size = new System.Drawing.Size(1258, 585);
             this.TechPanel.TabIndex = 26;
             // 
-            // TGemsEx
+            // T11Firm
             // 
-            this.TGemsEx.Location = new System.Drawing.Point(202, 19);
-            this.TGemsEx.Name = "TGemsEx";
-            this.TGemsEx.Size = new System.Drawing.Size(128, 128);
-            this.TGemsEx.TabIndex = 1;
-            this.TGemsEx.Text = "Gems Extractor";
-            this.TGemsEx.UseVisualStyleBackColor = true;
-            this.TGemsEx.Click += new System.EventHandler(this.TGemsEx_Click);
+            this.T11Firm.Location = new System.Drawing.Point(828, 401);
+            this.T11Firm.Name = "T11Firm";
+            this.T11Firm.Size = new System.Drawing.Size(128, 128);
+            this.T11Firm.TabIndex = 11;
+            this.T11Firm.Text = "Galactic Firm";
+            this.T11Firm.UseVisualStyleBackColor = true;
             // 
-            // TGazEx
+            // T10Workers
             // 
-            this.TGazEx.Location = new System.Drawing.Point(12, 195);
-            this.TGazEx.Name = "TGazEx";
-            this.TGazEx.Size = new System.Drawing.Size(128, 128);
-            this.TGazEx.TabIndex = 0;
-            this.TGazEx.Text = "Gaz Extractor";
-            this.TGazEx.UseVisualStyleBackColor = true;
-            this.TGazEx.Click += new System.EventHandler(this.TGazEx_Click);
+            this.T10Workers.Location = new System.Drawing.Point(623, 401);
+            this.T10Workers.Name = "T10Workers";
+            this.T10Workers.Size = new System.Drawing.Size(128, 128);
+            this.T10Workers.TabIndex = 10;
+            this.T10Workers.Text = "Workers";
+            this.T10Workers.UseVisualStyleBackColor = true;
             // 
-            // TPlutoEx
+            // T09Diplomacy
             // 
-            this.TPlutoEx.Location = new System.Drawing.Point(410, 19);
-            this.TPlutoEx.Name = "TPlutoEx";
-            this.TPlutoEx.Size = new System.Drawing.Size(128, 128);
-            this.TPlutoEx.TabIndex = 2;
-            this.TPlutoEx.Text = "Plutonium Extractor";
-            this.TPlutoEx.UseVisualStyleBackColor = true;
+            this.T09Diplomacy.Location = new System.Drawing.Point(410, 401);
+            this.T09Diplomacy.Name = "T09Diplomacy";
+            this.T09Diplomacy.Size = new System.Drawing.Size(128, 128);
+            this.T09Diplomacy.TabIndex = 9;
+            this.T09Diplomacy.Text = "Diplomacy";
+            this.T09Diplomacy.UseVisualStyleBackColor = true;
             // 
-            // THydroEn
+            // T08Radar
             // 
-            this.THydroEn.Location = new System.Drawing.Point(202, 195);
-            this.THydroEn.Name = "THydroEn";
-            this.THydroEn.Size = new System.Drawing.Size(128, 128);
-            this.THydroEn.TabIndex = 3;
-            this.THydroEn.Text = "Hydrogene Engine";
-            this.THydroEn.UseVisualStyleBackColor = true;
+            this.T08Radar.Location = new System.Drawing.Point(12, 401);
+            this.T08Radar.Name = "T08Radar";
+            this.T08Radar.Size = new System.Drawing.Size(128, 128);
+            this.T08Radar.TabIndex = 8;
+            this.T08Radar.Text = "Radar";
+            this.T08Radar.UseVisualStyleBackColor = true;
             // 
-            // THelEn
+            // T07BioDome
             // 
-            this.THelEn.Location = new System.Drawing.Point(410, 195);
-            this.THelEn.Name = "THelEn";
-            this.THelEn.Size = new System.Drawing.Size(128, 128);
-            this.THelEn.TabIndex = 4;
-            this.THelEn.Text = "Helium Engine";
-            this.THelEn.UseVisualStyleBackColor = true;
+            this.T07BioDome.Location = new System.Drawing.Point(1046, 195);
+            this.T07BioDome.Name = "T07BioDome";
+            this.T07BioDome.Size = new System.Drawing.Size(128, 128);
+            this.T07BioDome.TabIndex = 7;
+            this.T07BioDome.Text = "Bio Dome";
+            this.T07BioDome.UseVisualStyleBackColor = true;
             // 
-            // TPlutoEn
+            // T06FacUp
             // 
-            this.TPlutoEn.Location = new System.Drawing.Point(622, 195);
-            this.TPlutoEn.Name = "TPlutoEn";
-            this.TPlutoEn.Size = new System.Drawing.Size(128, 128);
-            this.TPlutoEn.TabIndex = 5;
-            this.TPlutoEn.Text = "Plutonium Extractor";
-            this.TPlutoEn.UseVisualStyleBackColor = true;
+            this.T06FacUp.Location = new System.Drawing.Point(828, 195);
+            this.T06FacUp.Name = "T06FacUp";
+            this.T06FacUp.Size = new System.Drawing.Size(128, 128);
+            this.T06FacUp.TabIndex = 6;
+            this.T06FacUp.Text = "Factory Upgrade";
+            this.T06FacUp.UseVisualStyleBackColor = true;
             // 
-            // TFacUp
+            // T05PlutoEn
             // 
-            this.TFacUp.Location = new System.Drawing.Point(828, 195);
-            this.TFacUp.Name = "TFacUp";
-            this.TFacUp.Size = new System.Drawing.Size(128, 128);
-            this.TFacUp.TabIndex = 6;
-            this.TFacUp.Text = "Factory Upgrade";
-            this.TFacUp.UseVisualStyleBackColor = true;
+            this.T05PlutoEn.Location = new System.Drawing.Point(622, 195);
+            this.T05PlutoEn.Name = "T05PlutoEn";
+            this.T05PlutoEn.Size = new System.Drawing.Size(128, 128);
+            this.T05PlutoEn.TabIndex = 5;
+            this.T05PlutoEn.Text = "Plutonium Extractor";
+            this.T05PlutoEn.UseVisualStyleBackColor = true;
             // 
-            // TBioDome
+            // T04HelEn
             // 
-            this.TBioDome.Location = new System.Drawing.Point(1046, 195);
-            this.TBioDome.Name = "TBioDome";
-            this.TBioDome.Size = new System.Drawing.Size(128, 128);
-            this.TBioDome.TabIndex = 7;
-            this.TBioDome.Text = "Bio Dome";
-            this.TBioDome.UseVisualStyleBackColor = true;
+            this.T04HelEn.Location = new System.Drawing.Point(410, 195);
+            this.T04HelEn.Name = "T04HelEn";
+            this.T04HelEn.Size = new System.Drawing.Size(128, 128);
+            this.T04HelEn.TabIndex = 4;
+            this.T04HelEn.Text = "Helium Engine";
+            this.T04HelEn.UseVisualStyleBackColor = true;
             // 
-            // TRadar
+            // T03HydroEn
             // 
-            this.TRadar.Location = new System.Drawing.Point(12, 401);
-            this.TRadar.Name = "TRadar";
-            this.TRadar.Size = new System.Drawing.Size(128, 128);
-            this.TRadar.TabIndex = 8;
-            this.TRadar.Text = "Radar";
-            this.TRadar.UseVisualStyleBackColor = true;
+            this.T03HydroEn.Location = new System.Drawing.Point(202, 195);
+            this.T03HydroEn.Name = "T03HydroEn";
+            this.T03HydroEn.Size = new System.Drawing.Size(128, 128);
+            this.T03HydroEn.TabIndex = 3;
+            this.T03HydroEn.Text = "Hydrogene Engine";
+            this.T03HydroEn.UseVisualStyleBackColor = true;
             // 
-            // TDiplomacy
+            // T02PlutoEx
             // 
-            this.TDiplomacy.Location = new System.Drawing.Point(410, 401);
-            this.TDiplomacy.Name = "TDiplomacy";
-            this.TDiplomacy.Size = new System.Drawing.Size(128, 128);
-            this.TDiplomacy.TabIndex = 9;
-            this.TDiplomacy.Text = "Diplomacy";
-            this.TDiplomacy.UseVisualStyleBackColor = true;
+            this.T02PlutoEx.Location = new System.Drawing.Point(410, 19);
+            this.T02PlutoEx.Name = "T02PlutoEx";
+            this.T02PlutoEx.Size = new System.Drawing.Size(128, 128);
+            this.T02PlutoEx.TabIndex = 2;
+            this.T02PlutoEx.Text = "Plutonium Extractor";
+            this.T02PlutoEx.UseVisualStyleBackColor = true;
             // 
-            // TWorkers
+            // T01GemsEx
             // 
-            this.TWorkers.Location = new System.Drawing.Point(623, 401);
-            this.TWorkers.Name = "TWorkers";
-            this.TWorkers.Size = new System.Drawing.Size(128, 128);
-            this.TWorkers.TabIndex = 10;
-            this.TWorkers.Text = "Workers";
-            this.TWorkers.UseVisualStyleBackColor = true;
+            this.T01GemsEx.Location = new System.Drawing.Point(202, 19);
+            this.T01GemsEx.Name = "T01GemsEx";
+            this.T01GemsEx.Size = new System.Drawing.Size(128, 128);
+            this.T01GemsEx.TabIndex = 1;
+            this.T01GemsEx.Text = "Gems Extractor";
+            this.T01GemsEx.UseVisualStyleBackColor = true;
+            this.T01GemsEx.Click += new System.EventHandler(this.TGemsEx_Click);
             // 
-            // TFirm
+            // T00GazEx
             // 
-            this.TFirm.Location = new System.Drawing.Point(828, 401);
-            this.TFirm.Name = "TFirm";
-            this.TFirm.Size = new System.Drawing.Size(128, 128);
-            this.TFirm.TabIndex = 11;
-            this.TFirm.Text = "Galactic Firm";
-            this.TFirm.UseVisualStyleBackColor = true;
+            this.T00GazEx.Location = new System.Drawing.Point(12, 195);
+            this.T00GazEx.Name = "T00GazEx";
+            this.T00GazEx.Size = new System.Drawing.Size(128, 128);
+            this.T00GazEx.TabIndex = 0;
+            this.T00GazEx.Text = "Gaz Extractor";
+            this.T00GazEx.UseVisualStyleBackColor = true;
+            this.T00GazEx.Click += new System.EventHandler(this.TGazEx_Click);
             // 
             // Form_GV_01
             // 
@@ -880,18 +880,18 @@
         private System.Windows.Forms.ListBox OverviewDetails;
         private System.Windows.Forms.PictureBox PlanetImg;
         private System.Windows.Forms.Panel TechPanel;
-        private System.Windows.Forms.Button TGemsEx;
-        private System.Windows.Forms.Button TGazEx;
-        private System.Windows.Forms.Button TFirm;
-        private System.Windows.Forms.Button TWorkers;
-        private System.Windows.Forms.Button TDiplomacy;
-        private System.Windows.Forms.Button TRadar;
-        private System.Windows.Forms.Button TBioDome;
-        private System.Windows.Forms.Button TFacUp;
-        private System.Windows.Forms.Button TPlutoEn;
-        private System.Windows.Forms.Button THelEn;
-        private System.Windows.Forms.Button THydroEn;
-        private System.Windows.Forms.Button TPlutoEx;
+        private System.Windows.Forms.Button T01GemsEx;
+        private System.Windows.Forms.Button T00GazEx;
+        private System.Windows.Forms.Button T11Firm;
+        private System.Windows.Forms.Button T10Workers;
+        private System.Windows.Forms.Button T09Diplomacy;
+        private System.Windows.Forms.Button T08Radar;
+        private System.Windows.Forms.Button T07BioDome;
+        private System.Windows.Forms.Button T06FacUp;
+        private System.Windows.Forms.Button T05PlutoEn;
+        private System.Windows.Forms.Button T04HelEn;
+        private System.Windows.Forms.Button T03HydroEn;
+        private System.Windows.Forms.Button T02PlutoEx;
 
 
 

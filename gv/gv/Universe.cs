@@ -160,7 +160,11 @@ namespace gv
         }
         public bool BuyTech( int idBought )
         {
-            return(_techs[idBought].IsDiscovered = _player.UnlockTech( idBought ));          
+            if( _techs[idBought].IsDiscovered ) return false;
+            else
+            {
+                return (_techs[idBought].IsDiscovered = _player.UnlockTech( idBought ));          
+            }
         }
         public Dictionary<string,Planet> Planets
         {

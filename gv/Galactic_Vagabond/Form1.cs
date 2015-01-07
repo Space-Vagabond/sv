@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using gv;
@@ -500,27 +501,34 @@ namespace Galactic_Vagabond
                 }
             }
             OverViewList.DataSource = toDisplay;
-            foreach (Control c in _cockpitControls) 
+            foreach( Control c in Controls )
             {
                 c.Hide();
             }
-            foreach (Control c in _overviewControls)
+            foreach( Control c in _tabControls )
             {
                 c.Show();
-
+            }
+            foreach( Control c in _overviewControls )
+            {
+                c.Show();
             }
 
         }
 
         private void CockpitButton_Click(object sender, EventArgs e)
         {
-            foreach(Control c in _cockpitControls)
+            foreach(Control c in Controls)
+            {
+                c.Hide();
+            }
+            foreach(Control c in _tabControls)
             {
                 c.Show();
             }
-            foreach(Control c in _overviewControls)
+            foreach( Control c in _cockpitControls )
             {
-                c.Hide();
+                c.Show();
             }
         }
 
@@ -558,6 +566,26 @@ namespace Galactic_Vagabond
                 c.Show();
             }
             TechPanel.Show();
+            foreach( Button b in TechPanel.Controls )
+            {
+                string n1 = b.Name[1].ToString();
+                string n2 = b.Name[2].ToString();
+
+                int nb = Convert.ToInt32(n1) * 10 + Convert.ToInt32(n2);
+
+                if( _universe.Techs[nb].IsDiscovered )
+                {
+                    b.Enabled = false;
+                }
+                if( _universe.Techs[nb].Prev1 != null && !_universe.Techs[(int)nb].Prev1.IsDiscovered )
+                {
+                    b.Enabled = false;
+                }
+                if( _universe.Techs[nb].Prev2 != null && !_universe.Techs[(int)nb].Prev2.IsDiscovered )
+                {
+                    b.Enabled = false;
+                }
+            }
         }
 
         private void TGazEx_Click( object sender, EventArgs e )

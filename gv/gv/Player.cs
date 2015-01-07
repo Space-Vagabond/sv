@@ -96,11 +96,22 @@ namespace gv
                 {
                     object o = _universe.Techs[idAsked];
                     PropertyInfo property = type.GetProperty( "Cost" + s, typeof( int ) );
-                    Debug.Assert( property != null, "CostXXX must be int!" );
+                    Debug.Assert( property != null, "Cost"+s+" must be int!" );
 
                     object value =  property.GetValue( o );
 
                     if( _ressources[s] < (int)value ) return false;
+                }
+            }
+            foreach( string s in PlanetAttributes.PlanetRessources )
+            {
+                if( s != "none" )
+                {
+                    object o = _universe.Techs[idAsked];
+                    PropertyInfo property = type.GetProperty( "Cost" + s, typeof( int ) );
+                    object value =  property.GetValue( o );
+
+                    _ressources[s] -= (int)value;
                 }
             }
             return true;
