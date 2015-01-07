@@ -37,7 +37,7 @@ namespace gv
             "Gems",
             "Plutonium",
             "Metal",
-            "Hydrogene",
+            "Hydrogen",
             "Helium",
             "none"
         };

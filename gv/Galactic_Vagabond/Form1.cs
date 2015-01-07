@@ -169,6 +169,13 @@ namespace Galactic_Vagabond
             {
                 if( pos.ContainedPlanet.Ressources != "none" && pos.ContainedPlanet.Factory == false )
                 {
+                    Build.Enabled = true;
+                    if( ((pos.ContainedPlanet.Ressources == "Helium" || pos.ContainedPlanet.Ressources == "Hydrogen") && !_universe.Techs[0].IsDiscovered)
+                        || (pos.ContainedPlanet.Ressources == "Gems" && !_universe.Techs[1].IsDiscovered)
+                        || (pos.ContainedPlanet.Ressources == "Plutonium" && !_universe.Techs[2].IsDiscovered) )
+                    {
+                        Build.Enabled = false;
+                    }
                     Build.Show();
                 }
                 else
@@ -375,9 +382,7 @@ namespace Galactic_Vagabond
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void EndTurn_Click( object sender, EventArgs e )
-        {
-            
-            
+        {           
             _universe.EndTurn();
             _universe.Event.EventOccurs();
             DisplayTurnEvents();
@@ -456,7 +461,7 @@ namespace Galactic_Vagabond
             this.PlutoniumLabel.Show();
             this.MetalLabel.Text = "Metal : " + _universe.User.Ressources["Metal"];
             this.MetalLabel.Show();
-            this.HydrogenLabel.Text = "Hydrogen : " + _universe.User.Ressources["Hydrogene"];
+            this.HydrogenLabel.Text = "Hydrogen : " + _universe.User.Ressources["Hydrogen"];
             this.HydrogenLabel.Show();
             this.HeliumLabel.Text = "Helium : " + _universe.User.Ressources["Helium"];
             this.HeliumLabel.Show();
@@ -572,18 +577,22 @@ namespace Galactic_Vagabond
                 string n2 = b.Name[2].ToString();
 
                 int nb = Convert.ToInt32(n1) * 10 + Convert.ToInt32(n2);
+                b.Enabled = false;
 
-                if( _universe.Techs[nb].IsDiscovered )
+                if( _universe.Techs[nb].Prev1 == null && _universe.Techs[nb].Prev2 == null )
                 {
-                    b.Enabled = false;
+                    b.Enabled = true;
                 }
-                if( _universe.Techs[nb].Prev1 != null && !_universe.Techs[(int)nb].Prev1.IsDiscovered )
+                else if( _universe.Techs[nb].Prev1 != null && _universe.Techs[nb].Prev1.IsDiscovered )
                 {
-                    b.Enabled = false;
-                }
-                if( _universe.Techs[nb].Prev2 != null && !_universe.Techs[(int)nb].Prev2.IsDiscovered )
-                {
-                    b.Enabled = false;
+                    if( _universe.Techs[nb].Prev2 != null && _universe.Techs[nb].Prev2.IsDiscovered )
+                    {
+                        b.Enabled = true;
+                    }
+                    else if( _universe.Techs[nb].Prev2 == null )
+                    {
+                        b.Enabled = true;
+                    }
                 }
             }
         }
@@ -591,10 +600,72 @@ namespace Galactic_Vagabond
         private void TGazEx_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 0 );
+            if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
         }
         private void TGemsEx_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 1 );
+            if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
+        }
+
+        private void T02PlutoEx_Click( object sender, EventArgs e )
+        {
+            bool msg = _universe.BuyTech( 2 );
+            if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
+        }
+
+        private void T03HydroEn_Click( object sender, EventArgs e )
+        {
+            bool msg = _universe.BuyTech( 3 );
+            if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
+        }
+
+        private void T04HelEn_Click( object sender, EventArgs e )
+        {
+            bool msg = _universe.BuyTech( 4 );
+            if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
+        }
+
+        private void T05PlutoEn_Click( object sender, EventArgs e )
+        {
+            bool msg = _universe.BuyTech( 5 );
+            if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
+        }
+
+        private void T06FacUp_Click( object sender, EventArgs e )
+        {
+            bool msg = _universe.BuyTech( 6 );
+            if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
+        }
+
+        private void T07BioDome_Click( object sender, EventArgs e )
+        {
+            bool msg = _universe.BuyTech( 7 );
+            if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
+        }
+
+        private void T08Radar_Click( object sender, EventArgs e )
+        {
+            bool msg = _universe.BuyTech( 8 );
+            if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
+        }
+
+        private void T09Diplomacy_Click( object sender, EventArgs e )
+        {
+            bool msg = _universe.BuyTech( 9 );
+            if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
+        }
+
+        private void T10Workers_Click( object sender, EventArgs e )
+        {
+            bool msg = _universe.BuyTech( 10 );
+            if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
+        }
+
+        private void T11Firm_Click( object sender, EventArgs e )
+        {
+            bool msg = _universe.BuyTech( 11 );
+            if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
         }
     }
 }

@@ -12,7 +12,7 @@ namespace gv
         string _description;
         int _costMetal;
         int _costSilicium;
-        int _costHydrogene;
+        int _costHydrogen;
         int _costHelium;
         int _costGems;
         int _costPlutonium;
@@ -30,7 +30,7 @@ namespace gv
             _description = description;
             _costMetal = costM;
             _costSilicium = costS;
-            _costHydrogene = costHy;
+            _costHydrogen = costHy;
             _costHelium = costHe;
             _costGems = costG;
             _costPlutonium = costP;
@@ -54,9 +54,9 @@ namespace gv
         {
             get { return _costSilicium; }
         }
-        public int CostHydrogene
+        public int CostHydrogen
         {
-            get { return _costHydrogene; }
+            get { return _costHydrogen; }
         }
         public int CostHelium
         {

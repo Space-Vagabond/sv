@@ -684,6 +684,7 @@
             this.T11Firm.TabIndex = 11;
             this.T11Firm.Text = "Galactic Firm";
             this.T11Firm.UseVisualStyleBackColor = true;
+            this.T11Firm.Click += new System.EventHandler(this.T11Firm_Click);
             // 
             // T10Workers
             // 
@@ -693,6 +694,7 @@
             this.T10Workers.TabIndex = 10;
             this.T10Workers.Text = "Workers";
             this.T10Workers.UseVisualStyleBackColor = true;
+            this.T10Workers.Click += new System.EventHandler(this.T10Workers_Click);
             // 
             // T09Diplomacy
             // 
@@ -702,6 +704,7 @@
             this.T09Diplomacy.TabIndex = 9;
             this.T09Diplomacy.Text = "Diplomacy";
             this.T09Diplomacy.UseVisualStyleBackColor = true;
+            this.T09Diplomacy.Click += new System.EventHandler(this.T09Diplomacy_Click);
             // 
             // T08Radar
             // 
@@ -711,6 +714,7 @@
             this.T08Radar.TabIndex = 8;
             this.T08Radar.Text = "Radar";
             this.T08Radar.UseVisualStyleBackColor = true;
+            this.T08Radar.Click += new System.EventHandler(this.T08Radar_Click);
             // 
             // T07BioDome
             // 
@@ -720,6 +724,7 @@
             this.T07BioDome.TabIndex = 7;
             this.T07BioDome.Text = "Bio Dome";
             this.T07BioDome.UseVisualStyleBackColor = true;
+            this.T07BioDome.Click += new System.EventHandler(this.T07BioDome_Click);
             // 
             // T06FacUp
             // 
@@ -729,6 +734,7 @@
             this.T06FacUp.TabIndex = 6;
             this.T06FacUp.Text = "Factory Upgrade";
             this.T06FacUp.UseVisualStyleBackColor = true;
+            this.T06FacUp.Click += new System.EventHandler(this.T06FacUp_Click);
             // 
             // T05PlutoEn
             // 
@@ -738,6 +744,7 @@
             this.T05PlutoEn.TabIndex = 5;
             this.T05PlutoEn.Text = "Plutonium Extractor";
             this.T05PlutoEn.UseVisualStyleBackColor = true;
+            this.T05PlutoEn.Click += new System.EventHandler(this.T05PlutoEn_Click);
             // 
             // T04HelEn
             // 
@@ -747,6 +754,7 @@
             this.T04HelEn.TabIndex = 4;
             this.T04HelEn.Text = "Helium Engine";
             this.T04HelEn.UseVisualStyleBackColor = true;
+            this.T04HelEn.Click += new System.EventHandler(this.T04HelEn_Click);
             // 
             // T03HydroEn
             // 
@@ -756,6 +764,7 @@
             this.T03HydroEn.TabIndex = 3;
             this.T03HydroEn.Text = "Hydrogene Engine";
             this.T03HydroEn.UseVisualStyleBackColor = true;
+            this.T03HydroEn.Click += new System.EventHandler(this.T03HydroEn_Click);
             // 
             // T02PlutoEx
             // 
@@ -765,6 +774,7 @@
             this.T02PlutoEx.TabIndex = 2;
             this.T02PlutoEx.Text = "Plutonium Extractor";
             this.T02PlutoEx.UseVisualStyleBackColor = true;
+            this.T02PlutoEx.Click += new System.EventHandler(this.T02PlutoEx_Click);
             // 
             // T01GemsEx
             // 

@@ -18,6 +18,7 @@ namespace gv
         bool _canMove;
         int _speed;
         int _remainingSteps;
+        int _resRate;
         Universe _universe;
         Dictionary<string, int> _ressources = new Dictionary<string,int>();
         
@@ -28,6 +29,7 @@ namespace gv
             _speed = 4000;
             _canMove = true;
             _remainingSteps = _speed;
+            _resRate = 10;
 
             foreach( string s in PlanetAttributes.PlanetRessources )
             {
@@ -65,7 +67,7 @@ namespace gv
             {
                 if( p.Ressources != "none" && p.Factory == true )
                 {
-                    _ressources[p.Ressources] += 10;
+                    _ressources[p.Ressources] += _resRate ;
                 }
             }
 
@@ -113,6 +115,32 @@ namespace gv
 
                     _ressources[s] -= (int)value;
                 }
+            }
+            switch( idAsked )
+            {
+                case 3:
+                    _speed = 10;
+                    break;
+                case 4:
+                    _speed = 15;
+                    break;
+                case 5:
+                    _speed = 20;
+                    break;
+                case 6:
+                    _resRate += 5;
+                    break;
+                case 9:
+                    _resRate += 2;
+                    break;
+                case 10:
+                    _resRate += 3;
+                    break;
+                case 11:
+                    _resRate += 5;
+                    break;
+                default:
+                    break;
             }
             return true;
         }

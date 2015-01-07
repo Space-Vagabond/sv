@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace gv
 {
-    class PGazeousHydrogene : Planet
+    class PGazeousHydrogen : Planet
     {
         bool _inhabited;
         string _surface;
         string _climate;
         int _img;
 
-        internal PGazeousHydrogene( Universe u )
+        internal PGazeousHydrogen( Universe u )
             : base( u, null )
         {
             _inhabited = (u.Rand.Next( 0, 2 ) > 0) ? true : false;
@@ -44,7 +44,7 @@ namespace gv
         }
         public override string Ressources
         {
-            get { return "Hydrogene"; }
+            get { return "Hydrogen"; }
         }
         public override int Img
         {

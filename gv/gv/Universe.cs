@@ -34,9 +34,9 @@ namespace gv
             _techs.Add (new Tech( "Factory Upgrade", "Multiplies your income by 1.5", 250, 250, 250, 250, 250, 250, _techs[5] ));
             _techs.Add (new Tech( "Bio Dome", "Allows you to settle down on a planet ", 500, 500, 500, 500, 500, 500, _techs[6] ));
             _techs.Add (new Tech( "Radar", "Allows you to know where are planets in Overview", 120, 0, 0, 0, 120, 0 ));
-            _techs.Add (new Tech( "Diplomacy", "Aliens are now your friends they help for you, adds 10% income for inhabited planets", 120, 0, 120, 120, 0, 0 ));
-            _techs.Add (new Tech( "Workers", "Aliens are now your workers they work for you, adds 20% income for inhabited planets", 200, 0, 0, 0, 200, 0, _techs[9] ));
-            _techs.Add (new Tech( "Slavery", "Aliens are now your slaves, you force them to work for you, adds 50% income for inhabited planets", 0, 0, 0, 0, 400, 400, _techs[10] ));
+            _techs.Add (new Tech( "Diplomacy", "Aliens are now your friends they help for you, adds 20% income ", 120, 0, 120, 120, 0, 0 ));
+            _techs.Add (new Tech( "Workers", "Aliens are now your workers they work for you, adds 30% income ", 200, 0, 0, 0, 200, 0, _techs[9] ));
+            _techs.Add (new Tech( "Galactic Firm", "You're now THE BOSS! Adds 50% income", 0, 0, 0, 0, 400, 400, _techs[10] ));
             
             NameGen = new TextGenerator(WordTypes.Name);
             int k = 1;
