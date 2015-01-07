@@ -17,12 +17,27 @@ namespace gv
         internal TextGenerator NameGen;
         EventGenerator _events;
         Player _player;
-        int _turn;
+        int _turn; 
+        readonly List<Tech> _techs = new List<Tech>();
 
         public Universe()
         {
             _events = new EventGenerator( this );
             _player = new Player(this);
+           
+            _techs.Add (new Tech( "Gaz Extractor", "Allows you to extract Helium and Hydrogen", 50, 50, 0, 0, 0, 0 ));
+            _techs.Add (new Tech( "Gems Extractor", "Allows you to extract Gems", 100, 100, 100, 100, 0, 0, _techs[0] ));
+            _techs.Add (new Tech( "Plutonium Extractor", "Allows you to extract Plutonium", 200, 200, 0, 100, 0, 0, _techs[1] ));
+            _techs.Add (new Tech( "Hydrogen Engine", "Increases your max speed to 10", 70, 0, 70, 0, 0, 0, _techs[0] ));
+            _techs.Add (new Tech( "Helium Engine", "Increases your max speed to 15", 70, 0, 70, 70, 0, 0, _techs[3] ));
+            _techs.Add (new Tech( "Plutonium Engine", "Increases your max speed to 20", 0, 0, 200, 200, 0, 100, _techs[2], _techs[4] ));
+            _techs.Add (new Tech( "Factory Upgrade", "Multiplies your income by 1.5", 250, 250, 250, 250, 250, 250, _techs[5] ));
+            _techs.Add (new Tech( "Bio Dome", "Allows you to settle down on a planet ", 500, 500, 500, 500, 500, 500, _techs[6] ));
+            _techs.Add (new Tech( "Radar", "Allows you to know where are planets in Overview", 120, 0, 0, 0, 120, 0 ));
+            _techs.Add (new Tech( "Diplomacy", "Aliens are now your friends they help for you, adds 20% income ", 120, 0, 120, 120, 0, 0 ));
+            _techs.Add (new Tech( "Workers", "Aliens are now your workers they work for you, adds 30% income ", 200, 0, 0, 0, 200, 0, _techs[9] ));
+            _techs.Add (new Tech( "Galactic Firm", "You're now THE BOSS! Adds 50% income", 0, 0, 0, 0, 400, 400, _techs[10] ));
+            
             NameGen = new TextGenerator(WordTypes.Name);
             int k = 1;
             for( int i = -1; i < 1; i++ )
@@ -143,6 +158,14 @@ namespace gv
             _turn += 1;
             _player.EndTurn();
         }
+        public bool BuyTech( int idBought )
+        {
+            if( _techs[idBought].IsDiscovered ) return false;
+            else
+            {
+                return (_techs[idBought].IsDiscovered = _player.UnlockTech( idBought ));          
+            }
+        }
         public Dictionary<string,Planet> Planets
         {
             get { return _planets; }
@@ -174,6 +197,10 @@ namespace gv
         public Dictionary<int,Chunk> ShownChunks
         {
             get { return _shownChunks; }
-        }      
+        }
+        public List<Tech> Techs
+        {
+            get { return _techs; }
+        }
     }
 }

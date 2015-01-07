@@ -50,7 +50,7 @@
     <Compile Include="PChthonian.cs" />
     <Compile Include="PCoreless.cs" />
     <Compile Include="PGazeousHelium.cs" />
-    <Compile Include="PGazeousHydrogene.cs" />
+    <Compile Include="PGazeousHydrogen.cs" />
     <Compile Include="Planet.cs" />
     <Compile Include="PlanetAttributes.cs" />
     <Compile Include="Player.cs" />
@@ -62,6 +62,7 @@
     <Compile Include="PTelluricLava.cs" />
     <Compile Include="PTelluricMetal.cs" />
     <Compile Include="PTelluricSilicat.cs" />
+    <Compile Include="Tech.cs" />
     <Compile Include="Universe.cs" />
   </ItemGroup>
   <ItemGroup>

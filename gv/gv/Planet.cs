@@ -49,7 +49,7 @@ namespace gv
                 case 4: return new PTelluricIce( u );
                 case 5: return new PCoreless( u );
                 case 6: return new PTelluricDesert( u );
-                case 7: return new PGazeousHydrogene( u );
+                case 7: return new PGazeousHydrogen( u );
                 case 8: return new PGazeousHelium( u );
                 case 9: return new PChthonian( u );
                 default: return new PTelluricSilicat( u );

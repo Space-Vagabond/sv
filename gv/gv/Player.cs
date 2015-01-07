@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
@@ -16,9 +18,9 @@ namespace gv
         bool _canMove;
         int _speed;
         int _remainingSteps;
+        int _resRate;
         Universe _universe;
         Dictionary<string, int> _ressources = new Dictionary<string,int>();
-
         
        public Player(Universe u)
         {
@@ -27,6 +29,8 @@ namespace gv
             _speed = 4000;
             _canMove = true;
             _remainingSteps = _speed;
+            _resRate = 10;
+
             foreach( string s in PlanetAttributes.PlanetRessources )
             {
                 if( s != "none" )
@@ -63,7 +67,7 @@ namespace gv
             {
                 if( p.Ressources != "none" && p.Factory == true )
                 {
-                    _ressources[p.Ressources] += 10;
+                    _ressources[p.Ressources] += _resRate ;
                 }
             }
 
@@ -83,6 +87,62 @@ namespace gv
                     )
                 )
             );
+        }
+        public bool UnlockTech( int idAsked )
+        {
+            Type type = typeof( Tech );           
+            
+            foreach( string s in PlanetAttributes.PlanetRessources )
+            {
+                if( s != "none" )
+                {
+                    object o = _universe.Techs[idAsked];
+                    PropertyInfo property = type.GetProperty( "Cost" + s, typeof( int ) );
+                    Debug.Assert( property != null, "Cost"+s+" must be int!" );
+
+                    object value =  property.GetValue( o );
+
+                    if( _ressources[s] < (int)value ) return false;
+                }
+            }
+            foreach( string s in PlanetAttributes.PlanetRessources )
+            {
+                if( s != "none" )
+                {
+                    object o = _universe.Techs[idAsked];
+                    PropertyInfo property = type.GetProperty( "Cost" + s, typeof( int ) );
+                    object value =  property.GetValue( o );
+
+                    _ressources[s] -= (int)value;
+                }
+            }
+            switch( idAsked )
+            {
+                case 3:
+                    _speed = 10;
+                    break;
+                case 4:
+                    _speed = 15;
+                    break;
+                case 5:
+                    _speed = 20;
+                    break;
+                case 6:
+                    _resRate += 5;
+                    break;
+                case 9:
+                    _resRate += 2;
+                    break;
+                case 10:
+                    _resRate += 3;
+                    break;
+                case 11:
+                    _resRate += 5;
+                    break;
+                default:
+                    break;
+            }
+            return true;
         }
         public int Speed
         {
