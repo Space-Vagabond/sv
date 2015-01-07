@@ -151,7 +151,7 @@ namespace gv
                     )
                 )
             );
-            save.Save( @".\..\..\..\Saves/save"+_player.Name+".xml" );
+            save.Save( @Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData )+"/GVSaves/save"+_player.Name+".xml" );
         }
         public void EndTurn()
         {

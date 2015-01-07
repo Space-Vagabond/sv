@@ -7,14 +7,17 @@ using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using gv;
+
 namespace Galactic_Vagabond
 {
     public partial class Form_GV_01 : Form
     {
         Universe _universe;
-        Image _square = Image.FromFile( @".\..\..\..\images/square.png" );
-        Image _ship = Image.FromFile( @".\..\..\..\images/ship.png" );
+
+        Image _square = Galactic_Vagabond.Properties.Resources.square;
+        Image _ship = Galactic_Vagabond.Properties.Resources.ship;
         Image[] _planets= new Image[20];
+
         List<Control> _displayedControls = new List<Control>();
         List<Control> _cockpitControls = new List<Control>();
         List<Control> _overviewControls = new List<Control>();
@@ -27,11 +30,11 @@ namespace Galactic_Vagabond
             InitializeComponent();
             for( int i = 0; i < 18; i++ )
             {
-                _planets[i] = Image.FromFile( @".\..\..\..\images/planet" + (i + 1) + ".png" );
+                _planets[i] = (Image)Galactic_Vagabond.Properties.Resources.ResourceManager.GetObject( "planet" +( i+1));
             }
             
             //Find or Creates the saves directory
-            Directory.CreateDirectory( @"./../../../Saves" );
+            Directory.CreateDirectory( @Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData )+"/GVSaves");
 
             //hiding main form and displays launcher
             this.Hide();
@@ -88,6 +91,16 @@ namespace Galactic_Vagabond
             _techControls.Add( TechPanel );
             TechPanel.Hide();
             TechPanel.BackColor = Color.Transparent;
+            foreach( Button b in TechPanel.Controls )
+            {
+                string n1 = b.Name[1].ToString();
+                string n2 = b.Name[2].ToString();
+
+                int nb = Convert.ToInt32( n1 ) * 10 + Convert.ToInt32( n2 );
+
+                b.BackgroundImage = (Image)Galactic_Vagabond.Properties.Resources.ResourceManager.GetObject( "tech" + nb.ToString() );
+
+            }
         }
         /// <summary>
         /// Initiaizing the map controller
@@ -623,7 +636,7 @@ namespace Galactic_Vagabond
                 b.Enabled = false;
                 b.FlatStyle = FlatStyle.Flat;
                 b.FlatAppearance.BorderColor = Color.Red;
-                b.FlatAppearance.BorderSize = 1;
+                b.FlatAppearance.BorderSize = 3;
                 
 
                 if( _universe.Techs[nb].Prev1 == null && _universe.Techs[nb].Prev2 == null )
