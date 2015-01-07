@@ -13,7 +13,8 @@ namespace Galactic_Vagabond
     public partial class Mastermind : Form
     {
         string _toDisplay;
-
+        Timer _myTimer = new System.Windows.Forms.Timer();
+        
         public Mastermind()
         {
             InitializeComponent();
@@ -21,8 +22,22 @@ namespace Galactic_Vagabond
             _toDisplay =  _l.GenerateSequence();
             this.SequenceLabel.Text = _toDisplay.ToUpper();
             _toDisplay = this.SequenceLabel.Text;
+
+            _myTimer.Tick += new EventHandler(TimerEventProcessor);
+            _myTimer.Interval = 3500;
+            _myTimer.Start();
+
         }
 
+        private void TimerEventProcessor(Object myObject,
+                                            EventArgs myEventArgs)
+        {
+            _myTimer.Stop();
+            _myTimer.Dispose();
+            this.SequenceLabel.Text = "********";
+        }
+
+         
         private void ValidateButton_Click(object sender, EventArgs e)
         {
             if (this.UserInput.Text == _toDisplay)

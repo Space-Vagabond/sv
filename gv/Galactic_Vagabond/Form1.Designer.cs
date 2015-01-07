@@ -643,16 +643,6 @@
             this.PlanetImg.TabIndex = 25;
             this.PlanetImg.TabStop = false;
             // 
-            // Testbutton
-            // 
-            this.Testbutton.Location = new System.Drawing.Point(761, 576);
-            this.Testbutton.Name = "Testbutton";
-            this.Testbutton.Size = new System.Drawing.Size(117, 23);
-            this.Testbutton.TabIndex = 26;
-            this.Testbutton.Text = "test mastermind";
-            this.Testbutton.UseVisualStyleBackColor = true;
-            this.Testbutton.Click += new System.EventHandler(this.Testbutton_Click);
-            // 
             // Form_GV_01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -660,7 +650,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1261, 657);
-            this.Controls.Add(this.Testbutton);
             this.Controls.Add(this.PlanetImg);
             this.Controls.Add(this.OverviewDetails);
             this.Controls.Add(this.CockpitButton);

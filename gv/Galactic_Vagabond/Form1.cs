@@ -543,12 +543,7 @@ namespace Galactic_Vagabond
             codex.ShowDialog();
         }
 
-        private void Testbutton_Click(object sender, EventArgs e)
-        {
-            Mastermind m = new Mastermind();
-            m.ShowDialog();
-        }
-
+        
         
     }
 }
