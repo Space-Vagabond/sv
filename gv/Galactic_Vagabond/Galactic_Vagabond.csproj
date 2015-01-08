@@ -95,6 +95,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TechButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="Codex.resx">
       <DependentUpon>Codex.cs</DependentUpon>
     </EmbeddedResource>
