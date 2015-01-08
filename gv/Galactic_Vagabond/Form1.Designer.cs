@@ -798,6 +798,7 @@
             this.toolTip1.AutomaticDelay = 0;
             this.toolTip1.BackColor = System.Drawing.Color.Black;
             this.toolTip1.ForeColor = System.Drawing.Color.Chartreuse;
+            this.toolTip1.IsBalloon = true;
             // 
             // T11Firm
             // 
