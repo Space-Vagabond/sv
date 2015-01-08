@@ -7,6 +7,7 @@ using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using gv;
+using Microsoft.VisualBasic.PowerPacks;
 
 namespace Galactic_Vagabond
 {
@@ -22,8 +23,7 @@ namespace Galactic_Vagabond
         List<Control> _cockpitControls = new List<Control>();
         List<Control> _overviewControls = new List<Control>();
         List<Control> _techControls = new List<Control>();
-        List<Control> _tabControls = new List<Control>();
-       
+        List<Control> _tabControls = new List<Control>();      
 
         public Form_GV_01()
         {
@@ -91,6 +91,7 @@ namespace Galactic_Vagabond
             _techControls.Add( TechPanel );
             TechPanel.Hide();
             TechPanel.BackColor = Color.Transparent;
+
             foreach( Button b in TechPanel.Controls.OfType<Button>() )
             {
                 string n1 = b.Name[1].ToString();
@@ -98,8 +99,19 @@ namespace Galactic_Vagabond
 
                 int nb = Convert.ToInt32( n1 ) * 10 + Convert.ToInt32( n2 );
 
+                b.Enabled = false;
+                b.FlatStyle = FlatStyle.Flat;
+                b.FlatAppearance.BorderColor = Color.Red;
+                b.FlatAppearance.BorderSize = 3;
                 b.BackgroundImage = (Image)Galactic_Vagabond.Properties.Resources.ResourceManager.GetObject( "tech" + nb.ToString() );
 
+            }
+            
+            foreach( LineShape l in shapeContainer1.Shapes )
+            {
+                l.BorderWidth = 2;
+                l.BorderColor = Color.Red;
+                l.Enabled = false;
             }
         }
         /// <summary>
@@ -633,13 +645,12 @@ namespace Galactic_Vagabond
                 string n2 = b.Name[2].ToString();
 
                 int nb = Convert.ToInt32(n1) * 10 + Convert.ToInt32(n2);
-                b.Enabled = false;
-                b.FlatStyle = FlatStyle.Flat;
-                b.FlatAppearance.BorderColor = Color.Red;
-                b.FlatAppearance.BorderSize = 3;
-                
-
-                if( _universe.Techs[nb].Prev1 == null && _universe.Techs[nb].Prev2 == null )
+                if( _universe.Techs[nb].IsDiscovered )
+                {
+                    b.Enabled = false;
+                    b.FlatAppearance.BorderColor = Color.Green;
+                }
+                else if( _universe.Techs[nb].Prev1 == null && _universe.Techs[nb].Prev2 == null )
                 {
                     b.Enabled = true;
                     b.FlatAppearance.BorderColor = Color.Blue;
@@ -656,55 +667,100 @@ namespace Galactic_Vagabond
                         b.Enabled = true;
                         b.FlatAppearance.BorderColor = Color.Blue;
                     }
-                }
-                if( _universe.Techs[nb].IsDiscovered )
-                {
-                    b.Enabled = false;
-                    b.FlatAppearance.BorderColor = Color.Green;
-                }
+                }              
             }
         }
         private void TGazEx_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 0 );
-            if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
-            TechButton_Click(sender, e);
+            if( msg )
+            {
+                lineShape1.BorderColor = Color.Green;
+                lineShape2.BorderColor = Color.Green;
+                TechButton_Click( sender, e );
+            }
+            else
+            {
+                MessageBox.Show( "You can't buy this Tech !" );
+            }
         }
         private void TGemsEx_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 1 );
-            if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
-            TechButton_Click(sender, e);
+            if( msg )
+            {
+                lineShape3.BorderColor = Color.Green;
+                TechButton_Click( sender, e );
+            }
+            else
+            {
+                MessageBox.Show( "You can't buy this Tech !" );
+            }
         }
         private void T02PlutoEx_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 2 );
-            if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
-            TechButton_Click(sender, e);
+            if( msg )
+            {
+                lineShape5.BorderColor = Color.Green;
+                TechButton_Click( sender, e );
+            }
+            else
+            {
+                MessageBox.Show( "You can't buy this Tech !" );
+            }
         }
         private void T03HydroEn_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 3 );
-            if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
-            TechButton_Click(sender, e);
+            if( msg )
+            {
+                lineShape4.BorderColor = Color.Green;
+                TechButton_Click( sender, e );
+            }
+            else
+            {
+                MessageBox.Show( "You can't buy this Tech !" );
+            }
         }
         private void T04HelEn_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 4 );
-            if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
-            TechButton_Click(sender, e);
+            if( msg )
+            {
+                lineShape6.BorderColor = Color.Green;
+                TechButton_Click( sender, e );
+            }
+            else
+            {
+                MessageBox.Show( "You can't buy this Tech !" );
+            }
         }
         private void T05PlutoEn_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 5 );
-            if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
-            TechButton_Click(sender, e);
+            if( msg )
+            {
+                lineShape7.BorderColor = Color.Green;
+                TechButton_Click( sender, e );
+            }
+            else
+            {
+                MessageBox.Show( "You can't buy this Tech !" );
+            }
         }
         private void T06FacUp_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 6 );
-            if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
-            TechButton_Click(sender, e);
+            if( msg )
+            {
+                lineShape8.BorderColor = Color.Green;
+                TechButton_Click( sender, e );
+            }
+            else
+            {
+                MessageBox.Show( "You can't buy this Tech !" );
+            }
         }
         private void T07BioDome_Click( object sender, EventArgs e )
         {
@@ -721,14 +777,28 @@ namespace Galactic_Vagabond
         private void T09Diplomacy_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 9 );
-            if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
-            TechButton_Click(sender, e);
+            if( msg )
+            {
+                lineShape9.BorderColor = Color.Green;
+                TechButton_Click( sender, e );
+            }
+            else
+            {
+                MessageBox.Show( "You can't buy this Tech !" );
+            }
         }
         private void T10Workers_Click( object sender, EventArgs e )
         {
             bool msg = _universe.BuyTech( 10 );
-            if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
-            TechButton_Click(sender, e);
+            if( msg )
+            {
+                lineShape10.BorderColor = Color.Green;
+                TechButton_Click( sender, e );
+            }
+            else
+            {
+                MessageBox.Show( "You can't buy this Tech !" );
+            }
         }
         private void T11Firm_Click( object sender, EventArgs e )
         {
