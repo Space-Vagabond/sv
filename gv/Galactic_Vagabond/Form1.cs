@@ -864,5 +864,12 @@ namespace Galactic_Vagabond
                 TechButton_Click(sender, e);
             }
         }
+
+        private void toolTip1_Draw( object sender, DrawToolTipEventArgs e )
+        {           
+            e.DrawBackground();
+            e.DrawBorder();
+            e.DrawText( TextFormatFlags.TextBoxControl );            
+        }
     }
 }
