@@ -864,5 +864,27 @@ namespace Galactic_Vagabond
                 TechButton_Click(sender, e);
             }
         }
+
+        private void StatisticsButton_Click(object sender, EventArgs e)
+        {
+            EndTurn.Show();
+            foreach (Control c in _tabControls)
+            {
+                c.Show();
+            }
+            foreach (Control c in _techControls)
+            {
+                c.Hide();
+            }
+            foreach (Control c in _cockpitControls)
+            {
+                c.Hide();
+            }
+            foreach (Control c in _overviewControls)
+            {
+                c.Hide();
+            }
+            
+        }
     }
 }

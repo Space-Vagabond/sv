@@ -549,6 +549,7 @@
             this.StatisticsButton.TabIndex = 16;
             this.StatisticsButton.Text = "Statistics";
             this.StatisticsButton.UseVisualStyleBackColor = false;
+            this.StatisticsButton.Click += new System.EventHandler(this.StatisticsButton_Click);
             // 
             // LastTurnLabel
             // 
