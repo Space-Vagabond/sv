@@ -1220,7 +1220,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "Form_GV_01";
-            this.Text = "Galactic_Vagabond 0.1";
+            this.Text = "Galactic Vagabond";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.map)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlanetImg)).EndInit();
