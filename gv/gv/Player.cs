@@ -35,7 +35,7 @@ namespace gv
             {
                 if( s != "none" )
                 {
-                    _ressources.Add( s, 0 );
+                    _ressources.Add( s, 100000 );
                 }
             }
         }

@@ -17,7 +17,7 @@ namespace Galactic_Vagabond
         public GameLoader()
         {
             InitializeComponent();
-            string folderPath = @".\..\..\..\Saves";
+            string folderPath = @Environment.GetFolderPath( Environment.SpecialFolder.ApplicationData ) + "/GVSaves";
             DirectoryInfo dir = new DirectoryInfo( folderPath );
             FileInfo[] files = dir.GetFiles( "save*", SearchOption.TopDirectoryOnly );
 

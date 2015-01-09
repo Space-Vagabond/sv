@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -81,18 +82,30 @@
             this.OverviewDetails = new System.Windows.Forms.ListBox();
             this.PlanetImg = new System.Windows.Forms.PictureBox();
             this.TechPanel = new System.Windows.Forms.Panel();
-            this.T11Firm = new System.Windows.Forms.Button();
-            this.T10Workers = new System.Windows.Forms.Button();
-            this.T09Diplomacy = new System.Windows.Forms.Button();
-            this.T08Radar = new System.Windows.Forms.Button();
-            this.T07BioDome = new System.Windows.Forms.Button();
-            this.T06FacUp = new System.Windows.Forms.Button();
-            this.T05PlutoEn = new System.Windows.Forms.Button();
-            this.T04HelEn = new System.Windows.Forms.Button();
-            this.T03HydroEn = new System.Windows.Forms.Button();
-            this.T02PlutoEx = new System.Windows.Forms.Button();
-            this.T01GemsEx = new System.Windows.Forms.Button();
-            this.T00GazEx = new System.Windows.Forms.Button();
+            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape10 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape9 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape8 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape7 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape6 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.T11Firm = new Galactic_Vagabond.TechButton();
+            this.T10Workers = new Galactic_Vagabond.TechButton();
+            this.T09Diplomacy = new Galactic_Vagabond.TechButton();
+            this.T08Radar = new Galactic_Vagabond.TechButton();
+            this.T07BioDome = new Galactic_Vagabond.TechButton();
+            this.T06FacUp = new Galactic_Vagabond.TechButton();
+            this.T05PlutoEn = new Galactic_Vagabond.TechButton();
+            this.T04HelEn = new Galactic_Vagabond.TechButton();
+            this.T03HydroEn = new Galactic_Vagabond.TechButton();
+            this.T02PlutoEx = new Galactic_Vagabond.TechButton();
+            this.T01GemsEx = new Galactic_Vagabond.TechButton();
+            this.T00GazEx = new Galactic_Vagabond.TechButton();
             ((System.ComponentModel.ISupportInitialize)(this.map)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlanetImg)).BeginInit();
             this.TechPanel.SuspendLayout();
@@ -651,7 +664,7 @@
             // PlanetImg
             // 
             this.PlanetImg.BackColor = System.Drawing.Color.Black;
-            this.PlanetImg.Location = new System.Drawing.Point(848, 142);
+            this.PlanetImg.Location = new System.Drawing.Point(848, 200);
             this.PlanetImg.Name = "PlanetImg";
             this.PlanetImg.Size = new System.Drawing.Size(30, 30);
             this.PlanetImg.TabIndex = 25;
@@ -672,127 +685,273 @@
             this.TechPanel.Controls.Add(this.T02PlutoEx);
             this.TechPanel.Controls.Add(this.T01GemsEx);
             this.TechPanel.Controls.Add(this.T00GazEx);
+            this.TechPanel.Controls.Add(this.shapeContainer1);
             this.TechPanel.Location = new System.Drawing.Point(0, 0);
             this.TechPanel.Name = "TechPanel";
             this.TechPanel.Size = new System.Drawing.Size(1258, 585);
             this.TechPanel.TabIndex = 26;
             // 
+            // shapeContainer1
+            // 
+            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer1.Name = "shapeContainer1";
+            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape10,
+            this.lineShape9,
+            this.lineShape8,
+            this.lineShape7,
+            this.lineShape6,
+            this.lineShape5,
+            this.lineShape4,
+            this.lineShape3,
+            this.lineShape2,
+            this.lineShape1});
+            this.shapeContainer1.Size = new System.Drawing.Size(1258, 585);
+            this.shapeContainer1.TabIndex = 12;
+            this.shapeContainer1.TabStop = false;
+            // 
+            // lineShape10
+            // 
+            this.lineShape10.Name = "lineShape10";
+            this.lineShape10.X1 = 751;
+            this.lineShape10.X2 = 827;
+            this.lineShape10.Y1 = 466;
+            this.lineShape10.Y2 = 466;
+            // 
+            // lineShape9
+            // 
+            this.lineShape9.Name = "lineShape9";
+            this.lineShape9.X1 = 536;
+            this.lineShape9.X2 = 626;
+            this.lineShape9.Y1 = 467;
+            this.lineShape9.Y2 = 468;
+            // 
+            // lineShape8
+            // 
+            this.lineShape8.Name = "lineShape8";
+            this.lineShape8.X1 = 955;
+            this.lineShape8.X2 = 1054;
+            this.lineShape8.Y1 = 261;
+            this.lineShape8.Y2 = 262;
+            // 
+            // lineShape7
+            // 
+            this.lineShape7.Name = "lineShape7";
+            this.lineShape7.X1 = 748;
+            this.lineShape7.X2 = 833;
+            this.lineShape7.Y1 = 262;
+            this.lineShape7.Y2 = 261;
+            // 
+            // lineShape6
+            // 
+            this.lineShape6.Name = "lineShape6";
+            this.lineShape6.X1 = 534;
+            this.lineShape6.X2 = 624;
+            this.lineShape6.Y1 = 258;
+            this.lineShape6.Y2 = 259;
+            // 
+            // lineShape5
+            // 
+            this.lineShape5.Name = "lineShape5";
+            this.lineShape5.X1 = 540;
+            this.lineShape5.X2 = 680;
+            this.lineShape5.Y1 = 85;
+            this.lineShape5.Y2 = 194;
+            // 
+            // lineShape4
+            // 
+            this.lineShape4.Name = "lineShape4";
+            this.lineShape4.X1 = 328;
+            this.lineShape4.X2 = 414;
+            this.lineShape4.Y1 = 261;
+            this.lineShape4.Y2 = 261;
+            // 
+            // lineShape3
+            // 
+            this.lineShape3.Name = "lineShape3";
+            this.lineShape3.X1 = 331;
+            this.lineShape3.X2 = 412;
+            this.lineShape3.Y1 = 82;
+            this.lineShape3.Y2 = 82;
+            // 
+            // lineShape2
+            // 
+            this.lineShape2.Name = "lineShape2";
+            this.lineShape2.X1 = 139;
+            this.lineShape2.X2 = 202;
+            this.lineShape2.Y1 = 262;
+            this.lineShape2.Y2 = 262;
+            // 
+            // lineShape1
+            // 
+            this.lineShape1.BorderColor = System.Drawing.Color.Black;
+            this.lineShape1.Name = "lineShape1";
+            this.lineShape1.SelectionColor = System.Drawing.Color.White;
+            this.lineShape1.X1 = 67;
+            this.lineShape1.X2 = 204;
+            this.lineShape1.Y1 = 196;
+            this.lineShape1.Y2 = 82;
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.AutomaticDelay = 0;
+            this.toolTip1.BackColor = System.Drawing.Color.Black;
+            this.toolTip1.ForeColor = System.Drawing.Color.Chartreuse;
+            this.toolTip1.IsBalloon = true;
+            // 
             // T11Firm
             // 
+            this.T11Firm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T11Firm.ForeColor = System.Drawing.Color.Tan;
             this.T11Firm.Location = new System.Drawing.Point(828, 401);
             this.T11Firm.Name = "T11Firm";
             this.T11Firm.Size = new System.Drawing.Size(128, 128);
             this.T11Firm.TabIndex = 11;
+            this.T11Firm.TEnabled = false;
             this.T11Firm.Text = "Galactic Firm";
             this.T11Firm.UseVisualStyleBackColor = true;
             this.T11Firm.Click += new System.EventHandler(this.T11Firm_Click);
             // 
             // T10Workers
             // 
+            this.T10Workers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T10Workers.ForeColor = System.Drawing.Color.Tan;
             this.T10Workers.Location = new System.Drawing.Point(623, 401);
             this.T10Workers.Name = "T10Workers";
             this.T10Workers.Size = new System.Drawing.Size(128, 128);
             this.T10Workers.TabIndex = 10;
+            this.T10Workers.TEnabled = false;
             this.T10Workers.Text = "Workers";
             this.T10Workers.UseVisualStyleBackColor = true;
             this.T10Workers.Click += new System.EventHandler(this.T10Workers_Click);
             // 
             // T09Diplomacy
             // 
+            this.T09Diplomacy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T09Diplomacy.ForeColor = System.Drawing.Color.Tan;
             this.T09Diplomacy.Location = new System.Drawing.Point(410, 401);
             this.T09Diplomacy.Name = "T09Diplomacy";
             this.T09Diplomacy.Size = new System.Drawing.Size(128, 128);
             this.T09Diplomacy.TabIndex = 9;
+            this.T09Diplomacy.TEnabled = false;
             this.T09Diplomacy.Text = "Diplomacy";
             this.T09Diplomacy.UseVisualStyleBackColor = true;
             this.T09Diplomacy.Click += new System.EventHandler(this.T09Diplomacy_Click);
             // 
             // T08Radar
             // 
+            this.T08Radar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T08Radar.ForeColor = System.Drawing.Color.Tan;
             this.T08Radar.Location = new System.Drawing.Point(12, 401);
             this.T08Radar.Name = "T08Radar";
             this.T08Radar.Size = new System.Drawing.Size(128, 128);
             this.T08Radar.TabIndex = 8;
+            this.T08Radar.TEnabled = false;
             this.T08Radar.Text = "Radar";
             this.T08Radar.UseVisualStyleBackColor = true;
             this.T08Radar.Click += new System.EventHandler(this.T08Radar_Click);
             // 
             // T07BioDome
             // 
+            this.T07BioDome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T07BioDome.ForeColor = System.Drawing.Color.Tan;
             this.T07BioDome.Location = new System.Drawing.Point(1046, 195);
             this.T07BioDome.Name = "T07BioDome";
             this.T07BioDome.Size = new System.Drawing.Size(128, 128);
             this.T07BioDome.TabIndex = 7;
+            this.T07BioDome.TEnabled = false;
             this.T07BioDome.Text = "Bio Dome";
             this.T07BioDome.UseVisualStyleBackColor = true;
             this.T07BioDome.Click += new System.EventHandler(this.T07BioDome_Click);
             // 
             // T06FacUp
             // 
+            this.T06FacUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T06FacUp.ForeColor = System.Drawing.Color.Tan;
             this.T06FacUp.Location = new System.Drawing.Point(828, 195);
             this.T06FacUp.Name = "T06FacUp";
             this.T06FacUp.Size = new System.Drawing.Size(128, 128);
             this.T06FacUp.TabIndex = 6;
+            this.T06FacUp.TEnabled = false;
             this.T06FacUp.Text = "Factory Upgrade";
             this.T06FacUp.UseVisualStyleBackColor = true;
             this.T06FacUp.Click += new System.EventHandler(this.T06FacUp_Click);
             // 
             // T05PlutoEn
             // 
+            this.T05PlutoEn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T05PlutoEn.ForeColor = System.Drawing.Color.Tan;
             this.T05PlutoEn.Location = new System.Drawing.Point(622, 195);
             this.T05PlutoEn.Name = "T05PlutoEn";
             this.T05PlutoEn.Size = new System.Drawing.Size(128, 128);
             this.T05PlutoEn.TabIndex = 5;
-            this.T05PlutoEn.Text = "Plutonium Extractor";
+            this.T05PlutoEn.TEnabled = false;
+            this.T05PlutoEn.Text = "Plutonium Engine";
             this.T05PlutoEn.UseVisualStyleBackColor = true;
             this.T05PlutoEn.Click += new System.EventHandler(this.T05PlutoEn_Click);
             // 
             // T04HelEn
             // 
+            this.T04HelEn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T04HelEn.ForeColor = System.Drawing.Color.Tan;
             this.T04HelEn.Location = new System.Drawing.Point(410, 195);
             this.T04HelEn.Name = "T04HelEn";
             this.T04HelEn.Size = new System.Drawing.Size(128, 128);
             this.T04HelEn.TabIndex = 4;
+            this.T04HelEn.TEnabled = false;
             this.T04HelEn.Text = "Helium Engine";
             this.T04HelEn.UseVisualStyleBackColor = true;
             this.T04HelEn.Click += new System.EventHandler(this.T04HelEn_Click);
             // 
             // T03HydroEn
             // 
+            this.T03HydroEn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T03HydroEn.ForeColor = System.Drawing.Color.Tan;
             this.T03HydroEn.Location = new System.Drawing.Point(202, 195);
             this.T03HydroEn.Name = "T03HydroEn";
             this.T03HydroEn.Size = new System.Drawing.Size(128, 128);
             this.T03HydroEn.TabIndex = 3;
+            this.T03HydroEn.TEnabled = false;
             this.T03HydroEn.Text = "Hydrogene Engine";
             this.T03HydroEn.UseVisualStyleBackColor = true;
             this.T03HydroEn.Click += new System.EventHandler(this.T03HydroEn_Click);
             // 
             // T02PlutoEx
             // 
+            this.T02PlutoEx.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T02PlutoEx.ForeColor = System.Drawing.Color.Tan;
             this.T02PlutoEx.Location = new System.Drawing.Point(410, 19);
             this.T02PlutoEx.Name = "T02PlutoEx";
             this.T02PlutoEx.Size = new System.Drawing.Size(128, 128);
             this.T02PlutoEx.TabIndex = 2;
+            this.T02PlutoEx.TEnabled = false;
             this.T02PlutoEx.Text = "Plutonium Extractor";
             this.T02PlutoEx.UseVisualStyleBackColor = true;
             this.T02PlutoEx.Click += new System.EventHandler(this.T02PlutoEx_Click);
             // 
             // T01GemsEx
             // 
+            this.T01GemsEx.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T01GemsEx.ForeColor = System.Drawing.Color.Tan;
             this.T01GemsEx.Location = new System.Drawing.Point(202, 19);
             this.T01GemsEx.Name = "T01GemsEx";
             this.T01GemsEx.Size = new System.Drawing.Size(128, 128);
             this.T01GemsEx.TabIndex = 1;
+            this.T01GemsEx.TEnabled = false;
             this.T01GemsEx.Text = "Gems Extractor";
             this.T01GemsEx.UseVisualStyleBackColor = true;
             this.T01GemsEx.Click += new System.EventHandler(this.TGemsEx_Click);
             // 
             // T00GazEx
             // 
+            this.T00GazEx.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T00GazEx.ForeColor = System.Drawing.Color.Tan;
             this.T00GazEx.Location = new System.Drawing.Point(12, 195);
             this.T00GazEx.Name = "T00GazEx";
             this.T00GazEx.Size = new System.Drawing.Size(128, 128);
             this.T00GazEx.TabIndex = 0;
+            this.T00GazEx.TEnabled = false;
             this.T00GazEx.Text = "Gaz Extractor";
             this.T00GazEx.UseVisualStyleBackColor = true;
             this.T00GazEx.Click += new System.EventHandler(this.TGazEx_Click);
@@ -891,21 +1050,30 @@
         private System.Windows.Forms.ListBox OverviewDetails;
         private System.Windows.Forms.PictureBox PlanetImg;
         private System.Windows.Forms.Panel TechPanel;
-        private System.Windows.Forms.Button T01GemsEx;
-        private System.Windows.Forms.Button T00GazEx;
-        private System.Windows.Forms.Button T11Firm;
-        private System.Windows.Forms.Button T10Workers;
-        private System.Windows.Forms.Button T09Diplomacy;
-        private System.Windows.Forms.Button T08Radar;
-        private System.Windows.Forms.Button T07BioDome;
-        private System.Windows.Forms.Button T06FacUp;
-        private System.Windows.Forms.Button T05PlutoEn;
-        private System.Windows.Forms.Button T04HelEn;
-        private System.Windows.Forms.Button T03HydroEn;
-        private System.Windows.Forms.Button T02PlutoEx;
-
-
-
+        private TechButton T01GemsEx;
+        private TechButton T00GazEx;
+        private TechButton T11Firm;
+        private TechButton T10Workers;
+        private TechButton T09Diplomacy;
+        private TechButton T08Radar;
+        private TechButton T07BioDome;
+        private TechButton T06FacUp;
+        private TechButton T05PlutoEn;
+        private TechButton T04HelEn;
+        private TechButton T03HydroEn;
+        private TechButton T02PlutoEx;
+        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape10;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape9;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape8;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape7;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape6;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape5;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape4;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape3;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
