@@ -95,6 +95,7 @@
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.NbPlanets = new System.Windows.Forms.Label();
+            this.DiscoveredPlanets = new System.Windows.Forms.Label();
             this.T11Firm = new Galactic_Vagabond.TechButton();
             this.T10Workers = new Galactic_Vagabond.TechButton();
             this.T09Diplomacy = new Galactic_Vagabond.TechButton();
@@ -107,7 +108,13 @@
             this.T02PlutoEx = new Galactic_Vagabond.TechButton();
             this.T01GemsEx = new Galactic_Vagabond.TechButton();
             this.T00GazEx = new Galactic_Vagabond.TechButton();
-            this.DiscoveredPlanets = new System.Windows.Forms.Label();
+            this.FactoriesMetal = new System.Windows.Forms.Label();
+            this.FactoriesSilicium = new System.Windows.Forms.Label();
+            this.FactoriesHydrogen = new System.Windows.Forms.Label();
+            this.FactoriesHelium = new System.Windows.Forms.Label();
+            this.FactoriesGems = new System.Windows.Forms.Label();
+            this.FactoriesPlutonium = new System.Windows.Forms.Label();
+            this.Income = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.map)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlanetImg)).BeginInit();
             this.TechPanel.SuspendLayout();
@@ -817,6 +824,19 @@
             this.NbPlanets.Text = "Placeholder";
             this.NbPlanets.Visible = false;
             // 
+            // DiscoveredPlanets
+            // 
+            this.DiscoveredPlanets.AutoSize = true;
+            this.DiscoveredPlanets.BackColor = System.Drawing.Color.Transparent;
+            this.DiscoveredPlanets.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DiscoveredPlanets.ForeColor = System.Drawing.Color.Red;
+            this.DiscoveredPlanets.Location = new System.Drawing.Point(50, 70);
+            this.DiscoveredPlanets.Name = "DiscoveredPlanets";
+            this.DiscoveredPlanets.Size = new System.Drawing.Size(92, 20);
+            this.DiscoveredPlanets.TabIndex = 28;
+            this.DiscoveredPlanets.Text = "Placeholder";
+            this.DiscoveredPlanets.Visible = false;
+            // 
             // T11Firm
             // 
             this.T11Firm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -973,18 +993,96 @@
             this.T00GazEx.UseVisualStyleBackColor = true;
             this.T00GazEx.Click += new System.EventHandler(this.TGazEx_Click);
             // 
-            // DiscoveredPlanets
+            // FactoriesMetal
             // 
-            this.DiscoveredPlanets.AutoSize = true;
-            this.DiscoveredPlanets.BackColor = System.Drawing.Color.Transparent;
-            this.DiscoveredPlanets.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DiscoveredPlanets.ForeColor = System.Drawing.Color.Red;
-            this.DiscoveredPlanets.Location = new System.Drawing.Point(50, 70);
-            this.DiscoveredPlanets.Name = "DiscoveredPlanets";
-            this.DiscoveredPlanets.Size = new System.Drawing.Size(92, 20);
-            this.DiscoveredPlanets.TabIndex = 28;
-            this.DiscoveredPlanets.Text = "Placeholder";
-            this.DiscoveredPlanets.Visible = false;
+            this.FactoriesMetal.AutoSize = true;
+            this.FactoriesMetal.BackColor = System.Drawing.Color.Transparent;
+            this.FactoriesMetal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FactoriesMetal.ForeColor = System.Drawing.Color.Red;
+            this.FactoriesMetal.Location = new System.Drawing.Point(50, 90);
+            this.FactoriesMetal.Name = "FactoriesMetal";
+            this.FactoriesMetal.Size = new System.Drawing.Size(92, 20);
+            this.FactoriesMetal.TabIndex = 29;
+            this.FactoriesMetal.Text = "Placeholder";
+            this.FactoriesMetal.Visible = false;
+            // 
+            // FactoriesSilicium
+            // 
+            this.FactoriesSilicium.AutoSize = true;
+            this.FactoriesSilicium.BackColor = System.Drawing.Color.Transparent;
+            this.FactoriesSilicium.Font = new System.Drawing.Font( "Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)) );
+            this.FactoriesSilicium.ForeColor = System.Drawing.Color.Red;
+            this.FactoriesSilicium.Location = new System.Drawing.Point( 50, 110 );
+            this.FactoriesSilicium.Name = "FactoriesSilicium";
+            this.FactoriesSilicium.Size = new System.Drawing.Size( 92, 20 );
+            this.FactoriesSilicium.TabIndex = 29;
+            this.FactoriesSilicium.Text = "Placeholder";
+            this.FactoriesSilicium.Visible = false;
+            // 
+            // FactoriesHydrogen
+            // 
+            this.FactoriesHydrogen.AutoSize = true;
+            this.FactoriesHydrogen.BackColor = System.Drawing.Color.Transparent;
+            this.FactoriesHydrogen.Font = new System.Drawing.Font( "Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)) );
+            this.FactoriesHydrogen.ForeColor = System.Drawing.Color.Red;
+            this.FactoriesHydrogen.Location = new System.Drawing.Point( 50, 130 );
+            this.FactoriesHydrogen.Name = "FactoriesHydrogen";
+            this.FactoriesHydrogen.Size = new System.Drawing.Size( 92, 20 );
+            this.FactoriesHydrogen.TabIndex = 29;
+            this.FactoriesHydrogen.Text = "Placeholder";
+            this.FactoriesHydrogen.Visible = false;
+            // 
+            // FactoriesHelium
+            // 
+            this.FactoriesHelium.AutoSize = true;
+            this.FactoriesHelium.BackColor = System.Drawing.Color.Transparent;
+            this.FactoriesHelium.Font = new System.Drawing.Font( "Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)) );
+            this.FactoriesHelium.ForeColor = System.Drawing.Color.Red;
+            this.FactoriesHelium.Location = new System.Drawing.Point( 50, 150 );
+            this.FactoriesHelium.Name = "FactoriesHelium";
+            this.FactoriesHelium.Size = new System.Drawing.Size( 92, 20 );
+            this.FactoriesHelium.TabIndex = 29;
+            this.FactoriesHelium.Text = "Placeholder";
+            this.FactoriesHelium.Visible = false;
+            // 
+            // FactoriesGems
+            // 
+            this.FactoriesGems.AutoSize = true;
+            this.FactoriesGems.BackColor = System.Drawing.Color.Transparent;
+            this.FactoriesGems.Font = new System.Drawing.Font( "Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)) );
+            this.FactoriesGems.ForeColor = System.Drawing.Color.Red;
+            this.FactoriesGems.Location = new System.Drawing.Point( 50, 170 );
+            this.FactoriesGems.Name = "FactoriesGems";
+            this.FactoriesGems.Size = new System.Drawing.Size( 92, 20 );
+            this.FactoriesGems.TabIndex = 29;
+            this.FactoriesGems.Text = "Placeholder";
+            this.FactoriesGems.Visible = false;
+            // 
+            // FactoriesPlutonium
+            // 
+            this.FactoriesPlutonium.AutoSize = true;
+            this.FactoriesPlutonium.BackColor = System.Drawing.Color.Transparent;
+            this.FactoriesPlutonium.Font = new System.Drawing.Font( "Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)) );
+            this.FactoriesPlutonium.ForeColor = System.Drawing.Color.Red;
+            this.FactoriesPlutonium.Location = new System.Drawing.Point( 50, 190 );
+            this.FactoriesPlutonium.Name = "FactoriesPlutonium";
+            this.FactoriesPlutonium.Size = new System.Drawing.Size( 92, 20 );
+            this.FactoriesPlutonium.TabIndex = 29;
+            this.FactoriesPlutonium.Text = "Placeholder";
+            this.FactoriesPlutonium.Visible = false;
+            // 
+            // Income
+            // 
+            this.Income.AutoSize = true;
+            this.Income.BackColor = System.Drawing.Color.Transparent;
+            this.Income.Font = new System.Drawing.Font( "Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)) );
+            this.Income.ForeColor = System.Drawing.Color.Red;
+            this.Income.Location = new System.Drawing.Point( 50, 210 );
+            this.Income.Name = "Income";
+            this.Income.Size = new System.Drawing.Size( 92, 20 );
+            this.Income.TabIndex = 29;
+            this.Income.Text = "Placeholder";
+            this.Income.Visible = false;
             // 
             // Form_GV_01
             // 
@@ -993,6 +1091,13 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1261, 657);
+            this.Controls.Add( this.FactoriesMetal );
+            this.Controls.Add( this.FactoriesSilicium );
+            this.Controls.Add( this.FactoriesHydrogen );
+            this.Controls.Add( this.FactoriesHelium );
+            this.Controls.Add( this.FactoriesGems );
+            this.Controls.Add( this.FactoriesPlutonium );
+            this.Controls.Add( this.Income );
             this.Controls.Add(this.DiscoveredPlanets);
             this.Controls.Add(this.NbPlanets);
             this.Controls.Add(this.PlanetImg);
@@ -1108,6 +1213,13 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label NbPlanets;
         private System.Windows.Forms.Label DiscoveredPlanets;
+        private System.Windows.Forms.Label FactoriesMetal;
+        private System.Windows.Forms.Label FactoriesSilicium;
+        private System.Windows.Forms.Label FactoriesHydrogen;
+        private System.Windows.Forms.Label FactoriesHelium;
+        private System.Windows.Forms.Label FactoriesGems;
+        private System.Windows.Forms.Label FactoriesPlutonium;
+        private System.Windows.Forms.Label Income;
     }
 }
 

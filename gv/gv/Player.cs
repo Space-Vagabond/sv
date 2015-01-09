@@ -169,5 +169,9 @@ namespace gv
             get { return _name; }
             set { _name = value; }
         }
+        public int Rate
+        {
+            get { return _resRate; }
+        }
     }
 }
