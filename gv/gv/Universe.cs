@@ -82,7 +82,7 @@ namespace gv
                 int n = _turn * _chunks.Count();
                 if( n > 100 )
                 {
-                    int k = (int)(100 - Math.Exp( ((n - 100) / 50) ));
+                    int k = (int)(100 - Math.Exp( ((n - 100) / 75) ));
 
 
                     if( k <= 0 || rand.Next( 1, k ) == 1 )

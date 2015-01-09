@@ -1074,9 +1074,6 @@
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private System.Windows.Forms.ToolTip toolTip1;
-
-
-
     }
 }
 
