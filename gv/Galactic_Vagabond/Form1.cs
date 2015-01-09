@@ -65,7 +65,7 @@ namespace Galactic_Vagabond
             _tabControls.Add( EventsButton );
             _tabControls.Add( CodexButton );
             _tabControls.Add( StatisticsButton );
-            _tabControls.Add( EndTurn );
+            
 
             _cockpitControls.Add(map);
             _cockpitControls.Add(TurnEvents);
@@ -91,7 +91,7 @@ namespace Galactic_Vagabond
             _techControls.Add( TechPanel );
             TechPanel.Hide();
             TechPanel.BackColor = Color.Transparent;
-
+            PlanetImg.Hide();
             foreach( TechButton b in TechPanel.Controls.OfType<TechButton>() )
             {
                 string n1 = b.Name[1].ToString();
@@ -647,6 +647,7 @@ namespace Galactic_Vagabond
                 c.Show();
             }
             TechPanel.Show();
+            EndTurn.Hide();
             foreach( TechButton b in TechPanel.Controls.OfType<TechButton>() )
             {
                 string n1 = b.Name[1].ToString();
@@ -863,6 +864,30 @@ namespace Galactic_Vagabond
                 if( msg == false ) MessageBox.Show( "You can't buy this Tech !" );
                 TechButton_Click(sender, e);
             }
+        }
+
+        private void StatisticsButton_Click(object sender, EventArgs e)
+        {
+            foreach (Control c in Controls)
+            {
+                c.Hide();
+            }
+            foreach (Control c in _tabControls)
+            {
+                c.Show();
+            }
+            NbPlanets.Show();
+            DiscoveredPlanets.Show();
+            NbPlanets.Text = "Reachable Planets : "+_universe.Planets.Values.Count.ToString();
+            int count = 0;
+            foreach (Planet p in _universe.Planets.Values)
+            {
+                if (p.IsDiscovered)
+                {
+                    count += 1;
+                }
+            }
+            DiscoveredPlanets.Text = "Planets discovered : " + count.ToString();
         }
 
         private void toolTip1_Draw( object sender, DrawToolTipEventArgs e )

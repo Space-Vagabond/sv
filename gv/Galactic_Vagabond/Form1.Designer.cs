@@ -94,6 +94,7 @@
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.NbPlanets = new System.Windows.Forms.Label();
             this.T11Firm = new Galactic_Vagabond.TechButton();
             this.T10Workers = new Galactic_Vagabond.TechButton();
             this.T09Diplomacy = new Galactic_Vagabond.TechButton();
@@ -106,6 +107,7 @@
             this.T02PlutoEx = new Galactic_Vagabond.TechButton();
             this.T01GemsEx = new Galactic_Vagabond.TechButton();
             this.T00GazEx = new Galactic_Vagabond.TechButton();
+            this.DiscoveredPlanets = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.map)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlanetImg)).BeginInit();
             this.TechPanel.SuspendLayout();
@@ -549,6 +551,7 @@
             this.StatisticsButton.TabIndex = 16;
             this.StatisticsButton.Text = "Statistics";
             this.StatisticsButton.UseVisualStyleBackColor = false;
+            this.StatisticsButton.Click += new System.EventHandler(this.StatisticsButton_Click);
             // 
             // LastTurnLabel
             // 
@@ -801,6 +804,19 @@
             this.toolTip1.OwnerDraw = true;
             this.toolTip1.Draw += new System.Windows.Forms.DrawToolTipEventHandler(this.toolTip1_Draw);
             // 
+            // NbPlanets
+            // 
+            this.NbPlanets.AutoSize = true;
+            this.NbPlanets.BackColor = System.Drawing.Color.Transparent;
+            this.NbPlanets.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NbPlanets.ForeColor = System.Drawing.Color.Red;
+            this.NbPlanets.Location = new System.Drawing.Point(50, 50);
+            this.NbPlanets.Name = "NbPlanets";
+            this.NbPlanets.Size = new System.Drawing.Size(92, 20);
+            this.NbPlanets.TabIndex = 27;
+            this.NbPlanets.Text = "Placeholder";
+            this.NbPlanets.Visible = false;
+            // 
             // T11Firm
             // 
             this.T11Firm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -957,6 +973,19 @@
             this.T00GazEx.UseVisualStyleBackColor = true;
             this.T00GazEx.Click += new System.EventHandler(this.TGazEx_Click);
             // 
+            // DiscoveredPlanets
+            // 
+            this.DiscoveredPlanets.AutoSize = true;
+            this.DiscoveredPlanets.BackColor = System.Drawing.Color.Transparent;
+            this.DiscoveredPlanets.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DiscoveredPlanets.ForeColor = System.Drawing.Color.Red;
+            this.DiscoveredPlanets.Location = new System.Drawing.Point(50, 70);
+            this.DiscoveredPlanets.Name = "DiscoveredPlanets";
+            this.DiscoveredPlanets.Size = new System.Drawing.Size(92, 20);
+            this.DiscoveredPlanets.TabIndex = 28;
+            this.DiscoveredPlanets.Text = "Placeholder";
+            this.DiscoveredPlanets.Visible = false;
+            // 
             // Form_GV_01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -964,11 +993,11 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1261, 657);
-            this.Controls.Add(this.TechPanel);
+            this.Controls.Add(this.DiscoveredPlanets);
+            this.Controls.Add(this.NbPlanets);
             this.Controls.Add(this.PlanetImg);
             this.Controls.Add(this.OverviewDetails);
             this.Controls.Add(this.CockpitButton);
-            this.Controls.Add(this.OverViewList);
             this.Controls.Add(this.TurnNumber);
             this.Controls.Add(this.PosY);
             this.Controls.Add(this.Pos);
@@ -989,7 +1018,9 @@
             this.Controls.Add(this.Build);
             this.Controls.Add(this.EndTurn);
             this.Controls.Add(this.CurrentPlanet);
+            this.Controls.Add(this.OverViewList);
             this.Controls.Add(this.map);
+            this.Controls.Add(this.TechPanel);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
@@ -1075,6 +1106,8 @@
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label NbPlanets;
+        private System.Windows.Forms.Label DiscoveredPlanets;
     }
 }
 
