@@ -103,6 +103,13 @@ namespace Galactic_Vagabond
             _statControls.Add( FactoriesGems );
             _statControls.Add( FactoriesPlutonium );
             _statControls.Add( Income );
+            _statControls.Add( TotalMetal );
+            _statControls.Add( TotalSilicium );
+            _statControls.Add( TotalHydrogen );
+            _statControls.Add( TotalGems );
+            _statControls.Add( TotalPlutonium );
+            _statControls.Add( TotalHelium );
+
 
             foreach( TechButton b in TechPanel.Controls.OfType<TechButton>() )
             {
@@ -922,6 +929,13 @@ namespace Galactic_Vagabond
             FactoriesPlutonium.Text = "Plutonium factories: " + factories["Plutonium"].ToString();
 
             Income.Text = "Income by turn by factory: " + _universe.User.Rate.ToString();
+            TotalMetal.Text = "Total Metal gathered: " + _universe.User.TotalRessources["Metal"].ToString();
+            TotalSilicium.Text = "Total Silicium gathered: " + _universe.User.TotalRessources["Silicium"].ToString();
+            TotalHydrogen.Text = "Total Hydrogen gathered: " + _universe.User.TotalRessources["Hydrogen"].ToString();
+            TotalHelium.Text = "Total Helium gathered: " + _universe.User.TotalRessources["Helium"].ToString();
+            TotalGems.Text = "Total Gems gathered: " + _universe.User.TotalRessources["Gems"].ToString();
+            TotalPlutonium.Text = "Total Plutonium gathered: " + _universe.User.TotalRessources["Plutonium"].ToString();
+
         }
 
         private void toolTip1_Draw( object sender, DrawToolTipEventArgs e )
