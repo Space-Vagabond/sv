@@ -958,11 +958,5 @@ namespace Galactic_Vagabond
             e.DrawBorder();
             e.DrawText( TextFormatFlags.TextBoxControl );            
         }
-
-        private void testButton_Click(object sender, EventArgs e)
-        {
-            caesar c = new caesar();
-            c.ShowDialog();
-        }
     }
 }
