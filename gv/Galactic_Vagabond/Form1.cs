@@ -190,7 +190,6 @@ namespace Galactic_Vagabond
                         }
                         else
                         {
-
                             this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Value = _planets[6 - 1];                            
                         }
                     }
@@ -249,7 +248,15 @@ namespace Galactic_Vagabond
                 CurrentPlanet.Text += "Surface: " + pos.ContainedPlanet.Surface + Environment.NewLine;
                 CurrentPlanet.Text += "Resources: " + pos.ContainedPlanet.Ressources + Environment.NewLine;
                 CurrentPlanet.Text += "Inhabitants: " + pos.ContainedPlanet.InhabitantsName + Environment.NewLine;
-                CurrentPlanet.Text += "Planet blocked for " + pos.ContainedPlanet.Blocked.ToString() +" turns" + Environment.NewLine;
+                if( pos.ContainedPlanet.Blocked == -1 )
+                {
+                    CurrentPlanet.Text += "Planet blocked"+ Environment.NewLine;
+                }
+                else if( pos.ContainedPlanet.Blocked > 0 )
+                {
+                    CurrentPlanet.Text += "Planet blocked for " + pos.ContainedPlanet.Blocked.ToString() +" turns" + Environment.NewLine;
+
+                }
                 if( pos.ContainedPlanet.Ressources != "none" )
                 {
                     CurrentPlanet.Text += "Constructible: yes" + Environment.NewLine;
@@ -275,6 +282,10 @@ namespace Galactic_Vagabond
                     {
                         CurrentPlanet.Text += "Constructible: no" + Environment.NewLine;
                     }
+                }
+                if( pos.ContainedPlanet.Blocked != 0 )
+                {
+                    Build.Enabled = false;
                 }
             }
             else
@@ -336,6 +347,11 @@ namespace Galactic_Vagabond
                     {
                         MessageBox.Show( "No more move points" );
                     }
+                }
+                var pos = _universe.Cells.Where( c => c.Position.X == _universe.User.Position.X && c.Position.Y == _universe.User.Position.Y ).Single();
+                if( pos.ContainsPlanet && pos.ContainedPlanet.Name != "Earth" && pos.ContainedPlanet.Name != "Eldorado" && !pos.ContainedPlanet.IsDiscovered)
+                {
+                    if( !LocalEventOnPlanet() ) pos.ContainedPlanet.Blocked = -1;
                 }
                 ShowCurrentPlanet();
                 DisplayPlayerDatas();
