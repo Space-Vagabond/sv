@@ -156,6 +156,12 @@ namespace gv
         public void EndTurn()
         {
             _turn += 1;
+
+            foreach( Planet p in _planets.Values )
+            {
+                if( p.Blocked > 0 ) p.Blocked -= 1;
+            }
+
             _player.EndTurn();
         }
         public bool BuyTech( int idBought )

@@ -248,6 +248,15 @@ namespace Galactic_Vagabond
                 CurrentPlanet.Text += "Surface: " + pos.ContainedPlanet.Surface + Environment.NewLine;
                 CurrentPlanet.Text += "Resources: " + pos.ContainedPlanet.Ressources + Environment.NewLine;
                 CurrentPlanet.Text += "Inhabitants: " + pos.ContainedPlanet.InhabitantsName + Environment.NewLine;
+                if( pos.ContainedPlanet.Blocked == -1 )
+                {
+                    CurrentPlanet.Text += "Planet blocked"+ Environment.NewLine;
+                }
+                else if( pos.ContainedPlanet.Blocked > 0 )
+                {
+                    CurrentPlanet.Text += "Planet blocked for " + pos.ContainedPlanet.Blocked.ToString() +" turns" + Environment.NewLine;
+
+                }
                 if( pos.ContainedPlanet.Ressources != "none" )
                 {
                     CurrentPlanet.Text += "Constructible: yes" + Environment.NewLine;
@@ -273,6 +282,10 @@ namespace Galactic_Vagabond
                     {
                         CurrentPlanet.Text += "Constructible: no" + Environment.NewLine;
                     }
+                }
+                if( pos.ContainedPlanet.Blocked != 0 )
+                {
+                    Build.Enabled = false;
                 }
             }
             else
@@ -334,6 +347,11 @@ namespace Galactic_Vagabond
                     {
                         MessageBox.Show( "No more move points" );
                     }
+                }
+                var pos = _universe.Cells.Where( c => c.Position.X == _universe.User.Position.X && c.Position.Y == _universe.User.Position.Y ).Single();
+                if( pos.ContainsPlanet && pos.ContainedPlanet.Name != "Earth" && pos.ContainedPlanet.Name != "Eldorado" && !pos.ContainedPlanet.IsDiscovered)
+                {
+                    if( !LocalEventOnPlanet() ) pos.ContainedPlanet.Blocked = -1;
                 }
                 ShowCurrentPlanet();
                 DisplayPlayerDatas();
@@ -958,5 +976,60 @@ namespace Galactic_Vagabond
             e.DrawBorder();
             e.DrawText( TextFormatFlags.TextBoxControl );            
         }
+
+        bool LocalEventOnPlanet()
+        {
+            int r = _universe.Rand.Next( 0, 20 );
+            switch( r )
+            {
+                case 0:
+                    caesar game0 = new caesar();
+                    var ret0 = game0.ShowDialog();
+                    if( ret0 == DialogResult.Yes )
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }                   
+                case 1:
+                    mastermind game1 = new mastermind();
+                    var ret1 = game1.ShowDialog();
+                    if( ret1 == DialogResult.Yes )
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }    
+                case 2:
+                    Calcul game2 = new Calcul();
+                    var ret2 = game2.ShowDialog();
+                    if( ret2 == DialogResult.Yes )
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }                      
+                case 3:
+                    Enigme game3 = new Enigme();
+                    var ret3 = game3.ShowDialog();
+                    if( ret3 == DialogResult.Yes )
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }                   
+                default:
+                    return true;                   
+            }
+        }
+
     }
 }
