@@ -56,6 +56,7 @@ namespace Galactic_Vagabond
                 {
 
                     XDocument doc = form2.Doc;
+                    _universe = new Universe (doc.Root);
                 }
             }
             
