@@ -24,5 +24,4 @@ C:\Users\Escande\Desktop\gv\sv\gv\gv\bin\Debug\FakeTextGenerator.dll
 C:\Users\Escande\Desktop\gv\sv\gv\gv\bin\Debug\FakeTextGenerator.pdb
 C:\Users\Escande\Desktop\gv\sv\gv\gv\obj\Debug\gv.dll
 C:\Users\Escande\Desktop\gv\sv\gv\gv\obj\Debug\gv.pdb
-C:\Users\Escande\Desktop\gv\sv\gv\gv\obj\Debug\gv.csprojResolveAssemblyReference.cache
 C:\Users\Benoit\Desktop\PI\sv\gv\gv\obj\Debug\gv.csprojResolveAssemblyReference.cache
