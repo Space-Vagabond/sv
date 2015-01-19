@@ -496,7 +496,7 @@ namespace Galactic_Vagabond
             _universe.Event.EventOccurs();
             DisplayTurnEvents();
             DisplayPlayerDatas();
-            
+            _universe.ToXML();
             
         }
         /// <summary>

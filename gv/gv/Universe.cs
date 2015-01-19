@@ -152,14 +152,14 @@ namespace gv
                     new XElement( "ShownChunks",
                         from Ch in _shownChunks
                         select new XElement("shownchunk",
-                            new XElement(Ch.Key+"X",Ch.Value.Position.X),
-                            new XElement( Ch.Key + "Y", Ch.Value.Position.Y )
+                            new XElement("X"+Ch.Key,Ch.Value.Position.X),
+                            new XElement("Y"+Ch.Key , Ch.Value.Position.Y )
                         )
                     ),
                     new XElement("Techs",
                         from T in _techs
                         select new XElement( "Tech",
-                            new XElement( T.Name, T.IsDiscovered )
+                            new XElement( "T"+_techs.IndexOf(T).ToString(), T.IsDiscovered )
                         )
                      )
                 )
