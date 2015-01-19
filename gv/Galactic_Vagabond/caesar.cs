@@ -35,13 +35,11 @@ namespace Galactic_Vagabond
         {
             if (UserInput.Text == _clearMsg)
             {
-                MessageBox.Show("You are welcome on our planet, noble traveler");
-                this.Dispose();
+                DialogResult = System.Windows.Forms.DialogResult.Yes;
             }
             else
             {
-                MessageBox.Show("Go back to your planet with your inferior brain");
-                this.Dispose();
+                DialogResult = System.Windows.Forms.DialogResult.No;
             }
             
         }
