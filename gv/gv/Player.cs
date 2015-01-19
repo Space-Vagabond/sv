@@ -20,7 +20,8 @@ namespace gv
         int _remainingSteps;
         int _resRate;
         Universe _universe;
-        Dictionary<string, int> _ressources = new Dictionary<string,int>();
+        Dictionary<string, int> _ressources = new Dictionary<string, int>();
+        Dictionary<string, int> _totalRessources = new Dictionary<string, int>();
         
        public Player(Universe u)
         {
@@ -36,6 +37,7 @@ namespace gv
                 if( s != "none" )
                 {
                     _ressources.Add( s, 100000 );
+                    _totalRessources.Add( s, 0 );
                 }
             }
         }
@@ -68,6 +70,7 @@ namespace gv
                 if( p.Ressources != "none" && p.Factory == true )
                 {
                     _ressources[p.Ressources] += _resRate ;
+                    _totalRessources[p.Ressources] += _resRate;
                 }
             }
 
@@ -168,6 +171,14 @@ namespace gv
         {
             get { return _name; }
             set { _name = value; }
+        }
+        public int Rate
+        {
+            get { return _resRate; }
+        }
+        public Dictionary<string, int> TotalRessources
+        {
+            get { return _totalRessources; }
         }
     }
 }

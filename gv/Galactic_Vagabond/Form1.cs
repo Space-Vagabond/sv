@@ -23,7 +23,8 @@ namespace Galactic_Vagabond
         List<Control> _cockpitControls = new List<Control>();
         List<Control> _overviewControls = new List<Control>();
         List<Control> _techControls = new List<Control>();
-        List<Control> _tabControls = new List<Control>();      
+        List<Control> _tabControls = new List<Control>();
+        List<Control> _statControls = new List<Control>();
 
         public Form_GV_01()
         {
@@ -87,11 +88,29 @@ namespace Galactic_Vagabond
             _overviewControls.Add(OverViewList);
             _overviewControls.Add(OverviewDetails);
             _overviewControls.Add(PlanetImg);
+            PlanetImg.Hide();
 
             _techControls.Add( TechPanel );
             TechPanel.Hide();
             TechPanel.BackColor = Color.Transparent;
-            PlanetImg.Hide();
+
+            _statControls.Add( DiscoveredPlanets );
+            _statControls.Add( NbPlanets );
+            _statControls.Add( FactoriesMetal );
+            _statControls.Add( FactoriesSilicium );
+            _statControls.Add( FactoriesHydrogen );
+            _statControls.Add( FactoriesHelium );
+            _statControls.Add( FactoriesGems );
+            _statControls.Add( FactoriesPlutonium );
+            _statControls.Add( Income );
+            _statControls.Add( TotalMetal );
+            _statControls.Add( TotalSilicium );
+            _statControls.Add( TotalHydrogen );
+            _statControls.Add( TotalGems );
+            _statControls.Add( TotalPlutonium );
+            _statControls.Add( TotalHelium );
+
+
             foreach( TechButton b in TechPanel.Controls.OfType<TechButton>() )
             {
                 string n1 = b.Name[1].ToString();
@@ -876,18 +895,47 @@ namespace Galactic_Vagabond
             {
                 c.Show();
             }
-            NbPlanets.Show();
-            DiscoveredPlanets.Show();
+            foreach( Control c in _statControls )
+            {
+                c.Show();
+            }
             NbPlanets.Text = "Reachable Planets : "+_universe.Planets.Values.Count.ToString();
             int count = 0;
+            Dictionary<string, int> factories = new Dictionary<string, int>();
+            foreach( string R in PlanetAttributes.PlanetRessources )
+            {
+                if( R != "none" )
+                {
+                    factories.Add( R, 0 );
+                }
+            }
             foreach (Planet p in _universe.Planets.Values)
             {
                 if (p.IsDiscovered)
                 {
                     count += 1;
+                    if( p.Factory && p.Ressources != "none" )
+                    {
+                        factories[p.Ressources] += 1;
+                    }
                 }
             }
             DiscoveredPlanets.Text = "Planets discovered : " + count.ToString();
+            FactoriesMetal.Text = "Metal factories: "+factories["Metal"].ToString();
+            FactoriesSilicium.Text = "Silicium factories: " + factories["Silicium"].ToString();
+            FactoriesHydrogen.Text = "Hydrogen factories: " + factories["Hydrogen"].ToString();
+            FactoriesHelium.Text = "Helium factories: " + factories["Helium"].ToString();
+            FactoriesGems.Text = "Gems factories: " + factories["Gems"].ToString();
+            FactoriesPlutonium.Text = "Plutonium factories: " + factories["Plutonium"].ToString();
+
+            Income.Text = "Income by turn by factory: " + _universe.User.Rate.ToString();
+            TotalMetal.Text = "Total Metal gathered: " + _universe.User.TotalRessources["Metal"].ToString();
+            TotalSilicium.Text = "Total Silicium gathered: " + _universe.User.TotalRessources["Silicium"].ToString();
+            TotalHydrogen.Text = "Total Hydrogen gathered: " + _universe.User.TotalRessources["Hydrogen"].ToString();
+            TotalHelium.Text = "Total Helium gathered: " + _universe.User.TotalRessources["Helium"].ToString();
+            TotalGems.Text = "Total Gems gathered: " + _universe.User.TotalRessources["Gems"].ToString();
+            TotalPlutonium.Text = "Total Plutonium gathered: " + _universe.User.TotalRessources["Plutonium"].ToString();
+
         }
 
         private void toolTip1_Draw( object sender, DrawToolTipEventArgs e )
