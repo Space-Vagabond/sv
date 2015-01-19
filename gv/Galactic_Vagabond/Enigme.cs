@@ -21,9 +21,19 @@ namespace Galactic_Vagabond
                 + "You decide to ask them \"What would your friend answer if I ask him if he's a liar?\"" + Environment.NewLine
                 + "The first one answer \"no\"" + Environment.NewLine
                 + "The second one answers\"yes\"" + Environment.NewLine
-                + "Which one is the Liar?";
+                + "Which one is the Liar?";           
+        }
 
-            
+        private void button1_Click( object sender, EventArgs e )
+        {
+            if(radioButton2.Checked)
+            {
+                DialogResult = System.Windows.Forms.DialogResult.Yes;
+            }
+            else
+            {
+                DialogResult = System.Windows.Forms.DialogResult.No;
+            }
         }
     }
 }
