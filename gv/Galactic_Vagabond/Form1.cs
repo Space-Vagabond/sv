@@ -989,7 +989,7 @@ namespace Galactic_Vagabond
                         return false;
                     }    
                 case 2:
-                    mastermind game2 = new mastermind();
+                    Calcul game2 = new Calcul();
                     var ret2 = game2.ShowDialog();
                     if( ret2 == DialogResult.Yes )
                     {
@@ -1000,7 +1000,7 @@ namespace Galactic_Vagabond
                         return false;
                     }                      
                 case 3:
-                    mastermind game3 = new mastermind();
+                    Enigme game3 = new Enigme();
                     var ret3 = game3.ShowDialog();
                     if( ret3 == DialogResult.Yes )
                     {

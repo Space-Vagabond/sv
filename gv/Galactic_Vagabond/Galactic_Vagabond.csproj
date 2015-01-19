@@ -69,11 +69,23 @@
     <Compile Include="caesar.Designer.cs">
       <DependentUpon>caesar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Calcul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calcul.Designer.cs">
+      <DependentUpon>Calcul.cs</DependentUpon>
+    </Compile>
     <Compile Include="Codex.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Codex.Designer.cs">
       <DependentUpon>Codex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enigme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Enigme.Designer.cs">
+      <DependentUpon>Enigme.cs</DependentUpon>
     </Compile>
     <Compile Include="EventLog.cs">
       <SubType>Form</SubType>
@@ -119,8 +131,14 @@
     <EmbeddedResource Include="caesar.resx">
       <DependentUpon>caesar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Calcul.resx">
+      <DependentUpon>Calcul.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Codex.resx">
       <DependentUpon>Codex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Enigme.resx">
+      <DependentUpon>Enigme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EventLog.resx">
       <DependentUpon>EventLog.cs</DependentUpon>
