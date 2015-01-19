@@ -29,6 +29,7 @@ namespace Galactic_Vagabond
         public Form_GV_01()
         {
             InitializeComponent();
+            
             for( int i = 0; i < 18; i++ )
             {
                 _planets[i] = (Image)Galactic_Vagabond.Properties.Resources.ResourceManager.GetObject( "planet" +( i+1));
@@ -44,6 +45,7 @@ namespace Galactic_Vagabond
                 var result = form2.ShowDialog();
                 if( result == DialogResult.Yes )//new game
                 {
+                    
                     form2.Dispose();
                     this.Show();
                     _universe = new Universe();
@@ -471,11 +473,13 @@ namespace Galactic_Vagabond
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void EndTurn_Click( object sender, EventArgs e )
-        {           
+        {
             _universe.EndTurn();
             _universe.Event.EventOccurs();
             DisplayTurnEvents();
             DisplayPlayerDatas();
+            
+            
         }
         /// <summary>
         /// Button build click
@@ -953,6 +957,12 @@ namespace Galactic_Vagabond
             e.DrawBackground();
             e.DrawBorder();
             e.DrawText( TextFormatFlags.TextBoxControl );            
+        }
+
+        private void testButton_Click(object sender, EventArgs e)
+        {
+            caesar c = new caesar();
+            c.ShowDialog();
         }
     }
 }
