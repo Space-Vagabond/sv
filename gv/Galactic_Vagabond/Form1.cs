@@ -224,6 +224,7 @@ namespace Galactic_Vagabond
             var pos = _universe.Cells.Where( c => c.Position.X == _universe.User.Position.X && c.Position.Y == _universe.User.Position.Y ).Single();
             if( pos.ContainsPlanet )
             {
+                Build.Text = "Build";
                 if( pos.ContainedPlanet.Ressources != "none" && pos.ContainedPlanet.Factory == false )
                 {
                     Build.Enabled = true;
@@ -254,10 +255,16 @@ namespace Galactic_Vagabond
                 {
                     if( pos.ContainedPlanet.Name == "Eldorado" )
                     {
+                        Build.Text = "Recreate Humanity";
+
                         CurrentPlanet.Text += "Constructible: Yes" + Environment.NewLine;
                         CurrentPlanet.Text += "Built: " + ((pos.ContainedPlanet.Factory) ? "yes" : "no") + Environment.NewLine;
 
                         CurrentPlanet.Text += "Build BioDome to recreate humanity" + Environment.NewLine;
+                        if( !_universe.Techs[7].IsDiscovered )
+                        {
+                            Build.Enabled = false;
+                        }
                         Build.Show();
                     }
                     else

@@ -82,6 +82,18 @@
             this.OverviewDetails = new System.Windows.Forms.ListBox();
             this.PlanetImg = new System.Windows.Forms.PictureBox();
             this.TechPanel = new System.Windows.Forms.Panel();
+            this.T11Firm = new Galactic_Vagabond.TechButton();
+            this.T10Workers = new Galactic_Vagabond.TechButton();
+            this.T09Diplomacy = new Galactic_Vagabond.TechButton();
+            this.T08Radar = new Galactic_Vagabond.TechButton();
+            this.T07BioDome = new Galactic_Vagabond.TechButton();
+            this.T06FacUp = new Galactic_Vagabond.TechButton();
+            this.T05PlutoEn = new Galactic_Vagabond.TechButton();
+            this.T04HelEn = new Galactic_Vagabond.TechButton();
+            this.T03HydroEn = new Galactic_Vagabond.TechButton();
+            this.T02PlutoEx = new Galactic_Vagabond.TechButton();
+            this.T01GemsEx = new Galactic_Vagabond.TechButton();
+            this.T00GazEx = new Galactic_Vagabond.TechButton();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape10 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape9 = new Microsoft.VisualBasic.PowerPacks.LineShape();
@@ -109,18 +121,6 @@
             this.TotalHelium = new System.Windows.Forms.Label();
             this.TotalGems = new System.Windows.Forms.Label();
             this.TotalPlutonium = new System.Windows.Forms.Label();
-            this.T11Firm = new Galactic_Vagabond.TechButton();
-            this.T10Workers = new Galactic_Vagabond.TechButton();
-            this.T09Diplomacy = new Galactic_Vagabond.TechButton();
-            this.T08Radar = new Galactic_Vagabond.TechButton();
-            this.T07BioDome = new Galactic_Vagabond.TechButton();
-            this.T06FacUp = new Galactic_Vagabond.TechButton();
-            this.T05PlutoEn = new Galactic_Vagabond.TechButton();
-            this.T04HelEn = new Galactic_Vagabond.TechButton();
-            this.T03HydroEn = new Galactic_Vagabond.TechButton();
-            this.T02PlutoEx = new Galactic_Vagabond.TechButton();
-            this.T01GemsEx = new Galactic_Vagabond.TechButton();
-            this.T00GazEx = new Galactic_Vagabond.TechButton();
             ((System.ComponentModel.ISupportInitialize)(this.map)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlanetImg)).BeginInit();
             this.TechPanel.SuspendLayout();
@@ -707,6 +707,162 @@
             this.TechPanel.Size = new System.Drawing.Size(1258, 585);
             this.TechPanel.TabIndex = 26;
             // 
+            // T11Firm
+            // 
+            this.T11Firm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T11Firm.ForeColor = System.Drawing.Color.Tan;
+            this.T11Firm.Location = new System.Drawing.Point(828, 401);
+            this.T11Firm.Name = "T11Firm";
+            this.T11Firm.Size = new System.Drawing.Size(128, 128);
+            this.T11Firm.TabIndex = 11;
+            this.T11Firm.TEnabled = false;
+            this.T11Firm.Text = "Galactic Firm";
+            this.T11Firm.UseVisualStyleBackColor = true;
+            this.T11Firm.Click += new System.EventHandler(this.T11Firm_Click);
+            // 
+            // T10Workers
+            // 
+            this.T10Workers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T10Workers.ForeColor = System.Drawing.Color.Tan;
+            this.T10Workers.Location = new System.Drawing.Point(623, 401);
+            this.T10Workers.Name = "T10Workers";
+            this.T10Workers.Size = new System.Drawing.Size(128, 128);
+            this.T10Workers.TabIndex = 10;
+            this.T10Workers.TEnabled = false;
+            this.T10Workers.Text = "Workers";
+            this.T10Workers.UseVisualStyleBackColor = true;
+            this.T10Workers.Click += new System.EventHandler(this.T10Workers_Click);
+            // 
+            // T09Diplomacy
+            // 
+            this.T09Diplomacy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T09Diplomacy.ForeColor = System.Drawing.Color.Tan;
+            this.T09Diplomacy.Location = new System.Drawing.Point(410, 401);
+            this.T09Diplomacy.Name = "T09Diplomacy";
+            this.T09Diplomacy.Size = new System.Drawing.Size(128, 128);
+            this.T09Diplomacy.TabIndex = 9;
+            this.T09Diplomacy.TEnabled = false;
+            this.T09Diplomacy.Text = "Diplomacy";
+            this.T09Diplomacy.UseVisualStyleBackColor = true;
+            this.T09Diplomacy.Click += new System.EventHandler(this.T09Diplomacy_Click);
+            // 
+            // T08Radar
+            // 
+            this.T08Radar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T08Radar.ForeColor = System.Drawing.Color.Tan;
+            this.T08Radar.Location = new System.Drawing.Point(12, 401);
+            this.T08Radar.Name = "T08Radar";
+            this.T08Radar.Size = new System.Drawing.Size(128, 128);
+            this.T08Radar.TabIndex = 8;
+            this.T08Radar.TEnabled = false;
+            this.T08Radar.Text = "Radar";
+            this.T08Radar.UseVisualStyleBackColor = true;
+            this.T08Radar.Click += new System.EventHandler(this.T08Radar_Click);
+            // 
+            // T07BioDome
+            // 
+            this.T07BioDome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T07BioDome.ForeColor = System.Drawing.Color.Tan;
+            this.T07BioDome.Location = new System.Drawing.Point(1046, 195);
+            this.T07BioDome.Name = "T07BioDome";
+            this.T07BioDome.Size = new System.Drawing.Size(128, 128);
+            this.T07BioDome.TabIndex = 7;
+            this.T07BioDome.TEnabled = false;
+            this.T07BioDome.Text = "Bio Dome";
+            this.T07BioDome.UseVisualStyleBackColor = true;
+            this.T07BioDome.Click += new System.EventHandler(this.T07BioDome_Click);
+            // 
+            // T06FacUp
+            // 
+            this.T06FacUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T06FacUp.ForeColor = System.Drawing.Color.Tan;
+            this.T06FacUp.Location = new System.Drawing.Point(828, 195);
+            this.T06FacUp.Name = "T06FacUp";
+            this.T06FacUp.Size = new System.Drawing.Size(128, 128);
+            this.T06FacUp.TabIndex = 6;
+            this.T06FacUp.TEnabled = false;
+            this.T06FacUp.Text = "Factory Upgrade";
+            this.T06FacUp.UseVisualStyleBackColor = true;
+            this.T06FacUp.Click += new System.EventHandler(this.T06FacUp_Click);
+            // 
+            // T05PlutoEn
+            // 
+            this.T05PlutoEn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T05PlutoEn.ForeColor = System.Drawing.Color.Tan;
+            this.T05PlutoEn.Location = new System.Drawing.Point(622, 195);
+            this.T05PlutoEn.Name = "T05PlutoEn";
+            this.T05PlutoEn.Size = new System.Drawing.Size(128, 128);
+            this.T05PlutoEn.TabIndex = 5;
+            this.T05PlutoEn.TEnabled = false;
+            this.T05PlutoEn.Text = "Plutonium Engine";
+            this.T05PlutoEn.UseVisualStyleBackColor = true;
+            this.T05PlutoEn.Click += new System.EventHandler(this.T05PlutoEn_Click);
+            // 
+            // T04HelEn
+            // 
+            this.T04HelEn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T04HelEn.ForeColor = System.Drawing.Color.Tan;
+            this.T04HelEn.Location = new System.Drawing.Point(410, 195);
+            this.T04HelEn.Name = "T04HelEn";
+            this.T04HelEn.Size = new System.Drawing.Size(128, 128);
+            this.T04HelEn.TabIndex = 4;
+            this.T04HelEn.TEnabled = false;
+            this.T04HelEn.Text = "Helium Engine";
+            this.T04HelEn.UseVisualStyleBackColor = true;
+            this.T04HelEn.Click += new System.EventHandler(this.T04HelEn_Click);
+            // 
+            // T03HydroEn
+            // 
+            this.T03HydroEn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T03HydroEn.ForeColor = System.Drawing.Color.Tan;
+            this.T03HydroEn.Location = new System.Drawing.Point(202, 195);
+            this.T03HydroEn.Name = "T03HydroEn";
+            this.T03HydroEn.Size = new System.Drawing.Size(128, 128);
+            this.T03HydroEn.TabIndex = 3;
+            this.T03HydroEn.TEnabled = false;
+            this.T03HydroEn.Text = "Hydrogene Engine";
+            this.T03HydroEn.UseVisualStyleBackColor = true;
+            this.T03HydroEn.Click += new System.EventHandler(this.T03HydroEn_Click);
+            // 
+            // T02PlutoEx
+            // 
+            this.T02PlutoEx.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T02PlutoEx.ForeColor = System.Drawing.Color.Tan;
+            this.T02PlutoEx.Location = new System.Drawing.Point(410, 19);
+            this.T02PlutoEx.Name = "T02PlutoEx";
+            this.T02PlutoEx.Size = new System.Drawing.Size(128, 128);
+            this.T02PlutoEx.TabIndex = 2;
+            this.T02PlutoEx.TEnabled = false;
+            this.T02PlutoEx.Text = "Plutonium Extractor";
+            this.T02PlutoEx.UseVisualStyleBackColor = true;
+            this.T02PlutoEx.Click += new System.EventHandler(this.T02PlutoEx_Click);
+            // 
+            // T01GemsEx
+            // 
+            this.T01GemsEx.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T01GemsEx.ForeColor = System.Drawing.Color.Tan;
+            this.T01GemsEx.Location = new System.Drawing.Point(202, 19);
+            this.T01GemsEx.Name = "T01GemsEx";
+            this.T01GemsEx.Size = new System.Drawing.Size(128, 128);
+            this.T01GemsEx.TabIndex = 1;
+            this.T01GemsEx.TEnabled = false;
+            this.T01GemsEx.Text = "Gems Extractor";
+            this.T01GemsEx.UseVisualStyleBackColor = true;
+            this.T01GemsEx.Click += new System.EventHandler(this.TGemsEx_Click);
+            // 
+            // T00GazEx
+            // 
+            this.T00GazEx.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T00GazEx.ForeColor = System.Drawing.Color.Tan;
+            this.T00GazEx.Location = new System.Drawing.Point(12, 195);
+            this.T00GazEx.Name = "T00GazEx";
+            this.T00GazEx.Size = new System.Drawing.Size(128, 128);
+            this.T00GazEx.TabIndex = 0;
+            this.T00GazEx.TEnabled = false;
+            this.T00GazEx.Text = "Gaz Extractor";
+            this.T00GazEx.UseVisualStyleBackColor = true;
+            this.T00GazEx.Click += new System.EventHandler(this.TGazEx_Click);
+            // 
             // shapeContainer1
             // 
             this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
@@ -1011,162 +1167,6 @@
             this.TotalPlutonium.TabIndex = 35;
             this.TotalPlutonium.Text = "Placeholder";
             this.TotalPlutonium.Visible = false;
-            // 
-            // T11Firm
-            // 
-            this.T11Firm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.T11Firm.ForeColor = System.Drawing.Color.Tan;
-            this.T11Firm.Location = new System.Drawing.Point(828, 401);
-            this.T11Firm.Name = "T11Firm";
-            this.T11Firm.Size = new System.Drawing.Size(128, 128);
-            this.T11Firm.TabIndex = 11;
-            this.T11Firm.TEnabled = false;
-            this.T11Firm.Text = "Galactic Firm";
-            this.T11Firm.UseVisualStyleBackColor = true;
-            this.T11Firm.Click += new System.EventHandler(this.T11Firm_Click);
-            // 
-            // T10Workers
-            // 
-            this.T10Workers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.T10Workers.ForeColor = System.Drawing.Color.Tan;
-            this.T10Workers.Location = new System.Drawing.Point(623, 401);
-            this.T10Workers.Name = "T10Workers";
-            this.T10Workers.Size = new System.Drawing.Size(128, 128);
-            this.T10Workers.TabIndex = 10;
-            this.T10Workers.TEnabled = false;
-            this.T10Workers.Text = "Workers";
-            this.T10Workers.UseVisualStyleBackColor = true;
-            this.T10Workers.Click += new System.EventHandler(this.T10Workers_Click);
-            // 
-            // T09Diplomacy
-            // 
-            this.T09Diplomacy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.T09Diplomacy.ForeColor = System.Drawing.Color.Tan;
-            this.T09Diplomacy.Location = new System.Drawing.Point(410, 401);
-            this.T09Diplomacy.Name = "T09Diplomacy";
-            this.T09Diplomacy.Size = new System.Drawing.Size(128, 128);
-            this.T09Diplomacy.TabIndex = 9;
-            this.T09Diplomacy.TEnabled = false;
-            this.T09Diplomacy.Text = "Diplomacy";
-            this.T09Diplomacy.UseVisualStyleBackColor = true;
-            this.T09Diplomacy.Click += new System.EventHandler(this.T09Diplomacy_Click);
-            // 
-            // T08Radar
-            // 
-            this.T08Radar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.T08Radar.ForeColor = System.Drawing.Color.Tan;
-            this.T08Radar.Location = new System.Drawing.Point(12, 401);
-            this.T08Radar.Name = "T08Radar";
-            this.T08Radar.Size = new System.Drawing.Size(128, 128);
-            this.T08Radar.TabIndex = 8;
-            this.T08Radar.TEnabled = false;
-            this.T08Radar.Text = "Radar";
-            this.T08Radar.UseVisualStyleBackColor = true;
-            this.T08Radar.Click += new System.EventHandler(this.T08Radar_Click);
-            // 
-            // T07BioDome
-            // 
-            this.T07BioDome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.T07BioDome.ForeColor = System.Drawing.Color.Tan;
-            this.T07BioDome.Location = new System.Drawing.Point(1046, 195);
-            this.T07BioDome.Name = "T07BioDome";
-            this.T07BioDome.Size = new System.Drawing.Size(128, 128);
-            this.T07BioDome.TabIndex = 7;
-            this.T07BioDome.TEnabled = false;
-            this.T07BioDome.Text = "Bio Dome";
-            this.T07BioDome.UseVisualStyleBackColor = true;
-            this.T07BioDome.Click += new System.EventHandler(this.T07BioDome_Click);
-            // 
-            // T06FacUp
-            // 
-            this.T06FacUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.T06FacUp.ForeColor = System.Drawing.Color.Tan;
-            this.T06FacUp.Location = new System.Drawing.Point(828, 195);
-            this.T06FacUp.Name = "T06FacUp";
-            this.T06FacUp.Size = new System.Drawing.Size(128, 128);
-            this.T06FacUp.TabIndex = 6;
-            this.T06FacUp.TEnabled = false;
-            this.T06FacUp.Text = "Factory Upgrade";
-            this.T06FacUp.UseVisualStyleBackColor = true;
-            this.T06FacUp.Click += new System.EventHandler(this.T06FacUp_Click);
-            // 
-            // T05PlutoEn
-            // 
-            this.T05PlutoEn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.T05PlutoEn.ForeColor = System.Drawing.Color.Tan;
-            this.T05PlutoEn.Location = new System.Drawing.Point(622, 195);
-            this.T05PlutoEn.Name = "T05PlutoEn";
-            this.T05PlutoEn.Size = new System.Drawing.Size(128, 128);
-            this.T05PlutoEn.TabIndex = 5;
-            this.T05PlutoEn.TEnabled = false;
-            this.T05PlutoEn.Text = "Plutonium Engine";
-            this.T05PlutoEn.UseVisualStyleBackColor = true;
-            this.T05PlutoEn.Click += new System.EventHandler(this.T05PlutoEn_Click);
-            // 
-            // T04HelEn
-            // 
-            this.T04HelEn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.T04HelEn.ForeColor = System.Drawing.Color.Tan;
-            this.T04HelEn.Location = new System.Drawing.Point(410, 195);
-            this.T04HelEn.Name = "T04HelEn";
-            this.T04HelEn.Size = new System.Drawing.Size(128, 128);
-            this.T04HelEn.TabIndex = 4;
-            this.T04HelEn.TEnabled = false;
-            this.T04HelEn.Text = "Helium Engine";
-            this.T04HelEn.UseVisualStyleBackColor = true;
-            this.T04HelEn.Click += new System.EventHandler(this.T04HelEn_Click);
-            // 
-            // T03HydroEn
-            // 
-            this.T03HydroEn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.T03HydroEn.ForeColor = System.Drawing.Color.Tan;
-            this.T03HydroEn.Location = new System.Drawing.Point(202, 195);
-            this.T03HydroEn.Name = "T03HydroEn";
-            this.T03HydroEn.Size = new System.Drawing.Size(128, 128);
-            this.T03HydroEn.TabIndex = 3;
-            this.T03HydroEn.TEnabled = false;
-            this.T03HydroEn.Text = "Hydrogene Engine";
-            this.T03HydroEn.UseVisualStyleBackColor = true;
-            this.T03HydroEn.Click += new System.EventHandler(this.T03HydroEn_Click);
-            // 
-            // T02PlutoEx
-            // 
-            this.T02PlutoEx.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.T02PlutoEx.ForeColor = System.Drawing.Color.Tan;
-            this.T02PlutoEx.Location = new System.Drawing.Point(410, 19);
-            this.T02PlutoEx.Name = "T02PlutoEx";
-            this.T02PlutoEx.Size = new System.Drawing.Size(128, 128);
-            this.T02PlutoEx.TabIndex = 2;
-            this.T02PlutoEx.TEnabled = false;
-            this.T02PlutoEx.Text = "Plutonium Extractor";
-            this.T02PlutoEx.UseVisualStyleBackColor = true;
-            this.T02PlutoEx.Click += new System.EventHandler(this.T02PlutoEx_Click);
-            // 
-            // T01GemsEx
-            // 
-            this.T01GemsEx.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.T01GemsEx.ForeColor = System.Drawing.Color.Tan;
-            this.T01GemsEx.Location = new System.Drawing.Point(202, 19);
-            this.T01GemsEx.Name = "T01GemsEx";
-            this.T01GemsEx.Size = new System.Drawing.Size(128, 128);
-            this.T01GemsEx.TabIndex = 1;
-            this.T01GemsEx.TEnabled = false;
-            this.T01GemsEx.Text = "Gems Extractor";
-            this.T01GemsEx.UseVisualStyleBackColor = true;
-            this.T01GemsEx.Click += new System.EventHandler(this.TGemsEx_Click);
-            // 
-            // T00GazEx
-            // 
-            this.T00GazEx.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.T00GazEx.ForeColor = System.Drawing.Color.Tan;
-            this.T00GazEx.Location = new System.Drawing.Point(12, 195);
-            this.T00GazEx.Name = "T00GazEx";
-            this.T00GazEx.Size = new System.Drawing.Size(128, 128);
-            this.T00GazEx.TabIndex = 0;
-            this.T00GazEx.TEnabled = false;
-            this.T00GazEx.Text = "Gaz Extractor";
-            this.T00GazEx.UseVisualStyleBackColor = true;
-            this.T00GazEx.Click += new System.EventHandler(this.TGazEx_Click);
             // 
             // Form_GV_01
             // 
