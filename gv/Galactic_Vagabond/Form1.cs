@@ -48,6 +48,7 @@ namespace Galactic_Vagabond
                     this.Show();
                     _universe = new Universe();
                     _universe.User.Name = form2.PName;
+                    
                 }
                 else//Load game
                 {
@@ -140,6 +141,8 @@ namespace Galactic_Vagabond
                 l.BorderColor = Color.Red;
                 l.Enabled = false;
             }
+            Story story = new Story();
+            story.ShowDialog(); 
         }
         /// <summary>
         /// Initiaizing the map controller
