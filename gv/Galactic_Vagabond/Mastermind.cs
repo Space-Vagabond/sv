@@ -43,12 +43,16 @@ namespace Galactic_Vagabond
             if (this.UserInput.Text == _toDisplay)
             {
                 MessageBox.Show("You are welcome on our planet, noble traveler");
+                this.Dispose();
             }
             else
             {
                 MessageBox.Show("Go back to your planet with your inferior brain");
+                this.Dispose();
             }
         }
+
+
     }
 
     public class LettersSequence
