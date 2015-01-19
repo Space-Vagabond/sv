@@ -148,7 +148,20 @@ namespace gv
                             new XElement("Y", c.Position.Y),
                             new XElement("ContainedPlanet", (c.ContainsPlanet?c.ContainedPlanet.Name : null))
                         )
-                    )
+                    ),
+                    new XElement( "ShownChunks",
+                        from Ch in _shownChunks
+                        select new XElement("shownchunk",
+                            new XElement(Ch.Key+"X",Ch.Value.Position.X),
+                            new XElement( Ch.Key + "Y", Ch.Value.Position.Y )
+                        )
+                    ),
+                    new XElement("Techs",
+                        from T in _techs
+                        select new XElement( "Tech",
+                            new XElement( T.Name, T.IsDiscovered )
+                        )
+                     )
                 )
             );
             save.Save( @Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData )+"/GVSaves/save"+_player.Name+".xml" );

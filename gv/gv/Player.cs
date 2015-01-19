@@ -80,12 +80,20 @@ namespace gv
             return new XElement( "Player",
                 new XElement( "Name", _name ),
                 new XElement( "Speed", _speed ),
+                new XElement("Move", _canMove),
                 new XElement("X", Position.X),
                 new XElement("Y", Position.Y),
                 new XElement( "RemainingSteps", _remainingSteps ),
+                new XElement("ResRate", _resRate),
                 new XElement("Ressources",
                     from p in _ressources
                         select new XElement("Ressource",
+                            new XElement(p.Key,p.Value)
+                    )
+                ),
+                new XElement("TotalRessources",
+                    from p in _totalRessources
+                        select new XElement("TotalRessource",
                             new XElement(p.Key,p.Value)
                     )
                 )
