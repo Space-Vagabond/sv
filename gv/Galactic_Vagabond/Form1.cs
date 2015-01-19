@@ -190,6 +190,7 @@ namespace Galactic_Vagabond
                         }
                         else
                         {
+
                             this.map.Rows[ConvertY( cl.Position.Y, ch.Key )].Cells[ConvertX( cl.Position.X, ch.Key )].Value = _planets[6 - 1];                            
                         }
                     }
@@ -248,6 +249,7 @@ namespace Galactic_Vagabond
                 CurrentPlanet.Text += "Surface: " + pos.ContainedPlanet.Surface + Environment.NewLine;
                 CurrentPlanet.Text += "Resources: " + pos.ContainedPlanet.Ressources + Environment.NewLine;
                 CurrentPlanet.Text += "Inhabitants: " + pos.ContainedPlanet.InhabitantsName + Environment.NewLine;
+                CurrentPlanet.Text += "Planet blocked for " + pos.ContainedPlanet.Blocked.ToString() +" turns" + Environment.NewLine;
                 if( pos.ContainedPlanet.Ressources != "none" )
                 {
                     CurrentPlanet.Text += "Constructible: yes" + Environment.NewLine;
@@ -958,5 +960,60 @@ namespace Galactic_Vagabond
             e.DrawBorder();
             e.DrawText( TextFormatFlags.TextBoxControl );            
         }
+
+        bool LocalEventOnPlanet()
+        {
+            int r = _universe.Rand.Next( 0, 20 );
+            switch( r )
+            {
+                case 0:
+                    caesar game0 = new caesar();
+                    var ret0 = game0.ShowDialog();
+                    if( ret0 == DialogResult.Yes )
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }                   
+                case 1:
+                    mastermind game1 = new mastermind();
+                    var ret1 = game1.ShowDialog();
+                    if( ret1 == DialogResult.Yes )
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }    
+                case 2:
+                    mastermind game2 = new mastermind();
+                    var ret2 = game2.ShowDialog();
+                    if( ret2 == DialogResult.Yes )
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }                      
+                case 3:
+                    mastermind game3 = new mastermind();
+                    var ret3 = game3.ShowDialog();
+                    if( ret3 == DialogResult.Yes )
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }                   
+                default:
+                    return true;                   
+            }
+        }
+
     }
 }
