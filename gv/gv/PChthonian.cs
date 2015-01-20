@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace gv
 {
@@ -15,15 +16,20 @@ namespace gv
         int _img;
 
         internal PChthonian(Universe u)
-            : base( u, null )
+            : base( u, "" )
         {
             _ressources = PlanetAttributes.PlanetRessource( u.Rand.Next( 1, 3 ) );
             _img = 5;
         }
+        internal PChthonian( Universe u, XElement attributes )
+            :base(u, attributes)
+        {
+            _ressources = attributes.Element( "Ressources" ).Value.ToString();
+        }
 
         public override string Type
         {
-            get { return "Chtonian"; }
+            get { return "Chthonian"; }
         }
         public override string Surface
         {
@@ -48,6 +54,7 @@ namespace gv
         public override int Img
         {
             get { return _img; }
+            internal set { _img = value; }
         }
     }
 }

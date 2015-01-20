@@ -1175,6 +1175,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1261, 657);
+            this.Controls.Add(this.TechPanel);
             this.Controls.Add(this.TotalPlutonium);
             this.Controls.Add(this.TotalGems);
             this.Controls.Add(this.TotalHelium);
@@ -1215,7 +1216,6 @@
             this.Controls.Add(this.CurrentPlanet);
             this.Controls.Add(this.OverViewList);
             this.Controls.Add(this.map);
-            this.Controls.Add(this.TechPanel);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;

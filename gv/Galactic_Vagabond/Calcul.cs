@@ -21,7 +21,7 @@ namespace Galactic_Vagabond
 
         private void button1_Click( object sender, EventArgs e )
         {
-            if(textBox1.Text !=  "")
+            if(textBox1.Text != "")
             {
                 if( textBox1.Text == "8" )
                 {

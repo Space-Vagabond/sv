@@ -8,8 +8,7 @@ namespace gv
     public class EventGenerator
     {
         Universe _u;
-        Dictionary<int,List<string>> _allEvents = new Dictionary<int,List<string>>();
-
+        
         public EventGenerator(Universe universe)
         {
             _u = universe;            
@@ -39,7 +38,7 @@ namespace gv
                }          
            }
            PlayerEvents( turnEvents );
-           _allEvents.Add(_u.Turn, turnEvents);
+           _u.AllEvents.Add(_u.Turn, turnEvents);
         }
 
         void PlayerEvents(List<string> turnEvents)
@@ -122,9 +121,6 @@ namespace gv
         {
             get { return _u; }
         }      
-        public IReadOnlyDictionary<int,List<string>> AllEvents
-        {
-            get { return _allEvents; }
-        }
+        
     }
 }

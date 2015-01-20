@@ -41,6 +41,27 @@ namespace gv
                 }
             }
         }
+
+       public Player( Universe u, XElement Psave )
+       {
+           _universe = u;
+           _name = Psave.Element( "Name" ).Value;
+           _speed = Convert.ToInt32(Psave.Element( "Speed" ).Value);
+           _canMove = Convert.ToBoolean( Psave.Element( "Move" ).Value );
+           _position.X = Convert.ToInt32( Psave.Element( "X" ).Value );
+           _position.Y = Convert.ToInt32( Psave.Element( "Y" ).Value );
+           _remainingSteps = Convert.ToInt32( Psave.Element( "RemainingSteps" ).Value );
+           _resRate = Convert.ToInt32( Psave.Element( "ResRate" ).Value );
+
+           foreach( XElement ressource in Psave.Element( "Ressources" ).Elements() )
+           {
+               _ressources.Add( ressource.Name.ToString(), Convert.ToInt32( ressource.Value ) );
+           }
+           foreach( XElement Tressource in Psave.Element( "TotalRessources" ).Elements() )
+           {
+               _totalRessources.Add( Tressource.Name.ToString(), Convert.ToInt32( Tressource.Value ) );
+           }
+       }
         public bool Move( Position destination )
         {
             if( _canMove == false )
@@ -80,14 +101,18 @@ namespace gv
             return new XElement( "Player",
                 new XElement( "Name", _name ),
                 new XElement( "Speed", _speed ),
+                new XElement("Move", _canMove),
                 new XElement("X", Position.X),
                 new XElement("Y", Position.Y),
                 new XElement( "RemainingSteps", _remainingSteps ),
+                new XElement("ResRate", _resRate),
                 new XElement("Ressources",
                     from p in _ressources
-                        select new XElement("Ressource",
-                            new XElement(p.Key,p.Value)
-                    )
+                        select new XElement(p.Key,p.Value)                   
+                ),
+                new XElement("TotalRessources",
+                    from p in _totalRessources
+                        select new XElement(p.Key,p.Value)                    
                 )
             );
         }

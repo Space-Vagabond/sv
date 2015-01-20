@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Xml.Linq;
 using ET.FakeText;
 
 namespace gv
@@ -17,7 +18,7 @@ namespace gv
             _factory = false;
             _discovered = false;
             _blocked = 0;
-            if( name == null )
+            if( name == "" )
             {
                 int n =  u.Rand.Next( 6, 9 );
 
@@ -36,6 +37,18 @@ namespace gv
                 _inhabitantsName = "Dorados";
             }
         }
+        internal protected Planet(Universe u, XElement attributes)
+        {
+            _name = attributes.Element( "Name" ).Value.ToString();
+            _inhabitantsName = attributes.Element( "InhabitantsName" ).Value.ToString();
+            _factory = Convert.ToBoolean( attributes.Element( "Built" ).Value );
+            _blocked = Convert.ToInt32( attributes.Element( "Blocked" ).Value );
+            _discovered = Convert.ToBoolean( attributes.Element( "Discovered" ).Value );
+            Climate = attributes.Element( "Climate" ).Value.ToString();
+            Surface = attributes.Element( "Surface" ).Value.ToString();
+            Img = Convert.ToInt32( attributes.Element( "ImgId" ).Value );
+
+        }
         
         internal static Planet CreatePlanet( Universe u )
         {
@@ -53,6 +66,25 @@ namespace gv
                 case 8: return new PGazeousHelium( u );
                 case 9: return new PChthonian( u );
                 default: return new PTelluricSilicat( u );
+            }
+        }
+        internal static Planet CreatePlanet( Universe u, string typeToCreate, XElement attributes )
+        {
+            switch( typeToCreate )
+            {
+                case "PTelluricSilicat": return new PTelluricSilicat( u, attributes );
+                case "PTelluricCarbon": return new PTelluricCarbon( u, attributes );
+                case "PTelluricMetal": return new PTelluricMetal( u, attributes );
+                case "PTelluricLava": return new PTelluricLava( u, attributes );
+                case "PTelluricIce": return new PTelluricIce( u, attributes );
+                case "PCoreless": return new PCoreless( u, attributes );
+                case "PTelluricDesert": return new PTelluricDesert( u, attributes );
+                case "PGazeousHydrogen": return new PGazeousHydrogen( u, attributes );
+                case "PGazeousHelium": return new PGazeousHelium( u, attributes );
+                case "PChthonian": return new PChthonian( u, attributes );
+                case "PDestroyed": return new Earth( u );
+                case "PPromisedLand": return new Eldorado( u );
+                default: return new PTelluricSilicat( u, attributes );
             }
         }
         
@@ -85,7 +117,7 @@ namespace gv
             get { return _factory; }
             set { _factory = value; }
         }
-        public abstract int Img { get;}
+        public abstract int Img { get;internal set; }
         public bool IsDiscovered
         {
             get { return _discovered; }
