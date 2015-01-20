@@ -65,6 +65,7 @@ namespace Galactic_Vagabond
             InitMap();
             ShowCurrentPlanet();
             DisplayPlayerDatas();
+            DisplayTurnEvents();
 
             _tabControls.Add( CockpitButton );
             _tabControls.Add( OverviewButton );
