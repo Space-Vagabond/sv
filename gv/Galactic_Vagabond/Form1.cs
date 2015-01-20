@@ -57,15 +57,14 @@ namespace Galactic_Vagabond
 
                     XDocument doc = form2.Doc;
                     _universe = new Universe (doc.Root);
-
-                    
+                    DisplayTurnEvents();                   
                 }
             }
             
             InitMap();
             ShowCurrentPlanet();
             DisplayPlayerDatas();
-            DisplayTurnEvents();
+            
 
             _tabControls.Add( CockpitButton );
             _tabControls.Add( OverviewButton );
