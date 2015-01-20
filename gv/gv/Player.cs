@@ -27,7 +27,7 @@ namespace gv
         {
             _universe = u;
             _position = new Position( 0, 0 );
-            _speed = 4000;
+            _speed = 4;
             _canMove = true;
             _remainingSteps = _speed;
             _resRate = 10;
@@ -36,7 +36,7 @@ namespace gv
             {
                 if( s != "none" )
                 {
-                    _ressources.Add( s, 100000 );
+                    _ressources.Add( s, 0 );
                     _totalRessources.Add( s, 0 );
                 }
             }

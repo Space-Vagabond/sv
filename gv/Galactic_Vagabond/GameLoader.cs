@@ -21,7 +21,7 @@ namespace Galactic_Vagabond
             DirectoryInfo dir = new DirectoryInfo( folderPath );
             FileInfo[] files = dir.GetFiles( "save*", SearchOption.TopDirectoryOnly );
 
-            string[] fileNames = files.Select( f => f.Name ).ToArray();
+            string[] fileNames = files.Select( f => f.Name).ToArray();
 
             for( int i = 0; i < files.Length; i++ )
             {

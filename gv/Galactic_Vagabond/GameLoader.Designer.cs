@@ -38,7 +38,7 @@
             // Back
             // 
             this.Back.BackColor = System.Drawing.Color.Black;
-            this.Back.Font = new System.Drawing.Font("Orator", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Back.ForeColor = System.Drawing.Color.Chartreuse;
             this.Back.Location = new System.Drawing.Point(234, 33);
             this.Back.Name = "Back";
@@ -52,7 +52,7 @@
             // 
             this.LoadSelected.BackColor = System.Drawing.Color.Black;
             this.LoadSelected.Enabled = false;
-            this.LoadSelected.Font = new System.Drawing.Font("Orator", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoadSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoadSelected.ForeColor = System.Drawing.Color.Chartreuse;
             this.LoadSelected.Location = new System.Drawing.Point(234, 129);
             this.LoadSelected.Name = "LoadSelected";
@@ -66,14 +66,14 @@
             // 
             this.Games.BackColor = System.Drawing.Color.Black;
             this.Games.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Games.Font = new System.Drawing.Font("Orator", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Games.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Games.ForeColor = System.Drawing.Color.White;
             this.Games.FormattingEnabled = true;
             this.Games.ItemHeight = 15;
             this.Games.Location = new System.Drawing.Point(14, 20);
             this.Games.Name = "Games";
             this.Games.ScrollAlwaysVisible = true;
-            this.Games.Size = new System.Drawing.Size(161, 45);
+            this.Games.Size = new System.Drawing.Size(161, 225);
             this.Games.TabIndex = 2;
             this.Games.SelectedValueChanged += new System.EventHandler(this.Games_SelectedValueChanged);
             // 
@@ -81,17 +81,17 @@
             // 
             this.Msg.AutoSize = true;
             this.Msg.BackColor = System.Drawing.Color.Transparent;
-            this.Msg.Font = new System.Drawing.Font("Orator", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Msg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Msg.ForeColor = System.Drawing.Color.Orange;
             this.Msg.Location = new System.Drawing.Point(201, 89);
             this.Msg.Name = "Msg";
-            this.Msg.Size = new System.Drawing.Size(139, 19);
+            this.Msg.Size = new System.Drawing.Size(121, 20);
             this.Msg.TabIndex = 3;
             this.Msg.Text = "Choose a game";
             // 
             // GameLoader
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
@@ -100,7 +100,7 @@
             this.Controls.Add(this.Games);
             this.Controls.Add(this.LoadSelected);
             this.Controls.Add(this.Back);
-            this.Font = new System.Drawing.Font("Orator", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "GameLoader";
