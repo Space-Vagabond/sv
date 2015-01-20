@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Xml.Linq;
+using System.Linq;
 
 namespace gv
 {
@@ -16,6 +18,28 @@ namespace gv
             _containerU = u;
             _containerC = c;
             _position = Pos;
+        }
+        public Cell( Universe u, XElement attributes )
+        {
+            _containerU = u;
+            _position.X = Convert.ToInt32( attributes.Element( "X" ).Value );
+            _position.Y = Convert.ToInt32( attributes.Element( "Y" ).Value );
+
+            _containerC = (from C in u.Chunks.Values
+                           where (C.Position.X == Convert.ToInt32( attributes.Element( "containerX" ).Value ) && C.Position.Y == Convert.ToInt32( attributes.Element( "containerY" ).Value ))
+                           select C).Single();
+
+            _containsPlanet = Convert.ToBoolean( attributes.Element( "ContainsPlanet" ).Value );
+            if( _containsPlanet )
+            {
+                _planet = (from P in u.Planets.Values
+                           where P.Name == attributes.Element( "ContainedPlanet" ).Value.ToString()
+                           select P).Single();
+            }
+            else
+            {
+                _planet = null;
+            }
         }
         public void AddPlanet()
         {

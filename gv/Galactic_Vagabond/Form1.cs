@@ -57,6 +57,8 @@ namespace Galactic_Vagabond
 
                     XDocument doc = form2.Doc;
                     _universe = new Universe (doc.Root);
+
+                    
                 }
             }
             
@@ -594,7 +596,7 @@ namespace Galactic_Vagabond
         void DisplayTurnEvents()
         {
             this.TurnEvents.DataSource = new List<string>();
-            this.TurnEvents.DataSource = _universe.Event.AllEvents[_universe.Turn];
+            this.TurnEvents.DataSource = _universe.AllEvents[_universe.Turn];
             int visibleItem = this.TurnEvents.ClientSize.Height / this.TurnEvents.ItemHeight;
             this.TurnEvents.TopIndex = Math.Max( this.TurnEvents.Items.Count - visibleItem + 1, 0 );
         }
@@ -697,6 +699,43 @@ namespace Galactic_Vagabond
             foreach( Control c in _tabControls )
             {
                 c.Show();
+            }
+            if( _universe.Techs[0].IsDiscovered )
+            {
+                lineShape1.BorderColor = Color.Green;
+                lineShape2.BorderColor = Color.Green;
+            }
+            if( _universe.Techs[1].IsDiscovered )
+            {
+                lineShape3.BorderColor = Color.Green;
+            }
+            if( _universe.Techs[2].IsDiscovered )
+            {
+                lineShape5.BorderColor = Color.Green;
+            }
+            if( _universe.Techs[3].IsDiscovered )
+            {
+                lineShape4.BorderColor = Color.Green;
+            }
+            if( _universe.Techs[4].IsDiscovered )
+            {
+                lineShape6.BorderColor = Color.Green;
+            }
+            if( _universe.Techs[5].IsDiscovered )
+            {
+                lineShape7.BorderColor = Color.Green;
+            }
+            if( _universe.Techs[6].IsDiscovered )
+            {
+                lineShape8.BorderColor = Color.Green;
+            }
+            if( _universe.Techs[9].IsDiscovered )
+            {
+                lineShape9.BorderColor = Color.Green;
+            }
+            if( _universe.Techs[10].IsDiscovered )
+            {
+                lineShape10.BorderColor = Color.Green;
             }
             TechPanel.Show();
             EndTurn.Hide();

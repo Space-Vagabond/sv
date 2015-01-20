@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace gv
 {
@@ -13,12 +14,17 @@ namespace gv
         bool _inhabited;
         int _img;
         internal PTelluricMetal( Universe u )
-            : base( u, null )
+            : base( u, "" )
         {
             _surface = PlanetAttributes.PlanetSurface( u.Rand.Next( 5, 9 ) );
             _climate = PlanetAttributes.PlanetClimate( u.Rand.Next( 0, 3 ) );
             _inhabited = (u.Rand.Next( 0, 2 ) > 0) ? true : false;
             _img = 11;
+
+        }
+        internal PTelluricMetal( Universe u, XElement attributes )
+            : base( u, attributes )
+        {
 
         }
 
@@ -48,6 +54,7 @@ namespace gv
         public override int Img
         {
             get { return _img; }
+            internal set { _img = value; }
         }
     }
 }

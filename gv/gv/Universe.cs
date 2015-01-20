@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting;
 using System.Xml.Linq;
 using ET.FakeText;
 
@@ -19,6 +20,9 @@ namespace gv
         Player _player;
         int _turn; 
         readonly List<Tech> _techs = new List<Tech>();
+        //int is the turn number, list is the event List of the (int) turn
+        Dictionary<int,List<string>> _allEvents = new Dictionary<int, List<string>>();
+
 
         public Universe()
         {
@@ -57,6 +61,7 @@ namespace gv
         {
             _events = new EventGenerator( this );
             NameGen = new TextGenerator( WordTypes.Name );
+
             _techs.Add( new Tech( "Gaz Extractor", "Allows you to extract Helium and Hydrogen", 50, 50, 0, 0, 0, 0 ) );
             _techs.Add( new Tech( "Gems Extractor", "Allows you to extract Gems", 100, 100, 100, 100, 0, 0, _techs[0] ) );
             _techs.Add( new Tech( "Plutonium Extractor", "Allows you to extract Plutonium", 200, 200, 0, 100, 0, 0, _techs[1] ) );
@@ -73,6 +78,51 @@ namespace gv
             _player = new Player( this, save.Element( "Player" ) );
             _turn = Convert.ToInt32( save.Element( "Turn" ).Value );
 
+            foreach( XElement item in save.Elements("Planets").Nodes() )
+            {
+                string typeToCreate = item.Element( "Type" ).Value;
+                typeToCreate = "P" + typeToCreate.Replace( " ", "" );
+                Planet p = Planet.CreatePlanet( this, typeToCreate, item );
+                _planets.Add( p.Name, p );
+            }
+            foreach( XElement item in save.Elements( "Chunks" ).Nodes() )
+            {
+                Chunk c = new Chunk(item, this);
+                _chunks.Add( c.Position, c );
+            }
+            foreach( XElement item in save.Elements( "Cells" ).Nodes() )
+            {
+                Cell c = new Cell( this, item );
+                _cells.Add( c );
+
+                Chunk ck = (from C in _chunks.Values
+                            where (C.Position.X == Convert.ToInt32( item.Element( "containerX" ).Value ) && C.Position.Y == Convert.ToInt32( item.Element( "containerY" ).Value ))
+                            select C).Single();
+                ck.Cells.Add( c );
+            }
+            foreach( XElement item in save.Elements( "ShownChunks" ).Nodes() )
+            {
+                Chunk c = (from C in _chunks.Values
+                            where (C.Position.X == Convert.ToInt32( item.Element( "X" ).Value ) && C.Position.Y == Convert.ToInt32( item.Element( "Y" ).Value ))
+                            select C).Single();
+
+                _shownChunks.Add( Convert.ToInt32(item.Element( "Key" ).Value), c );
+            }
+            foreach( XElement item in save.Elements( "Techs" ).Nodes() )
+            {
+                if( Convert.ToBoolean( item.Element( "IsDiscovered" ).Value ) )
+                {
+                    _techs[Convert.ToInt32( item.Element( "Key" ).Value )].IsDiscovered = true;
+                }
+            }
+            foreach( XElement item in save.Elements( "Events" ).Nodes() )
+            {
+                if(!_allEvents.ContainsKey(Convert.ToInt32(item.Element("Id").Value))) _allEvents.Add(Convert.ToInt32(item.Element("Id").Value), new List<string>());                
+            }
+            foreach( XElement item in save.Elements( "Events" ).Nodes() )
+            {
+                _allEvents[Convert.ToInt32(item.Element( "Id" ).Value)].Add(item.Element( "Event" ).Value);
+            }
                       
         }       
         public Planet AddPlanet()
@@ -133,6 +183,17 @@ namespace gv
         /// </summary>
         public void ToXML()
         {
+            var eventTree = new XElement( "Events" );
+            foreach( KeyValuePair<int,List<string>> pair in _allEvents )
+            {
+                eventTree.Add(
+                    from item in pair.Value
+                    select new XElement( "Turn",
+                        new XElement( "Id", pair.Key ),
+                        new XElement( "Event", item )
+                    ) );
+            }
+
             XDocument save = new XDocument(
                 new XElement( "Game",
                     new XElement(_player .ToXML()),
@@ -140,7 +201,6 @@ namespace gv
                     new XElement("Planets",
                         from p in _planets
                         select new XElement("Planet",
-                            new XElement("Class",p.GetType().AssemblyQualifiedName),
                             new XElement("Name", p.Value.Name),
                             new XElement("Type", p.Value.Type),
                             new XElement("Climate", p.Value.Climate),
@@ -175,18 +235,24 @@ namespace gv
                     new XElement( "ShownChunks",
                         from Ch in _shownChunks
                         select new XElement("shownchunk",
-                            new XElement("X"+Ch.Key,Ch.Value.Position.X),
-                            new XElement("Y"+Ch.Key , Ch.Value.Position.Y )
+                            new XElement( "Key", Ch.Key ),
+                            new XElement("X",Ch.Value.Position.X),
+                            new XElement("Y", Ch.Value.Position.Y )
                         )
                     ),
                     new XElement("Techs",
                         from T in _techs
                         select new XElement( "Tech",
-                            new XElement( "T"+_techs.IndexOf(T).ToString(), T.IsDiscovered )
+                            new XElement("Key", _techs.IndexOf(T)),
+                            new XElement( "IsDiscovered", T.IsDiscovered )
                         )
-                     )
+                     ),
+                     eventTree                       
                 )
             );
+            
+            
+            
             save.Save( @Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData )+"/GVSaves/save"+_player.Name+".xml" );
         }
         public void EndTurn()
@@ -243,6 +309,10 @@ namespace gv
         public List<Tech> Techs
         {
             get { return _techs; }
+        }
+        public Dictionary<int, List<string>> AllEvents
+        {
+            get { return _allEvents; }
         }
     }
 }
