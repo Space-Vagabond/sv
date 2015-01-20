@@ -47,6 +47,7 @@ namespace Galactic_Vagabond
 
         private void StartGame_Click( object sender, EventArgs e )
         {
+            
             PName = playerName.Text.ToString();
             this.DialogResult = System.Windows.Forms.DialogResult.Yes;
             this.Close();

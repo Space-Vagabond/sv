@@ -3,23 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace gv
 {
-    class PGazeousHydrogene : Planet
+    class PGazeousHydrogen : Planet
     {
         bool _inhabited;
         string _surface;
         string _climate;
         int _img;
 
-        internal PGazeousHydrogene( Universe u )
-            : base( u, null )
+        internal PGazeousHydrogen( Universe u )
+            : base( u, "" )
         {
             _inhabited = (u.Rand.Next( 0, 2 ) > 0) ? true : false;
             _climate = "Cold";
             _surface = "Iced";
             _img = 8;
+        }
+        internal PGazeousHydrogen( Universe u, XElement attributes )
+            : base( u, attributes )
+        {
+
         }
 
         public override string Type
@@ -44,11 +50,13 @@ namespace gv
         }
         public override string Ressources
         {
-            get { return "Hydrogene"; }
+            get { return "Hydrogen"; }
         }
         public override int Img
         {
             get { return _img; }
+            internal set { _img = value; }
+
         }
     }
 }

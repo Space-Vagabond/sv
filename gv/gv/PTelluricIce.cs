@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace gv
 {
@@ -14,11 +15,16 @@ namespace gv
         int _img;
 
         internal PTelluricIce( Universe u )
-            : base( u, null )
+            : base( u, "" )
         {
             _surface = "Ice";
             _climate = "Cold";
             _img = 17;
+        }
+        internal PTelluricIce( Universe u, XElement attributes )
+            : base( u, attributes )
+        {
+
         }
 
         public override string Type
@@ -48,6 +54,8 @@ namespace gv
         public override int Img
         {
             get { return _img; }
+            internal set { _img = value; }
+
         }
     }
 }

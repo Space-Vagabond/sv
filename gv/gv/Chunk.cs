@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Xml.Linq;
 
 namespace gv
 {
@@ -25,6 +26,13 @@ namespace gv
                 }
 			}
             InitializeCells();
+        }
+        public Chunk( XElement attributes, Universe u )
+        {
+            _container = u;
+
+            _position.X = Convert.ToInt32( attributes.Element( "X" ).Value );
+            _position.Y = Convert.ToInt32( attributes.Element( "Y" ).Value );
         }
         void InitializeCells()
         {

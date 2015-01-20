@@ -17,11 +17,11 @@ namespace Galactic_Vagabond
         public GameLoader()
         {
             InitializeComponent();
-            string folderPath = @".\..\..\..\Saves";
+            string folderPath = @Environment.GetFolderPath( Environment.SpecialFolder.ApplicationData ) + "/GVSaves";
             DirectoryInfo dir = new DirectoryInfo( folderPath );
             FileInfo[] files = dir.GetFiles( "save*", SearchOption.TopDirectoryOnly );
 
-            string[] fileNames = files.Select( f => f.Name ).ToArray();
+            string[] fileNames = files.Select( f => f.Name).ToArray();
 
             for( int i = 0; i < files.Length; i++ )
             {
@@ -43,9 +43,10 @@ namespace Galactic_Vagabond
 
         private void LoadSelected_Click( object sender, EventArgs e )
         {
-            if( Games.SelectedValue != null )
+            if( Games.SelectedItem != null )
             {
-                this.Doc = XDocument.Load( @".\..\..\..\Saves\" + Games.SelectedItem );
+                var saveToLoad = @Environment.GetFolderPath( Environment.SpecialFolder.ApplicationData ) + "/GVSaves/" + Games.SelectedItem;
+                this.Doc = XDocument.Load( saveToLoad );
                 DialogResult = System.Windows.Forms.DialogResult.Yes;
                 this.Close();
             }            

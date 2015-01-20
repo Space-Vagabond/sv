@@ -8,8 +8,7 @@ namespace gv
     public class EventGenerator
     {
         Universe _u;
-        Dictionary<int,List<string>> _allEvents = new Dictionary<int,List<string>>();
-
+        
         public EventGenerator(Universe universe)
         {
             _u = universe;            
@@ -39,7 +38,7 @@ namespace gv
                }          
            }
            PlayerEvents( turnEvents );
-           _allEvents.Add(_u.Turn, turnEvents);
+           _u.AllEvents.Add(_u.Turn, turnEvents);
         }
 
         void PlayerEvents(List<string> turnEvents)
@@ -110,10 +109,8 @@ namespace gv
                 {
                     _u.User.Ressources["Gems"] -= amount;
                     turnEvents.Add(String.Format("Income was stolen by local smugglers, you lost {0} gems", amount));
-                }
-            
+                }            
         }
-
         void GainSpeed( List<string> turnEvents)
         {
             _u.User.RemainingSteps += 1;
@@ -124,9 +121,6 @@ namespace gv
         {
             get { return _u; }
         }      
-        public IReadOnlyDictionary<int,List<string>> AllEvents
-        {
-            get { return _allEvents; }
-        }
+        
     }
 }

@@ -48,6 +48,7 @@ namespace gv
         public override int Img
         {
             get { return _img; }
+            internal set { _img = value; }
         }
     }
 }      

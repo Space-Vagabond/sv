@@ -29,7 +29,7 @@ namespace Galactic_Vagabond
         void loadEvents(Universe u)
         {
             int visibleItem = this.Height / this.Logs.ItemHeight;
-            this.Logs.DataSource = u.Event.AllEvents.SelectMany( d => d.Value ).ToList();
+            this.Logs.DataSource = u.AllEvents.SelectMany( d => d.Value ).ToList();
             
             this.Logs.TopIndex = Math.Max( this.Logs.Items.Count - visibleItem + 1, 0 );
             this.Logs.SelectedIndex = this.Logs.Items.Count - 1;
