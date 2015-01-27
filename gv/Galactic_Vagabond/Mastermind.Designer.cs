@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mastermind));
             this.ValidateButton = new System.Windows.Forms.Button();
             this.SequenceLabel = new System.Windows.Forms.Label();
             this.UserInput = new System.Windows.Forms.TextBox();
@@ -84,6 +85,7 @@
             this.Controls.Add(this.UserInput);
             this.Controls.Add(this.SequenceLabel);
             this.Controls.Add(this.ValidateButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "mastermind";
             this.Text = "Mastermind";
             this.ResumeLayout(false);

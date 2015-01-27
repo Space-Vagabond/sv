@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(caesar));
             this.MessageLabel = new System.Windows.Forms.Label();
             this.UserInput = new System.Windows.Forms.TextBox();
             this.ValidateButton = new System.Windows.Forms.Button();
@@ -84,6 +85,7 @@
             this.Controls.Add(this.ValidateButton);
             this.Controls.Add(this.UserInput);
             this.Controls.Add(this.MessageLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "caesar";
             this.Text = "caesar";
             this.ResumeLayout(false);

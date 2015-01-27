@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Codex));
             this.HydrogenButton = new System.Windows.Forms.Button();
             this.SiliciumButton = new System.Windows.Forms.Button();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
@@ -311,6 +312,7 @@
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.SiliciumButton);
             this.Controls.Add(this.HydrogenButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Codex";
             this.Text = "Codex";
             this.ResumeLayout(false);
