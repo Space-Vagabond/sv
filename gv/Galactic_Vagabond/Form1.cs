@@ -275,11 +275,22 @@ namespace Galactic_Vagabond
                         CurrentPlanet.Text += "Built: " + ((pos.ContainedPlanet.Factory) ? "yes" : "no") + Environment.NewLine;
 
                         CurrentPlanet.Text += "Build BioDome to recreate humanity" + Environment.NewLine;
-                        if( !_universe.Techs[7].IsDiscovered )
+                        if( _universe.Techs[7].IsDiscovered == false )
                         {
                             Build.Enabled = false;
                         }
-                        Build.Show();
+                        else
+                        {
+                            Build.Enabled = true;
+                        }
+                        if( pos.ContainedPlanet.Factory )
+                        {
+                            Build.Hide();                            
+                        }
+                        else
+                        {
+                            Build.Show();
+                        }
                     }
                     else
                     {
@@ -517,7 +528,10 @@ namespace Galactic_Vagabond
             }
             else if( pos.ContainsPlanet && pos.ContainedPlanet.Name == "Eldorado" )
             {
-                MessageBox.Show( "You won the game" );
+                pos.ContainedPlanet.Factory = true;
+                ShowCurrentPlanet();
+                WinGame won = new WinGame();
+                won.ShowDialog(this);
             }
         }        
         /// <summary>
@@ -596,7 +610,10 @@ namespace Galactic_Vagabond
         void DisplayTurnEvents()
         {
             this.TurnEvents.DataSource = new List<string>();
-            this.TurnEvents.DataSource = _universe.AllEvents[_universe.Turn];
+            if( _universe.AllEvents.ContainsKey( _universe.Turn ) )
+            {
+                this.TurnEvents.DataSource = _universe.AllEvents[_universe.Turn];
+            }
             int visibleItem = this.TurnEvents.ClientSize.Height / this.TurnEvents.ItemHeight;
             this.TurnEvents.TopIndex = Math.Max( this.TurnEvents.Items.Count - visibleItem + 1, 0 );
         }
