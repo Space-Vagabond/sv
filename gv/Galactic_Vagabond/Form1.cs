@@ -279,6 +279,12 @@ namespace Galactic_Vagabond
                         {
                             Build.Enabled = false;
                         }
+                        if( pos.ContainedPlanet.Factory )
+                        {
+                            Build.Enabled = false;
+                            this.Refresh();
+                        }
+                        
                         Build.Show();
                     }
                     else
@@ -596,7 +602,10 @@ namespace Galactic_Vagabond
         void DisplayTurnEvents()
         {
             this.TurnEvents.DataSource = new List<string>();
-            this.TurnEvents.DataSource = _universe.AllEvents[_universe.Turn];
+            if( _universe.AllEvents.ContainsKey( _universe.Turn ) )
+            {
+                this.TurnEvents.DataSource = _universe.AllEvents[_universe.Turn];
+            }
             int visibleItem = this.TurnEvents.ClientSize.Height / this.TurnEvents.ItemHeight;
             this.TurnEvents.TopIndex = Math.Max( this.TurnEvents.Items.Count - visibleItem + 1, 0 );
         }
