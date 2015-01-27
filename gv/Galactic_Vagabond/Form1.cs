@@ -275,17 +275,22 @@ namespace Galactic_Vagabond
                         CurrentPlanet.Text += "Built: " + ((pos.ContainedPlanet.Factory) ? "yes" : "no") + Environment.NewLine;
 
                         CurrentPlanet.Text += "Build BioDome to recreate humanity" + Environment.NewLine;
-                        if( !_universe.Techs[7].IsDiscovered )
+                        if( _universe.Techs[7].IsDiscovered == false )
                         {
                             Build.Enabled = false;
+                        }
+                        else
+                        {
+                            Build.Enabled = true;
                         }
                         if( pos.ContainedPlanet.Factory )
                         {
-                            Build.Enabled = false;
-                            this.Refresh();
+                            Build.Hide();                            
                         }
-                        
-                        Build.Show();
+                        else
+                        {
+                            Build.Show();
+                        }
                     }
                     else
                     {
@@ -523,6 +528,8 @@ namespace Galactic_Vagabond
             }
             else if( pos.ContainsPlanet && pos.ContainedPlanet.Name == "Eldorado" )
             {
+                pos.ContainedPlanet.Factory = true;
+                ShowCurrentPlanet();
                 WinGame won = new WinGame();
                 won.ShowDialog(this);
             }
