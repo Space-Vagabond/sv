@@ -517,7 +517,8 @@ namespace Galactic_Vagabond
             }
             else if( pos.ContainsPlanet && pos.ContainedPlanet.Name == "Eldorado" )
             {
-                MessageBox.Show( "You won the game" );
+                WinGame won = new WinGame();
+                won.ShowDialog(this);
             }
         }        
         /// <summary>
